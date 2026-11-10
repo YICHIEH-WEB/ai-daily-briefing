@@ -1,0 +1,8 @@
+{
+  "runtime": "typescript",
+  "platformVersion": 25,
+  "entry": "client/dist/index.html",
+  "name": "AI 每日早报",
+  "slug": "ai-2",
+  "managedCronJobs": []
+}

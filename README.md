@@ -13,6 +13,8 @@
 
 ## 檔案
 
+- `source/`：網站原始碼（React 前端＋ TypeScript 後端＋ Drizzle 資料庫，閱讀進度存於資料庫）。`source/client/src/data/issues.ts` 為佔位範例期數，真實期數資料在 `issues/`。
+- `issues/`：每期 JSON 資料，檔名 `<YYYY-MM-DD>.json`。
 - `docs/`：每期一份獨立 HTML 存檔（暖紙版），檔名 `AI每日資訊-<YYYY-MM-DD>.html`；`docs/index.html` 為往期歸檔首頁。
 - 每期保留一年，超過 365 天的舊期刪除。
 
