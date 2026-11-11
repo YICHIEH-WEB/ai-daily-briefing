@@ -8,7 +8,7 @@
 
 ## 怎麼做的
 
-- **信源固定 47 個**，每天依序掃描：官方部落格（OpenAI、Google DeepMind、Anthropic、Meta、Microsoft、NVIDIA）→ 英文科技媒體（The Verge、TechCrunch、MIT Technology Review、Ars Technica、Bloomberg、Reuters、Wired、VentureBeat）→ 中文與台灣媒體 18 個 → 模型跑分榜 7 個（LMArena、Artificial Analysis、Hugging Face、Aider、SWE-bench、HELM、LiveBench）→ 社群 8 個（X、Reddit、Hacker News、Hugging Face 熱門榜、微博、知乎）。
+- **信源固定 38 個**，每天依序掃描：官方部落格（Google DeepMind、Anthropic、Microsoft、NVIDIA）→ 英文科技媒體（The Verge、TechCrunch、MIT Technology Review、Ars Technica、Wired）→ 中文與台灣媒體 15 個 → 模型跑分榜 7 個（LMArena、Artificial Analysis、Hugging Face、Aider、SWE-bench、HELM、LiveBench）→ 社群 7 個（X、Reddit、Hacker News、Hugging Face 熱門榜、知乎）。（2026-11-11 起，被機器人阻擋的 9 個來源不再掃描。）
 - **日期核驗（方案 B）**：發布類條目須有兩個獨立來源給出同一事件日期，或以官方公告核對；核對不上就降級為「據 X 報導」且不寫斷言日期，或直接棄用。絕不拿文章發布日期當事件日期。
 - **只收過去 24 小時內的 AI 新聞**；同一事件合併成一條；湊不夠 15 條就老實說條數不足，不硬湊。
 - 全部內容一律繁體中文（台灣用法）。
