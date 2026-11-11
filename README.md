@@ -4,6 +4,8 @@
 
 線上看：https://YICHIEH-WEB.github.io/ai-daily-briefing/
 
+靜態版（portfolio 用）：https://yichieh-web.github.io/ai-daily-briefing/ai-daily-briefing-static.html
+
 ## 怎麼做的
 
 - **信源固定 47 個**，每天依序掃描：官方部落格（OpenAI、Google DeepMind、Anthropic、Meta、Microsoft、NVIDIA）→ 英文科技媒體（The Verge、TechCrunch、MIT Technology Review、Ars Technica、Bloomberg、Reuters、Wired、VentureBeat）→ 中文與台灣媒體 18 個 → 模型跑分榜 7 個（LMArena、Artificial Analysis、Hugging Face、Aider、SWE-bench、HELM、LiveBench）→ 社群 8 個（X、Reddit、Hacker News、Hugging Face 熱門榜、微博、知乎）。
