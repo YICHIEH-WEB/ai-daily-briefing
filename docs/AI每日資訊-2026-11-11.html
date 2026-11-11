@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 每日早報 · 2026-11-11</title>
+<style>
+  :root{
+    --bg:#faf8f4; --card:#fffdf9; --ink:#1d1915; --muted:#71685b; --faint:#a39a8a;
+    --hairline:#e9e0d0; --border:#ece3d2;
+    --ember:#b45309; --ember-deep:#8a3d05; --gold:#d9a441;
+    --serif:ui-serif,"Songti TC","STSong","Noto Serif TC","Noto Serif CJK TC",serif;
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+    --dot-model:#b45309; --dot-funding:#3f7a4e; --dot-policy:#8a5a83;
+    --dot-app:#2f7d7a; --dot-oss:#5b6470; --dot-research:#7a6a9a; --dot-other:#a89f90;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#14110d; --card:#1d1814; --ink:#f1ebe0; --muted:#a79d8c; --faint:#6f665a;
+      --hairline:#2b251e; --border:#372d21;
+      --ember:#e5a05c; --ember-deep:#f2bc7d; --gold:#d9a441;
+      --dot-model:#e5a05c; --dot-funding:#82bd8d; --dot-policy:#c69dc2;
+      --dot-app:#82c6c1; --dot-oss:#9aa3ad; --dot-research:#b3a1d6; --dot-other:#8d8474;
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","PingFang SC","Hiragino Sans GB","Microsoft JhengHei","Noto Sans TC",sans-serif;
+    line-height:1.75;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:680px;margin:0 auto;padding:36px 16px 72px}
+  .masthead{margin-bottom:30px}
+  .brand{display:flex;align-items:center;gap:9px;margin-bottom:14px}
+  .brand .mark{width:9px;height:9px;background:var(--ember);border-radius:2px;flex-shrink:0}
+  .brand .bt{font-family:var(--mono);font-size:11px;letter-spacing:.3em;color:var(--muted)}
+  .masthead h1{font-family:var(--serif);font-size:36px;font-weight:700;margin:0 0 8px;letter-spacing:.08em}
+  .dateline{font-size:14.5px;color:var(--muted);margin:0 0 4px}
+  .dayline{font-family:var(--mono);font-size:11px;letter-spacing:.22em;color:var(--faint);margin:0 0 4px}
+  .meta{font-size:12.5px;color:var(--faint);margin:0}
+  .signal{height:3px;margin-top:20px;border-radius:2px;
+    background:linear-gradient(90deg,var(--ember) 0%,var(--gold) 45%,transparent 100%)}
+  .hero{font-family:var(--serif);font-size:15.5px;line-height:1.85;margin:0 0 30px}
+  section{margin-bottom:38px}
+  .sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:16px}
+  .sec-num{font-family:var(--mono);font-size:12px;color:var(--ember);letter-spacing:.1em;flex-shrink:0}
+  .sec-head h2{font-size:15px;margin:0;letter-spacing:.14em;font-weight:700;flex-shrink:0}
+  .sec-head .rule{flex:1;height:1px;background:var(--hairline);transform:translateY(-4px)}
+  .tldr{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px 20px 20px 12px}
+  .tldr ol{margin:0;padding-left:26px}
+  .tldr li{margin:8px 0;font-size:14px}
+  .tldr li::marker{font-family:var(--mono);font-size:12px;color:var(--ember)}
+  .tldr a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--faint)}
+  .tldr a:hover{color:var(--ember);border-bottom-color:var(--ember)}
+  .top3{display:grid;gap:10px}
+  .mini{position:relative;background:var(--card);border:1px solid var(--border);border-radius:12px;
+    padding:15px 18px 15px 20px;overflow:hidden}
+  .mini::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
+    background:linear-gradient(var(--ember),var(--gold))}
+  .mini .rank{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--ember);display:block;margin-bottom:6px}
+  .mini a{color:var(--ink);text-decoration:none;font-weight:700;font-size:15px}
+  .mini a:hover{color:var(--ember)}
+  .mini p{margin:7px 0 0;font-size:13.5px;color:var(--muted)}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:14px;
+    padding:22px 20px;margin-bottom:14px;scroll-margin-top:16px}
+  .card .head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+  .num{font-family:var(--mono);font-size:12px;color:var(--faint);letter-spacing:.08em}
+  .card.is-top .num{color:var(--ember);font-weight:700}
+  .tag{display:inline-flex;align-items:center;font-size:11.5px;padding:2px 10px;border-radius:999px;
+    border:1px solid var(--border);color:var(--muted)}
+  .tag::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--dot,var(--faint));margin-right:7px;flex-shrink:0}
+  .tag-model{--dot:var(--dot-model)}
+  .tag-funding{--dot:var(--dot-funding)}
+  .tag-policy{--dot:var(--dot-policy)}
+  .tag-app{--dot:var(--dot-app)}
+  .tag-oss{--dot:var(--dot-oss)}
+  .tag-research{--dot:var(--dot-research)}
+  .tag-other{--dot:var(--dot-other)}
+  .card h3{font-family:var(--serif);font-size:19px;margin:2px 0 5px;line-height:1.55;font-weight:700}
+  .card .en{font-size:12.5px;color:var(--faint);margin:0 0 10px;font-style:italic}
+  .card .lede{font-size:14px;color:var(--muted);margin:0 0 12px;padding-left:10px;border-left:2px solid var(--ember)}
+  .card p.body{font-size:14.5px;margin:0 0 10px;text-align:justify}
+  .card .foot{margin-top:14px;padding-top:12px;border-top:1px dashed var(--hairline);
+    font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 14px}
+  .card .foot a{color:var(--ember);text-decoration:none}
+  .card .foot a:hover{text-decoration:underline}
+  .card .foot .note{flex-basis:100%}
+  .src-label{font-weight:700;color:var(--muted)}
+  footer{border-top:1px solid var(--hairline);padding-top:20px;color:var(--muted);font-size:13px}
+  footer p{margin:0}
+  @media (max-width:560px){
+    .masthead h1{font-size:29px}
+    .card{padding:18px 16px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand"><span class="mark"></span><span class="bt">AI DAILY BRIEFING</span></div>
+    <h1>AI 每日早報</h1>
+    <p class="dateline">2026 年 11 月 11 日 · 星期三</p>
+    <p class="dayline">WEDNESDAY · 台北時間</p>
+    <p class="meta">時間視窗：2026-11-10 09:00 至 2026-11-11 09:00（台北時間）· 共 15 條</p>
+    <div class="signal"></div>
+  </header>
+  <p class="hero">過去 24 小時，Anthropic 以 1.4 兆美元估值啟動史上最大 AI 上市路演，Google 兩線出招：最強模型全面開放、人形機器人上產線；台積電則首度以股東身分押注兩家模型公司。</p>
+  <section>
+    <div class="sec-head"><span class="sec-num">01</span><h2>一句話速覽</h2><span class="rule"></span></div>
+    <div class="tldr"><ol>
+      <li><a href="#card-1">Anthropic 啟動 IPO 路演，完全稀釋估值上看 1.4 兆美元。</a></li>
+      <li><a href="#card-2">Google 全面開放 Gemini 4 Carbon，鎖定高難度代理式工作流程。</a></li>
+      <li><a href="#card-3">DeepMind 發表 Gemini Robotics 2.5，賓士產線人形機器人成功率 96%。</a></li>
+      <li><a href="#card-4">Anthropic 推出 Claude Meetings、白板與試算表，把 Claude 推進辦公生產力市場。</a></li>
+      <li><a href="#card-5">OpenAI 在 ChatGPT 推出商家功能，商家可認領檔案、開設 AI 商務代理。</a></li>
+      <li><a href="#card-6">台積電董事會核准最高 10 億美元，投資 Anthropic 與 OpenAI。</a></li>
+      <li><a href="#card-7">紐約州 RAISE 法案登記上路，大型前沿 AI 開發者須於 2027 年 1 月 1 日前註冊。</a></li>
+      <li><a href="#card-8">Adobe MAX：Creative Cloud 開放第三方 AI 代理，MCP 整合 2027 年初測試。</a></li>
+      <li><a href="#card-9">微軟遊說川普政府，阻擋中國製光收發器進口禁令。</a></li>
+      <li><a href="#card-10">Fable 5.2 在真實接案基準 Remote Labor Index 拿下 41.3%，一年前最佳僅 2.5%。</a></li>
+      <li><a href="#card-11">OpenAI 與 Upwork 聯合研究：AI 相關接案預算高 52%，但時薪幾乎沒漲。</a></li>
+      <li><a href="#card-12">輝達投資的 Fireworks AI 數週內二度遭駭，客戶資料與未完成模型外洩。</a></li>
+      <li><a href="#card-13">ChatGPT Enterprise 登上 AWS Marketplace，可計入企業採購承諾。</a></li>
+      <li><a href="#card-14">Meta 的 Muse 助手登陸 Apple Watch 與 Wear OS，可語音通話、傳訊與聽寫。</a></li>
+      <li><a href="#card-15">Google Maps 進駐 AI Studio：用一句話就能做出地圖 App。</a></li>
+    </ol></div>
+  </section>
+  <section>
+    <div class="sec-head"><span class="sec-num">02</span><h2>今日頭條</h2><span class="rule"></span></div>
+    <div class="top3">
+      <div class="mini"><span class="rank">01</span><a href="#card-1">Anthropic 啟動 IPO 路演，完全稀釋估值上看 1.4 兆美元</a><p>公開募資最高 643.5 億美元、另加 260 億美元私募配售，前三季營收 332 億美元、年增約 12 倍。</p></div>
+      <div class="mini"><span class="rank">02</span><a href="#card-2">Google 全面開放 Gemini 4 Carbon，鎖定高難度代理式工作流程</a><p>兩週前僅開放資安團隊，如今向付費開發者與企業全面開放，入門價低於 Claude Fable 5.2。</p></div>
+      <div class="mini"><span class="rank">03</span><a href="#card-3">DeepMind 發表 Gemini Robotics 2.5，賓士產線人形機器人成功率 96%</a><p>200 多項任務成功率提升三成至一倍，賓士產線實測分揀裝箱成功率 96%。</p></div>
+    </div>
+  </section>
+  <section>
+    <div class="sec-head"><span class="sec-num">03</span><h2>全部資訊</h2><span class="rule"></span></div>
+    <article class="card is-top" id="card-1">
+      <div class="head"><span class="num">01</span><span class="tag tag-funding">融資</span></div>
+      <h3>Anthropic 啟動 IPO 路演，完全稀釋估值上看 1.4 兆美元</h3>
+      <p class="en">Anthropic launches IPO roadshow, targeting a massive $1.4 trillion valuation</p>
+      <p class="lede">Anthropic 啟動 IPO 路演，完全稀釋估值上看 1.4 兆美元。</p>
+      <p class="body">Anthropic 在 11 月 10 日正式啟動 IPO 路演，計畫發行 8.25 億股 A 類普通股，定價區間為每股 70 至 78 美元。</p>
+      <p class="body">公開募資最高約 643.5 億美元，另有 Google、輝達、AMD、微軟、台積電等七家科技公司參與的 260 億美元私募配售，合計募資規模最高可達約 904 億美元。</p>
+      <p class="body">按完全稀釋計算，估值最高約 1.4 兆美元；若只算已發行股數，估值約 1 兆美元，仍低於市場先前傳出的 1.5 兆至 2 兆美元預期。</p>
+      <p class="body">修正版招股書同時揭露財務數字：2026 年前三季營收 332 億美元，較去年同期成長約 12 倍，年化營收截至 10 月 31 日約 810 億美元。</p>
+      <p class="body">不過高速成長背後是沉重的資本開支，算力與基礎設施採購承諾總額高達約 9,009 億美元，其中約 707 億美元將在 12 個月內到期。</p>
+      <p class="body">股票預計在 Nasdaq 以代號 ANT 掛牌，路透引述消息稱最快 11 月 19 日開始交易，但公司未公布確切日期。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.channelnewsasia.com/business/anthropic-eyes-14-trillion-ipo-valuation-in-test-wall-streets-ai-fervor-6539066" target="_blank" rel="noopener">Reuters（經 CNA 轉載）</a><a href="https://www.neowin.net/news/anthropic-kicks-off-ipo-roadshow-targeting-a-massive-14-trillion-valuation/" target="_blank" rel="noopener">Neowin</a><span class="note">釋出時間：2026-11-10（路透同日報導；Neowin 報導時間為 2026-11-10 11:52 美東時間，相當於台北時間 11 月 11 日 00:52）</span></div>
+    </article>
+    <article class="card is-top" id="card-2">
+      <div class="head"><span class="num">02</span><span class="tag tag-model">模型</span></div>
+      <h3>Google 全面開放 Gemini 4 Carbon，鎖定高難度代理式工作流程</h3>
+      <p class="en">Gemini 4 Carbon is now available</p>
+      <p class="lede">Google 全面開放 Gemini 4 Carbon，鎖定高難度代理式工作流程。</p>
+      <p class="body">Google DeepMind 在 11 月 10 日宣布，Gemini 4 Carbon 即日起向付費開發者、企業與 Google AI Ultra 訂戶全面開放。</p>
+      <p class="body">Carbon 是 Google 自稱最強的模型，主打長程代理式工作流程、軟體工程、科學推理與網路安全能力，可透過 Gemini API、AI Studio、Gemini for business、Gemini App、搜尋 AI Mode 與 Antigravity 使用。</p>
+      <p class="body">需要留意的是，模型本身早在 10 月 28 日就已發表，兩週前僅先開放給 Fairwind 計畫的資安團隊，這次是全面開放，不是首發。</p>
+      <p class="body">入門定價為每百萬輸入 tokens 2 美元、輸出 10 美元，11 月 30 日後調漲為 4 美元與 20 美元，低於同級的 Claude Fable 5.2。</p>
+      <p class="body">Google 同日還在 Antigravity 預告多智能體協作功能「/swarm」，一個提示就能組成一支可即時追蹤的代理團隊。</p>
+      <p class="body">另外，Google 將提供 1 萬名科學家免費使用 Carbon 六個月，協助科研工作。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://deepmind.google/blog/gemini-4-carbon-is-now-available/" target="_blank" rel="noopener">Google DeepMind 官方</a><a href="https://venturebeat.com/technology/google-gemini-4-carbon-is-now-publicly-available-and-it-undercuts-claude-fable-5-2-and-opus-5-5-on-api-price" target="_blank" rel="noopener">VentureBeat</a><span class="note">釋出時間：2026-11-10（Google DeepMind 官方部落格標示日期；Engadget 報導時間為 2026-11-10T16:00:00+00:00，相當於台北時間 11 月 11 日 00:00）</span></div>
+    </article>
+    <article class="card is-top" id="card-3">
+      <div class="head"><span class="num">03</span><span class="tag tag-model">模型</span></div>
+      <h3>DeepMind 發表 Gemini Robotics 2.5，賓士產線人形機器人成功率 96%</h3>
+      <p class="en">Gemini Robotics 2.5: Accelerating Physical Intelligence</p>
+      <p class="lede">DeepMind 發表 Gemini Robotics 2.5，賓士產線人形機器人成功率 96%。</p>
+      <p class="body">Google DeepMind 在 11 月 10 日發表迄今最強的視覺—語言—動作模型 Gemini Robotics 2.5，主打讓機器人更快學會真實世界的技能。</p>
+      <p class="body">在 200 多項任務測試中，成功率較先前基準提升 30% 至 100%，任務完成速度快 20% 至 30%，涵蓋使用日常工具、處理易碎與柔軟物件等細緻操作。</p>
+      <p class="body">模型已實際部署於賓士位於匈牙利凱奇凱梅特與德國辛德芬根的產線，由 Apptronik 的 Apollo 2 人形機器人執行汽車零件分揀裝箱，成功率達 96%。</p>
+      <p class="body">安全方面，DeepMind 同日開源 ASIMOV-Jailbreak 機器人安全基準，測試模型是否會被誘導執行不安全動作；Gemini 4 Argon 的越獄抵抗率達 99.5%，高於先前基準的 82%。</p>
+      <p class="body">不過 Robotics 2.5 目前僅提供給 Google 的機器人合作夥伴，尚未全面開放，一般開發者還用不到。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/" target="_blank" rel="noopener">Google DeepMind 官方</a><a href="https://mezha.net/eng/news/mezha-76165dd7fb3fabecc2835bf4_deepmind_unveils_gemini/" target="_blank" rel="noopener">Mezha（轉述 Ars Technica）</a><span class="note">釋出時間：2026-11-10（Google DeepMind 官方部落格標示日期；Mezha 轉述 Ars Technica 報導時間為 2026-11-10T15:28:17+00:00，相當於台北時間 11 月 10 日 23:28）</span></div>
+    </article>
+    <article class="card" id="card-4">
+      <div class="head"><span class="num">04</span><span class="tag tag-app">應用</span></div>
+      <h3>Anthropic 把 Claude 變成辦公室套件：會議、白板、試算表一次到位</h3>
+      <p class="en">Anthropic launches Claude Meetings to turn workplace discussions into plans and tasks</p>
+      <p class="lede">Anthropic 推出 Claude Meetings、白板與試算表，把 Claude 推進辦公生產力市場。</p>
+      <p class="body">Anthropic 在 11 月 10 日的舊金山活動上推出四項職場功能，把 Claude 直接推進微軟與 Google 長期主導的辦公生產力市場。</p>
+      <p class="body">Claude Meetings 可加入 Google Meet 視訊會議，擔任可見的與會者，即時跟進討論、起草計畫並產出行動項目，目前為 Team 與 Enterprise 方案測試版。</p>
+      <p class="body">Claude Whiteboards 提供與 Claude 共用的協作白板，可把討論轉成帶時程與負責人的計畫；Claude Sheets 則可依提示建立含公式與多分頁的試算表，兩者皆為付費方案測試版。</p>
+      <p class="body">原名 Dashboards 的 Claude Data 同日正式全面開放，可串接 Snowflake、Salesforce 等企業資料來源生成儀表板。</p>
+      <p class="body">這次發表恰逢 Anthropic 啟動 IPO 路演同日，產品線從程式開發擴張到一般辦公場景，也讓投資人看到更寬的營收想像空間。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://techcrunch.com/2026/11/10/anthropic-launches-claude-meetings-to-turn-workplace-discussions-into-plans-and-tasks/" target="_blank" rel="noopener">TechCrunch</a><a href="https://gulfnews.com/technology/companies/claude-can-now-join-work-meetings-and-complete-tasks-as-you-talk-1.500743080" target="_blank" rel="noopener">Gulf News</a><span class="note">釋出時間：2026-11-10T17:30:00+00:00（UTC，相當於台北時間 11 月 11 日 01:30；Gulf News 同日報導時間為 23:52:14+04:00）</span></div>
+    </article>
+    <article class="card" id="card-5">
+      <div class="head"><span class="num">05</span><span class="tag tag-app">應用</span></div>
+      <h3>OpenAI 在 ChatGPT 推出商家功能：可認領檔案、開設 AI 商務代理</h3>
+      <p class="en">OpenAI lets businesses claim ChatGPT profiles, adds AI agents for US e-commerce firms</p>
+      <p class="lede">OpenAI 在 ChatGPT 推出商家功能，商家可認領檔案、開設 AI 商務代理。</p>
+      <p class="body">OpenAI 在 11 月 10 日於 ChatGPT 推出 Businesses 測試版，商家可透過 Business Hub 認領並驗證商家檔案、更新資訊、查看 ChatGPT 提及次數與導流數據。</p>
+      <p class="body">符合資格的美國電商與線上服務商家還可發布 Business Agent，直接與消費者對話、回答產品與服務問題。</p>
+      <p class="body">OpenAI 表示不會把使用者對話分享給商家，商家也可付費把自家代理設為 ChatGPT 廣告的導向目標，贊助版位會標示清楚。</p>
+      <p class="body">這是 ChatGPT 從問答工具走向商家搜尋與導購平台的一步，直接與 Google 商家檔案正面競爭。</p>
+      <p class="body">目前 Business Agent 初期僅限美國電商與線上服務業，其他地區與產業的上線時間尚未公布。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.reuters.com/technology/openai-lets-businesses-claim-chatgpt-profiles-adds-ai-agents-us-e-commerce-firms-2026-11-10/" target="_blank" rel="noopener">Reuters</a><a href="https://www.unite.ai/openai-launches-business-hub-and-business-agents-in-chatgpt/" target="_blank" rel="noopener">Unite.AI</a><span class="note">釋出時間：2026-11-10T18:02:24+00:00（UTC，相當於台北時間 11 月 11 日 02:02）</span></div>
+    </article>
+    <article class="card" id="card-6">
+      <div class="head"><span class="num">06</span><span class="tag tag-funding">融資</span></div>
+      <h3>台積電董事會核准最高 10 億美元，投資 Anthropic 與 OpenAI</h3>
+      <p class="en">TSMC earmarks up to $1bn to buy Anthropic and OpenAI shares</p>
+      <p class="lede">台積電董事會核准最高 10 億美元，投資 Anthropic 與 OpenAI。</p>
+      <p class="body">台積電 11 月 10 日召開董事會，通過以最高各 5 億美元認購 Anthropic 普通股（按 IPO 價格）與 OpenAI 優先股，合計上限 10 億美元。</p>
+      <p class="body">Anthropic 的 5 億美元屬於其 260 億美元私募配售的一部分；OpenAI 則預計 2027 年上市，兩案的實際金額、持股比例與完成時間都還待後續揭露。</p>
+      <p class="body">同場董事會還首度決議成立投資公司，另編列約 409 億美元資本預算擴充先進製程與封裝產能，並將第三季每股現金股利提高到 9 元新台幣、創單季新高。</p>
+      <p class="body">這項決議打破台積電長期不投資客戶、維持中立的慣例，反映其從晶片製造商延伸為 AI 模型公司股東的戰略轉向。</p>
+      <p class="body">需要留意的是，董事會核准的是投資上限而非已完成投資，市場不宜直接解讀為 10 億美元已經入帳。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://asia.nikkei.com/business/technology/artificial-intelligence/tsmc-earmarks-up-to-1bn-to-buy-anthropic-and-openai-shares" target="_blank" rel="noopener">Nikkei Asia</a><a href="https://www.techtimes.com/articles/330397/20261110/tsmc-approves-500-million-anthropic-ipo-stake-anthropic-filing-flags-tsmc-chip-supply-risk.htm" target="_blank" rel="noopener">TechTimes</a><span class="note">釋出時間：2026-11-10T23:19:00+09:00（日本標準時間，相當於台北時間 11 月 10 日 22:19；TechTimes 同日報導時間為 13:48:23-05:00 美東時間）</span></div>
+    </article>
+    <article class="card" id="card-7">
+      <div class="head"><span class="num">07</span><span class="tag tag-policy">政策</span></div>
+      <h3>紐約州 RAISE 法案登記上路，大型前沿 AI 開發者須於 2027 年 1 月 1 日前註冊</h3>
+      <p class="en">New York opens AI safety registration ahead of 2027 law</p>
+      <p class="lede">紐約州 RAISE 法案登記上路，大型前沿 AI 開發者須於 2027 年 1 月 1 日前註冊。</p>
+      <p class="body">紐約州州長 Hochul 在 11 月 10 日宣布開放 RAISE 法案（負責任 AI 安全與教育法）登記入口，年營收逾 5 億美元、訓練算力逾 10²⁶ 次運算的大型前沿模型開發者，須於 2027 年 1 月 1 日法案生效前完成登記。</p>
+      <p class="body">預料 OpenAI 與 Anthropic 均在適用範圍，法案要求業者公布安全框架、發布模型透明度報告，並在 72 小時內通報重大安全事故。</p>
+      <p class="body">違規罰款最高單次 100 萬美元、再犯 300 萬美元，由新設的 DIGIT 辦公室負責執行。</p>
+      <p class="body">同日州政府也在 Binghamton 大學成立紐約 AI 責任與研究中心，獨立測試前沿模型安全。</p>
+      <p class="body">紐約是美國第一批把 AI 安全揭露寫成法定義務的州，這套登記加罰款的做法，可能成為其他州跟進的範本。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://techcrunch.com/2026/11/10/openai-anthropic-face-new-oversight-as-new-yorks-ai-safety-law-takes-effect/" target="_blank" rel="noopener">TechCrunch</a><a href="https://oossa.com/en/new-york-opens-ai-safety-registration-ahead-of-2027-law" target="_blank" rel="noopener">Oossa</a><span class="note">釋出時間：2026-11-10T20:52:13+00:00（UTC，相當於台北時間 11 月 11 日 04:52；Oossa 同日報導時間為 21:13:45 UTC）</span></div>
+    </article>
+    <article class="card" id="card-8">
+      <div class="head"><span class="num">08</span><span class="tag tag-app">應用</span></div>
+      <h3>Adobe MAX：Creative Cloud 全面開放給第三方 AI 代理，MCP 整合 2027 年初測試</h3>
+      <p class="en">Adobe Opens Photoshop and Premiere to Third-Party AI Agents</p>
+      <p class="lede">Adobe MAX：Creative Cloud 開放第三方 AI 代理，MCP 整合 2027 年初測試。</p>
+      <p class="body">Adobe 在 11 月 10 日的 MAX 大會宣布，Creative Agent 進駐 Premiere、Illustrator、InDesign、After Effects 與 Frame.io，可依自然語言指令執行多步驟剪輯任務。</p>
+      <p class="body">同時預告 Creative Cloud 本地 MCP 整合，讓 OpenAI、Google、Anthropic 等第三方 AI 代理可直接在本機操作 Photoshop 等軟體的原生專案檔，保留圖層可編輯性。</p>
+      <p class="body">不過 MCP 整合與常駐代理僅為預告，預計 2027 年初才進入私人測試，不可寫成即日可用。</p>
+      <p class="body">此外 Firefly 推出 Design、Graph 與 Builder 等新工作區，Photoshop 新增 Relight 與 Generative Restyle 功能。</p>
+      <p class="body">這是 Adobe 歷來最大幅度的開放動作，等於承認創作者的 AI 助手不一定是自家產品，平台策略從封閉走向相容。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.pymnts.com/news/artificial-intelligence/2026/adobe-opens-photoshop-and-premiere-to-third-party-ai-agents/" target="_blank" rel="noopener">PYMNTS</a><a href="https://smallbiztrends.com/adobe-expands-creative-cloud-ai-agents-and-editing-tools/" target="_blank" rel="noopener">Small Business Trends</a><span class="note">釋出時間：2026-11-10T19:21:37+00:00（UTC，相當於台北時間 11 月 11 日 03:21；Small Business Trends 同日報導時間為 15:12:14 UTC）</span></div>
+    </article>
+    <article class="card" id="card-9">
+      <div class="head"><span class="num">09</span><span class="tag tag-policy">政策</span></div>
+      <h3>微軟遊說川普政府，阻擋中國製光收發器進口禁令</h3>
+      <p class="en">Microsoft presses Trump to scuttle expected ban on Chinese data center technology</p>
+      <p class="lede">微軟遊說川普政府，阻擋中國製光收發器進口禁令。</p>
+      <p class="body">據路透 11 月 10 日獨家報導，微軟正向川普政府遊說，要求擱置禁止進口中國製新型光收發器的計畫。</p>
+      <p class="body">光收發器是 AI 資料中心內以光纖高速傳輸資料的關鍵零件，中國廠商約占全球市場三分之二；美國政府擔心北京可能藉此竊取資料、植入惡意程式或中斷服務，FCC 正在研議禁令。</p>
+      <p class="body">微軟在美國有 35 座資料中心興建中、另有 134 座規劃中，9 月已與白宮科技政策辦公室及國安會官員會面示警供應鏈風險。</p>
+      <p class="body">可能的折衷方案是僅限制 3.2 Tbps 規格產品，該規格預計 2028 年才量產，普及安裝則要到 2029 年。</p>
+      <p class="body">這場遊說凸顯 AI 基建競賽的另一面：禁令的國安邏輯與資料中心擴建速度的現實需求，正在同一張談判桌上拉扯。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.reuters.com/business/media-telecom/microsoft-presses-trump-scuttle-expected-ban-chinese-data-center-technology-2026-11-10/" target="_blank" rel="noopener">Reuters</a><a href="https://m.economictimes.com/tech/technology/microsoft-presses-president-trump-to-scuttle-expected-ban-on-chinese-data-centre-technology/amp_articleshow/135709777.cms" target="_blank" rel="noopener">Economic Times（轉載路透）</a><span class="note">釋出時間：2026-11-10（路透同日報導；Economic Times 轉載時間為 2026-11-10T17:13:00+05:30，相當於台北時間 11 月 10 日 19:43）</span></div>
+    </article>
+    <article class="card" id="card-10">
+      <div class="head"><span class="num">10</span><span class="tag tag-research">研究</span></div>
+      <h3>Fable 5.2 在真實接案基準 Remote Labor Index 拿下 41.3%，一年前最佳僅 2.5%</h3>
+      <p class="en">Anthropic&#x27;s Fable 5.2 completes 41 percent of real freelance jobs, up from 2.5 percent a year ago</p>
+      <p class="lede">Fable 5.2 在真實接案基準 Remote Labor Index 拿下 41.3%，一年前最佳僅 2.5%。</p>
+      <p class="body">Scale Labs 與 AI 安全中心（CAIS）合作的 Remote Labor Index 在 11 月 10 日更新榜單，Claude Fable 5.2 以 41.3% 的自動化率居首。</p>
+      <p class="body">這代表它能以客戶可接受的專業品質完成 41.3% 的真實接案工作，約為第二名 Opus 5.5（21.25%）與第三名 GPT-6 Astra（20.83%）的兩倍。</p>
+      <p class="body">該基準由 240 項來自 Upwork 的真實已完成專案組成，總值約 14.4 萬美元，平均每案 632.60 美元、約 29 小時人力。</p>
+      <p class="body">一年前榜單推出時最佳系統僅 2.5%，今年 7 月 Fable 5 約 16%，顯示長程代理式工作的能力正在快速爬升。</p>
+      <p class="body">不過動畫與工業產品設計仍是 AI 最弱的環節，而且這項分數源自 Anthropic 發布時自家公布的測試數據，仍待獨立驗證。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://the-decoder.com/anthropics-fable-5-2-completes-41-percent-of-real-freelance-jobs-up-from-2-5-percent-a-year-ago/" target="_blank" rel="noopener">The Decoder</a><a href="https://aiparabellum.com/claude-fable-5-2-tops-remote-labor-index/" target="_blank" rel="noopener">AI Parabellum</a><span class="note">釋出時間：2026-11-10T14:15:56+00:00（UTC，相當於台北時間 11 月 10 日 22:15；41.3% 的數字源自 Anthropic 11 月 9 日發布時的自家測試數據，本期為榜單 11 月 10 日更新後的報導）</span></div>
+    </article>
+    <article class="card" id="card-11">
+      <div class="head"><span class="num">11</span><span class="tag tag-research">研究</span></div>
+      <h3>OpenAI 與 Upwork 聯合研究：AI 相關接案預算高 52%，但時薪幾乎沒漲</h3>
+      <p class="en">OpenAI Study Finds AI Freelance Projects Carry Larger Budgets</p>
+      <p class="lede">OpenAI 與 Upwork 聯合研究：AI 相關接案預算高 52%，但時薪幾乎沒漲。</p>
+      <p class="body">OpenAI 經濟研究團隊與 Upwork 在 11 月 10 日發表「Work at the Frontier」系列研究《The Rebundling of Freelance Work in the AI Age》，比對 ChatGPT 使用行為與 Upwork 刊登職缺。</p>
+      <p class="body">研究發現，AI 相關接案的固定價格預算比同類非 AI 專案高 52.4%，受僱後前 90 天工時多 40.6%，但刊登時薪僅高 1.5%。</p>
+      <p class="body">換句話說，專案規模變大、工時變長，但時薪並沒有跟著溢價，接案者的收入成長來自接更大的案子，而非單價上漲。</p>
+      <p class="body">在 63 類工作中，43 類呈現「ChatGPT 上常見的任務，在 Upwork 需求占比下滑」的模式，另有 20 類反向；AI 相關職缺的任務組合多樣性自 2023 年初以來提升約 45%。</p>
+      <p class="body">研究強調這是關聯性而非因果關係，不能直接解讀為 AI 造成接案市場的這些變化。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.unite.ai/openai-study-finds-ai-freelance-projects-carry-larger-budgets/" target="_blank" rel="noopener">Unite.AI</a><a href="https://www.europesays.com/ai/235645/" target="_blank" rel="noopener">EuropeSays</a><span class="note">釋出時間：2026-11-10T16:47:00+00:00（UTC，相當於台北時間 11 月 11 日 00:47）</span></div>
+    </article>
+    <article class="card" id="card-12">
+      <div class="head"><span class="num">12</span><span class="tag tag-other">其他</span></div>
+      <h3>輝達投資的 Fireworks AI 數週內二度遭駭，客戶資料與未完成模型外洩</h3>
+      <p class="en">Nvidia-Backed Fireworks AI Notifies Customers of Its Second Hack in Weeks</p>
+      <p class="lede">輝達投資的 Fireworks AI 數週內二度遭駭，客戶資料與未完成模型外洩。</p>
+      <p class="body">據彭博 11 月 10 日報導，輝達投資的 AI 推論平台 Fireworks AI 在 11 月 9 日通知客戶，公司二度遭駭。</p>
+      <p class="body">未經授權的第三方入侵代管 Fireworks 機器的外部雲端供應商，進而進入開發機器，事件發生於 10 月 24 日，涉及數萬個檔案，部分含有客戶資料。</p>
+      <p class="body">公司同時更新 10 月初首起事件的調查結果，確認該事件已波及客戶帳戶與帳單資訊，部分客戶的資料集與未完成模型權重亦受影響；發言人點名 Notion 與 Cursor 為受影響客戶。</p>
+      <p class="body">Fireworks 將攻擊歸因於以竊取模型存取權轉售牟利的 LLMjacking 集團，並已偕同 Palo Alto Networks 調查、通報執法單位。</p>
+      <p class="body">首起事件發生在 10 月初，當時是未經授權使用內部憑證存取客戶帳戶；兩起事件相隔僅約兩週，凸顯 AI 推論平台正成為駭客鎖定的高價值目標。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.claimsjournal.com/news/national/2026/11/10/341221.htm" target="_blank" rel="noopener">Bloomberg（經 Claims Journal 轉載）</a><a href="https://seekingalpha.com/news/4669516-nvidia-backed-fireworks-ai-hit-by-second-cyber-incident-exposes-data-report" target="_blank" rel="noopener">Seeking Alpha</a><span class="note">釋出時間：2026-11-10T16:22:45+00:00（UTC，相當於台北時間 11 月 11 日 00:22；入侵發生於 10 月 24 日，Fireworks 於 11 月 9 日通知客戶）</span></div>
+    </article>
+    <article class="card" id="card-13">
+      <div class="head"><span class="num">13</span><span class="tag tag-app">應用</span></div>
+      <h3>ChatGPT Enterprise 登上 AWS Marketplace，可計入企業採購承諾</h3>
+      <p class="en">ChatGPT Enterprise Lands on AWS Marketplace</p>
+      <p class="lede">ChatGPT Enterprise 登上 AWS Marketplace，可計入企業採購承諾。</p>
+      <p class="body">OpenAI 讓 ChatGPT Enterprise 透過 AWS Marketplace 販售，企業可沿用既有 AWS 採購與帳單關係購買，涵蓋 ChatGPT、ChatGPT Work、Codex 與 dots。</p>
+      <p class="body">符合資格的支出可計入 AWS 企業折扣計畫或私人定價協議承諾，對已有大額 AWS 合約的企業來說，等於把 AI 訂閱併進既有採購額度。</p>
+      <p class="body">這是採購通路的改變而非產品改變，OpenAI 仍負責產品體驗；上架採私人報價制，沒有公開定價。</p>
+      <p class="body">兩家公司去年 11 月簽署 380 億美元多年算力協議，今年 4 月已在 Bedrock 上線 OpenAI 模型，這次是合作的下一步。</p>
+      <p class="body">需要注意的是，透過 Marketplace 購買不等於資料全數留在 AWS 環境，推論資料落地位置另有規範，企業採購前須向帳戶團隊確認資格與條款。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://opentools.ai/news/chatgpt-enterprise-aws-marketplace-november-2026" target="_blank" rel="noopener">OpenTools</a><a href="https://www.unite.ai/openai-starts-selling-chatgpt-enterprise-through-aws-marketplace/" target="_blank" rel="noopener">Unite.AI</a><span class="note">釋出時間：2026-11-10（OpenTools 同日報導；OpenAI 官方宣布日為美國時間 11 月 9 日，媒體報導落在 11 月 10 日，屬邊界條目）</span></div>
+    </article>
+    <article class="card" id="card-14">
+      <div class="head"><span class="num">14</span><span class="tag tag-app">應用</span></div>
+      <h3>Meta 的 Muse 助手登陸 Apple Watch 與 Wear OS，可語音通話、傳訊與聽寫</h3>
+      <p class="en">Meta&#x27;s Muse AI Agent Comes to Apple Watch With Voice and Text Support</p>
+      <p class="lede">Meta 的 Muse 助手登陸 Apple Watch 與 Wear OS，可語音通話、傳訊與聽寫。</p>
+      <p class="body">Meta 宣布 AI 助手 Muse 登陸 Apple Watch 與 Wear OS 智慧手錶，使用者可直接在手腕上以語音通話、文字訊息或聽寫與助手互動。</p>
+      <p class="body">Apple Watch 版隨 Muse iOS App 15.0 版推出，需 watchOS 9.0 以上與 iOS 18 以上；Wear OS 版細節較少，仍待 Google Play 上架確認。</p>
+      <p class="body">Muse 上線 40 天內在美國下載量已破 1,000 萬次，此次是其推出 iPad App 後一個月內的又一次裝置擴張。</p>
+      <p class="body">手錶是最貼身的裝置形態，語音助手上腕意味著 Meta 想把 Muse 從手機裡的 App，變成隨時可喚的日常入口。</p>
+      <p class="body">不過手錶版能做多少事仍待實測，複雜任務很可能還是要回到手機或電腦上完成。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.macobserver.com/news/metas-muse-ai-agent-comes-to-apple-watch-with-voice-and-text-support/" target="_blank" rel="noopener">Mac Observer</a><a href="https://the-gadgeteer.com/2026/11/10/metas-muse-now-lives-on-apple-watch-and-wear-os/" target="_blank" rel="noopener">The Gadgeteer</a><span class="note">釋出時間：2026-11-10T18:38:00+02:00（東歐時間，相當於台北時間 11 月 11 日 00:38；Meta 官方宣布日為美國時間 11 月 9 日，媒體報導落在 11 月 10 日）</span></div>
+    </article>
+    <article class="card" id="card-15">
+      <div class="head"><span class="num">15</span><span class="tag tag-app">應用</span></div>
+      <h3>Google Maps 進駐 AI Studio：用一句話就能做出地圖 App</h3>
+      <p class="en">Google AI Studio Adds Google Maps Integration for Building Interactive Maps, Route Planning Apps</p>
+      <p class="lede">Google Maps 進駐 AI Studio：用一句話就能做出地圖 App。</p>
+      <p class="body">Google 宣布開發者現可在 AI Studio 內直接使用 Google Maps Platform，用自然語言描述想法，由 Gemini 生成具備真實地理資訊的 App。</p>
+      <p class="body">例如商店定位、路線規劃、即時空氣品質監測或電影感 3D 飛越，免去切換工作區設定帳單與 API 金鑰的步驟。</p>
+      <p class="body">實驗用的沙盒額度為每個 API 每日 100 次呼叫、免信用卡，正式上線則需連結 Google Cloud 帳單帳戶。</p>
+      <p class="body">這是 Google 把地圖能力打包進 AI 開發流程的一步：開發者不用再學地圖 API，只要會描述需求，就能做出帶真實地點的互動 App。</p>
+      <p class="body">不過沙盒額度僅供實驗，正式產品仍須接上計費帳戶；地圖資料的授權與用量計價，也要等實際上線後才看得清楚。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.gadgets360.com/ai/news/google-ai-studio-maps-integration-features-availability-12307153/amp" target="_blank" rel="noopener">Gadgets 360</a><a href="https://www.thetechoutlook.com/new-release/software-apps/developers-can-now-build-apps-powered-by-the-google-maps-platform-in-google-ai-studio/" target="_blank" rel="noopener">The Tech Outlook</a><span class="note">釋出時間：2026-11-10T14:09:00+05:30（印度標準時間，相當於台北時間 11 月 10 日 16:39；Google AI Studio 官方帳號發文日為 11 月 9 日，媒體報導落在 11 月 10 日）</span></div>
+    </article>
+  </section>
+  <footer>
+  <p>來源說明：本期 15 條皆來自官方部落格、英文與中文科技媒體、跑分榜與社群；發布類條目依方案 B 以兩個獨立來源核對事件日期，核對不上的已降級或棄用；發布時間不確定者標「未確認」，不猜測。</p>
+  </footer>
+</div>
+</body>
+</html>
