@@ -1,0 +1,785 @@
+{
+  "_說明": "AI 每日早報 2026-11-12 第三期真實資料。形狀同時對照包內兩份範例：source/client/src/data/issues.ts（構件實際渲染用的 issue 物件）與 05-樣例資料結構.json（anchor／category／entryNo／is_top3／one_line_summary／title_en／title_zh／summary_zh／sources{name,published_at,timezone,url} 欄位以 sources_detail 與對照欄位保留）。時間視窗：2026-11-11 09:00 至 2026-11-12 09:00（台北時間）。其中 3 條發表於台北時間 11 月 11 日凌晨、上一期截稿之後，內文已註明實際發表時間。",
+  "dateline": "2026 年 11 月 12 日 · 星期四",
+  "dayLine": "THURSDAY · 台北時間",
+  "hero": "過去 24 小時，輝達執行長黃仁勳陷入去留風暴，董事會傳擬撤換、國會擬傳喚；OpenAI 單季營收首破 100 億美元，Google 則連發決策型模型與協作工具。",
+  "is_latest": true,
+  "issue": "2026-11-12",
+  "label": "11-12",
+  "meta": "時間視窗：2026-11-11 09:00 至 2026-11-12 09:00（台北時間）· 共 15 條",
+  "notes": [
+    "來源說明：本期 15 條皆來自官方部落格、英文與中文科技媒體、跑分榜與社群；發布類條目依方案 B 以兩個獨立來源核對事件日期，核對不上的已降級或棄用；發布時間不確定者標「未確認」，不猜測。",
+    "其中 3 條（OpenAI 收購 Odessia、Anthropic 免費重置用量、Oura 收購 Counsel Health）發表於台北時間 11 月 11 日凌晨、上一期截稿之後，內文已註明實際發表時間。",
+    "本期未能讀取：Wired（網域阻擋）、VentureBeat RSS（429 限流）、Reddit（網域阻擋）、36氪（安全檢測）、TechOrange（僅顯示 cookie 政策）、新智元（域名已停放出售）；LMArena 與 Artificial Analysis 榜單數據未載入，無法確認榜單變化。"
+  ],
+  "weekday": "星期四",
+  "entries": [
+    {
+      "anchor": "card-1",
+      "category": "政策",
+      "en": "Nvidia reportedly preparing to fire Jensen Huang",
+      "entryNo": 1,
+      "is_top3": true,
+      "n": 1,
+      "note": "事件發展：紐時與華爾街日報報導皆為 2026-11-11；科技新報 11 月 12 日報導盤後股價重挫逾 8%。",
+      "one_line_summary": "輝達董事會傳擬撤換黃仁勳，盤後股價重挫逾 8%。",
+      "paras": [
+        "輝達執行長黃仁勳的去留問題在 11 月 11 日急遽升溫，《華爾街日報》報導董事會正準備撤換他，消息傳出後輝達股價在盤後交易重挫逾 8%。",
+        "同日《紐約時報》引述五名輝達前員工報導，黃仁勳另與直屬下屬、醫療保健副總裁鮑爾（Kimberly Powell）發展婚外情，兩人今年 3 月在聖荷西一場會議期間的飯店被拍下親密互動。",
+        "黃仁勳、鮑爾與輝達均未證實這項報導；黃仁勳被時報記者問及時僅回應不應直接找他談，隨即掛斷電話。",
+        "這波風暴源於 10 月底紐時揭露黃仁勳與新加坡 Megaspeed 高管 Alice Huang 關係密切，美國官員指稱 Alice Huang 為中國間諜，兩人並無親屬關係；黃仁勳已在 11 月 8 日向員工坦承不忠，董事會同日啟動獨立調查。",
+        "美國國會也已介入：三名共和黨籍委員會主席 11 月 5 日要求黃仁勳閉門說明，眾院中國委員會主席穆勒納爾 11 日表示，若黃仁勳拒絕配合，將可能對他發出傳票。",
+        "黃仁勳身兼全球 AI 算力龍頭掌舵者與晶片出口政策的關鍵遊說者，董事會動向與國會調查的結果，將直接牽動輝達的治理與美國對中國的晶片管制走向。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/11/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/"
+        },
+        {
+          "label": "科技新報",
+          "url": "https://finance.technews.tw/2026/11/12/rumors-suggest-that-nvidias-board-of-directors-is-preparing-to-replace-ceo-jensen-huang/#more-1649855"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "TechCrunch",
+          "published_at": "2026-11-11",
+          "timezone": "未確認",
+          "url": "https://techcrunch.com/2026/11/11/nvidia-ceo-jensen-huangs-affair-with-alleged-chinese-spy-a-timeline/"
+        },
+        {
+          "name": "科技新報",
+          "published_at": "2026-11-12",
+          "timezone": "台北時間",
+          "url": "https://finance.technews.tw/2026/11/12/rumors-suggest-that-nvidias-board-of-directors-is-preparing-to-replace-ceo-jensen-huang/#more-1649855"
+        }
+      ],
+      "summary_zh": "輝達執行長黃仁勳的去留問題在 11 月 11 日急遽升溫，《華爾街日報》報導董事會正準備撤換他，消息傳出後輝達股價在盤後交易重挫逾 8%。同日《紐約時報》引述五名輝達前員工報導，黃仁勳另與直屬下屬、醫療保健副總裁鮑爾（Kimberly Powell）發展婚外情，兩人今年 3 月在聖荷西一場會議期間的飯店被拍下親密互動。黃仁勳、鮑爾與輝達均未證實這項報導；黃仁勳被時報記者問及時僅回應不應直接找他談，隨即掛斷電話。這波風暴源於 10 月底紐時揭露黃仁勳與新加坡 Megaspeed 高管 Alice Huang 關係密切，美國官員指稱 Alice Huang 為中國間諜，兩人並無親屬關係；黃仁勳已在 11 月 8 日向員工坦承不忠，董事會同日啟動獨立調查。美國國會也已介入：三名共和黨籍委員會主席 11 月 5 日要求黃仁勳閉門說明，眾院中國委員會主席穆勒納爾 11 日表示，若黃仁勳拒絕配合，將可能對他發出傳票。黃仁勳身兼全球 AI 算力龍頭掌舵者與晶片出口政策的關鍵遊說者，董事會動向與國會調查的結果，將直接牽動輝達的治理與美國對中國的晶片管制走向。",
+      "tag": "policy",
+      "tagLabel": "政策",
+      "title": "輝達董事會傳擬撤換黃仁勳，盤後股價重挫逾 8%",
+      "title_en": "Nvidia reportedly preparing to fire Jensen Huang",
+      "title_zh": "輝達董事會傳擬撤換黃仁勳，盤後股價重挫逾 8%"
+    },
+    {
+      "anchor": "card-2",
+      "category": "融資",
+      "en": "OpenAI's quarterly revenue reportedly crosses $10B for the first time",
+      "entryNo": 2,
+      "is_top3": true,
+      "n": 2,
+      "note": "數據為 OpenAI 在 11 月 10 日投資人電話會議上分享、經《華爾街日報》《The Information》與彭博報導；公司未公開證實，數字為報導引述。",
+      "one_line_summary": "OpenAI 單季營收首破 100 億美元，虧損卻擴大至 109 億美元。",
+      "paras": [
+        "OpenAI 第三季營收據報首度突破 100 億美元，較第二季的 67 億美元成長近五成，也幾乎是去年同期的三倍。",
+        "數字來自 OpenAI 在 11 月 10 日的投資人電話會議，由《華爾街日報》、《The Information》與彭博先後報導；OpenAI 本人未公開證實。",
+        "以此推算，OpenAI 的年化營收已達約 500 億美元，財務長弗萊爾（Sarah Friar）表示企業業務單季翻倍，如今與消費者業務各佔營收約一半。",
+        "但高速成長仍伴隨巨額虧損：第三季營業虧損擴大至 109 億美元，高於第二季的 101 億美元；調整後營業利潤率由負 150% 收窄至負 109%。",
+        "換言之，OpenAI 每賺 1 美元，仍伴隨約 1.09 美元的調整後營業虧損，算力與基礎設施開支仍是商業模式最大的問號。",
+        "數字曝光的時機正值 Anthropic 啟動 IPO 路演，兩家實驗室的營收與虧損對比，成為市場檢驗 AI 商業模式的新戰場。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/11/openais-quarterly-revenue-reportedly-crosses-10b-for-the-first-time/"
+        },
+        {
+          "label": "INSIDE",
+          "url": "https://www.inside.com.tw/article/42879-openai-q3-2026-revenue-10-billion-enterprise"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "TechCrunch",
+          "published_at": "2026-11-11T16:14:44+00:00",
+          "timezone": "UTC",
+          "url": "https://techcrunch.com/2026/11/11/openais-quarterly-revenue-reportedly-crosses-10b-for-the-first-time/"
+        },
+        {
+          "name": "INSIDE",
+          "published_at": "2026-11-11T14:25:00+08:00",
+          "timezone": "台北時間",
+          "url": "https://www.inside.com.tw/article/42879-openai-q3-2026-revenue-10-billion-enterprise"
+        }
+      ],
+      "summary_zh": "OpenAI 第三季營收據報首度突破 100 億美元，較第二季的 67 億美元成長近五成，也幾乎是去年同期的三倍。數字來自 OpenAI 在 11 月 10 日的投資人電話會議，由《華爾街日報》、《The Information》與彭博先後報導；OpenAI 本人未公開證實。以此推算，OpenAI 的年化營收已達約 500 億美元，財務長弗萊爾（Sarah Friar）表示企業業務單季翻倍，如今與消費者業務各佔營收約一半。但高速成長仍伴隨巨額虧損：第三季營業虧損擴大至 109 億美元，高於第二季的 101 億美元；調整後營業利潤率由負 150% 收窄至負 109%。換言之，OpenAI 每賺 1 美元，仍伴隨約 1.09 美元的調整後營業虧損，算力與基礎設施開支仍是商業模式最大的問號。數字曝光的時機正值 Anthropic 啟動 IPO 路演，兩家實驗室的營收與虧損對比，成為市場檢驗 AI 商業模式的新戰場。",
+      "tag": "funding",
+      "tagLabel": "融資",
+      "title": "OpenAI 單季營收首破 100 億美元，虧損卻擴大至 109 億美元",
+      "title_en": "OpenAI's quarterly revenue reportedly crosses $10B for the first time",
+      "title_zh": "OpenAI 單季營收首破 100 億美元，虧損卻擴大至 109 億美元"
+    },
+    {
+      "anchor": "card-3",
+      "category": "模型",
+      "en": "Gemini Decisions API: Fast multimodal decisions",
+      "entryNo": 3,
+      "is_top3": true,
+      "n": 3,
+      "note": "Google 官方部落格 2026-11-11 宣佈；AI Weekly 同日報導。",
+      "one_line_summary": "Google 推出 Gemini Decisions API，一次回答上千道選擇題。",
+      "paras": [
+        "Google 在 11 月 11 日推出 Gemini Decisions API，背後是全新模型 Gemini Decision 1，專門處理「有界選擇」而非自由寫作。",
+        "一次請求可對同一份多模態輸入提出最多 1,000 道是非題、選擇題或評分題，涵蓋文字、圖片、音訊、影片與 PDF，單次輸入上限 25.6 萬個 token。",
+        "模型以一次前向運算直接為每個選項打分，回傳機率與信心分數，不逐字生成文字，端到端延遲約 150 至 250 毫秒。",
+        "定價為每百萬輸入 token 0.10 美元，輸出 token 不收費，因為模型不產生輸出文字；可透過 Gemini API 在 Google AI Studio 使用，另有免費層供原型開發。",
+        "Google 鎖定的場景是 AI 代理每天反覆做的判斷：工具選擇、政策檢查、模型路由與上下文評分，並已接上 OpenRouter、LangChain、Vercel、LiteLLM 等整合。",
+        "這是 Google 一週內第三波模型發布，繼 Gemini 4 Carbon 全面開放與 AlphaGenome 2 之後，顯示其正把模型能力拆成更細的專用端點。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "Google 官方部落格",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/"
+        },
+        {
+          "label": "AI Weekly",
+          "url": "https://aiweekly.co/alerts/google-launches-gemini-decisions-api-at-010-per-1m-tokens"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "Google 官方部落格",
+          "published_at": "2026-11-11",
+          "timezone": "未確認",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/gemini-decisions-api/"
+        },
+        {
+          "name": "AI Weekly",
+          "published_at": "2026-11-11T20:02:36+00:00",
+          "timezone": "UTC",
+          "url": "https://aiweekly.co/alerts/google-launches-gemini-decisions-api-at-010-per-1m-tokens"
+        }
+      ],
+      "summary_zh": "Google 在 11 月 11 日推出 Gemini Decisions API，背後是全新模型 Gemini Decision 1，專門處理「有界選擇」而非自由寫作。一次請求可對同一份多模態輸入提出最多 1,000 道是非題、選擇題或評分題，涵蓋文字、圖片、音訊、影片與 PDF，單次輸入上限 25.6 萬個 token。模型以一次前向運算直接為每個選項打分，回傳機率與信心分數，不逐字生成文字，端到端延遲約 150 至 250 毫秒。定價為每百萬輸入 token 0.10 美元，輸出 token 不收費，因為模型不產生輸出文字；可透過 Gemini API 在 Google AI Studio 使用，另有免費層供原型開發。Google 鎖定的場景是 AI 代理每天反覆做的判斷：工具選擇、政策檢查、模型路由與上下文評分，並已接上 OpenRouter、LangChain、Vercel、LiteLLM 等整合。這是 Google 一週內第三波模型發布，繼 Gemini 4 Carbon 全面開放與 AlphaGenome 2 之後，顯示其正把模型能力拆成更細的專用端點。",
+      "tag": "model",
+      "tagLabel": "模型",
+      "title": "Google 推出 Gemini Decisions API，一次回答上千道選擇題",
+      "title_en": "Gemini Decisions API: Fast multimodal decisions",
+      "title_zh": "Google 推出 Gemini Decisions API，一次回答上千道選擇題"
+    },
+    {
+      "anchor": "card-4",
+      "category": "研究",
+      "en": "AlphaGenome 2: Deciphering how cells read DNA to better understand disease",
+      "entryNo": 4,
+      "is_top3": false,
+      "n": 4,
+      "note": "Google DeepMind 官方部落格 2026-11-11 發表；Unite.AI 與 MLQ 同日報導。",
+      "one_line_summary": "DeepMind 發表 AlphaGenome 2，預測 DNA 變異如何影響特定細胞。",
+      "paras": [
+        "Google DeepMind 在 11 月 11 日發表 AlphaGenome 2，可預測 DNA 變異在特定細胞類型與細胞狀態下的基因調控效應。",
+        "模型鎖定疾病研究的核心難題：同一個基因變異在不同細胞裡可能有完全不同的影響，AlphaGenome 2 試圖直接算出這種細胞特異性。",
+        "非商業研究可透過 AlphaGenome API 使用，商業研究則為私人預覽；模型僅限研究用途，未經臨床驗證。",
+        "這是 DeepMind 基因組學路線的延續，前代 AlphaGenome 聚焦變異對基因表現的整體影響，新版把解析度推進到細胞狀態層級。",
+        "對藥物研發而言，能先在電腦裡篩出哪些變異真正致病，有機會縮短標靶驗證的週期，但臨床轉譯仍需實驗與監管把關。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "Unite.AI",
+          "url": "https://www.unite.ai/google-deepminds-alphagenome-2-predicts-cell-state-variant-effects/"
+        },
+        {
+          "label": "MLQ",
+          "url": "https://mlq.ai/news/google-deepmind-releases-alphagenome-2-to-predict-how-dna-changes-affect-specific-cell-types-and-disease/"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "Unite.AI",
+          "published_at": "2026-11-11",
+          "timezone": "未確認",
+          "url": "https://www.unite.ai/google-deepminds-alphagenome-2-predicts-cell-state-variant-effects/"
+        },
+        {
+          "name": "MLQ",
+          "published_at": "2026-11-11",
+          "timezone": "未確認",
+          "url": "https://mlq.ai/news/google-deepmind-releases-alphagenome-2-to-predict-how-dna-changes-affect-specific-cell-types-and-disease/"
+        }
+      ],
+      "summary_zh": "Google DeepMind 在 11 月 11 日發表 AlphaGenome 2，可預測 DNA 變異在特定細胞類型與細胞狀態下的基因調控效應。模型鎖定疾病研究的核心難題：同一個基因變異在不同細胞裡可能有完全不同的影響，AlphaGenome 2 試圖直接算出這種細胞特異性。非商業研究可透過 AlphaGenome API 使用，商業研究則為私人預覽；模型僅限研究用途，未經臨床驗證。這是 DeepMind 基因組學路線的延續，前代 AlphaGenome 聚焦變異對基因表現的整體影響，新版把解析度推進到細胞狀態層級。對藥物研發而言，能先在電腦裡篩出哪些變異真正致病，有機會縮短標靶驗證的週期，但臨床轉譯仍需實驗與監管把關。",
+      "tag": "research",
+      "tagLabel": "研究",
+      "title": "DeepMind 發表 AlphaGenome 2，預測 DNA 變異如何影響特定細胞",
+      "title_en": "AlphaGenome 2: Deciphering how cells read DNA to better understand disease",
+      "title_zh": "DeepMind 發表 AlphaGenome 2，預測 DNA 變異如何影響特定細胞"
+    },
+    {
+      "anchor": "card-5",
+      "category": "政策",
+      "en": "United won't let your AI agent book your flight",
+      "entryNo": 5,
+      "is_top3": false,
+      "n": 5,
+      "note": "美聯航 2026-11-11 宣佈並修訂運送契約；FastCompany 報導時間為 2026-11-11 22:05 UTC。",
+      "one_line_summary": "美聯航禁止 AI 代理代訂機票，違者可取消訂位。",
+      "paras": [
+        "美聯航在 11 月 11 日修訂運送契約，禁止未經授權的第三方個人 AI 代理代旅客訂票、改票、辦理報到或購買座位與升等，違規訂位可逕行取消。",
+        "業者給出三個理由：把帳號密碼交給 AI 助理可能外洩個資；代理的自動操作可能造成非預期的購買或帳戶異動；部分流程依法須由旅客本人確認，例如報到時須親自聲明托運行李未含違禁品。",
+        "禁令涵蓋官網與 App，也及於旅行社與訂票平台等間接通路；不過 AI 代理仍可查詢與顯示航班和票價，只是不可以完成交易。",
+        "美聯航表示，11 月 11 日前已由 AI 代理完成的訂位不會取消，但建議旅客自行確認訂位與開票無誤。",
+        "達美與美國航空目前仍允許部分代理訂票，僅表示正在評估；亞馬遜先前也已出手阻擋購物機器人，顯示大型商家正集體為代理式商務劃界。",
+        "這是代理式 AI 從「幫你找」走向「幫你買」的第一道商業防線，後續各家業者的跟進與否，將決定 AI 代理能否真正接手消費決策。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "FastCompany",
+          "url": "https://www.fastcompany.com/91640548/united-airlines-just-made-a-big-change-to-flight-bookings-heres-why-delta-and-american-arent-following"
+        },
+        {
+          "label": "The Verge",
+          "url": "https://www.theverge.com/news/1031705/united-airlines-ai-agent-booking-policy"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "FastCompany",
+          "published_at": "2026-11-11T22:05:47+00:00",
+          "timezone": "UTC",
+          "url": "https://www.fastcompany.com/91640548/united-airlines-just-made-a-big-change-to-flight-bookings-heres-why-delta-and-american-arent-following"
+        },
+        {
+          "name": "The Verge",
+          "published_at": "2026-11-12T05:54:00+08:00",
+          "timezone": "台北時間",
+          "url": "https://www.theverge.com/news/1031705/united-airlines-ai-agent-booking-policy"
+        }
+      ],
+      "summary_zh": "美聯航在 11 月 11 日修訂運送契約，禁止未經授權的第三方個人 AI 代理代旅客訂票、改票、辦理報到或購買座位與升等，違規訂位可逕行取消。業者給出三個理由：把帳號密碼交給 AI 助理可能外洩個資；代理的自動操作可能造成非預期的購買或帳戶異動；部分流程依法須由旅客本人確認，例如報到時須親自聲明托運行李未含違禁品。禁令涵蓋官網與 App，也及於旅行社與訂票平台等間接通路；不過 AI 代理仍可查詢與顯示航班和票價，只是不可以完成交易。美聯航表示，11 月 11 日前已由 AI 代理完成的訂位不會取消，但建議旅客自行確認訂位與開票無誤。達美與美國航空目前仍允許部分代理訂票，僅表示正在評估；亞馬遜先前也已出手阻擋購物機器人，顯示大型商家正集體為代理式商務劃界。這是代理式 AI 從「幫你找」走向「幫你買」的第一道商業防線，後續各家業者的跟進與否，將決定 AI 代理能否真正接手消費決策。",
+      "tag": "policy",
+      "tagLabel": "政策",
+      "title": "美聯航禁止 AI 代理代訂機票，違者可取消訂位",
+      "title_en": "United won't let your AI agent book your flight",
+      "title_zh": "美聯航禁止 AI 代理代訂機票，違者可取消訂位"
+    }
+,
+    {
+      "anchor": "card-6",
+      "category": "應用",
+      "en": "Anthropic gives every paid Claude user a free full usage reset",
+      "entryNo": 6,
+      "is_top3": false,
+      "n": 6,
+      "note": "Anthropic 開發者帳號 2026-11-10 21:59 UTC 在 X 宣佈，相當於台北時間 11 月 11 日 05:59；上一期截稿之後發表。",
+      "one_line_summary": "Anthropic 免費送一次 Claude 用量全額重置，限 12 月 10 日前使用。",
+      "paras": [
+        "Anthropic 在 11 月 10 日深夜透過開發者帳號宣佈，給所有 Pro、Max、Ultra 與 Team 付費用戶一次免費的全額用量重置，須在 12 月 10 日美西時間下午 2 點前使用。",
+        "重置涵蓋所有模型與所有額度，可在設定中的用量頁面領取，領取後無法撤回；若在到期前降級或取消訂閱，重置即失效。",
+        "原因是 Anthropic 近期修復了幾個小問題，這些問題讓部分用戶的用量消耗得比預期快；先前隨 Fable 5.2 上市附贈的重置，對已用完每週額度的用戶幫助有限。",
+        "重置只會把已消耗的用量補回來，不會提高額度上限，每週定期重置照常進行，也不會退還已額外購買的用量。",
+        "免費方案不在此次範圍內，Anthropic 也未提及企業版帳號；補償範圍涵蓋全部模型與額度，較以往的例行重置更廣。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "X @ClaudeDevs",
+          "url": "https://x.com/ClaudeDevs/status/2120275296637321476"
+        },
+        {
+          "label": "Paktechstan",
+          "url": "https://paktechstan.com/anthropic-gives-every-paid-claude-user-a-free-full-usage-reset-after-bugs-drained-their-limits"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "X @ClaudeDevs",
+          "published_at": "2026-11-10T21:59:00+00:00",
+          "timezone": "UTC",
+          "url": "https://x.com/ClaudeDevs/status/2120275296637321476"
+        },
+        {
+          "name": "Paktechstan",
+          "published_at": "2026-11-11T13:23:00+05:00",
+          "timezone": "UTC+5",
+          "url": "https://paktechstan.com/anthropic-gives-every-paid-claude-user-a-free-full-usage-reset-after-bugs-drained-their-limits"
+        }
+      ],
+      "summary_zh": "Anthropic 在 11 月 10 日深夜透過開發者帳號宣佈，給所有 Pro、Max、Ultra 與 Team 付費用戶一次免費的全額用量重置，須在 12 月 10 日美西時間下午 2 點前使用。重置涵蓋所有模型與所有額度，可在設定中的用量頁面領取，領取後無法撤回；若在到期前降級或取消訂閱，重置即失效。原因是 Anthropic 近期修復了幾個小問題，這些問題讓部分用戶的用量消耗得比預期快；先前隨 Fable 5.2 上市附贈的重置，對已用完每週額度的用戶幫助有限。重置只會把已消耗的用量補回來，不會提高額度上限，每週定期重置照常進行，也不會退還已額外購買的用量。免費方案不在此次範圍內，Anthropic 也未提及企業版帳號；補償範圍涵蓋全部模型與額度，較以往的例行重置更廣。",
+      "tag": "app",
+      "tagLabel": "應用",
+      "title": "Anthropic 免費送一次 Claude 用量全額重置，限 12 月 10 日前使用",
+      "title_en": "Anthropic gives every paid Claude user a free full usage reset",
+      "title_zh": "Anthropic 免費送一次 Claude 用量全額重置，限 12 月 10 日前使用"
+    },
+    {
+      "anchor": "card-7",
+      "category": "融資",
+      "en": "OpenAI acquires Odessia, travel startup created by Sonder founder",
+      "entryNo": 7,
+      "is_top3": false,
+      "n": 7,
+      "note": "創辦人 2026-11-10 在 X 與 LinkedIn 宣佈，TechCrunch 同日 21:08 UTC 報導，相當於台北時間 11 月 11 日 05:08；上一期截稿之後發表。",
+      "one_line_summary": "OpenAI 收購 AI 旅遊代理 Odessia，創辦人加入主導旅遊布局。",
+      "paras": [
+        "OpenAI 收購 AI 旅遊代理 Odessia，創辦人戴維森（Francis Davidson）11 月 10 日宣佈加入 OpenAI，負責旅遊的未來發展。",
+        "Odessia 成立不到一年，今年 6 月才完成由紅杉領投的 600 萬美元種子前輪融資，10 月 14 日公開上線，團隊僅 8 人，建在 GPT-5.5 與 Codex 之上，可在一次對話裡規劃並預訂機票、飯店與完整行程。",
+        "交易金額未公開，TechCrunch 形容這筆交易更像「人才收購」；Odessia 的獨立服務已隨收購關閉，現有訂位改由電子郵件支援。",
+        "OpenAI 發言人僅證實延攬戴維森，未宣佈任何旅遊新產品或計畫；戴維森先前創辦的住宿新創 Sonder 已走向破產。",
+        "收購時機與 OpenAI 在 ChatGPT 推出商家功能的同一天，顯示 OpenAI 正把對話介面變成交易入口，旅遊是下一個可能落地的場景。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/10/openai-acquires-odessia-travel-startup-created-by-sonder-founder/"
+        },
+        {
+          "label": "SiliconReport",
+          "url": "https://www.siliconreport.com/openai-acquires-travel-agent-odessia-odessia-s-founder-says"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "TechCrunch",
+          "published_at": "2026-11-10T21:08:52+00:00",
+          "timezone": "UTC",
+          "url": "https://techcrunch.com/2026/11/10/openai-acquires-odessia-travel-startup-created-by-sonder-founder/"
+        },
+        {
+          "name": "SiliconReport",
+          "published_at": "2026-11-11T01:14:00+00:00",
+          "timezone": "UTC",
+          "url": "https://www.siliconreport.com/openai-acquires-travel-agent-odessia-odessia-s-founder-says"
+        }
+      ],
+      "summary_zh": "OpenAI 收購 AI 旅遊代理 Odessia，創辦人戴維森（Francis Davidson）11 月 10 日宣佈加入 OpenAI，負責旅遊的未來發展。Odessia 成立不到一年，今年 6 月才完成由紅杉領投的 600 萬美元種子前輪融資，10 月 14 日公開上線，團隊僅 8 人，建在 GPT-5.5 與 Codex 之上，可在一次對話裡規劃並預訂機票、飯店與完整行程。交易金額未公開，TechCrunch 形容這筆交易更像「人才收購」；Odessia 的獨立服務已隨收購關閉，現有訂位改由電子郵件支援。OpenAI 發言人僅證實延攬戴維森，未宣佈任何旅遊新產品或計畫；戴維森先前創辦的住宿新創 Sonder 已走向破產。收購時機與 OpenAI 在 ChatGPT 推出商家功能的同一天，顯示 OpenAI 正把對話介面變成交易入口，旅遊是下一個可能落地的場景。",
+      "tag": "funding",
+      "tagLabel": "融資",
+      "title": "OpenAI 收購 AI 旅遊代理 Odessia，創辦人加入主導旅遊布局",
+      "title_en": "OpenAI acquires Odessia, travel startup created by Sonder founder",
+      "title_zh": "OpenAI 收購 AI 旅遊代理 Odessia，創辦人加入主導旅遊布局"
+    },
+    {
+      "anchor": "card-8",
+      "category": "其他",
+      "en": "SpaceX's Grok Build coding agent leaks oodles of confidential info",
+      "entryNo": 8,
+      "is_top3": false,
+      "n": 8,
+      "note": "資安公司 Claroc 於 2026-11-10 公佈研究，Ars Technica 與 The Verge 先後報導。",
+      "one_line_summary": "Grok Build 逾 3.5 萬個 App 任人開啟，連自家機密也外洩。",
+      "paras": [
+        "資安公司 Claroc 公佈研究指出，用 Grok Build 做出來的 3.5 萬多個 App，任何人拿到連結就能直接開啟，完全不需登入。",
+        "Claroc 清查 grok.me 域名下的 4.3 萬多個 App 位址，其中 37,571 個仍在線上，35,578 個（94.7%）無需登入即可存取，內容包括商業計畫、員工名冊、體檢結果，甚至以明文存放的密碼。",
+        "問題出在連結設計：隨機字串放在主機名稱裡，可透過公開的 DNS 紀錄反查枚舉；SpaceXSI 雖稱 App 預設不公開，但分享連結預設為「知道連結者皆可存取」。",
+        "外洩的 App 中有 24 個出自 SpaceXSI 與 X 自家員工之手，包括一份標示機密的新進業務員入職計畫、涵蓋 594 個帳戶的銷售版圖，以及一份給美國聯邦機構、標示機密的 X 廣告提案。",
+        "Claroc 在 11 月 8 日通報 SpaceXSI，對方在數小時內下架了自家 24 個 App，但其他用戶與企業的 App 在報導刊出時仍處於公開狀態。",
+        "這是代理式開發工具的系統性風險：AI 代理把商業邏輯、資料與憑證收進同一個可部署成品，分享預設一鬆動，外洩規模就以萬計。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1031663/spacex-grok-build-system-prompt-leak-confidential"
+        },
+        {
+          "label": "finance.biggo",
+          "url": "https://finance.biggo.com/news/d735ae83-d2e3-40c7-9840-4f0ed5b1c8fe"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "The Verge",
+          "published_at": "2026-11-12T04:54:00+08:00",
+          "timezone": "台北時間",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1031663/spacex-grok-build-system-prompt-leak-confidential"
+        },
+        {
+          "name": "finance.biggo",
+          "published_at": "2026-11-11T09:55:45+00:00",
+          "timezone": "UTC",
+          "url": "https://finance.biggo.com/news/d735ae83-d2e3-40c7-9840-4f0ed5b1c8fe"
+        }
+      ],
+      "summary_zh": "資安公司 Claroc 公佈研究指出，用 Grok Build 做出來的 3.5 萬多個 App，任何人拿到連結就能直接開啟，完全不需登入。Claroc 清查 grok.me 域名下的 4.3 萬多個 App 位址，其中 37,571 個仍在線上，35,578 個（94.7%）無需登入即可存取，內容包括商業計畫、員工名冊、體檢結果，甚至以明文存放的密碼。問題出在連結設計：隨機字串放在主機名稱裡，可透過公開的 DNS 紀錄反查枚舉；SpaceXSI 雖稱 App 預設不公開，但分享連結預設為「知道連結者皆可存取」。外洩的 App 中有 24 個出自 SpaceXSI 與 X 自家員工之手，包括一份標示機密的新進業務員入職計畫、涵蓋 594 個帳戶的銷售版圖，以及一份給美國聯邦機構、標示機密的 X 廣告提案。Claroc 在 11 月 8 日通報 SpaceXSI，對方在數小時內下架了自家 24 個 App，但其他用戶與企業的 App 在報導刊出時仍處於公開狀態。這是代理式開發工具的系統性風險：AI 代理把商業邏輯、資料與憑證收進同一個可部署成品，分享預設一鬆動，外洩規模就以萬計。",
+      "tag": "other",
+      "tagLabel": "其他",
+      "title": "Grok Build 逾 3.5 萬個 App 任人開啟，連自家機密也外洩",
+      "title_en": "SpaceX's Grok Build coding agent leaks oodles of confidential info",
+      "title_zh": "Grok Build 逾 3.5 萬個 App 任人開啟，連自家機密也外洩"
+    },
+    {
+      "anchor": "card-9",
+      "category": "應用",
+      "en": "Google's Tabletop AI can bring your photos to life",
+      "entryNo": 9,
+      "is_top3": false,
+      "n": 9,
+      "note": "Google Labs 2026-11-11 宣佈；The Verge 報導時間為 2026-11-12 00:00 台北時間。",
+      "one_line_summary": "Google 推出 Tabletop，讓 AI 幫一群人做出行程與分帳工具。",
+      "paras": [
+        "Google 在 11 月 11 日推出 Tabletop，一項 Google Labs 實驗，讓一群人共用一個線上空間，再由 AI 代理把大家丟進去的連結、檔案與想法變成可用的規劃工具。",
+        "用法是在空間裡輸入 @tabletop 下指令，例如排出家族旅行行程、晚餐投票、分帳表或聯賽對戰表；Google 也提供現成範本，協作方式類似 Google 文件，可多人同時編輯。",
+        "實驗由 Google Labs 設計與工程負責人努里克（Roman Nurik）宣佈，現階段僅開放美國年滿 18 歲用戶排隊等候，每週逐步放行，尚未公佈全面上線時程。",
+        "Tabletop 沒有公佈背後的模型名稱，先前的 Labs 實驗多半使用 Gemini 3；Google 也未說明定價，僅強調這是測試性質的產品概念。",
+        "繼 Gmail 寫作工具全面開放後，Google 同週再推一款協作型 AI 工具，顯示其正把 Gemini 從個人助理推向多人共用的工作場景。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1031576/google-tabletop-ai-photo-to-video"
+        },
+        {
+          "label": "Pulse2",
+          "url": "https://pulse2.com/google-tabletop-launches-as-ai-powered-collaborative-planning-tool-for-groups/"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "The Verge",
+          "published_at": "2026-11-12T00:00:00+08:00",
+          "timezone": "台北時間",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1031576/google-tabletop-ai-photo-to-video"
+        },
+        {
+          "name": "Pulse2",
+          "published_at": "2026-11-11",
+          "timezone": "未確認",
+          "url": "https://pulse2.com/google-tabletop-launches-as-ai-powered-collaborative-planning-tool-for-groups/"
+        }
+      ],
+      "summary_zh": "Google 在 11 月 11 日推出 Tabletop，一項 Google Labs 實驗，讓一群人共用一個線上空間，再由 AI 代理把大家丟進去的連結、檔案與想法變成可用的規劃工具。用法是在空間裡輸入 @tabletop 下指令，例如排出家族旅行行程、晚餐投票、分帳表或聯賽對戰表；Google 也提供現成範本，協作方式類似 Google 文件，可多人同時編輯。實驗由 Google Labs 設計與工程負責人努里克（Roman Nurik）宣佈，現階段僅開放美國年滿 18 歲用戶排隊等候，每週逐步放行，尚未公佈全面上線時程。Tabletop 沒有公佈背後的模型名稱，先前的 Labs 實驗多半使用 Gemini 3；Google 也未說明定價，僅強調這是測試性質的產品概念。繼 Gmail 寫作工具全面開放後，Google 同週再推一款協作型 AI 工具，顯示其正把 Gemini 從個人助理推向多人共用的工作場景。",
+      "tag": "app",
+      "tagLabel": "應用",
+      "title": "Google 推出 Tabletop，讓 AI 幫一群人做出行程與分帳工具",
+      "title_en": "Google's Tabletop AI can bring your photos to life",
+      "title_zh": "Google 推出 Tabletop，讓 AI 幫一群人做出行程與分帳工具"
+    },
+    {
+      "anchor": "card-10",
+      "category": "融資",
+      "en": "Oura to acquire AI-native primary care startup Counsel Health for $625M",
+      "entryNo": 10,
+      "is_top3": false,
+      "n": 10,
+      "note": "Oura 2026-11-10 宣佈全現金收購，TechCrunch 同日 19:23 UTC 報導，相當於台北時間 11 月 11 日 03:23；上一期截稿之後發表。交易完成時間各家報導不一，TechCrunch 稱 2027 年底前，路透稱今年底前。",
+      "one_line_summary": "Oura 以 6.25 億美元收購 AI 基層醫療新創 Counsel Health。",
+      "paras": [
+        "智慧戒指廠商 Oura 在 11 月 10 日宣佈，將以 6.25 億美元全現金收購 AI 原生基層醫療公司 Counsel Health，創下公司最大一筆收購。",
+        "Counsel Health 結合聊天式醫療介面與持牌醫師問診，用戶可在 Oura App 內取得個人化醫療建議、處方與轉診；其服務今年 6 月已整合進 Oura App。",
+        "交易完成後，Counsel 執行長阿拉格潘（Muthu Alagappan）將出任 Oura 首席臨床 AI 長，70 名員工一併加入；Counsel 將繼續服務既有企業客戶。",
+        "Oura 同時公佈財報：截至 9 月 30 日的季度營收 5.33 億美元、年增 153%，2026 財年營收約 17.5 億美元、年增 92%；去年 10 月完成 9 億美元融資後估值達 110 億美元。",
+        "這筆收購發生在 Oura 無限期推遲最高 22 億美元 IPO 的數週後，顯示公司正把重心從穿戴硬體轉向「量測＋診療」的醫療服務。",
+        "穿戴裝置廠商競逐醫療場景已成趨勢：戒指量到生理數據後，下一步是讓用戶直接在 App 裡看醫生，監管與醫療責任將是真正的考驗。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/10/oura-to-acquire-ai-native-primary-care-startup-counsel-health-for-625m/"
+        },
+        {
+          "label": "SiliconReport",
+          "url": "https://www.siliconreport.com/oura-to-acquire-counsel-health-for-625-million"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "TechCrunch",
+          "published_at": "2026-11-10T19:23:34+00:00",
+          "timezone": "UTC",
+          "url": "https://techcrunch.com/2026/11/10/oura-to-acquire-ai-native-primary-care-startup-counsel-health-for-625m/"
+        },
+        {
+          "name": "SiliconReport",
+          "published_at": "2026-11-10T22:11:00+00:00",
+          "timezone": "UTC",
+          "url": "https://www.siliconreport.com/oura-to-acquire-counsel-health-for-625-million"
+        }
+      ],
+      "summary_zh": "智慧戒指廠商 Oura 在 11 月 10 日宣佈，將以 6.25 億美元全現金收購 AI 原生基層醫療公司 Counsel Health，創下公司最大一筆收購。Counsel Health 結合聊天式醫療介面與持牌醫師問診，用戶可在 Oura App 內取得個人化醫療建議、處方與轉診；其服務今年 6 月已整合進 Oura App。交易完成後，Counsel 執行長阿拉格潘（Muthu Alagappan）將出任 Oura 首席臨床 AI 長，70 名員工一併加入；Counsel 將繼續服務既有企業客戶。Oura 同時公佈財報：截至 9 月 30 日的季度營收 5.33 億美元、年增 153%，2026 財年營收約 17.5 億美元、年增 92%；去年 10 月完成 9 億美元融資後估值達 110 億美元。這筆收購發生在 Oura 無限期推遲最高 22 億美元 IPO 的數週後，顯示公司正把重心從穿戴硬體轉向「量測＋診療」的醫療服務。穿戴裝置廠商競逐醫療場景已成趨勢：戒指量到生理數據後，下一步是讓用戶直接在 App 裡看醫生，監管與醫療責任將是真正的考驗。",
+      "tag": "funding",
+      "tagLabel": "融資",
+      "title": "Oura 以 6.25 億美元收購 AI 基層醫療新創 Counsel Health",
+      "title_en": "Oura to acquire AI-native primary care startup Counsel Health for $625M",
+      "title_zh": "Oura 以 6.25 億美元收購 AI 基層醫療新創 Counsel Health"
+    }
+,
+    {
+      "anchor": "card-11",
+      "category": "融資",
+      "en": "CoreWeave turns to customer prepayments, shorter contracts to fund AI growth",
+      "entryNo": 11,
+      "is_top3": false,
+      "n": 11,
+      "note": "CoreWeave 2026-11-10 公佈第三季財報；TechCrunch 2026-11-11 19:54 UTC 報導預付款模式，彭博同日 22:42 UTC 報導擬發行至少 40 億美元高評級貸款。",
+      "one_line_summary": "CoreWeave 改向客戶收預付款，不再發無擔保債。",
+      "paras": [
+        "AI 算力租賃商 CoreWeave 在第三季財報中改寫融資模式：未來三個月預計向客戶收取約 90 億美元預付款與保證金，轉向以特定客戶合約擔保的貸款，不再到無擔保債市籌資。",
+        "執行長英崔特（Michael Intrator）在電話會議上直言：「我們不會以目前的收益率使用無擔保債務市場為業務融資，也不需要這麼做。」",
+        "其中逾 30 億美元預付款來自已建成算力的新合約，不需再投入硬體採購；公司 8 月已完成 26 億美元定期貸款額度，專為短期合約設計。",
+        "CoreWeave 同時把更多算力撥給短期合約，短約價格可達每百萬瓦每年逾 4,000 萬美元，遠高於四至五年長約的 2,000 萬至 2,500 萬美元；7 月已漲價約 25%，當季稍後又漲 10%。",
+        "第三季營收 36.6 億美元、年增 168%，但淨虧損 7.09 億美元，單季利息支出 8.46 億美元，未交付訂單積壓達 1,325 億美元。",
+        "另據彭博報導，CoreWeave 還計畫發行至少 40 億美元高評級貸款；在算力需求持續超過供給的情況下，算力商的融資方式本身已成市場關注的風險指標。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/11/coreweave-turns-to-customer-prepayments-shorter-contracts-to-fund-ai-growth/"
+        },
+        {
+          "label": "Bloomberg",
+          "url": "https://www.bloomberg.com/news/articles/2026-11-11/coreweave-plans-to-raise-at-least-4-billion-in-high-grade-loan"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "TechCrunch",
+          "published_at": "2026-11-11T19:54:00+00:00",
+          "timezone": "UTC",
+          "url": "https://techcrunch.com/2026/11/11/coreweave-turns-to-customer-prepayments-shorter-contracts-to-fund-ai-growth/"
+        },
+        {
+          "name": "Bloomberg",
+          "published_at": "2026-11-11T22:42:47+00:00",
+          "timezone": "UTC",
+          "url": "https://www.bloomberg.com/news/articles/2026-11-11/coreweave-plans-to-raise-at-least-4-billion-in-high-grade-loan"
+        }
+      ],
+      "summary_zh": "AI 算力租賃商 CoreWeave 在第三季財報中改寫融資模式：未來三個月預計向客戶收取約 90 億美元預付款與保證金，轉向以特定客戶合約擔保的貸款，不再到無擔保債市籌資。執行長英崔特（Michael Intrator）在電話會議上直言：「我們不會以目前的收益率使用無擔保債務市場為業務融資，也不需要這麼做。」其中逾 30 億美元預付款來自已建成算力的新合約，不需再投入硬體採購；公司 8 月已完成 26 億美元定期貸款額度，專為短期合約設計。CoreWeave 同時把更多算力撥給短期合約，短約價格可達每百萬瓦每年逾 4,000 萬美元，遠高於四至五年長約的 2,000 萬至 2,500 萬美元；7 月已漲價約 25%，當季稍後又漲 10%。第三季營收 36.6 億美元、年增 168%，但淨虧損 7.09 億美元，單季利息支出 8.46 億美元，未交付訂單積壓達 1,325 億美元。另據彭博報導，CoreWeave 還計畫發行至少 40 億美元高評級貸款；在算力需求持續超過供給的情況下，算力商的融資方式本身已成市場關注的風險指標。",
+      "tag": "funding",
+      "tagLabel": "融資",
+      "title": "CoreWeave 改向客戶收預付款，不再發無擔保債",
+      "title_en": "CoreWeave turns to customer prepayments, shorter contracts to fund AI growth",
+      "title_zh": "CoreWeave 改向客戶收預付款，不再發無擔保債"
+    },
+    {
+      "anchor": "card-12",
+      "category": "融資",
+      "en": "With $720M round, Britain's Fractile gets a leg up in the race for AI chips",
+      "entryNo": 12,
+      "is_top3": false,
+      "n": 12,
+      "note": "路透 2026-11-11 報導；TechCrunch 同日 19:34 UTC 報導。",
+      "one_line_summary": "英國 AI 晶片新創 Fractile 募資 7.2 億美元，估值 70 億美元。",
+      "paras": [
+        "英國 AI 晶片新創 Fractile 在 11 月 11 日完成 7.2 億美元 C 輪融資，投後估值 70 億美元，僅半年前上一輪時估值還只有 11 億美元。",
+        "本輪由 Thrive Capital、Founders Fund、Lightspeed 與 Redpoint 共同領投，英國主權 AI 基金、英國商業銀行、Google 創投 CapitalG、貝萊德與 DST Global 等跟投。",
+        "Fractile 成立於 2022 年，主攻 AI 推論晶片，把記憶體直接嵌進晶片以破解頻寬瓶頸；公司稱其架構速度可達現有硬體 25 倍、成本僅十分之一，但尚未有獨立測試證實，也還沒有量產晶片出貨。",
+        "首款商用晶片預計 2027 年推出；另據報導，公司已與 Anthropic 達成約 2.5 億美元的供貨協議，但雙方均未證實。",
+        "英國政府稱這是歐洲半導體史上最大一筆融資，顯示各國正把 AI 晶片視為戰略資產，不只美國新創在拿錢。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/11/with-720m-round-britains-fractile-gets-a-leg-up-in-the-race-for-ai-chips/"
+        },
+        {
+          "label": "Reuters（經 LSE 轉載）",
+          "url": "https://www.lse.co.uk/news/uk-backed-ai-chip-startup-fractile-hits-7-billion-valuation-in-funding-round-osp4ohh8nq8eeea.html"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "TechCrunch",
+          "published_at": "2026-11-11T19:34:55+00:00",
+          "timezone": "UTC",
+          "url": "https://techcrunch.com/2026/11/11/with-720m-round-britains-fractile-gets-a-leg-up-in-the-race-for-ai-chips/"
+        },
+        {
+          "name": "Reuters（經 LSE 轉載）",
+          "published_at": "2026-11-11T14:47:00+00:00",
+          "timezone": "UTC",
+          "url": "https://www.lse.co.uk/news/uk-backed-ai-chip-startup-fractile-hits-7-billion-valuation-in-funding-round-osp4ohh8nq8eeea.html"
+        }
+      ],
+      "summary_zh": "英國 AI 晶片新創 Fractile 在 11 月 11 日完成 7.2 億美元 C 輪融資，投後估值 70 億美元，僅半年前上一輪時估值還只有 11 億美元。本輪由 Thrive Capital、Founders Fund、Lightspeed 與 Redpoint 共同領投，英國主權 AI 基金、英國商業銀行、Google 創投 CapitalG、貝萊德與 DST Global 等跟投。Fractile 成立於 2022 年，主攻 AI 推論晶片，把記憶體直接嵌進晶片以破解頻寬瓶頸；公司稱其架構速度可達現有硬體 25 倍、成本僅十分之一，但尚未有獨立測試證實，也還沒有量產晶片出貨。首款商用晶片預計 2027 年推出；另據報導，公司已與 Anthropic 達成約 2.5 億美元的供貨協議，但雙方均未證實。英國政府稱這是歐洲半導體史上最大一筆融資，顯示各國正把 AI 晶片視為戰略資產，不只美國新創在拿錢。",
+      "tag": "funding",
+      "tagLabel": "融資",
+      "title": "英國 AI 晶片新創 Fractile 募資 7.2 億美元，估值 70 億美元",
+      "title_en": "With $720M round, Britain's Fractile gets a leg up in the race for AI chips",
+      "title_zh": "英國 AI 晶片新創 Fractile 募資 7.2 億美元，估值 70 億美元"
+    },
+    {
+      "anchor": "card-13",
+      "category": "政策",
+      "en": "Microsoft vows to pay its own way to power data centers",
+      "entryNo": 13,
+      "is_top3": false,
+      "n": 13,
+      "note": "微軟雲端營運總裁華爾希（Noelle Walsh）2026-11-11 在休士頓 BloombergNEF 會議上發言；彭博法律同日 20:33 UTC 報導。",
+      "one_line_summary": "微軟承諾自付資料中心電力成本，不轉嫁一般用戶。",
+      "paras": [
+        "微軟雲端營運總裁華爾希（Noelle Walsh）11 月 11 日在休士頓的 BloombergNEF 會議上承諾，微軟將自行負擔資料中心的電力成本，不靠政府補貼，也不讓其他用電戶分攤成長代價。",
+        "華爾希說：「我們不希望其他客戶為我們的成長付費，我們會自己付錢。」這延續微軟今年 1 月提出的「社區優先」承諾，當時已表態願付足額電費與電網升級費用。",
+        "微軟今年計畫投入 1,170 億美元建設 AI 與雲端算力，單是 9 月一季的資本支出就達 394 億美元，12 月一季預計超過 500 億美元。",
+        "背景是美國期中選舉後資料中心反彈升溫：數十個地方投票限制或終止新建資料中心，德州候任州長已表態立法要求新建資料中心不得推高居民電價，參院也有法案要求資料中心自付電力。",
+        "OpenAI 已在 11 月 5 日做出類似承諾；隨著各州陸續把「使用者付費」寫進法規，算力商的電費帳單正從企業成本變成公共政策議題。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "Bloomberg Law",
+          "url": "https://news.bloomberglaw.com/artificial-intelligence/microsoft-vows-to-pay-its-own-way-to-power-data-centers"
+        },
+        {
+          "label": "Seeking Alpha",
+          "url": "https://seekingalpha.com/news/4670988-microsoft-plans-to-pay-our-own-way-to-power-data-centers"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "Bloomberg Law",
+          "published_at": "2026-11-11T20:33:16+00:00",
+          "timezone": "UTC",
+          "url": "https://news.bloomberglaw.com/artificial-intelligence/microsoft-vows-to-pay-its-own-way-to-power-data-centers"
+        },
+        {
+          "name": "Seeking Alpha",
+          "published_at": "2026-11-11T16:26:00-05:00",
+          "timezone": "美東時間",
+          "url": "https://seekingalpha.com/news/4670988-microsoft-plans-to-pay-our-own-way-to-power-data-centers"
+        }
+      ],
+      "summary_zh": "微軟雲端營運總裁華爾希（Noelle Walsh）11 月 11 日在休士頓的 BloombergNEF 會議上承諾，微軟將自行負擔資料中心的電力成本，不靠政府補貼，也不讓其他用電戶分攤成長代價。華爾希說：「我們不希望其他客戶為我們的成長付費，我們會自己付錢。」這延續微軟今年 1 月提出的「社區優先」承諾，當時已表態願付足額電費與電網升級費用。微軟今年計畫投入 1,170 億美元建設 AI 與雲端算力，單是 9 月一季的資本支出就達 394 億美元，12 月一季預計超過 500 億美元。背景是美國期中選舉後資料中心反彈升溫：數十個地方投票限制或終止新建資料中心，德州候任州長已表態立法要求新建資料中心不得推高居民電價，參院也有法案要求資料中心自付電力。OpenAI 已在 11 月 5 日做出類似承諾；隨著各州陸續把「使用者付費」寫進法規，算力商的電費帳單正從企業成本變成公共政策議題。",
+      "tag": "policy",
+      "tagLabel": "政策",
+      "title": "微軟承諾自付資料中心電力成本，不轉嫁一般用戶",
+      "title_en": "Microsoft vows to pay its own way to power data centers",
+      "title_zh": "微軟承諾自付資料中心電力成本，不轉嫁一般用戶"
+    },
+    {
+      "anchor": "card-14",
+      "category": "政策",
+      "en": "未確認",
+      "entryNo": 14,
+      "is_top3": false,
+      "n": 14,
+      "note": "Anthropic 2026-10-08 公佈新版使用政策，2026-11-12 今日生效；支援地區名單自 5 月 12 日版本以來未變，部分媒體稱「新禁令」的說法並不準確。",
+      "one_line_summary": "Anthropic 新版使用政策今日生效，支援地區名單其實沒變。",
+      "paras": [
+        "Anthropic 的新版使用政策在 11 月 12 日生效，其中支援地區條款明定三種受限情形：人身處不受支援地區、在不受支援地區註冊或設立總部的企業，及其員工；以及由不受支援地區人士或實體多數持有或控制的企業。",
+        "條款適用範圍涵蓋 Claude.ai、Claude Code、Cowork、API 與開發者平台，以及經雲端平台與授權經銷商提供的 Claude 模型。",
+        "台灣、日本、新加坡、南韓等都在支援名單上；中國大陸、香港、澳門與俄羅斯不在其中，未列入名單的地區一律視為不受支援。",
+        "值得注意的是，支援地區名單本身自 5 月 12 日版本以來並未改變；11 月 11 日部分俄羅斯媒體與 Telegram 頻道稱 Anthropic「新禁」俄羅斯企業員工使用的說法並不準確，新版文字主要是把既有管制寫得更明確。",
+        "這次更新於 10 月 8 日公佈，大多數內容為澄清既有規則；生效日當天引發討論，反映 AI 實驗室的地緣管制正從「人在哪裡」擴大到「公司歸誰管」。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "INSIDE",
+          "url": "https://www.inside.com.tw/article/42880-anthropic-supported-regions-policy-nov-12-location-incorporation-ownership-control"
+        },
+        {
+          "label": "Asia Daily",
+          "url": "https://asiadaily.org/news/18396/"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "INSIDE",
+          "published_at": "2026-11-11T16:12:00+08:00",
+          "timezone": "台北時間",
+          "url": "https://www.inside.com.tw/article/42880-anthropic-supported-regions-policy-nov-12-location-incorporation-ownership-control"
+        },
+        {
+          "name": "Asia Daily",
+          "published_at": "2026-11-11",
+          "timezone": "未確認",
+          "url": "https://asiadaily.org/news/18396/"
+        }
+      ],
+      "summary_zh": "Anthropic 的新版使用政策在 11 月 12 日生效，其中支援地區條款明定三種受限情形：人身處不受支援地區、在不受支援地區註冊或設立總部的企業，及其員工；以及由不受支援地區人士或實體多數持有或控制的企業。條款適用範圍涵蓋 Claude.ai、Claude Code、Cowork、API 與開發者平台，以及經雲端平台與授權經銷商提供的 Claude 模型。台灣、日本、新加坡、南韓等都在支援名單上；中國大陸、香港、澳門與俄羅斯不在其中，未列入名單的地區一律視為不受支援。值得注意的是，支援地區名單本身自 5 月 12 日版本以來並未改變；11 月 11 日部分俄羅斯媒體與 Telegram 頻道稱 Anthropic「新禁」俄羅斯企業員工使用的說法並不準確，新版文字主要是把既有管制寫得更明確。這次更新於 10 月 8 日公佈，大多數內容為澄清既有規則；生效日當天引發討論，反映 AI 實驗室的地緣管制正從「人在哪裡」擴大到「公司歸誰管」。",
+      "tag": "policy",
+      "tagLabel": "政策",
+      "title": "Anthropic 新版使用政策今日生效，支援地區名單其實沒變",
+      "title_en": "未確認",
+      "title_zh": "Anthropic 新版使用政策今日生效，支援地區名單其實沒變"
+    },
+    {
+      "anchor": "card-15",
+      "category": "研究",
+      "en": "An AI agent swarm may have unearthed an unmapped Maya site",
+      "entryNo": 15,
+      "is_top3": false,
+      "n": 15,
+      "note": "作者 2026-11-10 在 X 分享，The Verge 與 dev.to 於 11 月 11 日至 12 日報導；該遺址後經查證已見於 2025 年學術論文。",
+      "one_line_summary": "48 個 AI 代理掃出馬雅遺址，結果早有論文記載。",
+      "paras": [
+        "Google 工程師米歐提（Pietro Miotti）讓 48 個分屬 Gemini、ChatGPT、Claude 與 Grok 的 AI 代理，掃描約 1,200 平方公里的 NASA 光達資料，在 72 小時內標出一處疑似馬雅遺址。",
+        "代理標出的地點位於墨西哥叢林山頂，包括一座廣場、一座 8 至 12 公尺高的橢圓金字塔、一處抬升庭院與疑似水庫，推測為西元 250 至 900 年的古典期遺址。",
+        "米歐提據此寫信給墨西哥國家人類學與歷史研究所（INAH），對方回覆該座標沒有已登記的考古遺址；消息一度登上 Hacker News 首頁，獲得逾 800 分。",
+        "但後續查證發現，該遺址早已出現在 2025 年的學術論文（Estrada-Belli 等人）中，只是未列入 INAH 的官方登記；作者也在原文補充了這項更正。",
+        "這起事件的真正教訓不在發現本身，而是代理的工作方式：它們查了官方登記名冊，卻沒有查文獻——AI 代理能 72 小時跑完通報流程，卻也會把「未登記」誤讀為「未發現」。",
+        "實地驗證仍須 INAH 授權，目前尚未進行；對考古學而言，AI 代理更像高效的初篩工具，而非獨立的發現者。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1031498/an-ai-agent-swarm-may-have-unearthed-an-unmapped-maya-site"
+        },
+        {
+          "label": "dev.to",
+          "url": "https://dev.to/fathomnews/48-ai-agents-spot-a-possible-lost-maya-pyramid-overnight-and-mexico-has-no-record-of-it-546"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "The Verge",
+          "published_at": "2026-11-11",
+          "timezone": "未確認",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/1031498/an-ai-agent-swarm-may-have-unearthed-an-unmapped-maya-site"
+        },
+        {
+          "name": "dev.to",
+          "published_at": "2026-11-12T00:06:32+00:00",
+          "timezone": "UTC",
+          "url": "https://dev.to/fathomnews/48-ai-agents-spot-a-possible-lost-maya-pyramid-overnight-and-mexico-has-no-record-of-it-546"
+        }
+      ],
+      "summary_zh": "Google 工程師米歐提（Pietro Miotti）讓 48 個分屬 Gemini、ChatGPT、Claude 與 Grok 的 AI 代理，掃描約 1,200 平方公里的 NASA 光達資料，在 72 小時內標出一處疑似馬雅遺址。代理標出的地點位於墨西哥叢林山頂，包括一座廣場、一座 8 至 12 公尺高的橢圓金字塔、一處抬升庭院與疑似水庫，推測為西元 250 至 900 年的古典期遺址。米歐提據此寫信給墨西哥國家人類學與歷史研究所（INAH），對方回覆該座標沒有已登記的考古遺址；消息一度登上 Hacker News 首頁，獲得逾 800 分。但後續查證發現，該遺址早已出現在 2025 年的學術論文（Estrada-Belli 等人）中，只是未列入 INAH 的官方登記；作者也在原文補充了這項更正。這起事件的真正教訓不在發現本身，而是代理的工作方式：它們查了官方登記名冊，卻沒有查文獻——AI 代理能 72 小時跑完通報流程，卻也會把「未登記」誤讀為「未發現」。實地驗證仍須 INAH 授權，目前尚未進行；對考古學而言，AI 代理更像高效的初篩工具，而非獨立的發現者。",
+      "tag": "research",
+      "tagLabel": "研究",
+      "title": "48 個 AI 代理掃出馬雅遺址，結果早有論文記載",
+      "title_en": "An AI agent swarm may have unearthed an unmapped Maya site",
+      "title_zh": "48 個 AI 代理掃出馬雅遺址，結果早有論文記載"
+    }
+  ],
+  "tldr": [
+    {"n": 1, "text": "輝達董事會傳擬撤換黃仁勳，盤後股價重挫逾 8%。"},
+    {"n": 2, "text": "OpenAI 單季營收首破 100 億美元，虧損卻擴大至 109 億美元。"},
+    {"n": 3, "text": "Google 推出 Gemini Decisions API，一次回答上千道選擇題。"},
+    {"n": 4, "text": "DeepMind 發表 AlphaGenome 2，預測 DNA 變異如何影響特定細胞。"},
+    {"n": 5, "text": "美聯航禁止 AI 代理代訂機票，違者可取消訂位。"},
+    {"n": 6, "text": "Anthropic 免費送一次 Claude 用量全額重置，限 12 月 10 日前使用。"},
+    {"n": 7, "text": "OpenAI 收購 AI 旅遊代理 Odessia，創辦人加入主導旅遊布局。"},
+    {"n": 8, "text": "Grok Build 逾 3.5 萬個 App 任人開啟，連自家機密也外洩。"},
+    {"n": 9, "text": "Google 推出 Tabletop，讓 AI 幫一群人做出行程與分帳工具。"},
+    {"n": 10, "text": "Oura 以 6.25 億美元收購 AI 基層醫療新創 Counsel Health。"},
+    {"n": 11, "text": "CoreWeave 改向客戶收預付款，不再發無擔保債。"},
+    {"n": 12, "text": "英國 AI 晶片新創 Fractile 募資 7.2 億美元，估值 70 億美元。"},
+    {"n": 13, "text": "微軟承諾自付資料中心電力成本，不轉嫁一般用戶。"},
+    {"n": 14, "text": "Anthropic 新版使用政策今日生效，支援地區名單其實沒變。"},
+    {"n": 15, "text": "48 個 AI 代理掃出馬雅遺址，結果早有論文記載。"}
+  ],
+  "top3": [
+    {
+      "blurb": "紐時再爆與直屬高管婚外情，華爾街日報稱董事會擬撤換，輝達盤後股價重挫逾 8%。",
+      "n": 1,
+      "rank": 1,
+      "title": "輝達董事會傳擬撤換黃仁勳，盤後股價重挫逾 8%"
+    },
+    {
+      "blurb": "第三季營收首破 100 億美元、季增近五成，年化營收約 500 億美元，但營業虧損擴大至 109 億美元。",
+      "n": 2,
+      "rank": 2,
+      "title": "OpenAI 單季營收首破 100 億美元，虧損卻擴大至 109 億美元"
+    },
+    {
+      "blurb": "一次回答上千道是非與選擇題、只給機率不寫文章，瞄準 AI 代理的決策環節。",
+      "n": 3,
+      "rank": 3,
+      "title": "Google 推出 Gemini Decisions API，一次回答上千道選擇題"
+    }
+  ]
+}
