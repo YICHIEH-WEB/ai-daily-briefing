@@ -1,0 +1,699 @@
+{
+  "_說明": "AI 每日早報 2026-11-15 第六期真實資料。時間視窗：2026-11-14 09:00 至 2026-11-15 09:00（台北時間）。本期僅 14 條：經五層來源完整掃描與方案 B 核驗後，窗口內可核實的 AI 新聞不足 15 條，未以無關內容填充；發布類條目依方案 B 以兩個獨立來源核對事件日期。",
+  "dateline": "2026 年 11 月 15 日 · 星期日",
+  "dayLine": "SUNDAY · 台北時間",
+  "entries": [
+    {
+      "anchor": "card-1",
+      "category": "其他",
+      "en": "Before His Ouster, Jensen Huang Belittled the Executive Replacing Him",
+      "entryNo": 1,
+      "is_top3": true,
+      "n": 1,
+      "note": "《華爾街日報》11 月 14 日獨家報導；確切發文時間未確認，僅知當日刊出。Kress 於 11 月 12 日接任臨時執行長。",
+      "one_line_summary": "《華爾街日報》揭露，黃仁勳今年夏天當眾批評財務長 Kress 對循環融資風險的評估，質疑由其女婿主導、為買不起晶片的客戶提供融資的交易。",
+      "paras": [
+        "《華爾街日報》11 月 14 日獨家報導，黃仁勳今年夏天召集高層財務主管開會時，當眾打斷財務長 Colette Kress 的簡報，形容她是「受驚的鹿」，並稱她只是個「做報表的財務長」，無法協助他制定戰略或做決策。",
+        "會議的起因是輝達正洽談為買不起晶片的客戶提供數十億美元擔保，其中多筆交易由黃仁勳的女婿 Nico Caprez 主導，向新興雲端業者與資料中心開發商提供融資，希望把對方培養成長期客戶；Kress 曾在幕後試圖約束今年 1 月升任副總裁的 Caprez，並質疑如何挑選交易、如何為擔保定價與計算投資報酬。",
+        "報導指出，輝達與 OpenAI 洽談為俄亥俄州資料中心提供 2,500 億美元財務後盾的消息在 7 月 26 日見報後，隔日股價下跌 5%，市值蒸發 2,500 億美元；Kress 隨後將承諾金額砍半，雙方 8 月 17 日簽下縮水版協議，輝達也在 8 月底暫停部分融資交易。",
+        "Kress 8 月底曾公開為這套做法辯護，稱「我們知道有人會稱之為循環融資，我們的看法不同」，並稱投入資本的股權報酬將「非常可觀」；10 月起輝達開始收緊水龍頭，黃仁勳也私下對股價倍數自 5 月的 23 倍跌至 10 月的 16 倍感到不滿。",
+        "Kress 已於 11 月 12 日接任臨時執行長，黃仁勳則因兩段婚外情曝光而辭職，其中一人被懷疑是中國間諜，另一人為公司員工；她在給員工的備忘錄中表示，將繼續「在黃仁勳 33 年來建立的非凡基礎上前進」。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "The Wall Street Journal",
+          "url": "https://www.wsj.com/tech/jensen-huang-colette-kress-nvidia-ceo-eb289097"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "The Wall Street Journal",
+          "published_at": "2026-11-14",
+          "timezone": "未確認",
+          "url": "https://www.wsj.com/tech/jensen-huang-colette-kress-nvidia-ceo-eb289097"
+        }
+      ],
+      "summary_zh": "《華爾街日報》11 月 14 日獨家報導，黃仁勳今年夏天召集高層財務主管開會時，當眾打斷財務長 Colette Kress 的簡報，形容她是「受驚的鹿」，並稱她只是個「做報表的財務長」，無法協助他制定戰略或做決策。會議的起因是輝達正洽談為買不起晶片的客戶提供數十億美元擔保，其中多筆交易由黃仁勳的女婿 Nico Caprez 主導，向新興雲端業者與資料中心開發商提供融資，希望把對方培養成長期客戶；Kress 曾在幕後試圖約束今年 1 月升任副總裁的 Caprez，並質疑如何挑選交易、如何為擔保定價與計算投資報酬。報導指出，輝達與 OpenAI 洽談為俄亥俄州資料中心提供 2,500 億美元財務後盾的消息在 7 月 26 日見報後，隔日股價下跌 5%，市值蒸發 2,500 億美元；Kress 隨後將承諾金額砍半，雙方 8 月 17 日簽下縮水版協議，輝達也在 8 月底暫停部分融資交易。Kress 8 月底曾公開為這套做法辯護，稱「我們知道有人會稱之為循環融資，我們的看法不同」，並稱投入資本的股權報酬將「非常可觀」；10 月起輝達開始收緊水龍頭，黃仁勳也私下對股價倍數自 5 月的 23 倍跌至 10 月的 16 倍感到不滿。Kress 已於 11 月 12 日接任臨時執行長，黃仁勳則因兩段婚外情曝光而辭職，其中一人被懷疑是中國間諜，另一人為公司員工；她在給員工的備忘錄中表示，將繼續「在黃仁勳 33 年來建立的非凡基礎上前進」。",
+      "tag": "other",
+      "tagLabel": "其他",
+      "title": "黃仁勳去職前當眾貶低接任者，質疑循環融資失控",
+      "title_en": "Before His Ouster, Jensen Huang Belittled the Executive Replacing Him",
+      "title_zh": "黃仁勳去職前當眾貶低接任者，質疑循環融資失控"
+    },
+    {
+      "anchor": "card-2",
+      "category": "其他",
+      "en": "Elon Musk, Other Tech Execs Sign Petition Calling on Nvidia to Reinstate Jensen Huang",
+      "entryNo": 2,
+      "is_top3": true,
+      "n": 2,
+      "note": "TechCrunch 11 月 14 日 13:41 PST（台北時間 11 月 15 日 05:41）報導；INSIDE 同日 15:23 台北時間跟進，稱當時簽名人數逾 2.1 萬人。連署人數為網站即時數字，會持續變動。",
+      "one_line_summary": "馬斯克等科技高層連署要求輝達恢復黃仁勳職務，連署網站已有逾 11.5 萬人簽名，包括近 6,000 名現任員工。",
+      "paras": [
+        "TechCrunch 11 月 14 日報導，馬斯克等多位科技業高層已在一份要求輝達恢復黃仁勳職務的公開連署上簽名，連署網站 standwithjensen.com 顯示已有逾 11.5 萬人簽署，包括 5,965 名現任員工、1,108 名前員工與 63,063 名股東。",
+        "參與連署的科技高層包括馬斯克、Replit 執行長 Amjad Masad、Epic Games 執行長 Tim Sweeney 與 Y Combinator 執行長 Garry Tan；連署訴求為正當程序，並要求在獨立調查完成前恢復黃仁勳職務。",
+        "馬斯克 11 月 13 日在 X 上發文表示，他認為黃仁勳「不應在未經正當程序的情況下被解職」，並指責董事會「在沒有明確證據的情況下，倉促地把他趕下台」。",
+        "輝達董事會 11 月 12 日宣布黃仁勳即刻辭去總裁、執行長與董事職務，財務長 Colette Kress 暫代執行長；董事會至今未公開說明解職的具體事由，僅表示與黃仁勳的個人行為有關。",
+        "這場連署接續 11 月 13 日輝達內部論壇的員工聲援，當時逾 1,600 則留言呼籲黃仁勳回任；外界關注董事會是否會回應員工與股東的壓力，以及 11 月 17 日第三季財報前的人事走向。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/14/elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-to-reinstate-jensen-huang/"
+        },
+        {
+          "label": "INSIDE",
+          "url": "https://www.inside.com.tw/article/42914-jensen-huang-resigns-nvidia-petition-musk-signs"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "TechCrunch",
+          "published_at": "2026-11-14T13:41:00-08:00",
+          "timezone": "PST（UTC-8）",
+          "url": "https://techcrunch.com/2026/11/14/elon-musk-other-tech-execs-sign-petition-calling-on-nvidia-to-reinstate-jensen-huang/"
+        },
+        {
+          "name": "INSIDE",
+          "published_at": "2026-11-14T15:23:00+08:00",
+          "timezone": "台北時間（UTC+8）",
+          "url": "https://www.inside.com.tw/article/42914-jensen-huang-resigns-nvidia-petition-musk-signs"
+        }
+      ],
+      "summary_zh": "TechCrunch 11 月 14 日報導，馬斯克等多位科技業高層已在一份要求輝達恢復黃仁勳職務的公開連署上簽名，連署網站 standwithjensen.com 顯示已有逾 11.5 萬人簽署，包括 5,965 名現任員工、1,108 名前員工與 63,063 名股東。參與連署的科技高層包括馬斯克、Replit 執行長 Amjad Masad、Epic Games 執行長 Tim Sweeney 與 Y Combinator 執行長 Garry Tan；連署訴求為正當程序，並要求在獨立調查完成前恢復黃仁勳職務。馬斯克 11 月 13 日在 X 上發文表示，他認為黃仁勳「不應在未經正當程序的情況下被解職」，並指責董事會「在沒有明確證據的情況下，倉促地把他趕下台」。輝達董事會 11 月 12 日宣布黃仁勳即刻辭去總裁、執行長與董事職務，財務長 Colette Kress 暫代執行長；董事會至今未公開說明解職的具體事由，僅表示與黃仁勳的個人行為有關。這場連署接續 11 月 13 日輝達內部論壇的員工聲援，當時逾 1,600 則留言呼籲黃仁勳回任；外界關注董事會是否會回應員工與股東的壓力，以及 11 月 17 日第三季財報前的人事走向。",
+      "tag": "other",
+      "tagLabel": "其他",
+      "title": "馬斯克等科技高層連署，要求輝達恢復黃仁勳職務",
+      "title_en": "Elon Musk, Other Tech Execs Sign Petition Calling on Nvidia to Reinstate Jensen Huang",
+      "title_zh": "馬斯克等科技高層連署，要求輝達恢復黃仁勳職務"
+    },
+    {
+      "anchor": "card-3",
+      "category": "政策",
+      "en": "Asian Governments React to Nvidia CEO Jensen Huang's Exit",
+      "entryNo": 3,
+      "is_top3": true,
+      "n": 3,
+      "note": "TechCrunch 11 月 14 日 16:34 UTC 報導，11 月 15 日 00:04 UTC 更新。各國回應細節以報導為準。",
+      "one_line_summary": "中國、南韓、台灣、日本與新加坡相繼回應黃仁勳去職，關注晶片供應與輝達在亞洲的投資計畫是否生變。",
+      "paras": [
+        "TechCrunch 11 月 14 日報導，亞洲各國政府相繼對輝達執行長黃仁勳去職作出回應，焦點集中在晶片供應、投資計畫與地緣政治影響。",
+        "中國外交部否認涉事女子為間諜；新加坡方面則關注被拘留的 Alice Huang 的護照問題；南韓科學技術情報通信部表示，輝達已重申供應 26 萬顆先進 GPU 的計畫，並召開緊急會議因應。",
+        "台灣經濟部長龔明鑫表示，事件對全球 AI 成長的影響有限；台北市政府則表示，輝達海外總部計畫將照常推進。",
+        "日本經濟產業省表示正密切關注事態發展；各國政府的表態顯示，輝達領導層異動已從公司治理事件，擴大為牽動亞洲 AI 供應鏈與產業政策的區域議題。",
+        "黃仁勳 11 月 12 日辭職後，財務長 Colette Kress 暫代執行長，董事會已啟動接班人遴選；市場將緊盯 11 月 17 日第三季財報，以及輝達對各國客戶與合作夥伴的後續承諾。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/14/asian-governments-react-to-nvidia-ceo-jensen-huangs-exit/"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "TechCrunch",
+          "published_at": "2026-11-14T16:34:00+00:00",
+          "timezone": "UTC",
+          "url": "https://techcrunch.com/2026/11/14/asian-governments-react-to-nvidia-ceo-jensen-huangs-exit/"
+        }
+      ],
+      "summary_zh": "TechCrunch 11 月 14 日報導，亞洲各國政府相繼對輝達執行長黃仁勳去職作出回應，焦點集中在晶片供應、投資計畫與地緣政治影響。中國外交部否認涉事女子為間諜；新加坡方面則關注被拘留的 Alice Huang 的護照問題；南韓科學技術情報通信部表示，輝達已重申供應 26 萬顆先進 GPU 的計畫，並召開緊急會議因應。台灣經濟部長龔明鑫表示，事件對全球 AI 成長的影響有限；台北市政府則表示，輝達海外總部計畫將照常推進。日本經濟產業省表示正密切關注事態發展；各國政府的表態顯示，輝達領導層異動已從公司治理事件，擴大為牽動亞洲 AI 供應鏈與產業政策的區域議題。黃仁勳 11 月 12 日辭職後，財務長 Colette Kress 暫代執行長，董事會已啟動接班人遴選；市場將緊盯 11 月 17 日第三季財報，以及輝達對各國客戶與合作夥伴的後續承諾。",
+      "tag": "policy",
+      "tagLabel": "政策",
+      "title": "亞洲各國政府回應輝達執行長黃仁勳去職",
+      "title_en": "Asian Governments React to Nvidia CEO Jensen Huang's Exit",
+      "title_zh": "亞洲各國政府回應輝達執行長黃仁勳去職"
+    },
+    {
+      "anchor": "card-4",
+      "category": "政策",
+      "en": "Italy Fines Meta US$887 Million Over Android Users' Data Access",
+      "entryNo": 4,
+      "is_top3": false,
+      "n": 4,
+      "note": "路透 11 月 14 日 13:07 UTC 報導；Channel News Asia 同日 21:07 台北時間跟進。罰金以歐元計為 8.05 億，美元約 8.87 億。調查未涵蓋照片是否用於訓練 AI 模型。",
+      "one_line_summary": "義大利個資監管機關重罰 Meta 8.05 億歐元，指臉書 Android 版「從相簿取得建議」功能未經明確同意，取用約 2,000 萬名義大利用戶的照片與影片。",
+      "paras": [
+        "義大利個人資料保護局 11 月 14 日宣布，對 Meta 開罰 8.05 億歐元（約 8.87 億美元），約為其全球營收的 0.47%；路透於當日 13:07 UTC 率先報導，Channel News Asia 同日 21:07 台北時間跟進。",
+        "違規事由是臉書 Android 版自 2023 年起預設開啟的「從相簿取得建議」功能，在未取得用戶明確同意的情況下，取用約 2,000 萬名義大利 Android 用戶的照片、影片與相關詮釋資料。",
+        "監管機關要求 Meta 在 60 天內將該功能改為預設關閉，並另外取得用戶同意後才能取用相簿內容。",
+        "值得注意的是，本次調查並未涵蓋這些照片與影片是否被用來訓練 AI 模型，Meta 否認有此用途；監管機關保留權利，另行評估 Meta 2026 年推出的雲端處理相簿內容功能。",
+        "這是歐洲監管機關近年對大型科技平台開出的最重個資罰單之一，也凸顯 AI 時代下，相簿等個人資料的取用邊界正成為監管焦點。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "Channel News Asia",
+          "url": "https://www.channelnewsasia.com/business/italy-fines-meta-us887-million-over-android-users-data-access-6551816"
+        },
+        {
+          "label": "The Jerusalem Post",
+          "url": "https://www.jpost.com/international/article-914864"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "Channel News Asia",
+          "published_at": "2026-11-14T21:07:00+08:00",
+          "timezone": "台北時間（UTC+8）",
+          "url": "https://www.channelnewsasia.com/business/italy-fines-meta-us887-million-over-android-users-data-access-6551816"
+        },
+        {
+          "name": "The Jerusalem Post",
+          "published_at": "2026-11-14T16:10:00+02:00",
+          "timezone": "以色列時間（UTC+2）",
+          "url": "https://www.jpost.com/international/article-914864"
+        }
+      ],
+      "summary_zh": "義大利個人資料保護局 11 月 14 日宣布，對 Meta 開罰 8.05 億歐元（約 8.87 億美元），約為其全球營收的 0.47%；路透於當日 13:07 UTC 率先報導，Channel News Asia 同日 21:07 台北時間跟進。違規事由是臉書 Android 版自 2023 年起預設開啟的「從相簿取得建議」功能，在未取得用戶明確同意的情況下，取用約 2,000 萬名義大利 Android 用戶的照片、影片與相關詮釋資料。監管機關要求 Meta 在 60 天內將該功能改為預設關閉，並另外取得用戶同意後才能取用相簿內容。值得注意的是，本次調查並未涵蓋這些照片與影片是否被用來訓練 AI 模型，Meta 否認有此用途；監管機關保留權利，另行評估 Meta 2026 年推出的雲端處理相簿內容功能。這是歐洲監管機關近年對大型科技平台開出的最重個資罰單之一，也凸顯 AI 時代下，相簿等個人資料的取用邊界正成為監管焦點。",
+      "tag": "policy",
+      "tagLabel": "政策",
+      "title": "義大利罰 Meta 8.05 億歐元，涉未經同意取用用戶相簿",
+      "title_en": "Italy Fines Meta US$887 Million Over Android Users' Data Access",
+      "title_zh": "義大利罰 Meta 8.05 億歐元，涉未經同意取用用戶相簿"
+    },
+    {
+      "anchor": "card-5",
+      "category": "其他",
+      "en": "Where Was Nvidia's Security Team?",
+      "entryNo": 5,
+      "is_top3": false,
+      "n": 5,
+      "note": "TechCrunch 分析文章，發表於台北時間 11 月 15 日 08:08（UTC 11 月 15 日 00:08），落在時間視窗內。Megaspeed 調查細節以報導為準。",
+      "one_line_summary": "TechCrunch 追問輝達資安團隊在黃仁勳風波中的角色：長期資安長 8 月離職，接任者來自石油業，公司內部調查的知情範圍成謎。",
+      "paras": [
+        "TechCrunch 11 月 15 日凌晨分析指出，輝達長期資安長 David Reber 已於 2026 年 8 月離職，理由是健康因素；他兩年多前被診斷出早發性帕金森氏症。",
+        "接任者為 Saša Zdjelar，曾在埃克森美孚任職 17 年、Salesforce 任職 1 年；報導質疑，在領導層交接之際，資安團隊是否掌握美國當局對 Megaspeed 公司的調查，以及黃仁勳個人關係的相關情資。",
+        "黃仁勳 11 月 12 日辭職後，輝達正面臨聯邦與內部雙重調查；資安團隊在事件前後的知情範圍與通報機制，成為外界追問的焦點。",
+        "報導指出，一家市值一度高達 5.8 兆美元的公司，在執行長突然去職的同時，資安長職位也處於新舊交接期，治理與安全防線的空窗期值得關注。",
+        "輝達尚未公開說明資安團隊在調查中的角色；後續發展將視美國當局的調查進度，以及董事會接班人遴選的結果而定。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/14/where-was-nvidias-security-team/"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "TechCrunch",
+          "published_at": "2026-11-15T00:08:07+00:00",
+          "timezone": "UTC",
+          "url": "https://techcrunch.com/2026/11/14/where-was-nvidias-security-team/"
+        }
+      ],
+      "summary_zh": "TechCrunch 11 月 15 日凌晨分析指出，輝達長期資安長 David Reber 已於 2026 年 8 月離職，理由是健康因素；他兩年多前被診斷出早發性帕金森氏症。接任者為 Saša Zdjelar，曾在埃克森美孚任職 17 年、Salesforce 任職 1 年；報導質疑，在領導層交接之際，資安團隊是否掌握美國當局對 Megaspeed 公司的調查，以及黃仁勳個人關係的相關情資。黃仁勳 11 月 12 日辭職後，輝達正面臨聯邦與內部雙重調查；資安團隊在事件前後的知情範圍與通報機制，成為外界追問的焦點。報導指出，一家市值一度高達 5.8 兆美元的公司，在執行長突然去職的同時，資安長職位也處於新舊交接期，治理與安全防線的空窗期值得關注。輝達尚未公開說明資安團隊在調查中的角色；後續發展將視美國當局的調查進度，以及董事會接班人遴選的結果而定。",
+      "tag": "other",
+      "tagLabel": "其他",
+      "title": "輝達資安團隊當時在哪裡？",
+      "title_en": "Where Was Nvidia's Security Team?",
+      "title_zh": "輝達資安團隊當時在哪裡？"
+    },
+    {
+      "anchor": "card-6",
+      "category": "融資",
+      "en": "Key Facts: Anthropic PBC IPO Draws 6x Demand, Roadshow, China Risks",
+      "entryNo": 6,
+      "is_top3": false,
+      "n": 6,
+      "note": "路透 11 月 14 日報導（經 TradingView 關鍵事實 11 月 14 日 08:00 UTC 與 Pivot News 同日轉述）；「超額認購約 6 倍」最早由彭博 11 月 12 日報導，本條以路透 11 月 14 日的新增內容為主。",
+      "one_line_summary": "路透 11 月 14 日報導，Anthropic IPO 訂單簿超額認購約 6 倍，投資人追問能否守住對 Google 的模型領先優勢，並將 Claude 拓展至程式以外的領域。",
+      "paras": [
+        "路透 11 月 14 日報導，Anthropic 即將在納斯達克掛牌，IPO 訂單簿超額認購約 6 倍；公司預計 11 月 18 日定價、11 月 19 日以代號 ANT 開始交易。",
+        "本次發行 8.25 億股，價格區間為每股 70 至 78 美元，募資規模最高約 644 億美元，另有 260 億美元的私募配售。",
+        "報導指出，投資人正追問 Anthropic 能否守住對 Google 的模型領先優勢，並將 Claude 從程式領域拓展至更廣泛的應用；銀行對其 2028 年營收的預測為 270 至 280 億美元。",
+        "值得注意的是，「超額認購約 6 倍」的數字最早由彭博於 11 月 12 日報導，路透 11 月 14 日的報導新增投資人疑慮與 2028 年營收預測等細節。",
+        "若順利掛牌，這將是近年規模最大的 AI 公司 IPO 之一；市場將關注定價結果，以及 Anthropic 能否在與 Google、OpenAI 的競爭中維持成長動能。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "TradingView",
+          "url": "https://www.tradingview.com/news/tradingview:04f3cf2a97e39:0-key-facts-anthropic-pbc-ipo-draws-6x-demand-roadshow-china-risks/"
+        },
+        {
+          "label": "Pivot News",
+          "url": "https://pivotnews.ai/invest/anthropic-ipo-book-six-times-oversubscribed-people"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "TradingView",
+          "published_at": "2026-11-14T08:00:00+00:00",
+          "timezone": "UTC",
+          "url": "https://www.tradingview.com/news/tradingview:04f3cf2a97e39:0-key-facts-anthropic-pbc-ipo-draws-6x-demand-roadshow-china-risks/"
+        },
+        {
+          "name": "Pivot News",
+          "published_at": "2026-11-14",
+          "timezone": "未確認",
+          "url": "https://pivotnews.ai/invest/anthropic-ipo-book-six-times-oversubscribed-people"
+        }
+      ],
+      "summary_zh": "路透 11 月 14 日報導，Anthropic 即將在納斯達克掛牌，IPO 訂單簿超額認購約 6 倍；公司預計 11 月 18 日定價、11 月 19 日以代號 ANT 開始交易。本次發行 8.25 億股，價格區間為每股 70 至 78 美元，募資規模最高約 644 億美元，另有 260 億美元的私募配售。報導指出，投資人正追問 Anthropic 能否守住對 Google 的模型領先優勢，並將 Claude 從程式領域拓展至更廣泛的應用；銀行對其 2028 年營收的預測為 270 至 280 億美元。值得注意的是，「超額認購約 6 倍」的數字最早由彭博於 11 月 12 日報導，路透 11 月 14 日的報導新增投資人疑慮與 2028 年營收預測等細節。若順利掛牌，這將是近年規模最大的 AI 公司 IPO 之一；市場將關注定價結果，以及 Anthropic 能否在與 Google、OpenAI 的競爭中維持成長動能。",
+      "tag": "funding",
+      "tagLabel": "融資",
+      "title": "Anthropic IPO 訂單簿超額認購約 6 倍，投資人追問模型領先地位",
+      "title_en": "Key Facts: Anthropic PBC IPO Draws 6x Demand, Roadshow, China Risks",
+      "title_zh": "Anthropic IPO 訂單簿超額認購約 6 倍，投資人追問模型領先地位"
+    },
+    {
+      "anchor": "card-7",
+      "category": "其他",
+      "en": "ByteDance's 2029 and Tencent's Half the Workforce",
+      "entryNo": 7,
+      "is_top3": false,
+      "n": 7,
+      "note": "鈦媒體 11 月 14 日 16:39 台北時間刊出之分析；文中事件（騰訊演講 11 月 11 日、百度世界大會 11 月 12 日）發生在視窗內稍早，文章本身為窗口內刊出之原創分析。",
+      "one_line_summary": "張一鳴在字節跳動內部會議上坦言，追趕 OpenAI 與 Anthropic 的前沿水準最早要到 2029 或 2030 年；馬化騰「一半人守核心、一半人探索 AI 原生」的說法則被誤讀為裁員。",
+      "paras": [
+        "鈦媒體 11 月 14 日分析指出，字節跳動創辦人張一鳴近日在公司內部 AI 會議上坦言，字節追趕 OpenAI 與 Anthropic 前沿水準的時間，最早也要到 2029 年或 2030 年。",
+        "報導稱，字節跳動已將 2026 年 AI 基礎設施預算上調至 2,000 億人民幣以上，顯示即使承認落後，公司仍以重金投入追趕。",
+        "騰訊董事會主席馬化騰在 11 月 11 日公司 28 週年演講中表示，一半員工守住核心業務、另一半探索 AI 原生（AI Native），這番話一度被外界誤讀為騰訊將裁員一半。",
+        "百度創辦人李彥宏則在 11 月 12 日的百度世界大會上提出「智能組織」的概念，主張以 AI 重構企業組織型態。",
+        "三家中國科技巨頭在同一週先後表態，反映中國大廠在 AI 競賽中同時面臨追趕壓力與組織轉型的雙重課題；相關談話發生在 11 月 11 至 12 日，鈦媒體 11 月 14 日刊出分析。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "鈦媒體",
+          "url": "https://www.tmtpost.com/8201267.html"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "鈦媒體",
+          "published_at": "2026-11-14T16:39:00+08:00",
+          "timezone": "台北時間（UTC+8）",
+          "url": "https://www.tmtpost.com/8201267.html"
+        }
+      ],
+      "summary_zh": "鈦媒體 11 月 14 日分析指出，字節跳動創辦人張一鳴近日在公司內部 AI 會議上坦言，字節追趕 OpenAI 與 Anthropic 前沿水準的時間，最早也要到 2029 年或 2030 年。報導稱，字節跳動已將 2026 年 AI 基礎設施預算上調至 2,000 億人民幣以上，顯示即使承認落後，公司仍以重金投入追趕。騰訊董事會主席馬化騰在 11 月 11 日公司 28 週年演講中表示，一半員工守住核心業務、另一半探索 AI 原生（AI Native），這番話一度被外界誤讀為騰訊將裁員一半。百度創辦人李彥宏則在 11 月 12 日的百度世界大會上提出「智能組織」的概念，主張以 AI 重構企業組織型態。三家中國科技巨頭在同一週先後表態，反映中國大廠在 AI 競賽中同時面臨追趕壓力與組織轉型的雙重課題；相關談話發生在 11 月 11 至 12 日，鈦媒體 11 月 14 日刊出分析。",
+      "tag": "other",
+      "tagLabel": "其他",
+      "title": "字節的 2029 與騰訊的「一半人」",
+      "title_en": "未確認",
+      "title_zh": "字節的 2029 與騰訊的「一半人」"
+    },
+    {
+      "anchor": "card-8",
+      "category": "其他",
+      "en": "Microsoft Says Global Outage Fully Resolved After Disrupting Services in Over 70 Countries",
+      "entryNo": 8,
+      "is_top3": false,
+      "n": 8,
+      "note": "微軟 365 狀態帳號 11 月 14 日約 06:09 UTC 發文宣布恢復；海灣新聞同日 16:04 更新，印度教徒報即時頁面 14:11 印度標準時間更新。中斷自 11 月 12 日開始，恢復消息落在視窗內。",
+      "one_line_summary": "微軟 365 服務在中斷約 24 小時後於 11 月 14 日完全恢復，影響逾 70 個國家與地區的 Outlook、Teams 與 Copilot，原因為網路容量升級過程出問題。",
+      "paras": [
+        "微軟 365 狀態帳號 11 月 14 日在 X 上表示，全球服務中斷已完全解決；海灣新聞同日 16:04 更新報導，印度教徒報的即時頁面亦於 14:11 更新確認恢復。",
+        "這次中斷自 11 月 12 日開始，持續約 24 小時，影響逾 70 個國家與地區的 Outlook、Teams 與 Copilot 服務，連 OpenAI 與 Anthropic 的 Microsoft 365 連接器也受到波及。",
+        "微軟表示，原因是網路容量升級過程中出現問題，並明確指出此次中斷與網路攻擊無關，也與 AI 無關。",
+        "服務恢復後，微軟未公布受影響用戶的具體數字；此次事件是微軟 365 近年影響範圍最廣的中斷之一，也讓企業用戶重新檢視對單一雲端生產力套件的依賴。",
+        "值得注意的是，Copilot 等 AI 助手服務也一度中斷，顯示 AI 功能與雲端基礎設施的耦合程度日益加深，基礎設施故障會直接波及 AI 服務的可用性。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "Gulf News",
+          "url": "https://gulfnews.com/technology/companies/microsoft-says-global-outage-fully-resolved-after-disrupting-services-in-over-70-countries-1.500747167"
+        },
+        {
+          "label": "The Hindu",
+          "url": "https://www.thehindu.com/sci-tech/technology/microsoft-outlook-outage-status-microsoft-365-services-live-updates-november-14-2026/article71700692.ece"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "Gulf News",
+          "published_at": "2026-11-14T16:04:00+04:00",
+          "timezone": "海灣時間（UTC+4）",
+          "url": "https://gulfnews.com/technology/companies/microsoft-says-global-outage-fully-resolved-after-disrupting-services-in-over-70-countries-1.500747167"
+        },
+        {
+          "name": "The Hindu",
+          "published_at": "2026-11-14T14:11:00+05:30",
+          "timezone": "印度標準時間（UTC+5:30）",
+          "url": "https://www.thehindu.com/sci-tech/technology/microsoft-outlook-outage-status-microsoft-365-services-live-updates-november-14-2026/article71700692.ece"
+        }
+      ],
+      "summary_zh": "微軟 365 狀態帳號 11 月 14 日在 X 上表示，全球服務中斷已完全解決；海灣新聞同日 16:04 更新報導，印度教徒報的即時頁面亦於 14:11 更新確認恢復。這次中斷自 11 月 12 日開始，持續約 24 小時，影響逾 70 個國家與地區的 Outlook、Teams 與 Copilot 服務，連 OpenAI 與 Anthropic 的 Microsoft 365 連接器也受到波及。微軟表示，原因是網路容量升級過程中出現問題，並明確指出此次中斷與網路攻擊無關，也與 AI 無關。服務恢復後，微軟未公布受影響用戶的具體數字；此次事件是微軟 365 近年影響範圍最廣的中斷之一，也讓企業用戶重新檢視對單一雲端生產力套件的依賴。值得注意的是，Copilot 等 AI 助手服務也一度中斷，顯示 AI 功能與雲端基礎設施的耦合程度日益加深，基礎設施故障會直接波及 AI 服務的可用性。",
+      "tag": "other",
+      "tagLabel": "其他",
+      "title": "微軟 365 全球中斷後完全恢復，Copilot 一度受影響",
+      "title_en": "Microsoft Says Global Outage Fully Resolved After Disrupting Services in Over 70 Countries",
+      "title_zh": "微軟 365 全球中斷後完全恢復，Copilot 一度受影響"
+    },
+    {
+      "anchor": "card-9",
+      "category": "政策",
+      "en": "Zhou Xiaochuan: AI Is Reshaping the Division of Labor in Capital Markets",
+      "entryNo": 9,
+      "is_top3": false,
+      "n": 9,
+      "note": "演講於 11 月 14 日上午發表；新浪財經（上海證券報）與搜狐（證券日報）同日報導，搜狐刊出時間為 11 月 14 日 21:00 台北時間。",
+      "one_line_summary": "前央行行長周小川在 11 月 14 日上午的中國資本市場學術年會上表示，AI 可能實現遞迴自我改進，資本市場須以資源配置、風險控制與投資人合理回報三項目標錨定 AI 的目標函數。",
+      "paras": [
+        "前中國人民銀行行長周小川 11 月 14 日上午在上海舉行的首屆中國資本市場學術年會上發表演講，指出 AI 正深刻改變資本市場的人機分工格局。",
+        "周小川表示，AI 有可能實現遞迴自我改進（RSI），資本市場應以三項目標錨定 AI 的目標函數：優化資源配置、控制風險、為投資人尤其是養老金帶來合理回報。",
+        "在風險控制方面，他主張平衡股權與債券融資，並強化股權資本的損失吸收能力；高頻交易則可被視為低通濾波器問題來理解。",
+        "會上同時啟動「人工智能+資本市場」研究聯盟，顯示學界與業界正系統性地探討 AI 如何重塑資本市場的運作方式。",
+        "這場演講是中國金融界高層近期對 AI 與資本市場關係最完整的公開論述之一，後續影響值得關注。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "新浪財經",
+          "url": "https://finance.sina.com.cn/roll/2026-11-14/doc-iniytfyx2737455.shtml"
+        },
+        {
+          "label": "搜狐",
+          "url": "https://www.sohu.com/a/1101607171_122014422"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "新浪財經",
+          "published_at": "2026-11-14",
+          "timezone": "未確認",
+          "url": "https://finance.sina.com.cn/roll/2026-11-14/doc-iniytfyx2737455.shtml"
+        },
+        {
+          "name": "搜狐",
+          "published_at": "2026-11-14T21:00:00+08:00",
+          "timezone": "台北時間（UTC+8）",
+          "url": "https://www.sohu.com/a/1101607171_122014422"
+        }
+      ],
+      "summary_zh": "前中國人民銀行行長周小川 11 月 14 日上午在上海舉行的首屆中國資本市場學術年會上發表演講，指出 AI 正深刻改變資本市場的人機分工格局。周小川表示，AI 有可能實現遞迴自我改進（RSI），資本市場應以三項目標錨定 AI 的目標函數：優化資源配置、控制風險、為投資人尤其是養老金帶來合理回報。在風險控制方面，他主張平衡股權與債券融資，並強化股權資本的損失吸收能力；高頻交易則可被視為低通濾波器問題來理解。會上同時啟動「人工智能+資本市場」研究聯盟，顯示學界與業界正系統性地探討 AI 如何重塑資本市場的運作方式。這場演講是中國金融界高層近期對 AI 與資本市場關係最完整的公開論述之一，後續影響值得關注。",
+      "tag": "policy",
+      "tagLabel": "政策",
+      "title": "周小川：AI 深刻改變資本市場人機分工格局",
+      "title_en": "未確認",
+      "title_zh": "周小川：AI 深刻改變資本市場人機分工格局"
+    },
+    {
+      "anchor": "card-10",
+      "category": "其他",
+      "en": "The AI Graveyard: A Running List of Projects and Startups That Didn't Make It",
+      "entryNo": 10,
+      "is_top3": false,
+      "n": 10,
+      "note": "TechCrunch 11 月 14 日 17:30 UTC 刊出之盤點文章；所列計畫的關閉時間各異，文章本身為窗口內刊出。",
+      "one_line_summary": "TechCrunch 盤點 AI 領域夭折的計畫與新創：OpenAI 超級應用回撤、Sora 關閉、Character.ai 破產，標普數據顯示約 42% 的企業 AI 專案最終被放棄。",
+      "paras": [
+        "TechCrunch 11 月 14 日刊出「AI 墓園」盤點，整理近年未能存活的 AI 計畫與新創，包括 OpenAI 的 ChatGPT 超級應用回撤、Atlas 瀏覽器（8 月 9 日停用）、Operator，以及 2026 年 3 月關閉的 Sora。",
+        "名單還包括蘋果延宕的 Siri AI、10 月初破產的 Character.ai、8 月關閉的 Relay、11 月 6 日關閉的 Ollie，以及微軟 Recall、Notion Mail、Humane AI Pin、Rabbit R1、Huxe 與 Yupp。",
+        "報導引述標普全球市場財智的數據指出，約 42% 的企業 AI 專案最終被放棄，顯示 AI 熱潮之下，產品化與商業化的淘汰率同樣驚人。",
+        "這份盤點反映 AI 產業正從「什麼都做得出來」的擴張期，進入「什麼留得下來」的收斂期；即使是巨頭的旗艦計畫，也可能因策略轉向或市場反應不佳而收場。",
+        "對投資人與從業者而言，這份清單提醒：AI 專案的存活關鍵不在技術展示，而在能否找到可持續的用戶價值與商業模式。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "TechCrunch",
+          "published_at": "2026-11-14T17:30:00+00:00",
+          "timezone": "UTC",
+          "url": "https://techcrunch.com/2026/11/14/the-ai-graveyard-a-running-list-of-projects-and-startups-that-didnt-make-it/"
+        }
+      ],
+      "summary_zh": "TechCrunch 11 月 14 日刊出「AI 墓園」盤點，整理近年未能存活的 AI 計畫與新創，包括 OpenAI 的 ChatGPT 超級應用回撤、Atlas 瀏覽器（8 月 9 日停用）、Operator，以及 2026 年 3 月關閉的 Sora。名單還包括蘋果延宕的 Siri AI、10 月初破產的 Character.ai、8 月關閉的 Relay、11 月 6 日關閉的 Ollie，以及微軟 Recall、Notion Mail、Humane AI Pin、Rabbit R1、Huxe 與 Yupp。報導引述標普全球市場財智的數據指出，約 42% 的企業 AI 專案最終被放棄，顯示 AI 熱潮之下，產品化與商業化的淘汰率同樣驚人。這份盤點反映 AI 產業正從「什麼都做得出來」的擴張期，進入「什麼留得下來」的收斂期；即使是巨頭的旗艦計畫，也可能因策略轉向或市場反應不佳而收場。對投資人與從業者而言，這份清單提醒：AI 專案的存活關鍵不在技術展示，而在能否找到可持續的用戶價值與商業模式。",
+      "tag": "other",
+      "tagLabel": "其他",
+      "title": "AI 墓園：那些沒能活下來的計畫與新創",
+      "title_en": "The AI Graveyard: A Running List of Projects and Startups That Didn't Make It",
+      "title_zh": "AI 墓園：那些沒能活下來的計畫與新創"
+    },
+    {
+      "anchor": "card-11",
+      "category": "應用",
+      "en": "AI Recording Devices Are Competing to Know You Best",
+      "entryNo": 11,
+      "is_top3": false,
+      "n": 11,
+      "note": "鈦媒體 11 月 14 日刊出，確切發文時間未確認；目前僅單一來源，相關融資與營收數字以該報導為準。",
+      "one_line_summary": "AI 錄音卡、錄音豆與錄音戒指等裝置快速興起，Plaud 訂閱年收入兩年內從 100 萬美元衝上 1 億美元，成為 AI 硬體的新戰場。",
+      "paras": [
+        "鈦媒體（霞光社）11 月 14 日報導，AI 錄音卡、錄音豆、錄音戒指等裝置正在快速興起，爭奪「最懂你」的入口位置。",
+        "報導指出，Plaud 的訂閱年收入在兩年內從 100 萬美元成長至 1 億美元，顯示 AI 錄音裝置已找到願意付費的用戶群。",
+        "新創方面，Nooklab 於 2026 年初獲得融資，Flowtica 則於 2026 年 10 月獲得融資，資本正加速湧入這個細分賽道。",
+        "蘋果也在 11 月 4 日推送 iOS 27.3 開發者測試版，顯示平台方同樣關注 AI 錄音與語音處理的應用場景。",
+        "從錄音筆到穿戴裝置，AI 錄音硬體的競爭焦點已從「錄得下來」轉向「聽得懂、記得住、用得上」；誰能把會議、對話轉化為可用的知識，誰就能拿下這個入口。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "鈦媒體",
+          "url": "https://www.tmtpost.com/8205141.html"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "鈦媒體",
+          "published_at": "2026-11-14",
+          "timezone": "未確認",
+          "url": "https://www.tmtpost.com/8205141.html"
+        }
+      ],
+      "summary_zh": "鈦媒體（霞光社）11 月 14 日報導，AI 錄音卡、錄音豆、錄音戒指等裝置正在快速興起，爭奪「最懂你」的入口位置。報導指出，Plaud 的訂閱年收入在兩年內從 100 萬美元成長至 1 億美元，顯示 AI 錄音裝置已找到願意付費的用戶群。新創方面，Nooklab 於 2026 年初獲得融資，Flowtica 則於 2026 年 10 月獲得融資，資本正加速湧入這個細分賽道。蘋果也在 11 月 4 日推送 iOS 27.3 開發者測試版，顯示平台方同樣關注 AI 錄音與語音處理的應用場景。從錄音筆到穿戴裝置，AI 錄音硬體的競爭焦點已從「錄得下來」轉向「聽得懂、記得住、用得上」；誰能把會議、對話轉化為可用的知識，誰就能拿下這個入口。",
+      "tag": "app",
+      "tagLabel": "應用",
+      "title": "AI 錄音設備，正在爭奪「最懂你」的位置",
+      "title_en": "未確認",
+      "title_zh": "AI 錄音設備，正在爭奪「最懂你」的位置"
+    },
+    {
+      "anchor": "card-12",
+      "category": "應用",
+      "en": "Grok API Text Watermarks Switched Off by Default",
+      "entryNo": 12,
+      "is_top3": false,
+      "n": 12,
+      "note": "馬斯克 11 月 14 日在 X 上發文確認；開發者文件的實際更新時間為 11 月 10 至 11 日（TeslaNorth 11 月 11 日 09:32 太平洋時間報導），本條以 11 月 14 日的公開確認為事件日。",
+      "one_line_summary": "馬斯克 11 月 14 日在 X 上表示，Grok API 的文字浮水印改為僅在法律要求或用戶要求時才開啟；語音 API 仍維持浮水印，歐盟與加州用戶無法關閉。",
+      "paras": [
+        "馬斯克 11 月 14 日在 X 上發文表示，Grok API 的文字浮水印改為僅在法律要求或用戶要求時才開啟，預設不再加上浮水印。",
+        "根據 TeslaNorth 的報導，xAI 的開發者文件已於 11 月 10 日更新，Grok 文字浮水印採用 Google DeepMind 的 SynthID Text 技術；馬斯克 11 月 14 日的發文是這項調整的公開確認。",
+        "語音 API 則維持浮水印，採用 AudioSeal 技術，且對歐盟、歐洲經濟區與加州用戶鎖定開啟，無法關閉。",
+        "這項調整發生在各界關注 AI 生成內容標示的時刻；xAI 選擇預設關閉文字浮水印，與要求強制標示的監管方向形成對比。",
+        "後續值得關注的是，法律要求浮水印的司法管轄區將如何認定，以及預設關閉是否會影響 Grok 生成內容的可追溯性。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "AICoder",
+          "url": "https://aicoder.com/news"
+        },
+        {
+          "label": "TeslaNorth",
+          "url": "https://teslanorth.com/2026/11/11/grok-api-watermarks-off-default-docs/"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "AICoder",
+          "published_at": "2026-11-14",
+          "timezone": "未確認",
+          "url": "https://aicoder.com/news"
+        },
+        {
+          "name": "TeslaNorth",
+          "published_at": "2026-11-11T09:32:00-07:00",
+          "timezone": "太平洋時間（UTC-7）",
+          "url": "https://teslanorth.com/2026/11/11/grok-api-watermarks-off-default-docs/"
+        }
+      ],
+      "summary_zh": "馬斯克 11 月 14 日在 X 上發文表示，Grok API 的文字浮水印改為僅在法律要求或用戶要求時才開啟，預設不再加上浮水印。根據 TeslaNorth 的報導，xAI 的開發者文件已於 11 月 10 日更新，Grok 文字浮水印採用 Google DeepMind 的 SynthID Text 技術；馬斯克 11 月 14 日的發文是這項調整的公開確認。語音 API 則維持浮水印，採用 AudioSeal 技術，且對歐盟、歐洲經濟區與加州用戶鎖定開啟，無法關閉。這項調整發生在各界關注 AI 生成內容標示的時刻；xAI 選擇預設關閉文字浮水印，與要求強制標示的監管方向形成對比。後續值得關注的是，法律要求浮水印的司法管轄區將如何認定，以及預設關閉是否會影響 Grok 生成內容的可追溯性。",
+      "tag": "app",
+      "tagLabel": "應用",
+      "title": "xAI 改弦易轍：Grok API 文字浮水印改為預設關閉",
+      "title_en": "未確認",
+      "title_zh": "xAI 改弦易轍：Grok API 文字浮水印改為預設關閉"
+    },
+    {
+      "anchor": "card-13",
+      "category": "其他",
+      "en": "Quanta's Liang Sees No Impact on AI from Jensen Huang Controversy",
+      "entryNo": 13,
+      "is_top3": false,
+      "n": 13,
+      "note": "科技新報 11 月 14 日刊出（遠見雜誌授權轉載），確切發文時間未確認。",
+      "one_line_summary": "廣達副董事長梁次震表示，AI 產業動能不會因單一事件改變，對黃仁勳風波「不擔心」，也未見客戶砍單；NeoCloud 融資疑慮被過度放大。",
+      "paras": [
+        "科技新報 11 月 14 日報導（遠見雜誌授權轉載），廣達副董事長梁次震表示，AI 產業動能是在黃仁勳帶領下建立的，不會因單一事件而改變，他對黃仁勳風波「不擔心」。",
+        "梁次震表示，相信黃仁勳的作為符合美國與台灣的利益；美國選後 AI 建設「箭在弦上，不得不發」，目前未見客戶砍單。",
+        "針對 NeoCloud 業者的融資疑慮，他認為市場過度放大，因為董事會通常會事先規畫資金；民主黨對資料中心用電的關切，重點在平衡民生用電需求，而非反對 AI。",
+        "廣達是全球主要的 AI 伺服器代工廠之一，其高層的表態被視為供應鏈對 AI 需求前景的溫度計。",
+        "在輝達領導層異動引發市場不安之際，台灣供應鏈高層的公開信心喊話，有助穩定市場對 AI 硬體需求的預期。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "科技新報",
+          "url": "https://technews.tw/2026/11/14/quanta-liang-cizhen-sees-no-impact-on-ai-from-jensen-huang-controversy/"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "科技新報",
+          "published_at": "2026-11-14",
+          "timezone": "未確認",
+          "url": "https://technews.tw/2026/11/14/quanta-liang-cizhen-sees-no-impact-on-ai-from-jensen-huang-controversy/"
+        }
+      ],
+      "summary_zh": "科技新報 11 月 14 日報導（遠見雜誌授權轉載），廣達副董事長梁次震表示，AI 產業動能是在黃仁勳帶領下建立的，不會因單一事件而改變，他對黃仁勳風波「不擔心」。梁次震表示，相信黃仁勳的作為符合美國與台灣的利益；美國選後 AI 建設「箭在弦上，不得不發」，目前未見客戶砍單。針對 NeoCloud 業者的融資疑慮，他認為市場過度放大，因為董事會通常會事先規畫資金；民主黨對資料中心用電的關切，重點在平衡民生用電需求，而非反對 AI。廣達是全球主要的 AI 伺服器代工廠之一，其高層的表態被視為供應鏈對 AI 需求前景的溫度計。在輝達領導層異動引發市場不安之際，台灣供應鏈高層的公開信心喊話，有助穩定市場對 AI 硬體需求的預期。",
+      "tag": "other",
+      "tagLabel": "其他",
+      "title": "廣達梁次震看 AI 後市：無懼黃仁勳風波與政策變數",
+      "title_en": "未確認",
+      "title_zh": "廣達梁次震看 AI 後市：無懼黃仁勳風波與政策變數"
+    },
+    {
+      "anchor": "card-14",
+      "category": "開源",
+      "en": "Show HN: DeepSeek V3 in ~200 Lines of Pure JAX",
+      "entryNo": 14,
+      "is_top3": false,
+      "n": 14,
+      "note": "Hacker News 貼文刊於 11 月 14 日；AiNews247 同日 15:13 UTC 轉述，Token Reporter 同日轉述。專案為教學重現，非真正的 6,710 億參數 DeepSeek V3。",
+      "one_line_summary": "一名開發者在 Hacker News 分享用約 190 行純 JAX 重現 DeepSeek V3 架構的教學專案，以 3,620 萬參數模型在 MacBook Air 上從頭訓練，驗證損失從 5.02 降至 3.51。",
+      "paras": [
+        "一名開發者 11 月 14 日在 Hacker News 分享專案，以約 190 行純 JAX 程式碼重現 DeepSeek V3 的模型架構，全程不使用 Flax 或 PyTorch。",
+        "這個教學用的迷你模型僅有 3,620 萬個參數，以公有領域的偵探小說為訓練資料，在一台 MacBook Air 上從頭訓練，速度約每秒 1.07 萬個 token。",
+        "訓練結果顯示，驗證損失從 5.02 降至 3.51，證明即使是精簡版的架構，也能在消費級硬體上跑通完整的訓練流程。",
+        "需要說明的是，這是架構教學重現，並非真正的 DeepSeek V3（後者擁有 6,710 億個參數）；專案的價值在於讓開發者能以最少的程式碼理解多頭潛在注意力等關鍵設計。",
+        "這類「極簡重現」專案近年在開源社群頗受歡迎，反映開發者對前沿模型架構的好奇心，也降低了學習門檻。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "AiNews247",
+          "url": "https://ainews247.org/story/332048"
+        },
+        {
+          "label": "Token Reporter",
+          "url": "https://tokenreporter.ai/story/show-hn-deepseek-v3-200-lines-pure-jax-13111"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "AiNews247",
+          "published_at": "2026-11-14T15:13:15+00:00",
+          "timezone": "UTC",
+          "url": "https://ainews247.org/story/332048"
+        },
+        {
+          "name": "Token Reporter",
+          "published_at": "2026-11-14",
+          "timezone": "未確認",
+          "url": "https://tokenreporter.ai/story/show-hn-deepseek-v3-200-lines-pure-jax-13111"
+        }
+      ],
+      "summary_zh": "一名開發者 11 月 14 日在 Hacker News 分享專案，以約 190 行純 JAX 程式碼重現 DeepSeek V3 的模型架構，全程不使用 Flax 或 PyTorch。這個教學用的迷你模型僅有 3,620 萬個參數，以公有領域的偵探小說為訓練資料，在一台 MacBook Air 上從頭訓練，速度約每秒 1.07 萬個 token。訓練結果顯示，驗證損失從 5.02 降至 3.51，證明即使是精簡版的架構，也能在消費級硬體上跑通完整的訓練流程。需要說明的是，這是架構教學重現，並非真正的 DeepSeek V3（後者擁有 6,710 億個參數）；專案的價值在於讓開發者能以最少的程式碼理解多頭潛在注意力等關鍵設計。這類「極簡重現」專案近年在開源社群頗受歡迎，反映開發者對前沿模型架構的好奇心，也降低了學習門檻。",
+      "tag": "opensource",
+      "tagLabel": "開源",
+      "title": "開發者用約 200 行純 JAX 重現 DeepSeek V3 架構",
+      "title_en": "Show HN: DeepSeek V3 in ~200 Lines of Pure JAX",
+      "title_zh": "開發者用約 200 行純 JAX 重現 DeepSeek V3 架構"
+    }
+  ],
+  "hero": "過去 24 小時，黃仁勳風波持續延燒：《華爾街日報》揭露他去職前當眾貶低接任者 Kress、質疑循環融資失控，馬斯克等科技高層連署要求輝達恢復其職務，亞洲各國政府相繼回應；義大利重罰 Meta 8.05 億歐元，Anthropic IPO 訂單簿超額認購約 6 倍，微軟 365 全球中斷後完全恢復。",
+  "is_latest": true,
+  "issue": "2026-11-15",
+  "label": "11-15",
+  "meta": "時間視窗：2026-11-14 09:00 至 2026-11-15 09:00（台北時間）· 共 14 條",
+  "notes": [
+    "來源說明：本期 14 條，皆來自官方部落格、英文與中文科技媒體、跑分榜與社群；發布類條目依方案 B 以兩個獨立來源核對事件日期，核對不上的已降級或棄用；發布時間不確定者標「未確認」，不猜測。本期未滿 15 條：經五層來源完整掃描後，窗口內可核實的 AI 新聞僅 14 條，未以無關內容填充。",
+    "排除說明：Google Antigravity「/teamwork」多智能體功能（Google Research 部落格 11 月 13 日發文，事件日在視窗外）、Gemini 4 Hydrogen 設為 AI Mode 預設（11 月 12 日宣布）、OpenAI 支持 3 項中國晶片管制法案（彭博 11 月 12 日報導，INSIDE 11 月 14 日為跟進）、Meta 預測應用 Takes（《華爾街日報》11 月 13 日報導）、Claude Code「/doctor prompt-audit」指令（功能 9 月 25 日隨 v2.1.283 推出）、TestMu AI 品管報告（11 月 13 日發布）、輝達董事 Mark Stevens 出售約 9.47 億美元持股（交易發生於 8 月 31 日至 9 月 18 日）、台積電員工資訊外洩（11 月 12 日證實）、虎嗅百度「智能組織」分析（11 月 14 日 08:41 台北時間，視窗開始前 19 分鐘）、木馬化 Claude Code 擴充套件（11 月 14 日 00:22 UTC，視窗開始前 38 分鐘）、AMD 與 Meta 深化合作（10 月 27 日宣布）等，事件日皆在視窗外，已排除。",
+    "未收錄：馬斯克稱輝達供應協議為與黃仁勳的口頭約定（X 貼文，個人主張未經證實）、Anthropic 執行長稱 IPO 時機與市況不重要（investin.news 11 月 14 日）、韓國 AI ETF 計畫納入 Anthropic（同日）、Nvidia 第三季財報前瞻（財報為 11 月 17 日）、OpenAI Daybreak 防禦工廠（11 月 12 日宣布）等，重要性相對較低或未經獨立核實。",
+    "本期未能讀取：The Verge、Ars Technica（網域阻擋）、MIT Technology Review（頁面空白）、Bloomberg Technology RSS（bloomberg.com 阻擋）、Wired（阻擋）、VentureBeat RSS（HTTP 429，3 次重試失敗）；36氪首頁（安全檢測）、量子位（讀取失敗）、雷鋒網（讀取失敗）、新智元 ai-era.com（網域待售）、TechOrange 首頁（僅 Cookie 文字）、虎嗅首頁（快取為 11 月 12 日版本）、T客邦（未擷取到日期與連結）；X（登入牆，貼文以搜尋與雪花 ID 解碼核實）、Reddit r/LocalLLaMA、r/MachineLearning、r/singularity（未直接讀取，以搜尋與聚合站核實）、知乎（熱榜無法讀取）、Hacker News 首頁（快取為 11 月 13 日 23:36 UTC）；Hugging Face Open LLM Leaderboard（頁面卡在讀取中繼資料）。跑分榜七個來源（LMArena、Artificial Analysis、Hugging Face 榜單、Aider、SWE-bench、HELM、LiveBench）視窗內無登頂、超車或新模型上榜。"
+  ],
+  "weekday": "星期日",
+  "tldr": [
+    {
+      "n": 1,
+      "text": "《華爾街日報》揭露，黃仁勳今年夏天當眾批評財務長 Kress 對循環融資風險的評估，質疑由其女婿主導、為買不起晶片的客戶提供融資的交易。"
+    },
+    {
+      "n": 2,
+      "text": "馬斯克等科技高層連署要求輝達恢復黃仁勳職務，連署網站已有逾 11.5 萬人簽名，包括近 6,000 名現任員工。"
+    },
+    {
+      "n": 3,
+      "text": "中國、南韓、台灣、日本與新加坡相繼回應黃仁勳去職，關注晶片供應與輝達在亞洲的投資計畫是否生變。"
+    },
+    {
+      "n": 4,
+      "text": "義大利個資監管機關重罰 Meta 8.05 億歐元，指臉書 Android 版「從相簿取得建議」功能未經明確同意，取用約 2,000 萬名義大利用戶的照片與影片。"
+    },
+    {
+      "n": 5,
+      "text": "TechCrunch 追問輝達資安團隊在黃仁勳風波中的角色：長期資安長 8 月離職，接任者來自石油業，公司內部調查的知情範圍成謎。"
+    },
+    {
+      "n": 6,
+      "text": "路透 11 月 14 日報導，Anthropic IPO 訂單簿超額認購約 6 倍，投資人追問能否守住對 Google 的模型領先優勢，並將 Claude 拓展至程式以外的領域。"
+    },
+    {
+      "n": 7,
+      "text": "張一鳴在字節跳動內部會議上坦言，追趕 OpenAI 與 Anthropic 的前沿水準最早要到 2029 或 2030 年；馬化騰「一半人守核心、一半人探索 AI 原生」的說法則被誤讀為裁員。"
+    },
+    {
+      "n": 8,
+      "text": "微軟 365 服務在中斷約 24 小時後於 11 月 14 日完全恢復，影響逾 70 個國家與地區的 Outlook、Teams 與 Copilot，原因為網路容量升級過程出問題。"
+    },
+    {
+      "n": 9,
+      "text": "前央行行長周小川在 11 月 14 日上午的中國資本市場學術年會上表示，AI 可能實現遞迴自我改進，資本市場須以資源配置、風險控制與投資人合理回報三項目標錨定 AI 的目標函數。"
+    },
+    {
+      "n": 10,
+      "text": "TechCrunch 盤點 AI 領域夭折的計畫與新創：OpenAI 超級應用回撤、Sora 關閉、Character.ai 破產，標普數據顯示約 42% 的企業 AI 專案最終被放棄。"
+    },
+    {
+      "n": 11,
+      "text": "AI 錄音卡、錄音豆與錄音戒指等裝置快速興起，Plaud 訂閱年收入兩年內從 100 萬美元衝上 1 億美元，成為 AI 硬體的新戰場。"
+    },
+    {
+      "n": 12,
+      "text": "馬斯克 11 月 14 日在 X 上表示，Grok API 的文字浮水印改為僅在法律要求或用戶要求時才開啟；語音 API 仍維持浮水印，歐盟與加州用戶無法關閉。"
+    },
+    {
+      "n": 13,
+      "text": "廣達副董事長梁次震表示，AI 產業動能不會因單一事件改變，對黃仁勳風波「不擔心」，也未見客戶砍單；NeoCloud 融資疑慮被過度放大。"
+    },
+    {
+      "n": 14,
+      "text": "一名開發者在 Hacker News 分享用約 190 行純 JAX 重現 DeepSeek V3 架構的教學專案，以 3,620 萬參數模型在 MacBook Air 上從頭訓練，驗證損失從 5.02 降至 3.51。"
+    }
+  ],
+  "top3": [
+    {
+      "blurb": "黃仁勳今年夏天當眾批評接任者 Kress 對循環融資風險的評估，質疑由女婿主導的融資交易；Kress 已暫代執行長。",
+      "n": 1,
+      "rank": 1,
+      "title": "黃仁勳去職前當眾貶低接任者，質疑循環融資失控"
+    },
+    {
+      "blurb": "馬斯克等科技高層連署要求輝達恢復黃仁勳職務，已逾 11.5 萬人簽名，包括近 6,000 名現任員工。",
+      "n": 2,
+      "rank": 2,
+      "title": "馬斯克等科技高層連署，要求輝達恢復黃仁勳職務"
+    },
+    {
+      "blurb": "中國、南韓、台灣、日本與新加坡相繼回應，關注晶片供應與投資計畫；南韓稱輝達重申供應 26 萬顆 GPU。",
+      "n": 3,
+      "rank": 3,
+      "title": "亞洲各國政府回應輝達執行長黃仁勳去職"
+    }
+  ]
+}

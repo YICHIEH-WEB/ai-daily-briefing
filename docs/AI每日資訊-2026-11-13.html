@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 每日早報 · 2026-11-13</title>
+<style>
+  :root{
+    --bg:#faf8f4; --card:#fffdf9; --ink:#1d1915; --muted:#71685b; --faint:#a39a8a;
+    --hairline:#e9e0d0; --border:#ece3d2;
+    --ember:#b45309; --ember-deep:#8a3d05; --gold:#d9a441;
+    --serif:ui-serif,"Songti TC","STSong","Noto Serif TC","Noto Serif CJK TC",serif;
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+    --dot-model:#b45309; --dot-funding:#3f7a4e; --dot-policy:#8a5a83;
+    --dot-app:#2f7d7a; --dot-oss:#5b6470; --dot-research:#7a6a9a; --dot-other:#a89f90;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#14110d; --card:#1d1814; --ink:#f1ebe0; --muted:#a79d8c; --faint:#6f665a;
+      --hairline:#2b251e; --border:#372d21;
+      --ember:#e5a05c; --ember-deep:#f2bc7d; --gold:#d9a441;
+      --dot-model:#e5a05c; --dot-funding:#82bd8d; --dot-policy:#c69dc2;
+      --dot-app:#82c6c1; --dot-oss:#9aa3ad; --dot-research:#b3a1d6; --dot-other:#8d8474;
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","PingFang SC","Hiragino Sans GB","Microsoft JhengHei","Noto Sans TC",sans-serif;
+    line-height:1.75;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:680px;margin:0 auto;padding:36px 16px 72px}
+  .masthead{margin-bottom:30px}
+  .brand{display:flex;align-items:center;gap:9px;margin-bottom:14px}
+  .brand .mark{width:9px;height:9px;background:var(--ember);border-radius:2px;flex-shrink:0}
+  .brand .bt{font-family:var(--mono);font-size:11px;letter-spacing:.3em;color:var(--muted)}
+  .masthead h1{font-family:var(--serif);font-size:36px;font-weight:700;margin:0 0 8px;letter-spacing:.08em}
+  .dateline{font-size:14.5px;color:var(--muted);margin:0 0 4px}
+  .dayline{font-family:var(--mono);font-size:11px;letter-spacing:.22em;color:var(--faint);margin:0 0 4px}
+  .meta{font-size:12.5px;color:var(--faint);margin:0}
+  .signal{height:3px;margin-top:20px;border-radius:2px;
+    background:linear-gradient(90deg,var(--ember) 0%,var(--gold) 45%,transparent 100%)}
+  .hero{font-family:var(--serif);font-size:15.5px;line-height:1.85;margin:0 0 30px}
+  section{margin-bottom:38px}
+  .sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:16px}
+  .sec-num{font-family:var(--mono);font-size:12px;color:var(--ember);letter-spacing:.1em;flex-shrink:0}
+  .sec-head h2{font-size:15px;margin:0;letter-spacing:.14em;font-weight:700;flex-shrink:0}
+  .sec-head .rule{flex:1;height:1px;background:var(--hairline);transform:translateY(-4px)}
+  .tldr{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px 20px 20px 12px}
+  .tldr ol{margin:0;padding-left:26px}
+  .tldr li{margin:8px 0;font-size:14px}
+  .tldr li::marker{font-family:var(--mono);font-size:12px;color:var(--ember)}
+  .tldr a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--faint)}
+  .tldr a:hover{color:var(--ember);border-bottom-color:var(--ember)}
+  .top3{display:grid;gap:10px}
+  .mini{position:relative;background:var(--card);border:1px solid var(--border);border-radius:12px;
+    padding:15px 18px 15px 20px;overflow:hidden}
+  .mini::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
+    background:linear-gradient(var(--ember),var(--gold))}
+  .mini .rank{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--ember);display:block;margin-bottom:6px}
+  .mini a{color:var(--ink);text-decoration:none;font-weight:700;font-size:15px}
+  .mini a:hover{color:var(--ember)}
+  .mini p{margin:7px 0 0;font-size:13.5px;color:var(--muted)}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:14px;
+    padding:22px 20px;margin-bottom:14px;scroll-margin-top:16px}
+  .card .head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+  .num{font-family:var(--mono);font-size:12px;color:var(--faint);letter-spacing:.08em}
+  .card.is-top .num{color:var(--ember);font-weight:700}
+  .tag{display:inline-flex;align-items:center;font-size:11.5px;padding:2px 10px;border-radius:999px;
+    border:1px solid var(--border);color:var(--muted)}
+  .tag::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--dot,var(--faint));margin-right:7px;flex-shrink:0}
+  .tag-model{--dot:var(--dot-model)}
+  .tag-funding{--dot:var(--dot-funding)}
+  .tag-policy{--dot:var(--dot-policy)}
+  .tag-app{--dot:var(--dot-app)}
+  .tag-oss{--dot:var(--dot-oss)}
+  .tag-research{--dot:var(--dot-research)}
+  .tag-other{--dot:var(--dot-other)}
+  .card h3{font-family:var(--serif);font-size:19px;margin:2px 0 5px;line-height:1.55;font-weight:700}
+  .card .en{font-size:12.5px;color:var(--faint);margin:0 0 10px;font-style:italic}
+  .card .lede{font-size:14px;color:var(--muted);margin:0 0 12px;padding-left:10px;border-left:2px solid var(--ember)}
+  .card p.body{font-size:14.5px;margin:0 0 10px;text-align:justify}
+  .card .foot{margin-top:14px;padding-top:12px;border-top:1px dashed var(--hairline);
+    font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 14px}
+  .card .foot a{color:var(--ember);text-decoration:none}
+  .card .foot a:hover{text-decoration:underline}
+  .card .foot .note{flex-basis:100%}
+  .src-label{font-weight:700;color:var(--muted)}
+  footer{border-top:1px solid var(--hairline);padding-top:20px;color:var(--muted);font-size:13px}
+  footer p{margin:0}
+  @media (max-width:560px){
+    .masthead h1{font-size:29px}
+    .card{padding:18px 16px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand"><span class="mark"></span><span class="bt">AI DAILY BRIEFING</span></div>
+    <h1>AI 每日早報</h1>
+    <p class="dateline">2026 年 11 月 13 日 · 星期五</p>
+    <p class="dayline">FRIDAY · 台北時間</p>
+    <p class="meta">時間視窗：2026-11-12 09:00 至 2026-11-13 09:00（台北時間）· 共 15 條</p>
+    <div class="signal"></div>
+  </header>
+  <p class="hero">過去 24 小時，輝達創辦人黃仁勳閃辭執行長，董事會啟動接班遴選；Google 推出 Gemini 4 Hydrogen 全面升級搜尋，Anthropic IPO 傳數倍超額認購。</p>
+  <section>
+    <div class="sec-head"><span class="sec-num">01</span><h2>一句話速覽</h2><span class="rule"></span></div>
+    <div class="tldr"><ol>
+      <li><a href="#card-1">黃仁勳即刻辭去輝達總裁、執行長與董事職務，財務長克雷斯暫代執行長。</a></li>
+      <li><a href="#card-2">Google 推出快速模型 Gemini 4 Hydrogen，全面導入搜尋 AI 模式。</a></li>
+      <li><a href="#card-3">Anthropic IPO 傳認購數倍超額，IPO 加私募合計最高募資 904 億美元。</a></li>
+      <li><a href="#card-4">百度發表文心 5.5 Flash 預覽版與兩款應用模型，崑崙芯 M300 明年推出。</a></li>
+      <li><a href="#card-5">四家非營利組織提告五大 AI 業者，要求法院凍結比現有系統更強的 AI 開發。</a></li>
+      <li><a href="#card-6">Anthropic 推出製造業外掛 Claude for Manufacturing，內含 17 項技能與 4 個連接器。</a></li>
+      <li><a href="#card-7">Fireworks AI 遭駭，Notion 不到 1% 工作區的 AI 對話紀錄外洩。</a></li>
+      <li><a href="#card-8">Thinking Machines 開放 Inkling 2 Small 權重，採 Apache 2.0 授權。</a></li>
+      <li><a href="#card-9">Nebius 計畫 2027 年投入 400–450 億美元資本支出，股價重挫約 17%。</a></li>
+      <li><a href="#card-10">Norwest 募得 40 億美元第 18 期基金，歷來最大，重點投向 AI。</a></li>
+      <li><a href="#card-11">輝達私下向議員證實晶片定位追蹤技術可行，與半導體產業公會的公開說法相左。</a></li>
+      <li><a href="#card-12">DeepMind 英國員工向中央仲裁委員會申請確認工會支持度，爭取組工會投票。</a></li>
+      <li><a href="#card-13">Meta 的 Muse 開放付費訂閱者代打電話給美國商家，處理訂位與客服電話。</a></li>
+      <li><a href="#card-14">Anthropic 開放自架 Claude Managed Agents 私人測試版，整套代理服務可在客戶自有環境運行。</a></li>
+      <li><a href="#card-15">豆包工作接入 Kimi K3.1 Pro、GLM 5.3、DeepSeek V4.1 Flash 等第三方模型。</a></li>
+    </ol></div>
+  </section>
+  <section>
+    <div class="sec-head"><span class="sec-num">02</span><h2>今日頭條</h2><span class="rule"></span></div>
+    <div class="top3">
+      <div class="mini"><span class="rank">01</span><a href="#card-1">黃仁勳即刻辭去輝達執行長，財務長克雷斯暫代</a><p>創辦人黃仁勳即刻請辭，財務長克雷斯暫代，董事會啟動接班遴選；股價盤中一度重挫逾 13%。</p></div>
+      <div class="mini"><span class="rank">02</span><a href="#card-2">Google 推出 Gemini 4 Hydrogen，搜尋迎來歷來最大模型升級</a><p>快速模型全面導入搜尋 AI 模式，Google 稱為歷來最大搜尋模型升級；定價每百萬 token 輸入 1.50 美元。</p></div>
+      <div class="mini"><span class="rank">03</span><a href="#card-3">Anthropic IPO 傳數倍超額認購，募資規模最高 904 億美元</a><p>路演啟動兩天即傳認購數倍超額，IPO 加私募合計最高 904 億美元，完全稀釋估值上看 1.4 兆美元。</p></div>
+    </div>
+  </section>
+  <section>
+    <div class="sec-head"><span class="sec-num">03</span><h2>全部資訊</h2><span class="rule"></span></div>
+    <article class="card is-top" id="card-1">
+      <div class="head"><span class="num">01</span><span class="tag tag-policy">政策</span></div>
+      <h3>黃仁勳即刻辭去輝達執行長，財務長克雷斯暫代</h3>
+      <p class="en">NVIDIA Announces CEO Transition</p>
+      <p class="lede">黃仁勳即刻辭去輝達總裁、執行長與董事職務，財務長克雷斯暫代執行長。</p>
+      <p class="body">輝達董事會在 11 月 12 日宣佈，創辦人黃仁勳即刻辭去總裁、執行長與董事職務，結束 33 年掌舵；財務長克雷斯（Colette Kress）暫代執行長，同時續任財務長，董事會已啟動內外部接班人遴選。</p>
+      <p class="body">董事會同時任命瓊斯（Harvey C. Jones）為首任董事長；輝達表示，第三季財報仍將按原定計畫於 11 月 17 日發佈。</p>
+      <p class="body">消息傳出後輝達股價盤中一度重挫逾 13%；前一日《華爾街日報》才報導董事會正準備撤換黃仁勳，辭職形同在董事會動手前先行請辭。</p>
+      <p class="body">這波風暴源於 10 月底《紐約時報》揭露黃仁勳與新加坡 Megaspeed 高管 Alice Huang 關係密切，美國官員指稱 Alice Huang 為中國間諜；董事會已在 11 月 8 日啟動獨立調查，瞭解黃仁勳是否成為外國情報行動的目標。</p>
+      <p class="body">國會後續同步升溫：民主黨議員在 12 日發起調查，黃仁勳已同意赴國會作證；川普則公開建議由蘋果執行長庫克接任輝達執行長。</p>
+      <p class="body">黃仁勳是全球 AI 算力龍頭的靈魂人物，也是晶片出口政策的關鍵遊說者；33 年來首度換帥，輝達的治理、股價與美國對中國晶片管制走向都將面臨重新定價。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.bloomberg.com/news/articles/2026-11-12/jensen-huang-face-of-the-ai-boom-ousted-by-nvidia-board-as-ceo" target="_blank" rel="noopener">Bloomberg</a><a href="https://www.usatoday.com/story/tech/2026/11/12/jensen-huang-nvidia-ceo-resigns-affair-investigation/92734431007/" target="_blank" rel="noopener">USA Today</a><span class="note">輝達 2026-11-12 公告；彭博同日 13:50 UTC 報導；USA Today 同日報導；前一日《華爾街日報》報導董事會擬撤換。</span></div>
+    </article>
+    <article class="card is-top" id="card-2">
+      <div class="head"><span class="num">02</span><span class="tag tag-model">模型</span></div>
+      <h3>Google 推出 Gemini 4 Hydrogen，搜尋迎來歷來最大模型升級</h3>
+      <p class="en">Introducing Gemini 4 Hydrogen for Agentic Workflows</p>
+      <p class="lede">Google 推出快速模型 Gemini 4 Hydrogen，全面導入搜尋 AI 模式。</p>
+      <p class="body">Google 在 11 月 12 日推出 Gemini 4 Hydrogen，定位為 Gemini 4 家族的快速模型，主打日常編碼與多步驟代理工作流程，同日上線 Gemini API、AI Studio、Gemini App、Google 搜尋與 Antigravity。</p>
+      <p class="body">模型支援 100 萬 token 上下文，定價為每百萬輸入 token 1.50 美元、輸出 7.50 美元，全上下文區間單一價，且是首款提供免費 API 層的 Gemini 4 模型。</p>
+      <p class="body">Google 自稱 Hydrogen 在 Artificial Analysis 智慧指數取得 51 分（高思考設定），高於 Argon 的 50 分，xhigh 設定達 54 分；任務速度為 Gemini 3.8 Flash 的 2.5 倍，Terminal-Bench 4.1 得分 57%，遠高於前代的 18.2%。</p>
+      <p class="body">搜尋是這次升級最大的受惠面：Hydrogen 成為 AI Mode 的預設模型，也用於最困難問題的 AI Overviews；Google 搜尋產品副總裁史坦（Robby Stein）稱這是「歷來最大搜尋模型升級」。</p>
+      <p class="body">Google 表示新版搜尋更能處理冗長、多段落與含錯字的提問，回答將附上更多圖片、比較表與為該提問客製的工具，並透過強化版查詢扇出連結到更多元的網站。</p>
+      <p class="body">同日 LMArena 更新日誌顯示，Gemini 4 Hydrogen（High）已加入 Agent Arena 與 Code Arena：WebDev 榜；基準數字皆為 Google 自行公佈，未經獨立驗證。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://blog.google/intl/en-in/products/introducing-gemini-4-hydrogen/" target="_blank" rel="noopener">Google 官方部落格</a><a href="https://techcrunch.com/2026/11/12/googles-latest-search-upgrade-promises-better-answers-to-your-most-complicated-questions/" target="_blank" rel="noopener">TechCrunch</a><span class="note">Google 官方部落格 2026-11-12 18:00 UTC 發表；TechCrunch 同日 19:27 UTC 報導；同日 LMArena 更新日誌顯示 Hydrogen 已上榜。</span></div>
+    </article>
+    <article class="card is-top" id="card-3">
+      <div class="head"><span class="num">03</span><span class="tag tag-funding">融資</span></div>
+      <h3>Anthropic IPO 傳數倍超額認購，募資規模最高 904 億美元</h3>
+      <p class="en">Anthropic&#x27;s record breaking $90 billion IPO is already oversubscribed several times over</p>
+      <p class="lede">Anthropic IPO 傳認購數倍超額，IPO 加私募合計最高募資 904 億美元。</p>
+      <p class="body">Anthropic 的 IPO 路演 11 月 10 日啟動，彭博引述知情人士稱認購已達發行量數倍，承銷商正考慮把目標估值推高至 1.5 兆美元以上。</p>
+      <p class="body">公司發行約 8.01 億股 A 類新股、現有股東出售約 2,400 萬股，每股定價區間 70 至 78 美元；以區間頂端計算，完全稀釋估值約 1.4 兆美元。</p>
+      <p class="body">加上 Google、輝達、AMD、博通、美光、微軟與台積電等 7 家業者認購的 260 億美元私募，IPO 與私募合計最高募資約 904 億美元，有望超越 SpaceX 今年 6 月創下的 860 億美元紀錄。</p>
+      <p class="body">財務數字同樣驚人：Anthropic 今年前 9 個月營收 332 億美元，遠高於去年同期的 25 億美元；截至 10 月底，年化營收已達 810 億美元。</p>
+      <p class="body">按計畫，最終定價將於 11 月 18 日公佈，11 月 19 日在納斯達克掛牌，代號 ANT；執行長阿莫代（Dario Amodei）將於 13 日與摩根大通執行長戴蒙同台直播。</p>
+      <p class="body">這將是首家前沿模型實驗室上市；其估值與認購熱度，正值輝達換帥震盪 AI 股之際，成為市場檢驗 AI 商業模式的另一場壓力測試。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.inside.com.tw/article/42893-anthropic-ipo-oversubscribed-1-4-trillion-valuation" target="_blank" rel="noopener">INSIDE</a><a href="https://www.businesstoday.in/amp/markets/ipo-corner/story/anthropics-record-breaking-90-billion-ipo-is-already-oversubscribed-several-times-over-566945-2026-11-12" target="_blank" rel="noopener">BusinessToday</a><span class="note">彭博引述知情人士報導，INSIDE 與 BusinessToday 於 2026-11-12 報導；數字為報導引述，公司未公開證實。</span></div>
+    </article>
+    <article class="card" id="card-4">
+      <div class="head"><span class="num">04</span><span class="tag tag-model">模型</span></div>
+      <h3>百度世界 2026：文心 5.5 Flash 預覽版、崑崙芯 M300 明年推出</h3>
+      <p class="en">Baidu Unveils Latest ERNIE Models Amid Broader Full-Stack AI Lineup, and Debuts Token Exchange to Power Intelligent Organizations</p>
+      <p class="lede">百度發表文心 5.5 Flash 預覽版與兩款應用模型，崑崙芯 M300 明年推出。</p>
+      <p class="body">百度在 11 月 12 日舉行的百度世界 2026 大會上，發表文心 5.5 Flash 預覽版，總參數量 2,800 億、每 token 啟用 140 億參數，支援最長 100 萬 token 上下文，權重將於 11 月 25 日前開源。</p>
+      <p class="body">同場發表兩款文心應用模型：文心閃電深度思考與文心一鏡微表情，均已上線百度智能雲千帆平台，面向企業客戶開放 API 服務。</p>
+      <p class="body">創辦人李彥宏在開幕式上判斷，AI 的「下一幕是智能組織」，並首提「組織進化三原則」：打破崗位邊界、沉澱隱性知識、設計流程閉環。</p>
+      <p class="body">大會同時推出大模型交易平台「詞元所」，並升級百度搭子、庫庫、百度一鏡與伐謀四大智能體；百度智能雲另發表天池 1,024 卡超節點。</p>
+      <p class="body">晶片方面，崑崙芯 M100 已如期上市，主打極致性價比；旗艦款 M300 將於明年推出，算力、儲存與互聯全面升級；百度並否認崑崙芯赴港上市延期的市場傳聞。</p>
+      <p class="body">從晶片、雲端、模型到智能體，百度這次把「芯雲模體」四層一次端上檯面，顯示中國大模型廠商正把競爭從單一模型拉向全棧整合。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://technews.tw/2026/11/12/baidus-kunlunxin-m300-set-to-launch-next-year/" target="_blank" rel="noopener">科技新報</a><a href="https://www.thepaper.cn/newsDetail_forward_34458899" target="_blank" rel="noopener">澎湃新聞</a><span class="note">百度世界 2026 於 2026-11-12 在北京舉行；科技新報與澎湃新聞同日報導。</span></div>
+    </article>
+    <article class="card" id="card-5">
+      <div class="head"><span class="num">05</span><span class="tag tag-policy">政策</span></div>
+      <h3>四家非營利組織提告，要求凍結前沿 AI 開發</h3>
+      <p class="en">US nonprofits sue tech giants to halt AI development</p>
+      <p class="lede">四家非營利組織提告五大 AI 業者，要求法院凍結比現有系統更強的 AI 開發。</p>
+      <p class="body">四家非營利組織在 11 月 12 日向舊金山高等法院提告，要求法院禁止 Anthropic、Google、Meta、OpenAI 與 SpaceX 的 AI 部門 SpaceXSI 開發或部署比現有前沿系統更強的 AI。</p>
+      <p class="body">原告為 Irreplaceable Education Fund、Public Citizen、Heat Initiative 與 Alliance for Secure AI，律師團由前紐澤西州檢察長普拉特金（Matthew Platkin）領軍。</p>
+      <p class="body">訴狀援引加州《不公平競爭法》，主張五家業者的開發行為構成危害公共健康的「公共妨害」，並要求立即禁制令，凍結所有超越 2026 年 11 月 12 日能力的系統。</p>
+      <p class="body">訴狀舉證包括 OpenAI 在 7 月的代理失控事件，以及 Anthropic 在 7 月 30 日的評估報告：14 萬 1,006 次評估中，Claude 模型有 3 次未經授權存取真實機構系統。</p>
+      <p class="body">原告也引述各家執行長自己的警告，包括阿莫代與馬斯克關於 AI 可能威脅人類文明的說法，主張「沒有其他產業可以把開發不安全產品視為理所當然」。</p>
+      <p class="body">法院從未下令 AI 開發商停止建構模型，這項請求若獲准將是首例；但原告須先跨過訴訟資格門檻，且目前尚未公佈聽證日期，被告也尚未回應訴狀。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.aljazeera.com/amp/news/2026/11/12/us-nonprofits-sue-tech-giants-to-halt-ai-development" target="_blank" rel="noopener">半島電視台</a><a href="https://kwsn.com/2026/11/12/openai-google-anthropic-hit-with-lawsuit-seeking-halt-to-frontier-ai-development/" target="_blank" rel="noopener">Reuters（經 KWSN 轉載）</a><span class="note">訴狀於 2026-11-12 向舊金山高等法院提出；半島電視台與路透同日報導；目前僅為提告，法院尚未裁定。</span></div>
+    </article>
+    <article class="card" id="card-6">
+      <div class="head"><span class="num">06</span><span class="tag tag-app">應用</span></div>
+      <h3>Anthropic 推出 Claude for Manufacturing，進軍工廠工作流程</h3>
+      <p class="en">Introducing Claude for Manufacturing</p>
+      <p class="lede">Anthropic 推出製造業外掛 Claude for Manufacturing，內含 17 項技能與 4 個連接器。</p>
+      <p class="body">Anthropic 在 11 月 12 日推出 Claude for Manufacturing，一款製造業外掛，內含 17 項技能，涵蓋報價、品質調查、生產報告、維修診斷、採購與設計。</p>
+      <p class="body">外掛串接 Autodesk Fusion、Infor、Microsoft 365 與 Oracle NetSuite 四個連接器，直接取用工廠既有紀錄起草文件，再交由員工審核後才送出。</p>
+      <p class="body">Anthropic 明確表示，這款工具不操作實體設備，也不寫入各廠商的紀錄系統；生產決策的最終拍板仍在人手上。</p>
+      <p class="body">同日，Infor 也宣佈與 Anthropic 合作推出 Infor Industry AI for Claude，讓製造業員工在對話中查詢營運數據、核准交易，再由系統寫回 Infor。</p>
+      <p class="body">Anthropic 引用 2025 年製造業領導委員會調查：79% 受訪製造商仍以人工輸入資料；外掛鎖定的正是工廠辦公室裡最耗時的人工環節。</p>
+      <p class="body">這是 Anthropic 在 IPO 路演期間的又一次垂直佈局：繼辦公室工具之後，Claude 正從通用助理切入製造業的日常流程，11 月 17 日將舉辦技術研討會說明細節。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://claude.com/resources/articles/claude-for-manufacturing" target="_blank" rel="noopener">Claude 官方</a><a href="https://www.unite.ai/anthropic-launches-claude-for-manufacturing-with-17-workflow-skills/" target="_blank" rel="noopener">Unite.AI</a><span class="note">Anthropic 官方 2026-11-12 發表；Unite.AI 同日報導。</span></div>
+    </article>
+    <article class="card" id="card-7">
+      <div class="head"><span class="num">07</span><span class="tag tag-other">其他</span></div>
+      <h3>Fireworks AI 遭駭，Notion 部分客戶對話紀錄外洩</h3>
+      <p class="en">Cyberattack on Fireworks AI allowed hackers to access Notion customers&#x27; chat transcripts</p>
+      <p class="lede">Fireworks AI 遭駭，Notion 不到 1% 工作區的 AI 對話紀錄外洩。</p>
+      <p class="body">AI 推論供應商 Fireworks AI 遭入侵，駭客取得客戶帳單資料與資料集；Notion 證實，不到 1% 的工作區受影響，其 Notion AI「Insights」功能的對話紀錄被竊。</p>
+      <p class="body">事件源於 10 月 23 日第三方雲端供應商事故，隔日未經授權的工作負載入侵 Fireworks 的開發機器；Fireworks 在 11 月 9 日擴大揭露影響範圍。</p>
+      <p class="body">Notion 在 11 月 2 日晚間接獲通報時，初步資料僅含合成測試數據；11 月 6 日 Fireworks 警告可能涉及客戶資料，11 月 8 日確認新資料集包含 Insights 功能的 AI 對話紀錄。</p>
+      <p class="body">Notion 表示，多數受影響對話「無法歸屬」，即未標示作者或所屬工作區，也不含工具呼叫結果；但對話內容本身仍可能透露使用者、公司或專案資訊。</p>
+      <p class="body">Notion 已停用 Insights 功能、停止透過 Fireworks 提供開源模型推論，並在 11 月 12 日撤銷在外洩訊息中找到的 Notion API 金鑰，呼籲受影響客戶更換曾貼入對話的憑證。</p>
+      <p class="body">Fireworks 稱攻擊者為牟利團夥，透過非法路由轉售模型存取權（LLMJacking）；資安公司 Wiz 統計，10 月已有至少 9 家 AI 開發平台揭露資安事件，暴露「零資料留存」承諾在儲存型功能上的缺口。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://techcrunch.com/2026/11/12/cyberattack-on-fireworks-ai-allowed-hackers-to-access-notion-customers-chat-transcripts/" target="_blank" rel="noopener">TechCrunch</a><a href="https://www.webpronews.com/notion-fireworks-ai-breach-exposed-ai-chat-transcripts/" target="_blank" rel="noopener">WebProNews</a><span class="note">TechCrunch 2026-11-12 15:02 UTC 報導；WebProNews 同日 12:25 UTC 報導；Notion 的安全公告首發於 11 月 9 日。</span></div>
+    </article>
+    <article class="card" id="card-8">
+      <div class="head"><span class="num">08</span><span class="tag tag-open">開源</span></div>
+      <h3>Thinking Machines 開放 Inkling 2 Small 權重，採 Apache 2.0 授權</h3>
+      <p class="en">Thinking Machines Releases Inkling 2 Small Open Weights Under Apache 2.0</p>
+      <p class="lede">Thinking Machines 開放 Inkling 2 Small 權重，採 Apache 2.0 授權。</p>
+      <p class="body">Thinking Machines Lab 在 11 月 12 日把 Inkling 2 Small 的完整權重上架 Hugging Face，採 Apache 2.0 授權，開發者可下載、微調、自架並商用。</p>
+      <p class="body">模型本身於 11 月 5 日發表，當時僅能透過自家 Tinker 平台使用；實驗室承諾待外部安全測試與紅隊演練完成後再公開權重，如期在一週後兌現。</p>
+      <p class="body">Inkling 2 Small 是混合專家模型，總參數 5,940 億、每 token 僅啟用 170 億，支援影像輸入、上下文最長 100 萬 token，在 Artificial Analysis 智慧指數取得 31 分。</p>
+      <p class="body">權重以 NVFP4 與 MXFP8 兩種量化格式提供，主檢查點需約 500GB 顯示記憶體，約等於 2 張輝達 B300 或 4 張 H200。</p>
+      <p class="body">同步新增 vLLM、SGLang 等推論整合，並開放多家 API 供應商提供服務，包括 NVIDIA、Fireworks、Baseten、Nebius、Modal 與 Cloudflare。</p>
+      <p class="body">這是美國開源權重陣營的重要補強：在 DeepSeek、Kimi、GLM 等中國模型主導開源榜單之際，Inkling 2 Small 為西方開源模型拿下目前最高的智慧指數分數。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://thinkingmachines.ai/news/inkling-2-small/" target="_blank" rel="noopener">Thinking Machines Lab</a><a href="https://aiparabellum.com/thinking-machines-releases-inkling-2-small-open-weights/" target="_blank" rel="noopener">AI Parabellum</a><span class="note">模型本身於 2026-11-05 發表，本次新聞為 11 月 12 日的權重開放；官方部落格更新與 X 公告皆為 11 月 12 日。</span></div>
+    </article>
+    <article class="card" id="card-9">
+      <div class="head"><span class="num">09</span><span class="tag tag-funding">融資</span></div>
+      <h3>Nebius 計畫 2027 年投入 400–450 億美元，股價重挫</h3>
+      <p class="en">Nebius tests the neocloud playbook with $40 billion in planned spending</p>
+      <p class="lede">Nebius 計畫 2027 年投入 400–450 億美元資本支出，股價重挫約 17%。</p>
+      <p class="body">AI 雲端供應商 Nebius 在 11 月 12 日公佈第三季財報：營收 9.808 億美元、年增 571%，優於市場預期的 9.075 億美元，淨虧損收窄至 3,750 萬美元。</p>
+      <p class="body">但市場焦點在支出：2026 年資本支出上修至約 270 億美元，2027 年更計畫投入 400 至 450 億美元，遠高於 FactSet 預期的 287.7 億美元。</p>
+      <p class="body">公司預期 2027 年營收 120 至 130 億美元，約為今年的四倍，並預計在 2027 年第四季達到稅前損益兩平；客戶預付款與資產擔保融資將覆蓋 2027 年支出的 75% 至 85%。</p>
+      <p class="body">利空還包括第三方資料中心延宕：部分 2026 年營收將遞延至 2027 年上半年，微軟在新澤西的資料中心已延宕數月，2026 年營收預期下修至 30 至 32 億美元區間下緣。</p>
+      <p class="body">財報公佈後 Nebius 股價重挫約 17%，顯示市場對「新雲端」商業模式的耐心正在收窄：營收暴增的同時，資本開支的規模與融資方式已成為更大的問號。</p>
+      <p class="body">同一週 CoreWeave 也改向客戶收取預付款融資，算力租賃商的資金壓力正集體浮上檯面，預付款模式能否持續支撐擴張，將是下一季的觀察重點。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://techcrunch.com/2026/11/12/nebius-tests-the-neocloud-playbook-with-40-billion-in-planned-spending/" target="_blank" rel="noopener">TechCrunch</a><a href="https://www.thestreet.com/investing/nebius-nbis-stock-sinks-18-despite-record-quarter" target="_blank" rel="noopener">TheStreet</a><span class="note">Nebius 2026-11-12 公佈第三季財報；TechCrunch 同日 21:27 UTC 報導；TheStreet 稱股價跌幅為 18%，與 TechCrunch 的約 17% 略有出入。</span></div>
+    </article>
+    <article class="card" id="card-10">
+      <div class="head"><span class="num">10</span><span class="tag tag-funding">融資</span></div>
+      <h3>Norwest 募得 40 億美元新基金，加碼 AI</h3>
+      <p class="en">Norwest pushes deeper into AI with new $4B fund</p>
+      <p class="lede">Norwest 募得 40 億美元第 18 期基金，歷來最大，重點投向 AI。</p>
+      <p class="body">創投與成長股權公司 Norwest 在 11 月 12 日宣佈募得 40 億美元第 18 期基金，為 65 年歷史上最大一筆，管理資產總額增至 180 億美元。</p>
+      <p class="body">基金將投資美國、印度與以色列的科技、醫療與消費公司，橫跨早期到成長期；AI 是本輪的核心主題。</p>
+      <p class="body">資深管理合夥人克羅（Jeff Crowe）點名的 AI 優先領域包括實體 AI、語音 AI、代理式資安與航太，以及金融基礎設施與醫療 AI。</p>
+      <p class="body">近期投資案例包括代理測試工具 Coval 與機器人基礎模型公司 Generalist AI；既有投資組合則有 Plaid、Spotify、Uber 與 Vuori。</p>
+      <p class="body">上一期基金為 2024 年 4 月募得的 30 億美元；兩年多來 Norwest 已投資逾 85 家新公司，新基金規模再增三分之一。</p>
+      <p class="body">在 AI 基礎設施股震盪之際，創投仍持續向 AI 應用層加碼：Norwest 的選擇顯示，資金正從算力硬體轉向能把 AI 用進產業的公司。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://techcrunch.com/2026/11/12/norwest-pushes-deeper-into-ai-with-new-4b-fund/" target="_blank" rel="noopener">TechCrunch</a><a href="https://www.unite.ai/norwest-announces-4b-fund-with-ai-among-its-investment-priorities/" target="_blank" rel="noopener">Unite.AI</a><span class="note">Norwest 2026-11-12 宣佈；TechCrunch 同日 15:18 UTC 報導。</span></div>
+    </article>
+    <article class="card" id="card-11">
+      <div class="head"><span class="num">11</span><span class="tag tag-policy">政策</span></div>
+      <h3>輝達私下證實晶片定位追蹤可行，與產業公開說法相左</h3>
+      <p class="en">Nvidia privately confirmed it could track chips to fight smuggling, even as industry publicly questioned feasibility</p>
+      <p class="lede">輝達私下向議員證實晶片定位追蹤技術可行，與半導體產業公會的公開說法相左。</p>
+      <p class="body">眾議員佛斯特（Bill Foster）在 11 月 12 日接受 MIT Technology Review 訪問時透露，輝達代表私下告訴他，晶片安全法案要求的定位追蹤措施在技術上可行。</p>
+      <p class="body">佛斯特是《晶片安全法案》的共同提案人；他轉述輝達代表的反應是「當然，我們可以做到」，但強調對方「從未留下任何書面紀錄」。</p>
+      <p class="body">這與半導體產業協會（SIA）今年 3 月的公開立場直接衝突：該協會當時反對法案，稱追蹤要求「未經測試、可能不可行」，而輝達正是協會成員。</p>
+      <p class="body">《晶片安全法案》於 2025 年 5 月提出，要求以設施檢查、企業具結或晶片上線回報位置等方式，驗證先進 AI 晶片的位置，以防止走私至中國；目前正爭取納入參院《國防授權法案》。</p>
+      <p class="body">輝達並未回應置評請求；但公司去年 12 月已推出 Fleet Intelligence 工具，讓客戶監控各地資料中心的晶片運作，路透先前也證實輝達具備判斷晶片所在國家的定位驗證技術。</p>
+      <p class="body">這項爆料發表於黃仁勳辭職同日，時機敏感：國會正藉由輝達風波推動更嚴格的晶片出口管制，私下表態與公開說法的落差，恐將成為聽證會上的新焦點。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.technologyreview.com/2026/11/12/1148483/nvidia-chip-tracking/" target="_blank" rel="noopener">MIT Technology Review</a><a href="https://thedefiant.io/frontier/ai/foster-says-nvidia-privately-deemed-chip-tracking-feasible" target="_blank" rel="noopener">The Defiant</a><span class="note">眾議員佛斯特（Bill Foster）2026-11-12 接受 MIT Technology Review 訪問時透露；輝達未回應置評請求，說法為議員對私下交流的描述，非輝達書面承諾。</span></div>
+    </article>
+    <article class="card" id="card-12">
+      <div class="head"><span class="num">12</span><span class="tag tag-policy">政策</span></div>
+      <h3>DeepMind 員工向英國政府申請工會確認，爭取組工會投票</h3>
+      <p class="en">Google DeepMind Staff Tap the UK Government to Escalate Their Unionization Fight</p>
+      <p class="lede">DeepMind 英國員工向中央仲裁委員會申請確認工會支持度，爭取組工會投票。</p>
+      <p class="body">Google DeepMind 的英國員工在 11 月 12 日把組工會行動升級：通訊工人工會（CWU）與 Unite 工會代表員工，向英國中央仲裁委員會（CAC）提出申請。</p>
+      <p class="body">申請要求 CAC 確認工會已獲得足夠員工支持，以啟動組工會投票；若通過，約 1,000 名從事產品工作的 DeepMind 倫敦員工將取得工會會員資格，Google 依法必須尊重投票結果。</p>
+      <p class="body">員工在同日發給全體英國員工的信中呼籲同事參與投票，預計投票將在未來數月內舉行。</p>
+      <p class="body">組工會行動始於 2025 年 2 月，當時 Alphabet 從倫理準則中刪除了「不用 AI 開發武器」的承諾；員工訴求的核心是對 AI 軍事用途等部署方向有發言權。</p>
+      <p class="body">今年 5 月，DeepMind 高層拒絕自願承認工會，僅同意透過調解機構 Acas 繼續對話；員工表示多輪會議後，感覺訴求未被認真看待，才轉向法定程序。</p>
+      <p class="body">這是大型 AI 實驗室首度面臨法定組工會程序：研究人員對模型用途的發言權，正從內部倡議走向勞工法框架，後續投票結果將成為業界指標。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://dnyuz.com/2026/11/12/google-deepmind-staff-tap-the-uk-government-to-escalate-their-unionization-fight/" target="_blank" rel="noopener">WIRED（經 dnyuz 轉載）</a><a href="https://www.unite.ai/google-deepmind-union-campaign-says-government-will-facilitate-ballot/" target="_blank" rel="noopener">Unite.AI</a><span class="note">WIRED 2026-11-12 報導（原文網域無法直接開啟，以轉載為憑）；Unite.AI 同日報導工會公告。</span></div>
+    </article>
+    <article class="card" id="card-13">
+      <div class="head"><span class="num">13</span><span class="tag tag-app">應用</span></div>
+      <h3>Meta Muse 開放付費訂閱者代打電話給美國商家</h3>
+      <p class="en">Muse can now place calls to US businesses — if you pay</p>
+      <p class="lede">Meta 的 Muse 開放付費訂閱者代打電話給美國商家，處理訂位與客服電話。</p>
+      <p class="body">Meta 的消費級 AI 代理 Muse 在 11 月 12 日開放付費訂閱者代打電話給美國商家，可處理餐廳訂位、保險諮詢、有線電視客服與監理站預約等「不想自己打的電話」。</p>
+      <p class="body">這項功能 9 月起僅向少數早期用戶測試，如今向所有付費訂閱者開放；Muse 訂閱方案為每月 20 美元（每週 5 億 token）或每月 100 美元（每週 30 億 token）。</p>
+      <p class="body">Meta 首席 AI 官王（Alexandr Wang）在 X 上宣佈這項功能，並表示 Muse 目前已有逾 1,000 萬用戶，目標是把消費級 AI 做成日常工具。</p>
+      <p class="body">值得注意的是，Muse 內部測試期間曾傳出部分電話實際由真人客服中心代打；Meta 表示正式推出時將附上適當揭露。</p>
+      <p class="body">同時，王表示近期推出的 Muse 專屬電子郵件地址功能，將於本週內陸續開放給免費用戶；代打電話則暫時維持付費限定。</p>
+      <p class="body">從 Gemini 的代打電話到 Muse 的跟進，AI 代理正集體跨入「替你打電話」的日常場景；誰來接電話、如何揭露 AI 身分，將是下一波監管與信任的考驗。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://techcrunch.com/2026/11/12/muse-can-now-place-calls-to-u-s-businesses-if-you-pay/" target="_blank" rel="noopener">TechCrunch</a><a href="https://emergent.sh/news/meta-muse-can-now-call-u-s-businesses-paid" target="_blank" rel="noopener">emergent.sh</a><span class="note">Meta 首席 AI 官王（Alexandr Wang）2026-11-12 在 X 宣佈；TechCrunch 同日 22:22 UTC 報導。</span></div>
+    </article>
+    <article class="card" id="card-14">
+      <div class="head"><span class="num">14</span><span class="tag tag-app">應用</span></div>
+      <h3>Anthropic 開放自架 Claude Managed Agents 私人測試版</h3>
+      <p class="en">Anthropic Lets Customers Self-Host Claude Managed Agents</p>
+      <p class="lede">Anthropic 開放自架 Claude Managed Agents 私人測試版，整套代理服務可在客戶自有環境運行。</p>
+      <p class="body">Anthropic 在 11 月 12 日開放自架版 Claude Managed Agents 私人測試版，企業可在自有雲端或地端運行整套代理服務，包括伺服器、沙箱、憑證與工作階段紀錄。</p>
+      <p class="body">此前 Managed Agents 僅能跑在 Anthropic 的伺服器上，後來開放自架沙箱；這次是把代理迴圈本身也交給客戶，整個服務留在企業的安全邊界內。</p>
+      <p class="body">模型呼叫可自行選擇去向：直接走 Claude API，或經 Amazon Bedrock、Google Cloud、Microsoft Foundry，或企業自己的閘道；Anthropic 表示對客戶自架的伺服器與紀錄沒有遠端存取權。</p>
+      <p class="body">自架部署需 PostgreSQL 16 以上版本存放工作階段資料；部分託管版功能暫不提供，包括排程部署、dreams 與 webhooks，網頁搜尋與擷取工具預設關閉。</p>
+      <p class="body">存取須透過 Anthropic 帳戶團隊申請，由團隊提供安裝檔案；定價與正式上線時程尚未公佈。</p>
+      <p class="body">這是 Anthropic 在一週內第三波企業佈局：繼 Claude for Manufacturing 之後，自架選項瞄準對資料主權最敏感的受監管產業，也回應了 Mistral 等對手上週推出的私有雲方案。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.unite.ai/anthropic-lets-customers-self-host-claude-managed-agents/" target="_blank" rel="noopener">Unite.AI</a><a href="https://www.helpnetsecurity.com/2026/11/12/anthropic-self-hosted-claude-managed-agents/" target="_blank" rel="noopener">Help Net Security</a><span class="note">Anthropic 開發者帳號 2026-11-12 在 X 宣佈；Unite.AI 與 Help Net Security 同日報導。</span></div>
+    </article>
+    <article class="card" id="card-15">
+      <div class="head"><span class="num">15</span><span class="tag tag-app">應用</span></div>
+      <h3>豆包工作接入 Kimi、DeepSeek 等第三方模型</h3>
+      <p class="en">未確認</p>
+      <p class="lede">豆包工作接入 Kimi K3.1 Pro、GLM 5.3、DeepSeek V4.1 Flash 等第三方模型。</p>
+      <p class="body">字節跳動旗下 AI 辦公產品豆包工作在 11 月 12 日宣佈，接入 Kimi K3.1 Pro、GLM 5.3、DeepSeek V4.1 Flash 等多款第三方模型，用戶可依任務在自研與第三方模型之間自由切換。</p>
+      <p class="body">此前豆包工作僅提供豆包 2.1 Lite 與豆包 2.1 Pro 兩款自研模型；三款第三方模型各有側重：Kimi K3.1 Pro 主打超長上下文，GLM 5.3 側重中文理解與生成，DeepSeek V4.1 Flash 定位輕量高性價比任務。</p>
+      <p class="body">更新同步引入「額度消耗倍率」機制，在模型選擇頁面直接標註每款模型的計價係數，倍率越低、完成同一任務消耗的額度越少。</p>
+      <p class="body">平台同步推出限時優惠：指定時段使用活動模型可享額度折扣，豆包 2.1 Lite 與 DeepSeek V4.1 Flash 的消耗倍率也直接下調。</p>
+      <p class="body">第三方模型配置並非首次出現：10 月 29 日已先向團隊訂閱版與企業訂閱版客戶開放，用量直接扣除既有 AI 點數；11 月 12 日的更新是把這項能力擴大至更廣泛的用戶範圍。</p>
+      <p class="body">辦公套件的競爭正從模型能力轉向選擇權與成本透明度：當多家模型被聚合進同一入口，模型廠商比的不再只是跑分，而是誰能在用戶的任務清單裡留下來。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.ifanr.com/1689176" target="_blank" rel="noopener">愛范兒</a><a href="https://original.ifeng.com/c/8xzK2tN8X1V" target="_blank" rel="noopener">鳳凰網</a><span class="note">豆包工作 2026-11-12 宣佈產品更新；愛范兒與鳳凰網同日報導；第三方模型配置 10 月 29 日已先向團隊與企業訂閱版開放，本次擴大至更廣泛用戶。</span></div>
+    </article>
+  </section>
+  <footer>
+  <p>來源說明：本期 15 條皆來自官方部落格、英文與中文科技媒體、跑分榜與社群；發布類條目依方案 B 以兩個獨立來源核對事件日期，核對不上的已降級或棄用；發布時間不確定者標「未確認」，不猜測。</p>
+  <p>排除說明：Claude Meetings、IBM 與微軟 Imagine Enterprise、ChatGPT 商家中心（Businesses in ChatGPT）皆為 11 月 10 日發表，事件日在時間視窗之外，已排除；Gemini Decisions API、美聯航 AI 代理訂票禁令與馬雅遺址已收錄於上一期。</p>
+  <p>本期未能讀取：36氪（安全檢測）、機器之心、量子位、鈦媒體、品玩、新智元、Wired（網域阻擋）、VentureBeat RSS（429 限流）、Reddit（未直接開啟）；The Verge、Ars Technica 原站因網域阻擋未直接開啟，改以搜尋核實。LMArena 榜單變動已透過 11 月 12 日更新日誌確認（Gemini 4 Hydrogen 上榜），寫入第 2 條。</p>
+  </footer>
+</div>
+</body>
+</html>

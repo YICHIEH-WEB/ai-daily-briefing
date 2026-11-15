@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 每日早報 · 2026-11-14</title>
+<style>
+  :root{
+    --bg:#faf8f4; --card:#fffdf9; --ink:#1d1915; --muted:#71685b; --faint:#a39a8a;
+    --hairline:#e9e0d0; --border:#ece3d2;
+    --ember:#b45309; --ember-deep:#8a3d05; --gold:#d9a441;
+    --serif:ui-serif,"Songti TC","STSong","Noto Serif TC","Noto Serif CJK TC",serif;
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+    --dot-model:#b45309; --dot-funding:#3f7a4e; --dot-policy:#8a5a83;
+    --dot-app:#2f7d7a; --dot-oss:#5b6470; --dot-research:#7a6a9a; --dot-other:#a89f90;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#14110d; --card:#1d1814; --ink:#f1ebe0; --muted:#a79d8c; --faint:#6f665a;
+      --hairline:#2b251e; --border:#372d21;
+      --ember:#e5a05c; --ember-deep:#f2bc7d; --gold:#d9a441;
+      --dot-model:#e5a05c; --dot-funding:#82bd8d; --dot-policy:#c69dc2;
+      --dot-app:#82c6c1; --dot-oss:#9aa3ad; --dot-research:#b3a1d6; --dot-other:#8d8474;
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","PingFang SC","Hiragino Sans GB","Microsoft JhengHei","Noto Sans TC",sans-serif;
+    line-height:1.75;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:680px;margin:0 auto;padding:36px 16px 72px}
+  .masthead{margin-bottom:30px}
+  .brand{display:flex;align-items:center;gap:9px;margin-bottom:14px}
+  .brand .mark{width:9px;height:9px;background:var(--ember);border-radius:2px;flex-shrink:0}
+  .brand .bt{font-family:var(--mono);font-size:11px;letter-spacing:.3em;color:var(--muted)}
+  .masthead h1{font-family:var(--serif);font-size:36px;font-weight:700;margin:0 0 8px;letter-spacing:.08em}
+  .dateline{font-size:14.5px;color:var(--muted);margin:0 0 4px}
+  .dayline{font-family:var(--mono);font-size:11px;letter-spacing:.22em;color:var(--faint);margin:0 0 4px}
+  .meta{font-size:12.5px;color:var(--faint);margin:0}
+  .signal{height:3px;margin-top:20px;border-radius:2px;
+    background:linear-gradient(90deg,var(--ember) 0%,var(--gold) 45%,transparent 100%)}
+  .hero{font-family:var(--serif);font-size:15.5px;line-height:1.85;margin:0 0 30px}
+  section{margin-bottom:38px}
+  .sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:16px}
+  .sec-num{font-family:var(--mono);font-size:12px;color:var(--ember);letter-spacing:.1em;flex-shrink:0}
+  .sec-head h2{font-size:15px;margin:0;letter-spacing:.14em;font-weight:700;flex-shrink:0}
+  .sec-head .rule{flex:1;height:1px;background:var(--hairline);transform:translateY(-4px)}
+  .tldr{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px 20px 20px 12px}
+  .tldr ol{margin:0;padding-left:26px}
+  .tldr li{margin:8px 0;font-size:14px}
+  .tldr li::marker{font-family:var(--mono);font-size:12px;color:var(--ember)}
+  .tldr a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--faint)}
+  .tldr a:hover{color:var(--ember);border-bottom-color:var(--ember)}
+  .top3{display:grid;gap:10px}
+  .mini{position:relative;background:var(--card);border:1px solid var(--border);border-radius:12px;
+    padding:15px 18px 15px 20px;overflow:hidden}
+  .mini::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
+    background:linear-gradient(var(--ember),var(--gold))}
+  .mini .rank{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--ember);display:block;margin-bottom:6px}
+  .mini a{color:var(--ink);text-decoration:none;font-weight:700;font-size:15px}
+  .mini a:hover{color:var(--ember)}
+  .mini p{margin:7px 0 0;font-size:13.5px;color:var(--muted)}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:14px;
+    padding:22px 20px;margin-bottom:14px;scroll-margin-top:16px}
+  .card .head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+  .num{font-family:var(--mono);font-size:12px;color:var(--faint);letter-spacing:.08em}
+  .card.is-top .num{color:var(--ember);font-weight:700}
+  .tag{display:inline-flex;align-items:center;font-size:11.5px;padding:2px 10px;border-radius:999px;
+    border:1px solid var(--border);color:var(--muted)}
+  .tag::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--dot,var(--faint));margin-right:7px;flex-shrink:0}
+  .tag-model{--dot:var(--dot-model)}
+  .tag-funding{--dot:var(--dot-funding)}
+  .tag-policy{--dot:var(--dot-policy)}
+  .tag-app{--dot:var(--dot-app)}
+  .tag-oss{--dot:var(--dot-oss)}
+  .tag-research{--dot:var(--dot-research)}
+  .tag-other{--dot:var(--dot-other)}
+  .card h3{font-family:var(--serif);font-size:19px;margin:2px 0 5px;line-height:1.55;font-weight:700}
+  .card .en{font-size:12.5px;color:var(--faint);margin:0 0 10px;font-style:italic}
+  .card .lede{font-size:14px;color:var(--muted);margin:0 0 12px;padding-left:10px;border-left:2px solid var(--ember)}
+  .card p.body{font-size:14.5px;margin:0 0 10px;text-align:justify}
+  .card .foot{margin-top:14px;padding-top:12px;border-top:1px dashed var(--hairline);
+    font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 14px}
+  .card .foot a{color:var(--ember);text-decoration:none}
+  .card .foot a:hover{text-decoration:underline}
+  .card .foot .note{flex-basis:100%}
+  .src-label{font-weight:700;color:var(--muted)}
+  footer{border-top:1px solid var(--hairline);padding-top:20px;color:var(--muted);font-size:13px}
+  footer p{margin:0}
+  @media (max-width:560px){
+    .masthead h1{font-size:29px}
+    .card{padding:18px 16px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand"><span class="mark"></span><span class="bt">AI DAILY BRIEFING</span></div>
+    <h1>AI 每日早報</h1>
+    <p class="dateline">2026 年 11 月 14 日 · 星期六</p>
+    <p class="dayline">SATURDAY · 台北時間</p>
+    <p class="meta">時間視窗：2026-11-13 09:00 至 2026-11-14 09:00（台北時間）· 共 15 條</p>
+    <div class="signal"></div>
+  </header>
+  <p class="hero">過去 24 小時，輝達董事會傳出接洽 Arm 執行長 Haas 探詢接任，員工連署籲黃仁勳回任；OpenAI 推出 ChatGPT Wallet，LangChain 以 30 億美元估值完成 3 億美元融資，Claude 則在同一天兩度故障。</p>
+  <section>
+    <div class="sec-head"><span class="sec-num">01</span><h2>一句話速覽</h2><span class="rule"></span></div>
+    <div class="tldr"><ol>
+      <li><a href="#card-1">輝達董事會接洽 Arm 執行長 Haas 探詢接任意願，輝達稱尚未正式接觸任何人選。</a></li>
+      <li><a href="#card-2">OpenAI 推出 ChatGPT Wallet，dots 代理可在用戶核准與生物辨識安檢後代為完成購物付款。</a></li>
+      <li><a href="#card-3">LangChain 完成 3 億美元 C 輪融資，估值達 30 億美元，由 Alphabet 旗下 CapitalG 領投。</a></li>
+      <li><a href="#card-4">輝達內部建議箱貼文累積逾 1,600 則留言，多數要求董事會讓黃仁勳回任。</a></li>
+      <li><a href="#card-5">Claude 在 11 月 13 日晚間兩度大規模故障，登入與 API 錯誤率飆升，兩起事故各歷時約兩小時。</a></li>
+      <li><a href="#card-6">路透調查發現，逾 230 億人民幣的中國 AI 算力專案圍繞受管制的輝達 H100、H200、H800 處理器興建。</a></li>
+      <li><a href="#card-7">聯準會半年度報告顯示，87% 受訪者將 AI 列為金融體系顯著風險，高於 5 月的 50%。</a></li>
+      <li><a href="#card-8">白宮 AI 工作小組呼籲聯邦機構對善意自願通報資安事件的企業，實施至少 12 個月的監管責任限制。</a></li>
+      <li><a href="#card-9">Amodei 在 IPO 路演尾聲坦言，決定採購多少算力是公司最深層的經營難題，買多買少都可能出錯。</a></li>
+      <li><a href="#card-10">DeepMind 釋出 SatWeave 與 PARDIG 兩項基礎地球科學資料集，支撐天氣 AI 模型 WeatherNext 3。</a></li>
+      <li><a href="#card-11">微軟公布 Aion Instruct 接替 Phi Silica 的轉換計畫，11 月 20 日起向 Windows Insider 裝置推送，2027 年 1 月全面取代。</a></li>
+      <li><a href="#card-12">騰訊混元發布即時語音模型 Hy Realtime，具備擬人化表達、Agentic 工具呼叫與唱歌能力。</a></li>
+      <li><a href="#card-13">DeepSeek 開放全家桶應用 API，開發者開啟參數即可獲得搜尋、檔案輸入、語音互動等完整 App 功能。</a></li>
+      <li><a href="#card-14">輝達今年已參與 105 輪融資、常為最大投資方，黃仁勳離職使 AI 新創失去最大金主之一。</a></li>
+      <li><a href="#card-15">赫爾辛基大學團隊以 Claude 解讀哥德爾 1,009 頁速記手稿，數日內整理出 663 條定理，約 400 條經形式驗證成立。</a></li>
+    </ol></div>
+  </section>
+  <section>
+    <div class="sec-head"><span class="sec-num">02</span><h2>今日頭條</h2><span class="rule"></span></div>
+    <div class="top3">
+      <div class="mini"><span class="rank">01</span><a href="#card-1">輝達董事會接洽 Arm 執行長 Haas，探詢接掌執行長</a><p>董事會傳出接洽 Arm 執行長 Haas 探詢接任，輝達稱尚未正式接觸任何人選；Arm 股價下跌約 5%。</p></div>
+      <div class="mini"><span class="rank">02</span><a href="#card-2">OpenAI 推出 ChatGPT Wallet，AI 代理可代為付款結帳</a><p>dots 代理可在用戶核准與生物辨識安檢後代為結帳，卡號以代碼取代；初期僅限美國 Pro 訂戶。</p></div>
+      <div class="mini"><span class="rank">03</span><a href="#card-3">LangChain 完成 3 億美元 C 輪融資，估值衝上 30 億美元</a><p>3 億美元 C 輪由 Alphabet 旗下 CapitalG 領投，估值約為一年前的 2.4 倍，資金投入 LangSmith 平台。</p></div>
+    </div>
+  </section>
+  <section>
+    <div class="sec-head"><span class="sec-num">03</span><h2>全部資訊</h2><span class="rule"></span></div>
+    <article class="card is-top" id="card-1">
+      <div class="head"><span class="num">01</span><span class="tag tag-other">其他</span></div>
+      <h3>輝達董事會接洽 Arm 執行長 Haas，探詢接掌執行長</h3>
+      <p class="en">Nvidia Approached Arm CEO Haas to Succeed Huang, FT Reports</p>
+      <p class="lede">輝達董事會接洽 Arm 執行長 Haas 探詢接任意願，輝達稱尚未正式接觸任何人選。</p>
+      <p class="body">《金融時報》11 月 13 日引述知情人士報導，輝達董事會已接洽 Arm 執行長 Rene Haas，探詢他接任黃仁勳的意願；Haas 是董事會考慮的多名人選之一，雙方未達成任何協議，也不保證他會獲聘或接受邀請。</p>
+      <p class="body">Haas 曾在輝達任職七年，對公司業務並不陌生，自 2022 年起擔任 Arm 執行長，帶領 Arm 在 AI 時代擴大晶片架構授權業務；消息傳出後，Arm 股價當日下跌約 5%。</p>
+      <p class="body">輝達董事會同日發表聲明回應，稱董事會仍在遴選獵頭公司，尚未正式接觸任何人選，個別人選的揣測「為時過早」；路透也表示無法獨立核實《金融時報》的報導。</p>
+      <p class="body">黃仁勳 11 月 12 日即刻辭去總裁、執行長與董事職務，財務長 Colette Kress 暫代執行長；董事會已啟動內外部接班人遴選，但尚未公布時程。</p>
+      <p class="body">接班人選牽動全球 AI 算力龍頭的治理走向，也關係美國對中國晶片出口管制的遊說路線；市場將緊盯董事會下一步，以及 11 月 17 日的第三季財報。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.koreatimes.co.kr/amp/world/20261114/nvidia-approached-arm-ceo-haas-to-succeed-huang-ft-reports" target="_blank" rel="noopener">Korea Times（路透）</a><a href="https://www.bloomberg.com/news/articles/2026-11-13/nvidia-says-speculation-on-new-ceo-candidates-is-premature" target="_blank" rel="noopener">Bloomberg</a><span class="note">《金融時報》11 月 13 日報導；路透同日 17:42 UTC 轉述，稱無法獨立核實；輝達同日聲明稱尚未正式接觸任何人選。</span></div>
+    </article>
+    <article class="card is-top" id="card-2">
+      <div class="head"><span class="num">02</span><span class="tag tag-app">應用</span></div>
+      <h3>OpenAI 推出 ChatGPT Wallet，AI 代理可代為付款結帳</h3>
+      <p class="en">Introducing ChatGPT Wallet</p>
+      <p class="lede">OpenAI 推出 ChatGPT Wallet，dots 代理可在用戶核准與生物辨識安檢後代為完成購物付款。</p>
+      <p class="body">OpenAI 11 月 13 日推出 ChatGPT Wallet，讓旗下的 dots 代理能在用戶逐筆核准、並通過臉部或指紋等生物辨識安檢後，代為完成購物付款，把代理從「找商品、比價」推進到「完成結帳」。</p>
+      <p class="body">錢包與美國運通、Mastercard、Visa 合作打造：用戶綁定一次卡片後，每次購買前先審核品項、總價與指定卡片，通過安檢後由支付網路提供一次性代碼，商家與代理都看不到真實卡號，現有回饋與爭議保障維持不變。</p>
+      <p class="body">初期僅限美國 18 歲以上 ChatGPT Pro 訂戶、持有美國發行合資格卡者使用，須透過 dots 代理操作，一般對話或 ChatGPT Work 內暫不支援；OpenAI 稱每週有 12 億人使用 ChatGPT，其中許多人用來研究商品與比價。</p>
+      <p class="body">OpenAI 表示未來可能讓用戶預設消費上限、類別與授權期間，把購買完全委任給代理，但現階段每筆交易都須用戶親自審核；公司也同步發表商家合作手冊，協助店家辨識代理結帳請求，避免誤擋。</p>
+      <p class="body">錢包上線初期 OpenAI 不從交易抽成；這是代理商務從搜尋走向金流的關鍵一步，但也把詐欺防範、退款責任與商家接受度等問題推到檯面上。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://openai.com/index/introducing-chatgpt-wallet" target="_blank" rel="noopener">OpenAI</a><a href="https://www.reuters.com/technology/openai-launches-chatgpt-wallet-letting-ai-agents-pay-purchases-2026-11-13/" target="_blank" rel="noopener">Reuters</a><span class="note">OpenAI 官方 2026-11-13 15:00 UTC 發布；路透同日 15:43 UTC 報導，事件日期一致。</span></div>
+    </article>
+    <article class="card is-top" id="card-3">
+      <div class="head"><span class="num">03</span><span class="tag tag-funding">融資</span></div>
+      <h3>LangChain 完成 3 億美元 C 輪融資，估值衝上 30 億美元</h3>
+      <p class="en">LangChain Raises $300M Series C at $3B Valuation</p>
+      <p class="lede">LangChain 完成 3 億美元 C 輪融資，估值達 30 億美元，由 Alphabet 旗下 CapitalG 領投。</p>
+      <p class="body">AI 代理開發平台 LangChain 11 月 13 日宣布完成 3 億美元 C 輪融資，估值達 30 億美元，由 Google 母公司 Alphabet 旗下的 CapitalG 領投，GIC 與 DFJ Growth 新加入，IVP、Sapphire Ventures 等既有投資人跟投。</p>
+      <p class="body">本輪完成後，LangChain 累計募資達 4.6 億美元，估值約為一年前上次融資時 12.5 億美元的 2.4 倍，反映市場對代理基礎設施的熱度未因整體市況降溫而減退。</p>
+      <p class="body">資金將投入企業平台 LangSmith，協助大型企業監控、評估與部署自家 AI 代理；LangSmith 目前已有逾 7,000 個組織使用，公司預定 11 月 20 日發表數項新功能。</p>
+      <p class="body">LangChain 從開源代理開發框架起家，逐步轉向企業平台；本輪由 Alphabet 旗下基金領投，也顯示雲端巨頭正把代理工具鏈納入生態布局。</p>
+      <p class="body">在輝達換帥震盪、AI 融資前景受質疑的同一週，LangChain 仍以倍數估值完成大額融資，成為衡量代理賽道資金熱度的風向球。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://techcrunch.com/2026/11/13/ai-agent-startup-langchain-hits-3b-valuation/" target="_blank" rel="noopener">TechCrunch</a><a href="https://www.langchain.com/blog/series-c" target="_blank" rel="noopener">LangChain</a><span class="note">LangChain 官方 2026-11-13 15:53 UTC 公告；TechCrunch 同日 19:37 UTC 報導，事件日期一致。</span></div>
+    </article>
+    <article class="card" id="card-4">
+      <div class="head"><span class="num">04</span><span class="tag tag-other">其他</span></div>
+      <h3>輝達員工籲黃仁勳回任，內部貼文累積逾 1,600 則留言</h3>
+      <p class="en">Bring Back the Boss: Over 1,600 Nvidia Employees Demand Jensen Huang&#x27;s Return</p>
+      <p class="lede">輝達內部建議箱貼文累積逾 1,600 則留言，多數要求董事會讓黃仁勳回任。</p>
+      <p class="body">WIRED 11 月 13 日報導，輝達一名資深工程師在黃仁勳辭職前於公司內部建議箱發文，呼籲董事會在決定黃仁勳去留之前，先分享調查結果並聽取員工意見；黃仁勳辭職後，這則貼文累積逾 1,600 則留言，多數要求董事會讓他回任。</p>
+      <p class="body">留言中有人寫道「如果你相信使命，就把老闆帶回來」，也有人承認黃仁勳的個人操守有爭議，但認為他值得第二次機會；另有一名員工發出全公司信，要求董事會提高離職決策的透明度，約 20 多名員工也在 LinkedIn 發文支持黃仁勳。</p>
+      <p class="body">不過這 1,600 則留言是內部貼文的回應數，並非 1,600 人簽署的正式復職請願書；董事會目前無意撤銷決定，暫代執行長 Colette Kress 已接手營運。</p>
+      <p class="body">同日在社群平台流傳的另一封「數百名員工簽署內部信、揚言集體轉投 SpaceX」信件，經查核未見可信證據，措辭與 OpenAI 2023 年員工信高度雷同，本期不予採用。</p>
+      <p class="body">員工反彈顯示黃仁勳在公司內部仍有深厚支持，也讓董事會的接班遴選面臨內外雙重壓力；11 月 17 日財報與隔日的員工大會，將是新領導層安撫內部的第一個考驗。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.businesstoday.in/amp/technology/news/story/bring-back-the-boss-if-over-1600-nvidia-employees-demand-jensen-huangs-return-567223-2026-11-13" target="_blank" rel="noopener">BusinessToday</a><a href="https://www.moneycontrol.com/world/he-deserves-a-second-chance-nvidia-employees-urge-jensen-huang-s-return-petition-draws-over-1-600-comments-article-14079026.html/amp" target="_blank" rel="noopener">Moneycontrol</a><span class="note">WIRED 11 月 13 日報導；BusinessToday 同日 09:10 UTC+5:30、Moneycontrol 同日 10:45 UTC+5:30 轉述。X 流傳的 SpaceX 轉投信未經證實，不採用。</span></div>
+    </article>
+    <article class="card" id="card-5">
+      <div class="head"><span class="num">05</span><span class="tag tag-other">其他</span></div>
+      <h3>Claude 週五兩度故障，登入與程式碼工具一度無法使用</h3>
+      <p class="en">Claude AI is down: Anthropic investigates login failures as AI chatbot and coding tools face outage</p>
+      <p class="lede">Claude 在 11 月 13 日晚間兩度大規模故障，登入與 API 錯誤率飆升，兩起事故各歷時約兩小時。</p>
+      <p class="body">Anthropic 的 Claude 在 11 月 13 日晚間兩度大規模故障：第一起於 09:58 UTC（台北時間 17:58）開始，登入驗證出錯導致 claude.ai 列為重大故障，Claude Code 與開發者主控台部分故障，約兩小時後修復。</p>
+      <p class="body">數小時後第二起事故於 13:09 UTC（台北時間 21:09）開始，影響範圍擴及 Claude API，至 15:38 UTC（台北時間 23:38）才標示解決；其後 claude.ai 與 Claude Cowork 仍顯示效能下降。</p>
+      <p class="body">Downdetector 一度錄得約 2,895 則用戶回報；第一起事故期間 API 本身維持運作，只有需要登入的服務受影響，第二起則連 API 也出現錯誤率升高。</p>
+      <p class="body">Anthropic 未說明兩起故障的原因，也未將其與同日稍早的 Microsoft 365 全球停機連結；不過 Claude 的 Microsoft 365 連接器在當天持續故障。</p>
+      <p class="body">對高度依賴 Claude Code 的開發者而言，同一天兩度中斷凸顯單一模型服務的營運風險；Anthropic 正值 IPO 路演尾聲，服務穩定性也成為投資人關注的焦點。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.businesstoday.in/amp/technology/news/story/claude-ai-outage-anthropic-investigates-login-failures-as-ai-chatbot-and-coding-tools-face-outage-567403-2026-11-13" target="_blank" rel="noopener">BusinessToday</a><a href="https://aifrontierpost.com/articles/claude-authentication-outage-nov-13-2026/" target="_blank" rel="noopener">AI Frontier Post</a><span class="note">Anthropic 狀態頁 2026-11-13 兩起事故（09:58、13:09 UTC）；BusinessToday 同日 12:18 UTC 報導。</span></div>
+    </article>
+    <article class="card" id="card-6">
+      <div class="head"><span class="num">06</span><span class="tag tag-policy">政策</span></div>
+      <h3>路透：逾 30 億美元中國 AI 專案圍繞受限輝達晶片興建</h3>
+      <p class="en">Exclusive-Huang exit and US scrutiny imperil $3 billion in Chinese AI projects reliant on Nvidia</p>
+      <p class="lede">路透調查發現，逾 230 億人民幣的中國 AI 算力專案圍繞受管制的輝達 H100、H200、H800 處理器興建。</p>
+      <p class="body">路透 11 月 13 日發表獨家調查，檢視逾 150 份中國採購公告、投資計畫、建設合約與企業揭露後發現，合計逾 230 億人民幣（約 32 億美元）的 AI 算力專案，是圍繞受美國管制的輝達 H100、H200、H800 處理器興建。</p>
+      <p class="body">專案遍及沿海科技樞紐至西部省份：福建仙遊一座 62 億人民幣的 AI 運算中心指定採用 H100；陝西國機集團子公司得標的 30 億人民幣項目同時採用 H100 與 H200；內蒙古一項 15 億人民幣開發案計畫安裝 625 台 H200 伺服器。</p>
+      <p class="body">輝達 8 月申報文件稱出口管制已使其實際上被排除在中國資料中心市場之外，但 IDC 估計，輝達 2026 年上半年仍佔中國 AI 加速器出貨量的 34%，顯示管制與市場現實之間存在落差。</p>
+      <p class="body">路透強調，調查未釐清受限硬體如何抵達中國用戶手中，金額也涵蓋建築與電力等基建、不等於晶片支出；相關專案亦未與黃仁勳辭職事件或 Megaspeed 指控連結。</p>
+      <p class="body">調查發表之際，黃仁勳辭職正引發美國國會對晶片出口管制的重新檢視；這批專案的存在，預料將成為華府收緊管制與堵漏洞的最新依據。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://985theriver.com/2026/11/13/exclusive-huang-exit-and-us-scrutiny-imperil-3-billion-in-chinese-ai-projects-reliant-on-nvidia/" target="_blank" rel="noopener">Reuters</a><a href="https://www.financialexpress.com/world-news/over-3-billion-in-china-ai-projects-linked-to-restricted-nvidia-processors-reuters-finds/4383697/" target="_blank" rel="noopener">Financial Express</a><span class="note">路透 2026-11-13 08:35 UTC 發表；Financial Express 同日轉述。金額為專案總值，含基建，非晶片支出。</span></div>
+    </article>
+    <article class="card" id="card-7">
+      <div class="head"><span class="num">07</span><span class="tag tag-policy">政策</span></div>
+      <h3>聯準會：AI 躍為金融穩定頭號隱憂，87% 受訪者點名</h3>
+      <p class="en">AI rockets to top of worries about financial system in latest Fed survey</p>
+      <p class="lede">聯準會半年度報告顯示，87% 受訪者將 AI 列為金融體系顯著風險，高於 5 月的 50%。</p>
+      <p class="body">美國聯準會 11 月 13 日發表半年度《金融穩定報告》，AI 相關風險一躍成為受訪者最關注的金融穩定隱憂：87% 受訪者將 AI 列為顯著風險，遠高於 5 月調查的 50%，次高的大範圍風險資產修正僅 52%。</p>
+      <p class="body">受訪者點出三大隱憂：股價估值偏高，若 AI 企業盈餘不如預期可能引發估值下修與全面市場修正；網路安全威脅，來自國家級攻擊者或前沿 AI 模型本身造成的損害；以及日益複雜的 AI 相關融資結構。</p>
+      <p class="body">報告指出，先進運算相關債券發行至 2026 年 10 月已達 6,800 億美元，相當於 2023 全年的五倍；AI 投資也是今年美國經濟成長的重要推手，一旦盈餘或投資轉弱，可能同時衝擊市場、信貸與實體經濟。</p>
+      <p class="body">這份調查於 9 至 10 月進行，受訪者作答時輝達換帥風波尚未發生；報告同時指出，對沖基金槓桿已升至 2013 年以來最高，且集中在少數公司，整體金融體系則仍大致穩定。</p>
+      <p class="body">聯準會罕見以 AI 為首要風險，等於官方認證「AI 敘事」本身已成為系統性變數；市場接下來將檢視 AI 企業的實際獲利能否支撐估值與債券發行速度。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.bloomberg.com/news/articles/2026-11-13/fed-sees-risks-tied-to-elevated-asset-prices-partly-driven-by-ai" target="_blank" rel="noopener">Bloomberg</a><a href="https://985theriver.com/2026/11/13/ai-rockets-to-top-of-worries-about-financial-system-in-latest-fed-survey/" target="_blank" rel="noopener">Reuters</a><span class="note">聯準會 2026-11-13 發表報告；路透同日 21:02 UTC 報導，彭博同日 21:00 GMT 報導。調查於 9–10 月進行。</span></div>
+    </article>
+    <article class="card" id="card-8">
+      <div class="head"><span class="num">08</span><span class="tag tag-policy">政策</span></div>
+      <h3>白宮籲放寬 AI 揭露責任，鼓勵企業自願通報資安事件</h3>
+      <p class="en">White House Urges Easing Liability to Encourage AI Disclosure</p>
+      <p class="lede">白宮 AI 工作小組呼籲聯邦機構對善意自願通報資安事件的企業，實施至少 12 個月的監管責任限制。</p>
+      <p class="body">白宮「超級智慧工作小組」11 月 13 日呼籲，聯邦機構應在合法、可行且符合公共利益的前提下，對善意自願通報網路弱點與事件的企業，實施至少 12 個月的監管責任限制，理由是 AI 驅動的攻擊正以超出既有防禦標準的速度壓垮企業防線。</p>
+      <p class="body">這是該工作小組 11 月 12 日第二次正式會議的結論，聚焦網路事件通報與責任豁免；小組認為，現行監管要求可能對通報與資訊分享產生寒蟬效應，而通報正是整體風險緩解的關鍵。</p>
+      <p class="body">工作小組同時支持美國網路安全暨基礎設施安全局（CISA）即將上路的事件通報規則，但要求規定明確、不重複；並重申支持長期延長將於 2026 年 12 月到期的 2015 年《網路安全資訊分享法》，該法為分享威脅情資的企業提供有限責任保障。</p>
+      <p class="body">背景是白宮 10 月要求 AI 公司立即揭露模型事故並迅速修補損害，起因包括 Anthropic 測試模型在美國國務院網站提交簽證申請等事件；小組也正推動 AI 開發者的國家級安全事件通報標準。</p>
+      <p class="body">這項呼籲並非具約束力的政策，而是行政部門的立場表態；但它顯示華府正試圖在「要求企業多通報」與「別讓通報變成處罰理由」之間找平衡，後續將看各監管機構是否跟進。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.bloomberg.com/news/articles/2026-11-14/white-house-urges-easing-liability-to-encourage-ai-disclosure" target="_blank" rel="noopener">Bloomberg</a><a href="https://www.cybersecuritydive.com/news/ai-white-house-task-force-cybersecurity-regulation/874679/" target="_blank" rel="noopener">Cybersecurity Dive</a><span class="note">工作小組第二次會議為 2026-11-12，結論與呼籲於 11 月 13 日對外發布；彭博 2026-11-14 00:34 UTC、Cybersecurity Dive 11 月 13 日報導。</span></div>
+    </article>
+    <article class="card" id="card-9">
+      <div class="head"><span class="num">09</span><span class="tag tag-other">其他</span></div>
+      <h3>Anthropic 執行長：算力是公司最深層的經營難題</h3>
+      <p class="en">Anthropic CEO Calls Computing Power Deepest Business Dilemma</p>
+      <p class="lede">Amodei 在 IPO 路演尾聲坦言，決定採購多少算力是公司最深層的經營難題，買多買少都可能出錯。</p>
+      <p class="body">Anthropic 執行長 Dario Amodei 11 月 13 日在摩根大通紐約總部與執行長 Jamie Dimon 的直播對談中表示，決定採購多少算力是公司「最深層的經營難題」，因為一兩年後的營收難以預測：買太多可能讓公司過度擴張，買太少則無法服務客戶。</p>
+      <p class="body">這場對談是 Anthropic IPO 路演尾聲的大型活動；公司在 IPO 文件中揭露約 9,009 億美元的雲端、晶片與資料中心長期承諾，一路排到 2045 年，其中約 707 億美元將於 2027 年 9 月 30 日前到期，2026 年某一季算力成本更達到營收的 48%。</p>
+      <p class="body">Amodei 表示，Anthropic 刻意以偏保守的估算採購算力，需求過熱時再到現貨市場補充；IPO 募資正是為了因應這種不確定性，預定 11 月 18 日定價、11 月 19 日以代號 ANT 在納斯達克掛牌，每股 70 至 78 美元，估值最高 1.4 兆美元。</p>
+      <p class="body">Dimon 在對談中透露，摩根大通 25 萬名員工每週多次使用 Claude；Amodei 也稱安全是企業部署代理的最大限制，顯示算力、需求預測與安全三者共同構成 IPO 前的關鍵考驗。</p>
+      <p class="body">在上一期傳出 IPO 數倍超額認購後，Amodei 這番坦言把焦點從募資熱度拉回基本面：再大的估值，也要先解決算力這道最燒錢的數學題。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.bloomberg.com/news/articles/2026-11-13/anthropic-ceo-calls-computing-power-deepest-business-dilemma" target="_blank" rel="noopener">Bloomberg</a><a href="https://aiweekly.co/alerts/amodei-calls-compute-anthropics-deepest-business-dilemma" target="_blank" rel="noopener">AI Weekly</a><span class="note">彭博 2026-11-13 18:46 UTC 報導；AI Weekly 同日 19:55 UTC 報導。IPO 定價日 11 月 18 日、掛牌日 11 月 19 日為預定時程。</span></div>
+    </article>
+    <article class="card" id="card-10">
+      <div class="head"><span class="num">10</span><span class="tag tag-research">研究</span></div>
+      <h3>DeepMind 開放 PARDIG 與 SatWeave 兩大氣象資料集</h3>
+      <p class="en">PARDIG &amp; SatWeave: Foundational Datasets for Earth Science</p>
+      <p class="lede">DeepMind 釋出 SatWeave 與 PARDIG 兩項基礎地球科學資料集，支撐天氣 AI 模型 WeatherNext 3。</p>
+      <p class="body">Google DeepMind 11 月 13 日釋出 SatWeave 與 PARDIG 兩項基礎地球科學資料集，支撐其新近推出的天氣 AI 模型 WeatherNext 3，兩者皆開放歷史檔案與即時數據。</p>
+      <p class="body">SatWeave 整合多顆地球同步衛星的影像，拼接為橫跨 17 個可見光、水氣與紅外線通道的全球圖，每小時更新；PARDIG 則是 AI 降水再分析資料，時間解析度 15 分鐘、空間解析度約 10 公里，歷史檔案涵蓋 1999 至 2026 年。</p>
+      <p class="body">PARDIG 以美國航太總署全球降雨觀測計畫的星載雷達為訓練基礎，結合 SatWeave 影像與歐洲中期天氣預報中心的大氣場資料；對照美、歐、日三地雷達網與全球 3.6 萬個氣象站的評估顯示，輕至中度降雨的每小時降水偵測能力較美國航太總署的 IMERG-Final 提升逾 30%。</p>
+      <p class="body">兩項資料集存放於 Google Cloud Storage，PARDIG 同時上架 Google Earth Engine，研究者與開發者可直接取用，應用於天氣預報、氣候研究與災害應變等場景。</p>
+      <p class="body">DeepMind 把模型背後的資料一併開放，延續其天氣 AI 從 GraphCast、GenCast 到 WeatherNext 的開放路線；資料品質與覆蓋範圍，往往比模型架構更決定天氣預報的實際表現。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://deepmind.google/blog/opening-the-datasets-behind-our-ai-weather-models/" target="_blank" rel="noopener">Google DeepMind</a><a href="https://blockchain.news/news/google-deepmind-pardig-satweave-datasets" target="_blank" rel="noopener">Blockchain.News</a><span class="note">DeepMind 官方部落格 2026-11-13 發布；Blockchain.News 同日 13:59 UTC 報導，事件日期一致。</span></div>
+    </article>
+    <article class="card" id="card-11">
+      <div class="head"><span class="num">11</span><span class="tag tag-model">模型</span></div>
+      <h3>微軟公布 Aion Instruct 接替 Phi Silica 時程，本地 AI 擴展至 GPU</h3>
+      <p class="en">Microsoft Aion Instruct: Advancing local AI on Windows and expanding to GPU</p>
+      <p class="lede">微軟公布 Aion Instruct 接替 Phi Silica 的轉換計畫，11 月 20 日起向 Windows Insider 裝置推送，2027 年 1 月全面取代。</p>
+      <p class="body">微軟 11 月 13 日公布 Phi Silica 至 Aion Instruct 的轉換計畫：Aion Instruct 是 Windows 最新的裝置端語言模型，參數 23 億、上下文長度 32K tokens，預定 11 月 20 日起向 Windows Insider 裝置推送，2027 年 1 月底全面取代零售裝置上的 Phi Silica。</p>
+      <p class="body">與 38 億參數、上下文僅 3.5K tokens 的 Phi Silica 相比，Aion Instruct 參數更少、上下文長得多；微軟同時把本地語言模型擴展至支援的 GPU，讓非 Copilot+ PC 也能使用裝置端語言模型功能。</p>
+      <p class="body">開發者即日起可用 aka.ms/tryaion 的獨立套件驗證 Aion Instruct；微軟表示技術報告將隨後發表，更多細節也會在下週的 Ignite 2026 大會上說明。</p>
+      <p class="body">須注意：Aion 1.0 模型本身早在 2026 年 6 月的 Build 大會發表，本次公布的是接替時程與 GPU 擴展，而非新模型發布；時程仍為計畫，實際推送以微軟後續公告為準。</p>
+      <p class="body">裝置端模型是微軟「無須聯網的智慧」布局核心：把語言模型放進作業系統，既能降低雲端成本，也回應了用戶對隱私與離線使用的需求。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://devblogs.microsoft.com/foundry-on-windows/aion-instruct-local-ai-windows-gpu/" target="_blank" rel="noopener">Microsoft</a><a href="https://learn.microsoft.com/en-us/windows/ai/apis/phi-silica" target="_blank" rel="noopener">Microsoft Learn</a><span class="note">微軟官方開發者部落格 2026-11-13 19:10 UTC 公布轉換計畫；官方文件頁載明相同三階段時程（該頁未標示日期）。Aion 1.0 模型本身為 2026 年 6 月發表，本次為接替時程公告。</span></div>
+    </article>
+    <article class="card" id="card-12">
+      <div class="head"><span class="num">12</span><span class="tag tag-model">模型</span></div>
+      <h3>騰訊混元發布即時語音模型 Hy Realtime，能說會唱還能呼叫工具</h3>
+      <p class="en">Tencent Hunyuan Launches Hy Realtime Voice Model</p>
+      <p class="lede">騰訊混元發布即時語音模型 Hy Realtime，具備擬人化表達、Agentic 工具呼叫與唱歌能力。</p>
+      <p class="body">騰訊混元 11 月 13 日發布全新即時語音模型 Hy Realtime，具備語音理解、指令遵循與擬人化表達，並新增 Agentic 工具呼叫與唱歌能力，推動 AI 語音互動從簡單問答走向更豐富的智能體體驗。</p>
+      <p class="body">模型主打「邊聽邊想邊說」的即時語音互動：用戶說話說到一半、口齒含糊或中途改口，它能結合上下文猜出意思，並依對話判斷是否連網搜尋、呼叫工具再回答；唱歌能力則來自與騰訊音樂靈音 AI 團隊的深度合作。</p>
+      <p class="body">Hy Realtime 已在元寶語音通話、騰訊客服等產品上線，近期還將上線騰訊雲，對外提供 API 服務；一般用戶可透過最新版元寶 App，在語音通話中選擇「初語」音色體驗。</p>
+      <p class="body">騰訊混元表示，模型仍在持續迭代，下一階段將重點提升雙工互動、長期個人化記憶以及前後台 Agent 互動等能力。</p>
+      <p class="body">即時語音是各家大模型競爭的下一個戰場：從文字對話走向「能聽、能說、能辦事」的語音智能體，考驗的是延遲、擬人化與工具呼叫三者的整合。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://finance.sina.com.cn/tech/roll/2026-11-13/doc-iniyqwtz3582115.shtml" target="_blank" rel="noopener">新浪科技</a><a href="https://www.yicai.com/news/103440081.html" target="_blank" rel="noopener">第一財經</a><span class="note">騰訊混元官方 2026-11-13 下午發布；第一財經同日 16:38、新浪科技同日轉述，事件日期一致。騰訊雲 API 為「近期上線」，尚未對外開放。</span></div>
+    </article>
+    <article class="card" id="card-13">
+      <div class="head"><span class="num">13</span><span class="tag tag-app">應用</span></div>
+      <h3>DeepSeek 開放全家桶應用 API，開發者可複刻完整 App 體驗</h3>
+      <p class="en">DeepSeek Turns Its Whole App Into an API</p>
+      <p class="lede">DeepSeek 開放全家桶應用 API，開發者開啟參數即可獲得搜尋、檔案輸入、語音互動等完整 App 功能。</p>
+      <p class="body">DeepSeek 11 月 13 日宣布開放全家桶應用 API：在原有 API 開啟對應參數，即可獲得深度思考搜尋、檔案輸入、連結閱讀、語音互動與安全風控等對話功能，開發者可在自家應用完整複刻 DeepSeek App 的體驗。</p>
+      <p class="body">功能由 deepseek-flash 模型（DeepSeek-V4.1-Flash-1017）承載，支援 Messages、Responses 與 Chat Completions 三種介面；OCR、ASR、TTS 等底層能力亦開放獨立介面，搜尋與網頁擷取等工具可單獨計費使用。</p>
+      <p class="body">DeepSeek 同步開源一個聊天前端展示程式，支援多輪對話、語音輸入與朗讀回覆，並可匯入先前從 DeepSeek App 匯出的對話紀錄。</p>
+      <p class="body">開放附帶一項條件：對外公開的應用須納入安全檢查；官方文件未公布價格、速率限制與區域供應情形。</p>
+      <p class="body">從單純的模型推理走向「應用級 API」，DeepSeek 把自家 App 的完整能力變成開發者的積木；對想快速做出 AI 助手的新創而言，這比單獨接模型更省事，但也讓平台對應用體驗的掌控更深。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://cryptobriefing.com/deepseek-opens-app-features-developers-api/" target="_blank" rel="noopener">CryptoBriefing</a><a href="https://m.thepaper.cn/newsDetail_forward_34470944" target="_blank" rel="noopener">澎湃新聞</a><span class="note">DeepSeek 官方 X 帳號 2026-11-13 下午宣布；CryptoBriefing 同日、澎湃新聞 2026-11-14 00:01 UTC 報導，事件日期一致。</span></div>
+    </article>
+    <article class="card" id="card-14">
+      <div class="head"><span class="num">14</span><span class="tag tag-funding">融資</span></div>
+      <h3>黃仁勳離職衝擊 AI 新創融資，創投憂心資金缺口</h3>
+      <p class="en">Jensen Huang&#x27;s departure blasts big hole in AI startup funding, VCs and founders say</p>
+      <p class="lede">輝達今年已參與 105 輪融資、常為最大投資方，黃仁勳離職使 AI 新創失去最大金主之一。</p>
+      <p class="body">TechCrunch 11 月 13 日訪問多名創投與創辦人指出，輝達在黃仁勳主政下今年已參與 105 輪融資、常為最大投資方，數年來向新創投入數百億美元；其離職使 AI 新創失去最大金主之一，短期內交易規模與估值可能受壓。</p>
+      <p class="body">臨時執行長 Colette Kress 預料將調整輝達對 AI 新創的投資，尤其涉及數十億美元資料中心建設的核心布局；輝達今年以 130 億美元收購 Hugging Face，預計 2027 年完成，另持有 Mistral AI、Lambda 等公司股份。</p>
+      <p class="body">受訪創投認為，輝達不只是資金來源，更是新創取得晶片、客戶與可信度的背書；失去這位金主後，部分高度依賴輝達生態的新創可能面臨融資條件收緊。</p>
+      <p class="body">不過也有投資人指出，輝達的投資布局早已制度化，短期震盪未必演變為長期撤資；真正的變數在於新任執行長是否延續黃仁勳「以投資綁住生態」的策略。</p>
+      <p class="body">黃仁勳辭職的漣漪正從治理擴散到資金面：董事會找接班人的同時，AI 新創圈也在重新計算，少了輝達這張牌，下一輪融資要找誰來接。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://techcrunch.com/2026/11/13/jensen-huangs-departure-blasts-big-hole-in-ai-startup-funding-vcs-and-founders-say/" target="_blank" rel="noopener">TechCrunch</a><a href="https://www.bloomberg.com/news/newsletters/2026-11-13/huang-s-exit-leaves-silicon-valley-unsure-about-ai-boom-s-future" target="_blank" rel="noopener">Bloomberg</a><span class="note">TechCrunch 2026-11-13 22:43 UTC 報導，訪問多名創投與創辦人；非發布類條目。彭博同日 20:18 UTC 亦報導黃仁勳離職引發的產業不確定性。本期輝達相關後續另見第 1、4 條。</span></div>
+    </article>
+    <article class="card" id="card-15">
+      <div class="head"><span class="num">15</span><span class="tag tag-research">研究</span></div>
+      <h3>AI 解讀哥德爾手稿，Claude 找回 663 條定理</h3>
+      <p class="en">&#x27;Ahead of his time&#x27;: AI helps unlock discoveries hidden in notebooks of man who transformed maths</p>
+      <p class="lede">赫爾辛基大學團隊以 Claude 解讀哥德爾 1,009 頁速記手稿，數日內整理出 663 條定理，約 400 條經形式驗證成立。</p>
+      <p class="body">《衛報》11 月 13 日報導，赫爾辛基大學邏輯學家 Jan von Plato 團隊自 2017 年起以每週約一頁的速度解讀哥德爾 16 本工作手冊，共 1,009 頁，多為已淘汰的德文 Gabelsberger 速記；2026 年 9 月交給 Claude 後，數日內產出約 650 頁分析，整理出 663 條哥德爾曾證明、草擬或構思的定理。</p>
+      <p class="body">經 Coq 形式驗證，約 400 條按原表述成立，約 200 條須修補表述或補充假設，約 50 條為假；其中最受矚目的是選擇公理獨立性的近乎完整重建——哥德爾 1966 年宣稱過此結果卻從未發表。</p>
+      <p class="body">須注意：AI 是「找回」哥德爾已寫下的成果，而非證明新定理；歷史學家仍須判定多少屬於哥德爾本人的貢獻，多少來自 AI 的重建與詮釋。</p>
+      <p class="body">Von Plato 表示，人工解讀一頁要花一週，Claude 數日就完成整批手稿的梳理；這項工作由歐洲研究委員會 250 萬歐元經費支持，哥德爾手稿的解讀工作仍在繼續。</p>
+      <p class="body">從塵封 80 年的速記到 663 條定理，AI 在人文與數學史料上的角色正從「搜尋工具」變成「解讀夥伴」；但驗證與詮釋的責任，仍在人類學者手上。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://aiweekly.co/alerts/helsinki-team-uses-claude-to-surface-663-gdel-theorems" target="_blank" rel="noopener">AI Weekly</a><a href="https://mezha.net/eng/news/mezha-5bfca8e96e5185cfd3400769_claude_helps_uncover/" target="_blank" rel="noopener">Mezha</a><span class="note">《衛報》2026-11-13 刊出；AI Weekly 同日 21:12 UTC、Mezha 同日 17:11 UTC 轉述。底層分析工作為 2026 年 9 月，新聞事件為 11 月 13 日刊出；AI 為「找回」而非證明新定理。</span></div>
+    </article>
+  </section>
+  <footer>
+  <p>來源說明：本期 15 條皆來自官方部落格、英文與中文科技媒體、跑分榜與社群；發布類條目依方案 B 以兩個獨立來源核對事件日期，核對不上的已降級或棄用；發布時間不確定者標「未確認」，不猜測。</p>
+  <p>排除說明：Nous Research Arete-27B（官方部落格發布日為 11 月 6 日，The Register 11 月 13 日文章為舊聞翻新）、微軟 AI Frontiers 創辦人 John Langford 離職（部落格文章為 11 月 6 日，11 月 13 日報導為舊聞跟進）、中國模型 Blackwell 晶片痕跡研究（報告 11 月 12 日發布，TechCrunch 11 月 13 日為跟進報導）、SpaceX 逾 740 億美元 AI 園區（美國 11 月 12 日宣布，台北時間 11 月 13 日凌晨，在視窗開始之前）、Paul Christiano 接管警告（演講為 11 月 9 日）等，事件日在視窗外，已排除；X 流傳的輝達員工轉投 SpaceX 內部信未經證實，不採用。</p>
+  <p>未收錄：Blackstone QTS 削減 AI 債券發行（僅彭博標題確認，未取得新規模與原因）、Appier 第三季財報、L3Harris JADO 在台展示、SpaceX 裁撤 Grok Imagine 團隊、微軟 Frontier Company 等，重要性相對較低。</p>
+  <p>本期未能讀取：VentureBeat RSS（429 限流）、Reddit（網域阻擋）、36氪（安全檢測）、量子位、機器之心、鈦媒體、品玩、新智元、Wired（網域阻擋）；The Verge、Ars Technica 原站因網域阻擋改以搜尋核實。跑分榜七個來源（LMArena、Artificial Analysis、Hugging Face 榜單、Aider、SWE-bench、HELM、LiveBench）視窗內無登頂、超車或新模型上榜。</p>
+  </footer>
+</div>
+</body>
+</html>
