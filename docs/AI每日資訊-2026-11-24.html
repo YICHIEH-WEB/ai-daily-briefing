@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 每日早報 · 2026-11-24</title>
+<style>
+  :root{
+    --bg:#faf8f4; --card:#fffdf9; --ink:#1d1915; --muted:#71685b; --faint:#a39a8a;
+    --hairline:#e9e0d0; --border:#ece3d2;
+    --ember:#b45309; --ember-deep:#8a3d05; --gold:#d9a441;
+    --serif:ui-serif,"Songti TC","STSong","Noto Serif TC","Noto Serif CJK TC",serif;
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+    --dot-model:#b45309; --dot-funding:#3f7a4e; --dot-policy:#8a5a83;
+    --dot-app:#2f7d7a; --dot-oss:#5b6470; --dot-research:#7a6a9a; --dot-other:#a89f90;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#14110d; --card:#1d1814; --ink:#f1ebe0; --muted:#a79d8c; --faint:#6f665a;
+      --hairline:#2b251e; --border:#372d21;
+      --ember:#e5a05c; --ember-deep:#f2bc7d; --gold:#d9a441;
+      --dot-model:#e5a05c; --dot-funding:#82bd8d; --dot-policy:#c69dc2;
+      --dot-app:#82c6c1; --dot-oss:#9aa3ad; --dot-research:#b3a1d6; --dot-other:#8d8474;
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","PingFang SC","Hiragino Sans GB","Microsoft JhengHei","Noto Sans TC",sans-serif;
+    line-height:1.75;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:680px;margin:0 auto;padding:36px 16px 72px}
+  .masthead{margin-bottom:30px}
+  .brand{display:flex;align-items:center;gap:9px;margin-bottom:14px}
+  .brand .mark{width:9px;height:9px;background:var(--ember);border-radius:2px;flex-shrink:0}
+  .brand .bt{font-family:var(--mono);font-size:11px;letter-spacing:.3em;color:var(--muted)}
+  .masthead h1{font-family:var(--serif);font-size:36px;font-weight:700;margin:0 0 8px;letter-spacing:.08em}
+  .dateline{font-size:14.5px;color:var(--muted);margin:0 0 4px}
+  .dayline{font-family:var(--mono);font-size:11px;letter-spacing:.22em;color:var(--faint);margin:0 0 4px}
+  .meta{font-size:12.5px;color:var(--faint);margin:0}
+  .signal{height:3px;margin-top:20px;border-radius:2px;
+    background:linear-gradient(90deg,var(--ember) 0%,var(--gold) 45%,transparent 100%)}
+  .hero{font-family:var(--serif);font-size:15.5px;line-height:1.85;margin:0 0 30px}
+  section{margin-bottom:38px}
+  .sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:16px}
+  .sec-num{font-family:var(--mono);font-size:12px;color:var(--ember);letter-spacing:.1em;flex-shrink:0}
+  .sec-head h2{font-size:15px;margin:0;letter-spacing:.14em;font-weight:700;flex-shrink:0}
+  .sec-head .rule{flex:1;height:1px;background:var(--hairline);transform:translateY(-4px)}
+  .tldr{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px 20px 20px 12px}
+  .tldr ol{margin:0;padding-left:26px}
+  .tldr li{margin:8px 0;font-size:14px}
+  .tldr li::marker{font-family:var(--mono);font-size:12px;color:var(--ember)}
+  .tldr a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--faint)}
+  .tldr a:hover{color:var(--ember);border-bottom-color:var(--ember)}
+  .top3{display:grid;gap:10px}
+  .mini{position:relative;background:var(--card);border:1px solid var(--border);border-radius:12px;
+    padding:15px 18px 15px 20px;overflow:hidden}
+  .mini::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
+    background:linear-gradient(var(--ember),var(--gold))}
+  .mini .rank{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--ember);display:block;margin-bottom:6px}
+  .mini a{color:var(--ink);text-decoration:none;font-weight:700;font-size:15px}
+  .mini a:hover{color:var(--ember)}
+  .mini p{margin:7px 0 0;font-size:13.5px;color:var(--muted)}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:14px;
+    padding:22px 20px;margin-bottom:14px;scroll-margin-top:16px}
+  .card .head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+  .num{font-family:var(--mono);font-size:12px;color:var(--faint);letter-spacing:.08em}
+  .card.is-top .num{color:var(--ember);font-weight:700}
+  .tag{display:inline-flex;align-items:center;font-size:11.5px;padding:2px 10px;border-radius:999px;
+    border:1px solid var(--border);color:var(--muted)}
+  .tag::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--dot,var(--faint));margin-right:7px;flex-shrink:0}
+  .tag-model{--dot:var(--dot-model)}
+  .tag-funding{--dot:var(--dot-funding)}
+  .tag-policy{--dot:var(--dot-policy)}
+  .tag-app{--dot:var(--dot-app)}
+  .tag-oss{--dot:var(--dot-oss)}
+  .tag-research{--dot:var(--dot-research)}
+  .tag-other{--dot:var(--dot-other)}
+  .card h3{font-family:var(--serif);font-size:19px;margin:2px 0 5px;line-height:1.55;font-weight:700}
+  .card .en{font-size:12.5px;color:var(--faint);margin:0 0 10px;font-style:italic}
+  .card .lede{font-size:14px;color:var(--muted);margin:0 0 12px;padding-left:10px;border-left:2px solid var(--ember)}
+  .card p.body{font-size:14.5px;margin:0 0 10px;text-align:justify}
+  .card .foot{margin-top:14px;padding-top:12px;border-top:1px dashed var(--hairline);
+    font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 14px}
+  .card .foot a{color:var(--ember);text-decoration:none}
+  .card .foot a:hover{text-decoration:underline}
+  .card .foot .note{flex-basis:100%}
+  .src-label{font-weight:700;color:var(--muted)}
+  footer{border-top:1px solid var(--hairline);padding-top:20px;color:var(--muted);font-size:13px}
+  footer p{margin:0}
+  @media (max-width:560px){
+    .masthead h1{font-size:29px}
+    .card{padding:18px 16px}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand"><span class="mark"></span><span class="bt">AI DAILY BRIEFING</span></div>
+    <h1>AI 每日早報</h1>
+    <p class="dateline">2026 年 11 月 24 日 · 星期二</p>
+    <p class="dayline">TUESDAY · 台北時間</p>
+    <p class="meta">時間視窗：2026-11-23 09:00 至 2026-11-24 09:00（台北時間）· 共 15 條</p>
+    <div class="signal"></div>
+  </header>
+  <p class="hero">過去 24 小時，輝達董事會恢復黃仁勳執行長職務，美國商務部同日將 Megaspeed 列入實體清單；Anthropic 推出 Claude Ship，讓 AI 代理審查、修復並核准程式碼變更；智譜發布 GLM-5.4，首個 Loop Transformer 旗艦模型；OpenAI 與 Cisco 開源 Shirudo；亞馬遜與 CrowdStrike 同日宣布大型收購。</p>
+  <section>
+    <div class="sec-head"><span class="sec-num">01</span><h2>一句話速覽</h2><span class="rule"></span></div>
+    <div class="tldr"><ol>
+      <li><a href="#card-1">輝達董事會 11 月 23 日全票通過，即刻恢復黃仁勳總裁、執行長及董事職務，距其 11 月 12 日請辭僅 11 天；董事會稱徵詢美國政府高層意見後認定復職不構成國安風險，川普公開支持；同一天，美國商務部將涉入晶片走私疑雲的新加坡雲端公司 Megaspeed 及其關聯企業列入實體清單，消息公布後輝達股價盤前一度大漲逾三成。</a></li>
+      <li><a href="#card-2">Anthropic 11 月 23 日推出 Claude Ship，由已正式上線的 Code Review 加上新 Beta 工具 PR Steward 與 Claude Approvals 組成，AI 代理可審查 GitHub 拉取請求、修復未通過的檢查與合併衝突，並依團隊政策核准例行變更；即日起展開 Beta，適用 Claude Team 與 Enterprise 方案。</a></li>
+      <li><a href="#card-3">智譜 Z.ai 11 月 23 日發布 GLM-5.4，750B 規模的首個 Loop Transformer 旗艦模型，將 GLM-5 基座的 28 層共享權重循環執行兩遍，在不增加參數的情況下加深計算深度，官方稱智能水平可對標 2 至 4 倍參數規模的模型；已上線 GLM Coding Plan、ZCode 與 Z.ai Chat，支援 100 萬詞元上下文。</a></li>
+      <li><a href="#card-4">OpenAI 與 Cisco 11 月 23 日聯合推出開源專案 Shirudo（日文「盾」），以 eBPF 在修補程式完成前先為運行中的 Linux 系統部署臨時「防護罩」，阻擋漏洞利用且無需重啟服務；由 AI 代理生成的防護罩已在受控測試中擋下 Java4Shell 對 Elasticsearch 的攻擊，採 BSD 2-Clause 授權。</a></li>
+      <li><a href="#card-5">亞馬遜 11 月 23 日宣布收購以色列新創 Decart 的 Decart Optimization Stack（DOS）技術，並延攬三位共同創辦人與 AI 研究工程團隊，為對外銷售自研 Trainium 晶片鋪路；亞馬遜未公布交易金額，彭博引述知情人士報導約 75 億美元。</a></li>
+      <li><a href="#card-6">CrowdStrike 11 月 23 日宣布以全股票交易收購雲端資安公司 Zscaler，交易價值約 439 億美元，為資安產業歷來最大併購之一；Zscaler 股東每股可換得 1.135 股 CrowdStrike 股票，隱含每股約 260.41 美元，較上週五收盤價溢價 34%，交易預計於 CrowdStrike 2028 財年下半年完成。</a></li>
+      <li><a href="#card-7">維吉尼亞州與奧勒岡州檢察長 11 月 23 日分別提告馬斯克旗下的 SpaceX，指其 AI 模型 Grok 的「辛辣模式」可將一張普通照片製成非自願性裸露或性化影像與影片，包括涉及未成年人的內容，違反各州消費者保護法；這是美國各州首次就 Grok 深偽內容提告。</a></li>
+      <li><a href="#card-8">Google 11 月 23 日宣布擴大搜尋 AI Mode 的個人智慧（Personal Intelligence），可選擇性接入 Google Wallet、Drive 與 Gemini App，讓 AI 回應納入消費、文件與對話脈絡；Wallet 連結即日起開始推出，Drive 與 Gemini App 連結將於未來數週內上線，連結皆為選擇性加入、可隨時關閉。</a></li>
+      <li><a href="#card-9">AWS 11 月 23 日發布五款 Strands Decider v2 模型，以 Gemma 4 為基座、採 Apache 2.0 授權的開放權重模型，專為代理迴圈中的重複決策而設計：不生成文字，而是在一次前向傳遞中為開發者提供的選項逐一評分；最大 31B 模型在 Decision Index 0.3 公開基準拿下 71.5 分，遠高於 v1 的 48.8 分。</a></li>
+      <li><a href="#card-10">Anthropic 11 月 23 日將企業前沿保障（Enterprise Frontier Safeguards，EFS）推向公開測試版，企業客戶可將 Claude 的提示與回應存放在自家雲端、自行持有加密金鑰，Anthropic 軟體在客戶雲上每 15 分鐘掃描異常，兼顧零資料留存與自動化安全監測；EFS 於 9 月宣布、與 100 多家客戶共同開發，適用 Mythos 與 Fable 模型。</a></li>
+      <li><a href="#card-11">Google DeepMind 11 月 23 日發表部落格文章指出，多組 Gemini 4 智能體團隊分工改進量子演算法，並以 Lean 定理證明器進行形式驗證；聚變模擬成本降低 11.8 倍、arcsin 常式加速 290 倍，相關 Lean 函式庫與規格已開源。</a></li>
+      <li><a href="#card-12">中國具身智能新創自變量 11 月 23 日發布首個具身基礎模型 WALL-API-1.0，核心模型 WALL-OSS-1.0 讓動作數據自預訓練階段即參與學習；在 312 項任務的開放式真機評測中零樣本成功率達 55.1%，ManipArena 15 項任務得 1,101 分（滿分 1,500），較上一代提高 52.5%。</a></li>
+      <li><a href="#card-13">大曉機器人 11 月 23 日發布增強型具身通用模型 ACE-Brain-0.7（9B 視覺語言模型，微調自 Qwen3.5-9B），首提基於真實執行狀態的具身推理範式，融合空間錨定、任務理解與進度估計；六項任務推理基準平均 76.5 分，官方稱超越 GPT-6 Astra（72.7 分）與 Claude Opus 5.5（73.5 分）。</a></li>
+      <li><a href="#card-14">螞蟻百靈 11 月 23 日在廣州醫療健康生態大會集中發布 LingSante 醫療健康模型家族：LingSante-3.1-air-VL（124B 總參、5.5B 激活，多模態）與 LingSante-3.1-flash 當天開源，另有即時多模態互動 LingSante Live、疾病風險預測 LingSante Pulse 與醫療安全防護 LingSante MedGuard；阿福 App 同步升級。</a></li>
+      <li><a href="#card-15">AI 評測非營利組織 METR 11 月 23 日更新時間跨度圖，在加入設計 AI 評測、哲學論證評分等開放式任務後，模型在需要判斷力的任務上明顯弱於寫程式；MIT Technology Review 指出，這意味著遞迴自我改進可能沒那麼快到來。</a></li>
+    </ol></div>
+  </section>
+  <section>
+    <div class="sec-head"><span class="sec-num">02</span><h2>今日頭條</h2><span class="rule"></span></div>
+    <div class="top3">
+      <div class="mini"><span class="rank">01</span><a href="#card-1">輝達董事會恢復黃仁勳執行長職務；美商務部同日將 Megaspeed 列入實體清單</a><p>輝達董事會 11 月 23 日全票通過，即刻恢復黃仁勳總裁、執行長及董事職務，距其 11 月 12 日請辭僅 11 天；董事會稱徵詢美國政府高層意見後認定復職不構成國安風險，川普公開支持；同一天，美國商務部將涉入晶片走私疑雲的新加坡雲端公司 Megaspeed 及其關聯企業列入實體清單，消息公布後輝達股價盤前一度大漲逾三成。</p></div>
+      <div class="mini"><span class="rank">02</span><a href="#card-2">Anthropic 推出 Claude Ship，AI 代理可審查、修復並核准程式碼變更</a><p>Anthropic 11 月 23 日推出 Claude Ship，由已正式上線的 Code Review 加上新 Beta 工具 PR Steward 與 Claude Approvals 組成，AI 代理可審查 GitHub 拉取請求、修復未通過的檢查與合併衝突，並依團隊政策核准例行變更；即日起展開 Beta，適用 Claude Team 與 Enterprise 方案。</p></div>
+      <div class="mini"><span class="rank">03</span><a href="#card-3">智譜發布 GLM-5.4，首個 Loop Transformer 旗艦模型</a><p>智譜 Z.ai 11 月 23 日發布 GLM-5.4，750B 規模的首個 Loop Transformer 旗艦模型，將 GLM-5 基座的 28 層共享權重循環執行兩遍，在不增加參數的情況下加深計算深度，官方稱智能水平可對標 2 至 4 倍參數規模的模型；已上線 GLM Coding Plan、ZCode 與 Z.ai Chat，支援 100 萬詞元上下文。</p></div>
+    </div>
+  </section>
+  <section>
+    <div class="sec-head"><span class="sec-num">03</span><h2>全部資訊</h2><span class="rule"></span></div>
+    <article class="card is-top" id="card-1">
+      <div class="head"><span class="num">01</span><span class="tag tag-policy">政策</span></div>
+      <h3>輝達董事會恢復黃仁勳執行長職務；美商務部同日將 Megaspeed 列入實體清單</h3>
+      <p class="en">Nvidia reinstates Jensen Huang as CEO; US blacklists Megaspeed</p>
+      <p class="lede">輝達董事會 11 月 23 日全票通過，即刻恢復黃仁勳總裁、執行長及董事職務，距其 11 月 12 日請辭僅 11 天；董事會稱徵詢美國政府高層意見後認定復職不構成國安風險，川普公開支持；同一天，美國商務部將涉入晶片走私疑雲的新加坡雲端公司 Megaspeed 及其關聯企業列入實體清單，消息公布後輝達股價盤前一度大漲逾三成。</p>
+      <p class="body">輝達董事會 11 月 23 日宣布，全票通過即刻恢復黃仁勳總裁、執行長及董事職務，距其 11 月 12 日因婚外情風波請辭僅 11 天。董事會表示，經與黃仁勳多次會談，並徵詢美國政府高層意見後，認定復職不構成國家安全風險；董事長 Harvey Jones 稱，黃仁勳是帶領輝達的正確人選。川普同日在 Truth Social 發文，稱董事會做了「正確且適當的決定」。</p>
+      <p class="body">黃仁勳在聲明中表示，很榮幸重返輝達，並對董事會的信任表達感謝。臨時執行長 Colette Kress 回任財務長；針對黃仁勳遭外國情報行動鎖定的獨立調查仍將繼續，董事會同時新設國家安全與出口管制委員會，並增設首席合規官。黃仁勳下週將赴美國參議院作證。</p>
+      <p class="body">同一天，美國商務部將新加坡雲端公司 Megaspeed 及其在新加坡、馬來西亞與泰國的六家關聯企業列入實體清單，禁止美國企業未經許可向其出售晶片與技術。Megaspeed 被指為輝達晶片的最大買家之一，遭調查是否協助將先進晶片走私至中國；其控股股東 Alice Huang 被美方懷疑為中國間諜，黃仁勳與她傳出婚外情正是此次風波的導火線。</p>
+      <p class="body">消息公布後，輝達股價盤前一度大漲逾三成，帶動美股期貨與晶片股走高。短短 11 天內的請辭與復職大逆轉，凸顯黃仁勳對這家全球最具價值公司之一的影響力，也讓外界質疑董事會的治理與美國政府介入企業人事的界線。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.reuters.com/technology/nvidia-reinstates-jensen-huang-ceo-2026-11-23/" target="_blank" rel="noopener">Reuters</a><a href="https://www.aljazeera.com/economy/2026/11/23/nvidia-board-reinstates-jensen-huang-as-ceo" target="_blank" rel="noopener">Al Jazeera</a><a href="https://www.inside.com.tw/article/42986-jensen-huang-will-return" target="_blank" rel="noopener">INSIDE</a><a href="https://www.reuters.com/business/us-blacklist-megaspeed-chip-firm-linked-nvidia-scandal-source-says-2026-11-23/" target="_blank" rel="noopener">Reuters（Megaspeed）</a><span class="note">黃仁勳復職與 Megaspeed 列入實體清單為同一事件鏈，合併為一條；復職公告發於美東時間 11 月 23 日上午 8 時 55 分，Megaspeed 列入清單由 Semafor 率先報導，路透、華爾街日報與中央社同日跟進。</span></div>
+    </article>
+    <article class="card is-top" id="card-2">
+      <div class="head"><span class="num">02</span><span class="tag tag-app">應用</span></div>
+      <h3>Anthropic 推出 Claude Ship，AI 代理可審查、修復並核准程式碼變更</h3>
+      <p class="en">Anthropic launches Claude Ship, letting AI agents review, fix and approve code changes</p>
+      <p class="lede">Anthropic 11 月 23 日推出 Claude Ship，由已正式上線的 Code Review 加上新 Beta 工具 PR Steward 與 Claude Approvals 組成，AI 代理可審查 GitHub 拉取請求、修復未通過的檢查與合併衝突，並依團隊政策核准例行變更；即日起展開 Beta，適用 Claude Team 與 Enterprise 方案。</p>
+      <p class="body">Anthropic 11 月 23 日推出 Claude Ship，讓 AI 代理從寫程式延伸到交付程式碼：它可審查 GitHub 拉取請求（PR）、修復未通過的檢查與合併衝突，並依團隊預設的政策核准例行變更。產品由三個部分組成：已正式上線的 Code Review，加上新進入 Beta 的 PR Steward 與 Claude Approvals。</p>
+      <p class="body">PR Steward 會在拉取請求出現問題時主動介入，修復測試失敗或合併衝突；Claude Approvals 則讓團隊為例行變更設定核准規則，符合條件的變更可由代理直接放行，不再逐一等待人工點頭。Anthropic 同時推出 /ship 指令，讓開發者直接在 Claude Code 中呼叫這套流程。</p>
+      <p class="body">Claude Ship 即日起展開 Beta，適用 Claude Team 與 Enterprise 方案。Anthropic 將其定位為「交付代理」而非單純的寫碼助手，目標是縮短從寫完程式到合併上線之間的等待時間。</p>
+      <p class="body">這是 Anthropic 在上市後首週的又一產品動作：同一天，公司亦將企業前沿保障（EFS）推向公開測試版（見本期第 10 條），顯示其正同步擴張開發者工具與企業安全兩條產品線。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://techcrunch.com/2026/11/23/anthropic-launches-claude-ship-letting-ai-agents-review-fix-and-approve-code-changes/" target="_blank" rel="noopener">TechCrunch</a><a href="https://www.reuters.com/business/anthropic-launches-claude-ship-help-developers-ship-code-faster-2026-11-23/" target="_blank" rel="noopener">Reuters</a><span class="note">路透與 TechCrunch 皆確認事件日為 11 月 23 日。</span></div>
+    </article>
+    <article class="card is-top" id="card-3">
+      <div class="head"><span class="num">03</span><span class="tag tag-model">模型</span></div>
+      <h3>智譜發布 GLM-5.4，首個 Loop Transformer 旗艦模型</h3>
+      <p class="en">Z.ai&#x27;s GLM-5.4 aims to match models up to four times its size by running 28 layers twice</p>
+      <p class="lede">智譜 Z.ai 11 月 23 日發布 GLM-5.4，750B 規模的首個 Loop Transformer 旗艦模型，將 GLM-5 基座的 28 層共享權重循環執行兩遍，在不增加參數的情況下加深計算深度，官方稱智能水平可對標 2 至 4 倍參數規模的模型；已上線 GLM Coding Plan、ZCode 與 Z.ai Chat，支援 100 萬詞元上下文。</p>
+      <p class="body">智譜 Z.ai 11 月 23 日發布 GLM-5.4，官方稱為首個 Loop Transformer 架構的旗艦模型。模型規模為 750B 參數，將 GLM-5 基座的 28 層共享權重循環執行兩遍，以相同的參數量換取更深的計算深度，藉此提升推理能力。</p>
+      <p class="body">官方稱，GLM-5.4 的智能水平可對標 2 至 4 倍參數規模的模型，並以此開啟「通用化編程」，讓程式碼生成影片、遊戲、CAD 與 3D 內容。模型支援 100 萬詞元上下文，已上線 GLM Coding Plan、ZCode 與 Z.ai Chat。</p>
+      <p class="body">值得注意的是，官方並未公布旗艦版的基準成績表，效能主張目前僅為廠商說法，尚無第三方複核。標準 API 標示即將推出，模型權重計畫在完成安全加固後開放。</p>
+      <p class="body">GLM-5.4 是繼 GLM-5 之後智譜在旗艦模型上的新動作，也是中國大模型廠商在「以更少參數換取更深推理」路線上的代表作。Hacker News 當日討論熱度超過千分，顯示海外開發者社群亦密切關注。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://z.ai/blog/glm-5.4" target="_blank" rel="noopener">Z.ai 官方部落格</a><a href="https://venturebeat.com/technology/z-ais-glm-5-4-aims-to-match-models-up-to-four-times-its-size-by-running-28-layers-twice" target="_blank" rel="noopener">VentureBeat</a><a href="https://www.marktechpost.com/2026/11/23/zai-glm-5-4-loop-transformer/" target="_blank" rel="noopener">MarkTechPost</a><span class="note">官方部落格、VentureBeat 與 MarkTechPost 皆給出同一事件日期 2026 年 11 月 23 日；「可對標 2 至 4 倍參數模型」為官方說法，尚無第三方複核，官方亦未公布旗艦版基準成績表。</span></div>
+    </article>
+    <article class="card" id="card-4">
+      <div class="head"><span class="num">04</span><span class="tag tag-oss">開源</span></div>
+      <h3>OpenAI 與 Cisco 開源 Shirudo，以 eBPF 即時防護 Linux 系統</h3>
+      <p class="en">Introducing Shirudo</p>
+      <p class="lede">OpenAI 與 Cisco 11 月 23 日聯合推出開源專案 Shirudo（日文「盾」），以 eBPF 在修補程式完成前先為運行中的 Linux 系統部署臨時「防護罩」，阻擋漏洞利用且無需重啟服務；由 AI 代理生成的防護罩已在受控測試中擋下 Java4Shell 對 Elasticsearch 的攻擊，採 BSD 2-Clause 授權。</p>
+      <p class="body">OpenAI 與 Cisco 11 月 23 日聯合推出開源專案 Shirudo（日文「盾」），目標是縮短「發現漏洞」與「完成修補」之間的空窗期。Shirudo 以 eBPF 技術在運行中的 Linux 核心部署小型、經簽署的臨時「防護罩」，直接阻擋漏洞利用的程式路徑，服務無需重啟。</p>
+      <p class="body">與傳統修補流程不同，防護罩由 AI 代理撰寫與測試：代理讀取漏洞資訊後生成 eBPF 程式，經簽署後部署，待正式修補程式上線再行撤除。OpenAI 表示，Codex 生成的防護罩已在受控測試中擋下 Java4Shell 對 Elasticsearch 的攻擊，Cisco 方面亦稱已擋下 PHP 相關漏洞的利用嘗試。</p>
+      <p class="body">Shirudo 源自 Cisco 旗下 Isovalent 團隊 2022 年開源的 Tetragon，改寫為「代理原生」設計：代理直接以程式碼而非人類制定的政策語言與系統互動。專案採 BSD 2-Clause 授權，程式碼已公開於 GitHub，部署前仍須人工簽署核准。</p>
+      <p class="body">兩家公司將 Shirudo 定位為「自我防禦基礎設施」的第一步，未來將持續合作。對企業而言，這意味著漏洞修補的責任分工正在改變：代理先擋下攻擊，人類再從容完成正式修補。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://openai.com/index/introducing-shirudo" target="_blank" rel="noopener">OpenAI 部落格</a><a href="https://newsroom.cisco.com/c/r/newsroom/en/us/a/y2026/m11/cisco-and-openai-launch-shirudo-a-new-project-to-safeguard-agentic-ai.html" target="_blank" rel="noopener">Cisco 新聞中心</a><span class="note">OpenAI 官方部落格與 Cisco 新聞中心皆標示 2026 年 11 月 23 日 21:20 UTC，事件日期一致。</span></div>
+    </article>
+    <article class="card" id="card-5">
+      <div class="head"><span class="num">05</span><span class="tag tag-funding">融資</span></div>
+      <h3>亞馬遜以約 75 億美元收購 Decart 技術與團隊</h3>
+      <p class="en">Amazon snaps up Decart&#x27;s AI optimization tech for $7.5B as it prepares to sell Trainium chips</p>
+      <p class="lede">亞馬遜 11 月 23 日宣布收購以色列新創 Decart 的 Decart Optimization Stack（DOS）技術，並延攬三位共同創辦人與 AI 研究工程團隊，為對外銷售自研 Trainium 晶片鋪路；亞馬遜未公布交易金額，彭博引述知情人士報導約 75 億美元。</p>
+      <p class="body">亞馬遜 11 月 23 日宣布，將收購以色列新創 Decart 的 Decart Optimization Stack（DOS）技術，並延攬三位共同創辦人與 AI 研究工程團隊。DOS 是一套最佳化軟體，可讓 AI 模型在輝達、亞馬遜與 Google 等不同廠商的晶片上更有效率地運行，並在晶片之間輕鬆切換。</p>
+      <p class="body">亞馬遜未公布交易金額，彭博引述知情人士報導約 75 億美元；交易須經監管核准，且據報與五年期績效目標掛鉤。Decart 成立於 2023 年，上一輪估值據 PitchBook 資料接近 40 億美元。</p>
+      <p class="body">這筆交易並非收購 Decart 整家公司：Decart 的 AI 模型（包括即時世界模型 Oasis）不在交易範圍內。技術將由亞馬遜晶片部門 Annapurna Labs 接手，用於提升 Trainium 與 Inferentia 晶片的效能。</p>
+      <p class="body">亞馬遜表示，Decart 團隊自 2025 年起已與其合作，目標是讓 Trainium 更容易為開發者與企業採用。隨著亞馬遜準備對外銷售 Trainium，這筆交易形同買下晶片的「軟體入口」，是大型科技公司爭奪 AI 人才與基礎設施的又一例證。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.reuters.com/business/retail-consumer/amazon-buy-decarts-ai-chip-optimization-tech-latest-ai-talent-grab-2026-11-23/" target="_blank" rel="noopener">Reuters</a><a href="https://techcrunch.com/2026/11/23/amazon-snaps-up-decarts-ai-optimization-tech-for-7-5b-as-it-prepares-to-sell-trainium-chips/" target="_blank" rel="noopener">TechCrunch</a><span class="note">亞馬遜未公布交易金額，約 75 億美元為彭博引述知情人士的報導；路透與 TechCrunch 皆確認事件日為 11 月 23 日。</span></div>
+    </article>
+    <article class="card" id="card-6">
+      <div class="head"><span class="num">06</span><span class="tag tag-funding">融資</span></div>
+      <h3>CrowdStrike 以 439 億美元收購 Zscaler，打造資安巨擘</h3>
+      <p class="en">CrowdStrike to acquire Zscaler for $44 billion</p>
+      <p class="lede">CrowdStrike 11 月 23 日宣布以全股票交易收購雲端資安公司 Zscaler，交易價值約 439 億美元，為資安產業歷來最大併購之一；Zscaler 股東每股可換得 1.135 股 CrowdStrike 股票，隱含每股約 260.41 美元，較上週五收盤價溢價 34%，交易預計於 CrowdStrike 2028 財年下半年完成。</p>
+      <p class="body">CrowdStrike 11 月 23 日宣布，將以全股票交易收購雲端資安公司 Zscaler，交易價值約 439 億美元，為資安產業歷來最大併購之一。兩家公司董事會皆已一致通過，交易須經 Zscaler 股東與監管機關核准。</p>
+      <p class="body">依交易條件，Zscaler 股東每股可換得 1.135 股 CrowdStrike 普通股，以 11 月 20 日收盤價計，隱含每股約 260.41 美元，較 Zscaler 上週五收盤價溢價 34%。交易完成後，CrowdStrike 現有股東將持有合併後公司約 84.1% 股權。</p>
+      <p class="body">CrowdStrike 執行長 George Kurtz 將領導合併後的公司。交易旨在將 Zscaler 的網路安全與零信任服務併入 CrowdStrike 的 Falcon 平台，擴大其在企業資安市場的版圖，預計交易於 CrowdStrike 2028 財年下半年完成。</p>
+      <p class="body">兩家公司表示，AI 驅動的網路攻擊日益複雜，是促成整合的主因。這是同一天第二筆大型科技併購（見本期第 5 條亞馬遜收購 Decart），顯示 2026 年的併購熱潮正延燒至 AI 與資安基礎設施。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.reuters.com/legal/transactional/crowdstrike-buy-zscaler-439-billion-2026-11-23/" target="_blank" rel="noopener">Reuters</a><a href="https://techcrunch.com/2026/11/23/crowdstrike-to-acquire-zscaler-for-44-billion/" target="_blank" rel="noopener">TechCrunch</a><a href="https://www.businesswire.com/news/home/20261123522174/en/CrowdStrike-to-Acquire-Zscaler-Bringing-Network-Security-and-Zero-Trust-to-the-Falcon-Platform" target="_blank" rel="noopener">BusinessWire</a><span class="note">路透、TechCrunch 與 BusinessWire 官方新聞稿皆確認事件日為 11 月 23 日。</span></div>
+    </article>
+    <article class="card" id="card-7">
+      <div class="head"><span class="num">07</span><span class="tag tag-policy">政策</span></div>
+      <h3>兩州起訴 SpaceX，指 Grok 生成深偽色情內容違法</h3>
+      <p class="en">Virginia, Oregon sue Musk&#x27;s SpaceX over Grok AI&#x27;s creation of child sexual abuse images and videos</p>
+      <p class="lede">維吉尼亞州與奧勒岡州檢察長 11 月 23 日分別提告馬斯克旗下的 SpaceX，指其 AI 模型 Grok 的「辛辣模式」可將一張普通照片製成非自願性裸露或性化影像與影片，包括涉及未成年人的內容，違反各州消費者保護法；這是美國各州首次就 Grok 深偽內容提告。</p>
+      <p class="body">維吉尼亞州檢察長 Jay Jones 與奧勒岡州檢察長 Dan Rayfield 11 月 23 日分別向州法院提告馬斯克旗下的 SpaceX Super Intelligence，指其 AI 模型 Grok 在未設置足夠防護的情況下，生成兒童性虐待內容與其他非自願性性影像，違反各州消費者保護法。數州先前已宣布調查 Grok，但維吉尼亞與奧勒岡是首批提告的州。</p>
+      <p class="body">訴狀指出，Grok 的「辛辣模式」（spicy mode）可將一張現有照片製成逼真的裸露或性化影像與影片，且公司對外宣稱產品安全，實際防護卻不足。兩州要求損害賠償、罰金與禁制令，迫使公司停止違法行為；維吉尼亞州每件違規最高可罰 2,500 美元。</p>
+      <p class="body">維吉尼亞州訴狀引述反數位仇恨中心（CCDH）的研究，估計 2025 年 12 月至 2026 年 1 月間，Grok 在 X 上生成並發布了數百萬張性化影像，其中逾 2 萬張疑似描繪未成年人。SpaceX 目前還面臨十多起個人訴訟，原告稱 Grok 生成了他們未成年或成年時期的非自願性影像。</p>
+      <p class="body">X Safety 當天上午發文稱，正封鎖以 Grok 製作性暗示深偽內容的使用者。這起訴訟是 Grok 內容爭議從調查升級為司法的關鍵一步，也讓 AI 生成式影像的平台責任再度成為美國各州的執法焦點。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.reuters.com/legal/government/virginia-oregon-sue-musks-spacex-over-grok-ais-creation-child-sexual-abuse-2026-11-23/" target="_blank" rel="noopener">Reuters</a><a href="https://www.aljazeera.com/economy/2026/11/23/us-states-sue-spacex-over-grok-ais-creation-of-child-sexual-abuse-material" target="_blank" rel="noopener">Al Jazeera</a><span class="note">路透與半島電視台皆確認訴訟於 11 月 23 日提出；CCDH 研究數據為訴狀引述，未經獨立核實。</span></div>
+    </article>
+    <article class="card" id="card-8">
+      <div class="head"><span class="num">08</span><span class="tag tag-app">應用</span></div>
+      <h3>Google AI Mode 接入 Wallet、Drive 與 Gemini App，提供更個人化回答</h3>
+      <p class="en">Google Search&#x27;s AI Mode can now tap into Drive and Wallet for more personalized responses</p>
+      <p class="lede">Google 11 月 23 日宣布擴大搜尋 AI Mode 的個人智慧（Personal Intelligence），可選擇性接入 Google Wallet、Drive 與 Gemini App，讓 AI 回應納入消費、文件與對話脈絡；Wallet 連結即日起開始推出，Drive 與 Gemini App 連結將於未來數週內上線，連結皆為選擇性加入、可隨時關閉。</p>
+      <p class="body">Google 11 月 23 日宣布，搜尋的 AI Mode 將擴大個人智慧（Personal Intelligence）的連結範圍：使用者可選擇性接入 Google Wallet、Drive 與 Gemini App，讓 AI 回應納入個人的消費、文件與對話脈絡。Wallet 連結即日起開始推出，Drive 與 Gemini App 連結將於未來數週內上線。</p>
+      <p class="body">接入 Wallet 後，AI Mode 可協助描繪財務目標、找出日常省錢方法，並依已連結的信用卡推薦最划算的回饋方案；Google 強調，AI Mode 只能讀取帳戶資訊，不能移動、管理或投資使用者的金錢。接入 Drive 後，AI 可參考文件、試算表與 PDF，例如為報稅季量身打造準備計畫。</p>
+      <p class="body">Gemini App 的連結則讓對話脈絡雙向流通：在 Gemini App 中探索過的想法，AI Mode 無需從頭開始，反之亦然。Google 同時表示，AI Overviews 與 AI Mode 將開始依據近期搜尋脈絡提供更貼近個人的回應，未來還會在回應下方新增「個人化」圖示，顯示 AI 參考了哪些脈絡。</p>
+      <p class="body">個人智慧此前已可連結 Gmail、行事曆與相簿；Google 強調，所有連結皆為選擇性加入，預設不開啟，可隨時在搜尋設定中關閉。這是 Google 將個人資料轉化為搜尋優勢的關鍵一步，也再度引發個人隱私與便利之間的權衡討論。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://blog.google/products-and-platforms/products/search/google-search-personal-intelligence-apps/" target="_blank" rel="noopener">Google 官方部落格</a><a href="https://techcrunch.com/2026/11/23/google-searchs-ai-mode-can-now-tap-into-drive-and-wallet-for-more-personalized-responses/" target="_blank" rel="noopener">TechCrunch</a><span class="note">Google 官方部落格與 TechCrunch 皆確認事件日為 11 月 23 日；Wallet 連結即日起推出，Drive 與 Gemini App 連結為未來數週內上線，並非當日全部可用。</span></div>
+    </article>
+    <article class="card" id="card-9">
+      <div class="head"><span class="num">09</span><span class="tag tag-model">模型</span></div>
+      <h3>AWS 發布 Strands Decider v2，鎖定決定成敗的單一細節</h3>
+      <p class="en">AWS&#x27;s Strands Decider v2 targets the agent decisions that hinge on a single detail</p>
+      <p class="lede">AWS 11 月 23 日發布五款 Strands Decider v2 模型，以 Gemma 4 為基座、採 Apache 2.0 授權的開放權重模型，專為代理迴圈中的重複決策而設計：不生成文字，而是在一次前向傳遞中為開發者提供的選項逐一評分；最大 31B 模型在 Decision Index 0.3 公開基準拿下 71.5 分，遠高於 v1 的 48.8 分。</p>
+      <p class="body">AWS 11 月 23 日發布 Strands Decider v2，共五款開放權重模型，以 Google 的 Gemma 4 為基座，規模自 E2B 至 31B，採 Apache 2.0 授權，權重已上架 Hugging Face。與一般語言模型不同，Decider 是「系統一」模型：不生成文字，而是在一次前向傳遞中為開發者提供的選項逐一評分，最多可處理 255 個選項。</p>
+      <p class="body">v2 的關鍵改進在於讀取情境的方式：它會雙向讀取完整情境，讓前面的細節能以後面的資訊重新詮釋，藉此捕捉足以翻轉答案的單一關鍵細節。AWS 報告，最大 31B 模型在 Decision Index 0.3 公開基準拿下 71.5 分，遠高於 v1 最大模型的 48.8 分；在 DecisionPivot 基準上則為 84.3 分，對 v1 的 23.2 分。</p>
+      <p class="body">訓練資料共 1,750 萬筆決策範例，六項公開文字基準平均 82.1 分，高於 v1 的 70.0 分。AWS 亦稱，內部最大票務系統以 Decider 取代 Claude Sonnet 4.6 進行工單標籤後，成本降低 98%、回應速度提升 78%。不過這些數字皆為廠商自報，尚未經第三方複核。</p>
+      <p class="body">同日，AWS 亦推出 Strands Box CLI，為 Claude Code、Codex 與 Kiro 等編碼代理提供原生沙箱支援。Decider v2 與 Box 的組合，顯示 AWS 正系統性地降低代理決策的推論成本，同時收緊無人值守編碼的安全邊界。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://strandsagents.com/blog/introducing-strands-decider-v2/" target="_blank" rel="noopener">Strands 官方部落格</a><a href="https://venturebeat.com/data/awss-strands-decider-v2-targets-the-agent-decisions-that-hinge-on-a-single-detail" target="_blank" rel="noopener">VentureBeat</a><span class="note">Strands 官方部落格與 VentureBeat 皆確認事件日為 11 月 23 日；成本與基準數字為 AWS 自報，尚未經第三方複核。</span></div>
+    </article>
+    <article class="card" id="card-10">
+      <div class="head"><span class="num">10</span><span class="tag tag-app">應用</span></div>
+      <h3>Anthropic 企業前沿保障公開測試版上線，客戶可自管 Claude 資料留存</h3>
+      <p class="en">Zero data retention with Enterprise Frontier Safeguards is now in beta</p>
+      <p class="lede">Anthropic 11 月 23 日將企業前沿保障（Enterprise Frontier Safeguards，EFS）推向公開測試版，企業客戶可將 Claude 的提示與回應存放在自家雲端、自行持有加密金鑰，Anthropic 軟體在客戶雲上每 15 分鐘掃描異常，兼顧零資料留存與自動化安全監測；EFS 於 9 月宣布、與 100 多家客戶共同開發，適用 Mythos 與 Fable 模型。</p>
+      <p class="body">Anthropic 11 月 23 日宣布，企業前沿保障（Enterprise Frontier Safeguards，EFS）即日起開放公開測試版。企業客戶可將 Claude 的提示、回應與推理過程加密存放在自家雲端儲存空間，自行持有加密金鑰；Anthropic 與雲端供應商皆不留存客戶資料，資料亦不用於訓練。</p>
+      <p class="body">安全監測並未因此缺席：Anthropic 的軟體在客戶雲端每 15 分鐘掃描一次異常，偵測跨多次請求的濫用模式，並直接通報客戶自己的安全團隊。EFS 適用於 Claude Platform、AWS 上的 Claude Platform、Amazon Bedrock 與 Google Cloud 上的 Claude，Microsoft Foundry 支援即將推出。</p>
+      <p class="body">EFS 於今年 9 月宣布，此後與 100 多家客戶共同開發，其中包括四分之一的財富 100 強企業，以及醫療、金融與法律等對資料可見度有嚴格規定的產業；Bridgewater、Salesforce 與 Stripe 皆參與了封閉測試。適用模型為 Mythos 與 Fable 系列。</p>
+      <p class="body">這項設計扭轉了 Anthropic 今年 6 月的強制 30 天留存政策，也回應了企業客戶對前沿模型資料留存的疑慮。同一天，Anthropic 亦推出 Claude Ship（見本期第 2 條），顯示其正同步推進開發者工具與企業安全兩條產品線。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://claude.com/resources/articles/zero-data-retention-with-enterprise-frontier-safeguards" target="_blank" rel="noopener">Claude 官方文章</a><a href="https://www.pymnts.com/news/artificial-intelligence/2026/anthropic-expands-availability-of-ai-safety-monitoring-with-zero-data-retention/" target="_blank" rel="noopener">PYMNTS</a><span class="note">Anthropic 官方文章與 PYMNTS 皆確認事件日為 11 月 23 日；EFS 本身於 9 月宣布、11 月 9 日隨 Fable 5.2 進入封閉測試，本條以 11 月 23 日的公開測試版上線為事件日。</span></div>
+    </article>
+    <article class="card" id="card-11">
+      <div class="head"><span class="num">11</span><span class="tag tag-research">研究</span></div>
+      <h3>DeepMind：Gemini 4 智能體團隊以 Lean 形式驗證找到更快量子演算法</h3>
+      <p class="en">Finding faster quantum algorithms with agents and formal verification</p>
+      <p class="lede">Google DeepMind 11 月 23 日發表部落格文章指出，多組 Gemini 4 智能體團隊分工改進量子演算法，並以 Lean 定理證明器進行形式驗證；聚變模擬成本降低 11.8 倍、arcsin 常式加速 290 倍，相關 Lean 函式庫與規格已開源。</p>
+      <p class="body">Google DeepMind 11 月 23 日發表部落格文章，介紹多組 Gemini 4 智能體團隊如何分工改進量子演算法，並以 Lean 定理證明器進行形式驗證，確保演算法的正確性。研究聚焦於量子演算法的底層常式改進，而非提出全新演算法框架。</p>
+      <p class="body">據 DeepMind 所述，改進後的演算法讓聚變模擬的成本降低 11.8 倍，arcsin 常式的執行速度提升 290 倍。團隊同時開源了相關 Lean 函式庫與規格，供研究社群檢驗與沿用。</p>
+      <p class="body">值得注意的是，底層研究論文早在 11 月 6 日上傳 arXiv、11 月 9 日修訂，11 月 23 日是 DeepMind 官方部落格的發表日，而非研究的首發日。形式驗證的意義在於：Lean 可驗證證明步驟正確，但無法保證形式化陳述與論文主張完全一致。</p>
+      <p class="body">這是 AI 智能體參與科學發現的又一案例：多智能體分工、形式化驗證把關，再由人類團隊把關發表。DeepMind 選擇以部落格文章公開成果，顯示其正將智能體科研流程本身作為產品敘事的一部分。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://deepmind.google/blog/finding-faster-quantum-algorithms-with-agents-and-formal-verification/" target="_blank" rel="noopener">DeepMind 部落格</a><span class="note">本條僅 DeepMind 官方部落格一家主要來源；底層 arXiv 論文為 11 月 6 日上傳、11 月 9 日修訂，11 月 23 日為官方部落格發表日，非研究首發日。</span></div>
+    </article>
+    <article class="card" id="card-12">
+      <div class="head"><span class="num">12</span><span class="tag tag-model">模型</span></div>
+      <h3>自變量發布具身基礎模型 WALL-API-1.0，零樣本成功率 55.1%</h3>
+      <p class="en">X Square Robot Introduces WALL-OSS-1.0: Understand More, Act Better — A Native Foundation Model for the Physical World</p>
+      <p class="lede">中國具身智能新創自變量 11 月 23 日發布首個具身基礎模型 WALL-API-1.0，核心模型 WALL-OSS-1.0 讓動作數據自預訓練階段即參與學習；在 312 項任務的開放式真機評測中零樣本成功率達 55.1%，ManipArena 15 項任務得 1,101 分（滿分 1,500），較上一代提高 52.5%。</p>
+      <p class="body">中國具身智能新創自變量（X Square Robot）11 月 23 日發布首個具身基礎模型 WALL-API-1.0，核心為全新模型 WALL-OSS-1.0。與一般先學語言視覺、再接動作策略的做法不同，WALL-OSS-1.0 讓動作數據自預訓練階段即參與學習，使語言、視覺與動作共同塑造模型的能力。</p>
+      <p class="body">據官方公布，WALL-OSS-1.0 在 312 項任務的開放式真機評測中取得 55.1% 的零樣本成功率，無需針對特定任務示範或微調；在 ManipArena 15 項任務真機評測中得 1,101 分（滿分 1,500），較上一代 WALL-OSS-0.5 提高 52.5%。模型以 Qwen3.5 為基座，並以自研 X-Tokenizer 將連續動作軌跡壓縮為離散 Token。</p>
+      <p class="body">同日發布的還有 XR Harness 智能體框架，連結高層規劃與實體執行，以及面向開發者與企業的 WALL-API-1.0 介面；輕量版 Lite（4B）與 Nano（2B）亦同步推出。官方稱，模型已部署於國內一家頭部物流企業的分揀產線。</p>
+      <p class="body">官方亦稱，WALL-OSS-1.0 Lite 在 RoboDojo 仿真榜單的無 Agent 策略賽道居首，領先 Astra、Opus 5.5 等超大參數模型的 Agent 方案。但上述成績皆為廠商自報，尚無第三方複核，收錄時應予標明。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.ifanr.com/1691043" target="_blank" rel="noopener">愛范兒</a><a href="https://beta.manilatimes.net/2026/11/23/tmt-newswire/globenewswire/x-square-robot-introduces-wall-oss-10-understand-more-act-better-a-native-foundation-model-for-the-physical-world/2475923/amp" target="_blank" rel="noopener">GlobeNewswire（Manila Times 轉載）</a><span class="note">愛范兒與 GlobeNewswire 新聞稿皆確認事件日為 11 月 23 日；評測成績為官方自報，尚無第三方複核。</span></div>
+    </article>
+    <article class="card" id="card-13">
+      <div class="head"><span class="num">13</span><span class="tag tag-model">模型</span></div>
+      <h3>大曉機器人發布 ACE-Brain-0.7，首提基於真實執行狀態的具身推理</h3>
+      <p class="en">Daxiao Robotics releases ACE-Brain-0.7, an embodied general-purpose model</p>
+      <p class="lede">大曉機器人 11 月 23 日發布增強型具身通用模型 ACE-Brain-0.7（9B 視覺語言模型，微調自 Qwen3.5-9B），首提基於真實執行狀態的具身推理範式，融合空間錨定、任務理解與進度估計；六項任務推理基準平均 76.5 分，官方稱超越 GPT-6 Astra（72.7 分）與 Claude Opus 5.5（73.5 分）。</p>
+      <p class="body">大曉機器人 11 月 23 日發布增強型具身通用模型 ACE-Brain-0.7，首提基於真實執行狀態的具身推理（Execution-Grounded Reasoning）範式。模型為 9B 視覺語言模型，微調自 Qwen3.5-9B，融合空間錨定、任務理解與進度估計三大能力，針對機器人「懂規劃卻不懂執行」的難題。</p>
+      <p class="body">據官方公布，ACE-Brain-0.7 在六項公開任務推理基準中平均 76.5 分，超越 GPT-6 Astra 的 72.7 分與 Claude Opus 5.5 的 73.5 分；七項空間錨定基準平均 75.90 分。團隊亦圍繞任務規劃、執行監測、下一步預測、失敗診斷與任務理解五個維度，構建約 370 萬組高品質問答數據。</p>
+      <p class="body">值得留意的是，單項成績並非全面領先：在 RoboBench 任務分解子項，ACE-Brain-0.7 為 67.7 分，低於 GPT-6 Astra 的 74.5 分與 Claude Opus 5.5 的 77.8 分。相關論文已於 11 月 19 日上傳 arXiv，11 月 23 日為官方正式發布日。</p>
+      <p class="body">ACE-Brain-0.7 面向酒店服務、即時零售等長程作業場景，目標是加速具身機器人在真實場景的規模化落地。同一天，中國具身智能領域另有自變量發布 WALL 系列模型（見本期第 12 條），顯示該賽道的發布密度正在升高。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.ifanr.com/digest/1691005" target="_blank" rel="noopener">愛范兒</a><a href="https://finance.sina.com.cn/stock/estate/integration/2026-11-23/doc-iniztfna2306068.shtml" target="_blank" rel="noopener">新浪財經</a><span class="note">愛范兒、觀點網與新浪財經皆確認事件日為 11 月 23 日；arXiv 論文為 11 月 19 日，11 月 23 日為官方正式發布日；基準成績為官方自報，尚無第三方複核。</span></div>
+    </article>
+    <article class="card" id="card-14">
+      <div class="head"><span class="num">14</span><span class="tag tag-model">模型</span></div>
+      <h3>螞蟻百靈醫療模型五連發，兩款核心模型同步開源</h3>
+      <p class="en">Ant LingSante unveils five medical AI releases, open-sourcing two core models</p>
+      <p class="lede">螞蟻百靈 11 月 23 日在廣州醫療健康生態大會集中發布 LingSante 醫療健康模型家族：LingSante-3.1-air-VL（124B 總參、5.5B 激活，多模態）與 LingSante-3.1-flash 當天開源，另有即時多模態互動 LingSante Live、疾病風險預測 LingSante Pulse 與醫療安全防護 LingSante MedGuard；阿福 App 同步升級。</p>
+      <p class="body">螞蟻百靈 11 月 23 日在廣州醫療健康生態大會集中發布 LingSante 醫療健康模型家族，共五項發布。LingSante-3.1-air-VL（總參 124B、每詞元激活 5.5B，多模態，支援本地部署）與 LingSante-3.1-flash 當天開源。</p>
+      <p class="body">另三項發布為：即時多模態互動 LingSante Live，可在阿福 App 以即時視訊進行「望聞問切」；疾病風險預測 LingSante Pulse；以及醫療安全防護 LingSante MedGuard。阿福 App 同步升級，支援方言與穿戴裝置連動。</p>
+      <p class="body">需說明的是，LingSante-3.1-flash 的 MXFP4 量化權重已於上一期報導，本條聚焦本次大會新增的內容：air-VL 開源，以及 Live、Pulse、MedGuard 三項新品。基礎版權重早於 11 月 19 日上架，本次開源的是 air-VL 與 flash 的完整家族布局。</p>
+      <p class="body">螞蟻百靈是中國醫療 AI 布局最積極的團隊之一，此次五連發顯示其正將醫療模型從單點能力擴展為覆蓋診前、診中與安全防護的完整產品線。官方未公布本次發布模型的第三方評測成績。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.qbitai.com/2026/11/511998.html" target="_blank" rel="noopener">量子位</a><a href="https://www.qbitai.com/2026/11/512017.html" target="_blank" rel="noopener">量子位</a><span class="note">量子位兩篇報導皆刊於 11 月 23 日，事件日期一致；LingSante-3.1-flash 的 MXFP4 量化權重已於上一期報導，本條僅收新增內容；量子位未標註時區，以 UTC+08:00 計。</span></div>
+    </article>
+    <article class="card" id="card-15">
+      <div class="head"><span class="num">15</span><span class="tag tag-research">研究</span></div>
+      <h3>METR：AI 判斷力成瓶頸，遞迴自我改進未必來得那麼快</h3>
+      <p class="en">The Download: the AI judgment problem, carbon removal, and a crop threat</p>
+      <p class="lede">AI 評測非營利組織 METR 11 月 23 日更新時間跨度圖，在加入設計 AI 評測、哲學論證評分等開放式任務後，模型在需要判斷力的任務上明顯弱於寫程式；MIT Technology Review 指出，這意味著遞迴自我改進可能沒那麼快到來。</p>
+      <p class="body">AI 評測非營利組織 METR 11 月 23 日更新其時間跨度（time horizon）圖，納入設計 AI 評測、哲學論證評分等開放式任務。結果顯示，模型在需要判斷力的任務上，明顯弱於寫程式等結構化任務。</p>
+      <p class="body">時間跨度圖衡量模型可獨立完成多長的任務；先前版本以程式任務為主，模型表現持續拉長。但加入開放式任務後，曲線明顯放緩：當任務沒有明確對錯、需要權衡與取捨時，模型的表現大幅下滑。</p>
+      <p class="body">MIT Technology Review 在當日的 The Download 中指出，這意味著遞迴自我改進——AI 自行設計更好的 AI 評測與訓練流程——可能沒那麼快到來。判斷力缺口成為模型能力曲線的新瓶頸。</p>
+      <p class="body">這份更新與 OpenAI 首席科學家日前「以困惑度為共同尺度」的提議形成對照：一方主張以單一指標衡量進展，另一方則指出，進展本身在開放式任務上並不均勻。兩者共同指向同一個問題——現有評測能否捕捉 AI 真正的能力邊界。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.technologyreview.com/2026/11/23/1149548/the-download-ai-judgment-problem-carbon-removal-crop-threat/" target="_blank" rel="noopener">MIT Technology Review</a><span class="note">本條僅 MIT Technology Review 一家主要來源報導；METR 時間跨度圖的先前版本曾於 11 月 20 日更新，本條以 11 月 23 日的新版報告為事件日。</span></div>
+    </article>
+  </section>
+  <footer>
+  <p>來源說明：本期 15 條，皆來自官方部落格、英文與中文科技媒體、跑分榜與社群；發布類條目依方案 B 以兩個獨立來源核對事件日期，核對不上的已降級或棄用；發布時間不確定者標「未確認」，不猜測。</p>
+  <p>排除說明：Google Gemini Task（11 月 17 日推出）、Google 鏡像維度（11 月 19 日發表）、Walmart Muse 黑五購物（上線日 11 月 24 日在視窗外）、Tesla FSD 義大利批准（宣布日 11 月 20 日）、記憶張量 MemT-1.0-Pro（發布日 11 月 22 日與 11 月 23 日說法分歧）、Anthropic VP≠VNP 證明主張（同一 formal-math 計畫的新主張，尚無人類數學家驗證，本期未收錄）等，事件日皆在視窗外或未達收錄標準，已排除。跑分榜七個來源視窗內無登頂、超車或新模型上榜。</p>
+  <p>單一來源說明：DeepMind 量子演算法研究、METR 判斷力報告皆僅一家主要來源；螞蟻 LingSante 五連發以量子位 11 月 23 日兩篇報導為主；亞馬遜收購 Decart 的約 75 億美元金額為彭博引述知情人士，亞馬遜未公布；以上皆已於條目備註中說明。</p>
+  </footer>
+</div>
+</body>
+</html>

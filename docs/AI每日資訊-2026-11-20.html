@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 每日早報 · 2026-11-20</title>
+<style>
+  :root{
+    --bg:#faf8f4; --card:#fffdf9; --ink:#1d1915; --muted:#71685b; --faint:#a39a8a;
+    --hairline:#e9e0d0; --border:#ece3d2;
+    --ember:#b45309; --ember-deep:#8a3d05; --gold:#d9a441;
+    --serif:ui-serif,"Songti TC","STSong","Noto Serif TC","Noto Serif CJK TC",serif;
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+    --dot-model:#b45309; --dot-funding:#3f7a4e; --dot-policy:#8a5a83;
+    --dot-app:#2f7d7a; --dot-oss:#5b6470; --dot-research:#7a6a9a; --dot-other:#a89f90;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#14110d; --card:#1d1814; --ink:#f1ebe0; --muted:#a79d8c; --faint:#6f665a;
+      --hairline:#2b251e; --border:#372d21;
+      --ember:#e5a05c; --ember-deep:#f2bc7d; --gold:#d9a441;
+      --dot-model:#e5a05c; --dot-funding:#82bd8d; --dot-policy:#c69dc2;
+      --dot-app:#82c6c1; --dot-oss:#9aa3ad; --dot-research:#b3a1d6; --dot-other:#8d8474;
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","PingFang SC","Hiragino Sans GB","Microsoft JhengHei","Noto Sans TC",sans-serif;
+    line-height:1.75;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:680px;margin:0 auto;padding:36px 16px 72px}
+  .masthead{margin-bottom:30px}
+  .brand{display:flex;align-items:center;gap:9px;margin-bottom:14px}
+  .brand .mark{width:9px;height:9px;background:var(--ember);border-radius:2px;flex-shrink:0}
+  .brand .bt{font-family:var(--mono);font-size:11px;letter-spacing:.3em;color:var(--muted)}
+  .masthead h1{font-family:var(--serif);font-size:36px;font-weight:700;margin:0 0 8px;letter-spacing:.08em}
+  .dateline{font-size:14.5px;color:var(--muted);margin:0 0 4px}
+  .dayline{font-family:var(--mono);font-size:11px;letter-spacing:.22em;color:var(--faint);margin:0 0 4px}
+  .meta{font-size:12.5px;color:var(--faint);margin:0}
+  .signal{height:3px;margin-top:20px;border-radius:2px;
+    background:linear-gradient(90deg,var(--ember) 0%,var(--gold) 45%,transparent 100%)}
+  .hero{font-family:var(--serif);font-size:15.5px;line-height:1.85;margin:0 0 30px}
+  section{margin-bottom:38px}
+  .sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:16px}
+  .sec-num{font-family:var(--mono);font-size:12px;color:var(--ember);letter-spacing:.1em;flex-shrink:0}
+  .sec-head h2{font-size:15px;margin:0;letter-spacing:.14em;font-weight:700;flex-shrink:0}
+  .sec-head .rule{flex:1;height:1px;background:var(--hairline);transform:translateY(-4px)}
+  .tldr{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px 20px 20px 12px}
+  .tldr ol{margin:0;padding-left:26px}
+  .tldr li{margin:8px 0;font-size:14px}
+  .tldr li::marker{font-family:var(--mono);font-size:12px;color:var(--ember)}
+  .tldr a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--faint)}
+  .tldr a:hover{color:var(--ember);border-bottom-color:var(--ember)}
+  .top3{display:grid;gap:10px}
+  .mini{position:relative;background:var(--card);border:1px solid var(--border);border-radius:12px;
+    padding:15px 18px 15px 20px;overflow:hidden}
+  .mini::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
+    background:linear-gradient(var(--ember),var(--gold))}
+  .mini .rank{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--ember);display:block;margin-bottom:6px}
+  .mini a{color:var(--ink);text-decoration:none;font-weight:700;font-size:15px}
+  .mini a:hover{color:var(--ember)}
+  .mini p{margin:7px 0 0;font-size:13.5px;color:var(--muted)}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:14px;
+    padding:22px 20px;margin-bottom:14px;scroll-margin-top:16px}
+  .card .head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+  .num{font-family:var(--mono);font-size:12px;color:var(--faint);letter-spacing:.08em}
+  .card.is-top .num{color:var(--ember);font-weight:700}
+  .tag{display:inline-flex;align-items:center;font-size:11.5px;padding:2px 10px;border-radius:999px;
+    border:1px solid var(--border);color:var(--muted)}
+  .tag::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--dot,var(--faint));margin-right:7px;flex-shrink:0}
+  .tag-model{--dot:var(--dot-model)}
+  .tag-funding{--dot:var(--dot-funding)}
+  .tag-policy{--dot:var(--dot-policy)}
+  .tag-app{--dot:var(--dot-app)}
+  .tag-oss{--dot:var(--dot-oss)}
+  .tag-research{--dot:var(--dot-research)}
+  .tag-other{--dot:var(--dot-other)}
+  .card h3{font-family:var(--serif);font-size:19px;margin:2px 0 5px;line-height:1.55;font-weight:700}
+  .card .en{font-size:12.5px;color:var(--faint);margin:0 0 10px;font-style:italic}
+  .card .lede{font-size:14px;color:var(--muted);margin:0 0 12px;padding-left:10px;border-left:2px solid var(--ember)}
+  .card p.body{font-size:14.5px;margin:0 0 10px;text-align:justify}
+  .card .foot{margin-top:14px;padding-top:12px;border-top:1px dashed var(--hairline);
+    font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 14px}
+  .card .foot a{color:var(--ember);text-decoration:none}
+  .card .foot a:hover{text-decoration:underline}
+  .card .foot .note{flex-basis:100%}
+  .src-label{font-weight:700;color:var(--muted)}
+  footer{border-top:1px solid var(--hairline);padding-top:20px;color:var(--muted);font-size:13px}
+  footer p{margin:0}
+  @media (max-width:560px){
+    .masthead h1{font-size:29px}
+    .card{padding:18px 16px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand"><span class="mark"></span><span class="bt">AI DAILY BRIEFING</span></div>
+    <h1>AI 每日早報</h1>
+    <p class="dateline">2026 年 11 月 20 日 · 星期五</p>
+    <p class="dayline">FRIDAY · 台北時間</p>
+    <p class="meta">時間視窗：2026-11-19 09:00 至 2026-11-20 09:00（台北時間）· 共 15 條</p>
+    <div class="signal"></div>
+  </header>
+  <p class="hero">過去 24 小時，Anthropic 上市首日開盤漲 34%、收漲 17%，創史上最大 IPO；蘋果傳研發自家 AI 代理，Anthropic 盤後應聲走低；加州檢方傳喚輝達、調查晶片是否流入中國；DeepSeek 第二輪千億融資落地；美國遠端算力新規生效，台積電、三星暫停部分對中出貨。</p>
+  <section>
+    <div class="sec-head"><span class="sec-num">01</span><h2>一句話速覽</h2><span class="rule"></span></div>
+    <div class="tldr"><ol>
+      <li><a href="#card-1">Anthropic 11 月 19 日在納斯達克掛牌，開盤報 111.50 美元、較發行價漲 34%，收盤報 97.17 美元、漲幅 17%，成交逾 8.46 億股為當日最活躍個股。</a></li>
+      <li><a href="#card-2">彭博報導蘋果正研發自主 AI 代理，可替用戶寫程式、瀏覽網頁、操作 App 與控制裝置，最快明年底推出；消息傳出後 Anthropic 盤後跌約 5%。</a></li>
+      <li><a href="#card-3">加州檢察長 11 月 19 日向輝達發出調查傳票，調查其先進晶片或機密資訊是否流入中國，以及公司與前執行長是否誤導投資人；輝達股價九個交易日已跌 22%。</a></li>
+      <li><a href="#card-4">DeepSeek 第二輪融資 11 月 19 日落地，營運主體完成工商變更，新增 31 名合夥人，騰訊出資 9.5653% 為第一大出資人；據報本輪規模約 1,000 億至 1,060 億元。</a></li>
+      <li><a href="#card-5">美國 BIS 遠端算力新規 11 月 19 日生效，海外資料中心向受限企業提供逾 1,200 萬 TPP 算力須取得許可；台積電與三星已通知中國客戶暫停部分處理器出貨。</a></li>
+      <li><a href="#card-6">OpenAI 11 月 19 日揭露內部系統 Performance Factory，以 Codex 驅動的工作流程自動調查並修復拖慢 ChatGPT 的效能衰退，三個多月追蹤逾 1,700 起調查。</a></li>
+      <li><a href="#card-7">輝達與微軟 11 月 19 日在 Ignite 宣布擴大合作，Azure 已跑起 Vera Rubin NVL72 系統，Foundry 擴大支援 Nemotron 3.5 開放模型，Windows PC 也能本地跑大型語言模型。</a></li>
+      <li><a href="#card-8">Google 11 月 19 日宣布，Mac 版 Gemini App 新增「電腦操作」功能，可在隔離的背景視窗內代用戶操作桌面 App、本地檔案與網站，初期僅限美國英文用戶。</a></li>
+      <li><a href="#card-9">阿里巴巴第三季營收 2,715.19 億元、年增 10%，淨利 644.2 億元、年增 213%；AI 雲與算力營收 609.73 億元、年增 53%，但資本支出年增 60%、自由現金流轉負。</a></li>
+      <li><a href="#card-10">Design Arena 11 月 19 日更新圖片榜單，商湯 SenseNova U1 Pro 在圖片生成與圖片編輯雙榜均列中國第一、全球第六，僅次於 OpenAI 的 GPT Image 2.x 系列。</a></li>
+      <li><a href="#card-11">馬斯克 11 月 19 日在 DealBook 峰會公開批評輝達董事會不讓黃仁勳回任「不是一個明智的決定」，並將黃仁勳比喻為巔峰時期的喬丹。</a></li>
+      <li><a href="#card-12">美股 11 月 19 日三大指數收盤皆跌逾 2%，道瓊跌破 5 萬點，標普 500 創下自 2024 年 4 月以來最長連跌；台股同日跌 1,768 點、創史上第 7 大收盤跌點。</a></li>
+      <li><a href="#card-13">TechCrunch 推算 Anthropic 此次 IPO 有望為慈善帶來高達 1,560 億美元：公益基金獲配 5% 股份約 800 億美元，員工認捐約 230 億美元、公司配對約 530 億美元。</a></li>
+      <li><a href="#card-14">VentureBeat 報導 Uber 因 AI 程式工具開支失控而收緊設定：Claude Code 互動在 40 萬 token 即自動壓縮，推理強度預設降至中等，啟動時不再載入 MCP 工具定義。</a></li>
+      <li><a href="#card-15">Superhuman 11 月 19 日宣布將個人化 Go 助理擴展至整個產品線並公開 Go SDK，新增 DeepL、Databricks 等 20 個第三方代理整合，Go 已有逾 100 萬活躍用戶。</a></li>
+    </ol></div>
+  </section>
+  <section>
+    <div class="sec-head"><span class="sec-num">02</span><h2>今日頭條</h2><span class="rule"></span></div>
+    <div class="top3">
+      <div class="mini"><span class="rank">01</span><a href="#card-1">Anthropic 上市首日收 97.17 美元、漲 17%，開盤一度衝破 2 兆美元市值</a><p>Anthropic 11 月 19 日在納斯達克掛牌，開盤報 111.50 美元、較發行價漲 34%，收盤報 97.17 美元、漲幅 17%，成交逾 8.46 億股為當日最活躍個股。</p></div>
+      <div class="mini"><span class="rank">02</span><a href="#card-2">蘋果傳研發自家 AI 代理：可代用戶操作 Mac，Anthropic 盤後跌約 5%</a><p>彭博報導蘋果正研發自主 AI 代理，可替用戶寫程式、瀏覽網頁、操作 App 與控制裝置，最快明年底推出；消息傳出後 Anthropic 盤後跌約 5%。</p></div>
+      <div class="mini"><span class="rank">03</span><a href="#card-3">加州檢方傳喚輝達：查晶片是否流入中國、有無誤導投資人</a><p>加州檢察長 11 月 19 日向輝達發出調查傳票，調查其先進晶片或機密資訊是否流入中國，以及公司與前執行長是否誤導投資人；輝達股價九個交易日已跌 22%。</p></div>
+    </div>
+  </section>
+  <section>
+    <div class="sec-head"><span class="sec-num">03</span><h2>全部資訊</h2><span class="rule"></span></div>
+    <article class="card is-top" id="card-1">
+      <div class="head"><span class="num">01</span><span class="tag tag-funding">融資</span></div>
+      <h3>Anthropic 上市首日收 97.17 美元、漲 17%，開盤一度衝破 2 兆美元市值</h3>
+      <p class="en">Anthropic ANT Closes at $97.17, Up 17% on Its First Day of Trading</p>
+      <p class="lede">Anthropic 11 月 19 日在納斯達克掛牌，開盤報 111.50 美元、較發行價漲 34%，收盤報 97.17 美元、漲幅 17%，成交逾 8.46 億股為當日最活躍個股。</p>
+      <p class="body">Anthropic 11 月 19 日在納斯達克掛牌，代號 ANT。共同創辦人 Dario 與 Daniela Amodei 上午 9 點 30 分在時代廣場敲響開盤鐘，但首筆交易直到 11 點 50 分才成交，開盤價 111.50 美元、較 83 美元發行價高出 34%。股價盤中一度衝上 115.10 美元，隨後回落至 92.72 美元低點，終場收在 97.17 美元、漲幅 17.07%。</p>
+      <p class="body">全日成交逾 8.46 億股，為那斯達克當日成交最活躍的個股，超越 SpaceX 今年 6 月首日 5.22 億股的紀錄。路透指出，以開盤價計算，Anthropic 市值一度約 2 兆美元；但市值算法落差極大：僅計已發行股數不到 1.5 兆美元，計入未來可能新增的員工獎勵股、選擇權與亞馬遜可轉換債券則逾 2 兆美元，兩者相差逾 5,000 億美元。</p>
+      <p class="body">發行條件方面，公司以每股 83 美元發行 9.8 億股，公開發行募資 813 億美元，連同 AMD、博通、Google、美光、微軟、輝達與台積電夥伴認購的 260 億美元私募，合計募得 1,073 億美元。承銷商另有選擇權可在 11 月 20 日前再購入 1.47 億股、約 122 億美元，發行預定 11 月 20 日完成交割，銀行承銷費約 5.5 億美元。</p>
+      <p class="body">七位共同創辦人藉 IPO 出售 2,365 萬股、套現近 20 億美元，每人約出售 340 萬股、進帳約 2.8 億美元；Google 持股 13.4%、亞馬遜持股 14.6%。公司同時背負龐大的算力承諾，未來投入合計約 1.05 兆至 1.08 兆美元。散戶配售比例約 15%，低於原先設定的 20% 目標；分析師初評多為買進，Melius 目標價 155 美元、Needham 目標價 150 美元，五家買進評級的平均目標價約 116 美元。</p>
+      <p class="body">這是首家前沿 AI 實驗室上市，為整個產業立下公開市場基準，OpenAI 仍為私人公司。指數納入有時間表：晨星美國整體市場指數將在五個交易日後納入，納斯達克 100 指數在 12 月 18 日後，標普 500 指數至少一年內不會納入；約 155 億股內部人持股鎖定至明年第三季財報公布後。首日收漲 17% 已屬強勁，尤其同一天美股三大指數皆跌逾 2%。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://techcrunch.com/2026/11/19/anthropic-hits-nasdaq-exchanges-at-110-27-above-ipo-price/" target="_blank" rel="noopener">TechCrunch</a><a href="https://www.fool.com/investing/2026/11/19/anthropic-just-started-trading-here-s-what-you-need-to-know/" target="_blank" rel="noopener">Motley Fool</a><a href="https://techcrunch.com/2026/11/19/anthropics-7-founders-cashed-out-nearly-2b-in-record-breaking-ipo/" target="_blank" rel="noopener">TechCrunch（創辦人套現）</a><a href="https://invezz.com/news/2026/11/19/anthropic-stock-first-day-close-2026-11-19/" target="_blank" rel="noopener">Invezz</a><span class="note">市值口徑：開盤價計完全稀釋市值逾 2 兆美元，僅計已發行股數則不到 1.5 兆美元，兩者相差逾 5,000 億美元；募資總額 1,073 億美元為公開發行 813 億美元加私募 260 億美元。Invezz 報導僅知日期為 11 月 19 日，精確時刻未確認。</span></div>
+    </article>
+    <article class="card is-top" id="card-2">
+      <div class="head"><span class="num">02</span><span class="tag tag-app">應用</span></div>
+      <h3>蘋果傳研發自家 AI 代理：可代用戶操作 Mac，Anthropic 盤後跌約 5%</h3>
+      <p class="en">Apple may be developing its own AI agent that runs your Mac</p>
+      <p class="lede">彭博報導蘋果正研發自主 AI 代理，可替用戶寫程式、瀏覽網頁、操作 App 與控制裝置，最快明年底推出；消息傳出後 Anthropic 盤後跌約 5%。</p>
+      <p class="body">彭博記者 Mark Gurman 11 月 19 日美股收盤後報導，蘋果正研發自主 AI 代理，可寫程式、瀏覽網頁、操作 App 並控制裝置，瞄準 OpenAI、Anthropic 與 Meta 已經布局的代理市場；彭博標題指出消息傳出後 Anthropic 股價盤後下跌。</p>
+      <p class="body">證據來自蘋果本週刊登的招聘啟事：其中一個職缺徵求資深工程經理，打造「主動式代理 AI 助理」，能跨 App 與裝置執行多步驟任務、呼叫服務、協調專門子代理；另一職缺描述的代理可像人一樣使用電腦，在 App、瀏覽器、命令列、程式碼與 API 之間工作。</p>
+      <p class="body">進度仍在早期：彭博稱蘋果尚未公布產品，最快要到明年底才可能全面推出，內部仍在搭建基礎技術。蘋果同時收緊 macOS 對第三方代理的權限，macOS 27.3 將提醒用戶勿輕易授權完整磁碟存取，形同為自家代理鋪路、也築起防線。</p>
+      <p class="body">市場反應：消息傳出後，Anthropic 與 Meta 盤後走低，據市場消息，Anthropic 盤後跌幅約 5%；蘋果股價當日收 349.21 美元、跌 0.92%，仍較 8 月低點上漲逾一成。</p>
+      <p class="body">意義：蘋果過去在 AI 代理落後對手，Siri 傳將於 2027 年轉型為更自主的代理；自家代理若整合進 Mac 與 iPhone 生態系，將直接挑戰 Claude 與 ChatGPT 的代理布局，但產品時程與能力仍未經蘋果官方證實。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://techcrunch.com/2026/11/19/apple-may-be-developing-its-own-ai-agent-that-runs-your-mac/" target="_blank" rel="noopener">TechCrunch</a><a href="https://www.asktraders.com/analysis/apple-building-own-ai-agent-bloomberg-reports/" target="_blank" rel="noopener">AskTraders</a><a href="https://stocktwits.com/news-articles/markets/equity/s-and-p-500-nasdaq-dow-end-lower-as-anthropic-trading-debut-fails-to-provide-adequate-confidence/cNbio2mR90v" target="_blank" rel="noopener">Stocktwits</a><span class="note">本條為彭博引述招聘啟事的報導，非蘋果官方產品發布；全面推出時程為彭博說法，蘋果未證實。Anthropic 盤後跌約 5% 為市場消息說法，彭博標題僅確認盤後下跌。</span></div>
+    </article>
+    <article class="card is-top" id="card-3">
+      <div class="head"><span class="num">03</span><span class="tag tag-policy">政策</span></div>
+      <h3>加州檢方傳喚輝達：查晶片是否流入中國、有無誤導投資人</h3>
+      <p class="en">California AG subpoenas Nvidia over concerns about former CEO, China ties</p>
+      <p class="lede">加州檢察長 11 月 19 日向輝達發出調查傳票，調查其先進晶片或機密資訊是否流入中國，以及公司與前執行長是否誤導投資人；輝達股價九個交易日已跌 22%。</p>
+      <p class="body">加州檢察長 Rob Bonta 11 月 19 日宣布，已向輝達發出調查傳票，調查其先進 AI 晶片或機密資訊是否流入中國，以及公司與前執行長是否就此誤導投資人與公眾、違反加州法律。Bonta 表示：「輝達與前執行長的行為亮起鮮明的紅燈」，並強調即使處境複雜，公司也不能誤導投資人。</p>
+      <p class="body">調查源於黃仁勳 11 月 11 日辭職，起因是被揭露與疑似中國情報人員的 Alice Huang 有婚外情。Alice Huang 曾任新加坡 Megaspeed 高層，該公司正因疑似將受管制輝達晶片轉運至中國而接受調查；美國司法部與商務部 11 月 16 日證實自 2024 年起調查 Megaspeed，商務部 2025 年 5 月曾向輝達索取相關紀錄，輝達次月將 Megaspeed 列入受限客戶名單。</p>
+      <p class="body">調查持續擴大：輝達 11 月 17 日成立國家安全與出口管制監督委員會，由董事 Suzanne Nora Johnson 主持；《華爾街日報》報導 SEC 也已對輝達的投資人揭露展開民事調查；另有股東訴訟指控輝達與黃仁勳誤導投資人；黃仁勳已同意 12 月 1 日出席國會閉門問詢，談國家安全議題。</p>
+      <p class="body">同日眾議院外交事務委員會指出，川普政府 2025 年 12 月至今年 5 月間批准近 90 萬片先進輝達與 AMD AI 晶片銷往中國企業，實際出貨數量不明；輝達回應稱批准附帶嚴格條件與有限數量，且已停止向中國發運 H200 晶片。</p>
+      <p class="body">市場與政治餘波：輝達股價自黃仁勳承認婚外情後九個交易日跌 22%，市值兩週內蒸發逾 1 兆美元；川普最新財產申報顯示其 9 月買入至多 26.5 萬美元輝達股票，白宮稱投資組合由第三方獨立管理；調查傳票本身並非認定違法，後續取決於加州司法部取得的證據。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://mymixfm.com/2026/11/19/california-ag-subpoenas-nvidia-over-concerns-about-former-ceo-china-ties/" target="_blank" rel="noopener">Reuters</a><a href="https://www.freemalaysiatoday.com/category/business/2026/11/20/california-probes-nvidia-over-chip-access-in-china" target="_blank" rel="noopener">Free Malaysia Today</a><a href="https://www.lawcommentary.com/articles/california-subpoenas-nvidia-china-chips" target="_blank" rel="noopener">Law Commentary</a><span class="note">調查傳票並非認定違法；Alice Huang 與中國情報機構的關聯為美國情報官員說法，中國已否認相關指控；川普買股金額為申報區間上限，非確切金額。</span></div>
+    </article>
+    <article class="card" id="card-4">
+      <div class="head"><span class="num">04</span><span class="tag tag-funding">融資</span></div>
+      <h3>DeepSeek 第二輪千億融資落地：31 家出資方入股，騰訊、寧德時代領銜</h3>
+      <p class="en">未確認</p>
+      <p class="lede">DeepSeek 第二輪融資 11 月 19 日落地，營運主體完成工商變更，新增 31 名合夥人，騰訊出資 9.5653% 為第一大出資人；據報本輪規模約 1,000 億至 1,060 億元。</p>
+      <p class="body">《科創板日報》11 月 19 日報導，DeepSeek 第二輪融資出現最新進展：營運主體杭州深度求索人工智能基礎技術研究有限公司完成工商變更，新增股東杭州程硯企業管理諮詢合夥企業，註冊資本由 1,644.75 萬元增至 1,991.87 萬元、增幅約 21.1%。</p>
+      <p class="body">杭州程硯同期新增 31 名合夥人，登記出資額由 0.6 萬元增至 34.39 億元；出資方涵蓋網際網路、通訊、晶片、汽車與新能源產業，包括騰訊、中國移動、中國電信、寧德時代、兆易創新、小紅書與 vivo，以及礪思資本、博裕資本、IDG 資本、高榕資本、君聯資本、正心谷與中信證券等機構。</p>
+      <p class="body">出資比例方面，騰訊旗下上海珩岫出資 9.5653%，為第一大出資人；寧德時代相關三檔基金合計出資比例同為 9.5653%；中國移動旗下中移投資與中信證券投資各出資 7.6522%；網易、美團、中國電信、vivo、美的介於 2.39% 至 2.87% 之間。</p>
+      <p class="body">據多家媒體引述知情人士，本輪融資規模約 1,000 億至 1,060 億元，投後估值約 6,155 億元；疊加 6 月首輪約 510 億元，兩輪合計逾 1,500 億元。梁文鋒退出杭州程硯直接合夥人名單，但仍透過杭州程策持有其 99% 股權、繼續擔任執行事務合夥人；上一輪投資機構在本輪擁有優先認購額度。</p>
+      <p class="body">另據消息，DeepSeek 已聘請中信證券籌備科創板 IPO，計劃年內啟動上市流程；融資規模與估值數字尚未獲公司官方確認。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://original.ifeng.com/c/8yBBhSMMZvJ" target="_blank" rel="noopener">鳳凰網</a><a href="https://www.chaincatcher.com/article/2306259" target="_blank" rel="noopener">ChainCatcher</a><span class="note">融資規模約 1,000 億至 1,060 億元、投後估值約 6,155 億元、籌備科創板 IPO 皆為媒體引述消息人士說法，未獲 DeepSeek 官方確認；工商變更登記本身為公開資訊。</span></div>
+    </article>
+    <article class="card" id="card-5">
+      <div class="head"><span class="num">05</span><span class="tag tag-policy">政策</span></div>
+      <h3>美國遠端算力新規生效：逾 1,200 萬 TPP 須許可，台積電、三星暫停部分對中出貨</h3>
+      <p class="en">未確認</p>
+      <p class="lede">美國 BIS 遠端算力新規 11 月 19 日生效，海外資料中心向受限企業提供逾 1,200 萬 TPP 算力須取得許可；台積電與三星已通知中國客戶暫停部分處理器出貨。</p>
+      <p class="body">美國商務部工業暨安全局（BIS）11 月 16 日公布的《先進半導體遠端存取管理》臨時最終規則，11 月 19 日刊登《聯邦公報》正式生效，將 AI 晶片管制從實體出口延伸至海外資料中心的遠端算力，避免企業透過第三國取得受限制的先進運算能力。</p>
+      <p class="body">新規要點：海外資料中心單獨或透過互連資料中心，向總部或最終母公司位於澳門或美國 D:5 國家群組目的地的企業，提供逾 1,200 萬 aggregate TPP（約等於 750 顆 H100）算力，原則上須取得 BIS 許可；既有資料中心須在 90 天內、即 2027 年 2 月 17 日前補辦許可，在途貨物有 30 天過渡期，公眾意見徵詢期 60 天。</p>
+      <p class="body">新規同時將新加坡、馬來西亞、印尼、泰國與巴西列為較高轉運風險目的地，對特定先進半導體新增出口許可要求；並調整晶圓代工廠與委外封裝測試業者處理特定先進邏輯晶片的分類推定規則，撤銷先前 AI 擴散規則建立的部分管制架構。</p>
+      <p class="body">《金融時報》引述知情人士報導，新規生效後，台積電與三星電子已通知中國客戶，在向美國商務部申請許可期間暫停部分處理器出貨，連消費性電子客戶也接獲通知；新規取消「晶片為智慧型手機等非 AI 用途設計即可豁免」的條款，台積電為小米、OPPO、vivo 代工的手機晶片也可能受影響，三星的中國客戶包括百度崑崙芯與字節跳動。</p>
+      <p class="body">影響：安永提醒，台灣 IC 設計、晶圓代工、封測與 AI 伺服器業者須盤點既有交易與海外布局，掌握客戶最終母公司所在地與算力實際用途；美國收緊管制的同時，中國科技企業取得高階算力的難度進一步升高，阿里巴巴等業者已在財報中示警前景不確定性。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://finance.ettoday.net/news/3275131" target="_blank" rel="noopener">ETtoday</a><a href="https://www.cna.com.tw/news/aopl/202611190353.aspx" target="_blank" rel="noopener">中央社</a><a href="https://www.storm.mg/article/11183269" target="_blank" rel="noopener">風傳媒</a><span class="note">台積電、三星暫停出貨為《金融時報》引述知情人士的報導，兩家公司未公開證實；1,200 萬 TPP 約等於 750 顆 H100 為媒體換算。</span></div>
+    </article>
+    <article class="card" id="card-6">
+      <div class="head"><span class="num">06</span><span class="tag tag-research">研究</span></div>
+      <h3>OpenAI 揭露 Performance Factory：Codex 代理三個月追蹤 1,700 多起效能衰退</h3>
+      <p class="en">How OpenAI&#x27;s Performance Factory keeps ChatGPT fast</p>
+      <p class="lede">OpenAI 11 月 19 日揭露內部系統 Performance Factory，以 Codex 驅動的工作流程自動調查並修復拖慢 ChatGPT 的效能衰退，三個多月追蹤逾 1,700 起調查。</p>
+      <p class="body">OpenAI 11 月 19 日在官方部落格揭露內部系統 Performance Factory，並向 VentureBeat 提供獨家工程報告：這套以 Codex 驅動的系統會自動調查並修復拖慢 ChatGPT 的效能衰退，讓產品在持續更新下保持速度。</p>
+      <p class="body">運作方式：效能警報觸發後，系統建立任務，Codex 代理在雲端依序完成調查、根因定位、程式碼修改、審查與驗證；任務服務定義各階段流程，調度迴圈指派待辦工作，訂閱機制則在 PR 留言或部署完成等事件發生時喚醒代理。</p>
+      <p class="body">成效：三個多月來，效能衰退工作流程共追蹤逾 1,700 起調查、平均每天約 17 起，在 600 多起找到根本原因；人工抽查 100 份診斷，70% 被評為準確，其餘仍需補強或未能確立因果。</p>
+      <p class="body">修復仍是瓶頸：在找到根因的案例中，Codex 在約 400 起提出修正方案，約 50 項實際合併的修正以代理提案為基礎或與之相符，其中約 15 項與 Codex 寫出的程式碼完全相同；每份診斷與修正都要經過另一個 Codex 工作階段的對抗式審查，最終是否合併仍由工程師決定。</p>
+      <p class="body">意義與下一步：OpenAI 坦言自動修復的成果仍未達預期，計劃擴展至主動式效能優化，並探索讓代理在無人介入下發布低風險修正；Performance Factory 目前僅為內部工具，未作為產品對外提供，但展示了程式代理從解決單一任務走向協調多代理工作流程的演變。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://openai.com/index/how-openai-performance-factory-keeps-chatgpt-fast" target="_blank" rel="noopener">OpenAI</a><a href="https://venturebeat.com/orchestration/exclusive-openai-reveals-performance-factory-a-codex-powered-software-optimization-system-that-keeps-chatgpt-fast" target="_blank" rel="noopener">VentureBeat</a><span class="note">數據皆為 OpenAI 內部量測與自述，未經獨立驗證；Performance Factory 為內部工具，非對外產品。</span></div>
+    </article>
+    <article class="card" id="card-7">
+      <div class="head"><span class="num">07</span><span class="tag tag-app">應用</span></div>
+      <h3>輝達與微軟在 Ignite 擴大合作：Vera Rubin 登陸 Azure，Nemotron 進駐 Foundry</h3>
+      <p class="en">NVIDIA and Microsoft Expand Accelerated Computing From Azure to Windows PCs</p>
+      <p class="lede">輝達與微軟 11 月 19 日在 Ignite 宣布擴大合作，Azure 已跑起 Vera Rubin NVL72 系統，Foundry 擴大支援 Nemotron 3.5 開放模型，Windows PC 也能本地跑大型語言模型。</p>
+      <p class="body">輝達與微軟 11 月 19 日在 Microsoft Ignite 宣布擴大加速運算合作，從 Azure 資料中心延伸到邊緣裝置與 Windows PC：Azure 資料中心已跑起 Vera Rubin NVL72 系統，並擴大開放搭載該系統的虛擬機器預覽。</p>
+      <p class="body">模型方面，Microsoft Foundry 擴大支援輝達 Nemotron 開放模型與客製化能力，Nemotron 3.5 系列中的 Super 面向長時間運作的代理、Lightning 面向快速回應與工具呼叫，Bolt 與 Transcribe 即將推出；Foundry Local 與 Azure Local 也納入 Nemotron 推理、程式撰寫與工具呼叫能力，Azure Local 支援 RTX PRO 6000 Blackwell GPU。</p>
+      <p class="body">微軟自身亦採用輝達技術：以 NVIDIA Dynamo 進行模型後訓練的強化學習推論、用 RTX PRO 6000 加速 Bing 搜尋模型；雙方還將在 Ignite 展示 RTX Spark 驅動的 Windows PC 本地大型語言模型體驗，以及 GPU 加速 Windows 365 雲端 PC 的 Direct Stream 有限預覽，公開預覽預計 2027 年初。</p>
+      <p class="body">效能佐證：MLPerf Training v6.1 中，Azure 以 10,240 顆輝達 GPU（GB200 NVL72）跑 DeepSeek-V3，創下該輪最大規模；推論項目中，Azure 的 GB300 NVL72 系統在 DeepSeek-R1 互動吞吐量領先雲端提交者逾 10%；安永以 Foundry 的 Programmed Training 微調 Nemotron 模型分類企業採購紀錄，準確率提升 55%、成本較專有前沿模型低 15 倍。</p>
+      <p class="body">限制：Vera Rubin 虛擬機器與 Direct Stream 目前皆為預覽階段，輝達與微軟未公布虛擬機器系列、適用區域、定價與全面上線日期；輝達的 BioNeMo Agent Toolkit 與 ALCHEMI Toolkit 也將擴展至 Microsoft Discovery 目錄，支援生命科學與藥物研發的代理研究。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://blogs.nvidia.com/blog/microsoft-ignite-accelerated-computing-azure-windows-pcs/" target="_blank" rel="noopener">NVIDIA Blog</a><a href="https://www.unite.ai/nvidia-expands-microsoft-ai-collaboration-with-vera-rubin-and-nemotron/" target="_blank" rel="noopener">Unite.AI</a><span class="note">Vera Rubin 虛擬機器與 Direct Stream 皆為預覽階段，未公布定價、區域與全面上線日期；效能與成本數字皆為輝達與微軟自述。</span></div>
+    </article>
+    <article class="card" id="card-8">
+      <div class="head"><span class="num">08</span><span class="tag tag-app">應用</span></div>
+      <h3>Google 讓 Gemini 接管你的 Mac：電腦操作功能上線，隔離視窗內代辦多步驟任務</h3>
+      <p class="en">Google gives Gemini the ability to use your Mac for you</p>
+      <p class="lede">Google 11 月 19 日宣布，Mac 版 Gemini App 新增「電腦操作」功能，可在隔離的背景視窗內代用戶操作桌面 App、本地檔案與網站，初期僅限美國英文用戶。</p>
+      <p class="body">Google 11 月 19 日宣布，Mac 版 Gemini App 新增「電腦操作」（computer use）功能，Gemini 可在隔離的背景視窗內代用戶操作桌面 App、本地檔案與網站，完成多步驟任務；使用者輸入「@Computer use」並描述需求即可啟動，對話中可即時預覽進度。</p>
+      <p class="body">功能範圍：Gemini 可點擊、輸入、填寫表單、跨檔案與網頁工作，Google 舉例包括批次修圖調色、在 Blender 搭建 3D 場景、自動填寫 PDF 表單，以及從截圖擷取數據放入簡報；執行前可暫停、停止或逐項核准關鍵動作。</p>
+      <p class="body">限制：初期僅限美國英文用戶，須為年滿 18 歲的個人帳號並訂閱 Google AI Plus、Pro 或 Ultra；須使用 Apple Silicon 的 Mac、macOS Sequoia 15.0 以上版本；功能逐步推送，並非所有符合資格的帳號立即取得。</p>
+      <p class="body">安全爭議：Gemini 須取得 macOS 輔助使用與螢幕錄製權限，並在操作個別 App 前請求授權；Google 提醒，Gemini 可能出錯、永久刪除檔案或將檔案分享給第三方；支援文件目前僅列出 Pro 與 Ultra 可控制桌面 App，與公告列出的 Plus 方案存在出入。</p>
+      <p class="body">時機：Google 推出此功能三天前，蘋果才在 macOS 27.3 開發者測試版收緊完整磁碟存取權限；同日彭博也報導蘋果正研發自家 AI 代理，Mac 上的代理大戰正式開打，Google 搶先一步把 Gemini 送進蘋果的桌面。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://blog.google/innovation-and-ai/products/gemini-app/computer-use-mac/" target="_blank" rel="noopener">Google Blog</a><a href="https://techcrunch.com/2026/11/19/google-gives-gemini-the-ability-to-use-your-mac-for-you/" target="_blank" rel="noopener">TechCrunch</a><a href="https://www.macrumors.com/2026/11/19/google-gemini-mac-app-control/" target="_blank" rel="noopener">MacRumors</a><span class="note">公告列出的適用方案為 Plus、Pro、Ultra，但 Google 支援文件目前僅列 Pro 與 Ultra 可控制桌面 App，兩者存在出入；功能為逐步推送。</span></div>
+    </article>
+    <article class="card" id="card-9">
+      <div class="head"><span class="num">09</span><span class="tag tag-other">其他</span></div>
+      <h3>阿里巴巴第三季淨利飆 213%：AI 雲與算力營收年增 53%，但自由現金流轉負</h3>
+      <p class="en">未確認</p>
+      <p class="lede">阿里巴巴第三季營收 2,715.19 億元、年增 10%，淨利 644.2 億元、年增 213%；AI 雲與算力營收 609.73 億元、年增 53%，但資本支出年增 60%、自由現金流轉負。</p>
+      <p class="body">阿里巴巴 11 月 19 日港股盤後公布截至 9 月 30 日的第三季財報，營收 2,715.19 億元人民幣、年增 10%，優於市場預期；淨利 644.2 億元、年增 213%，主因股權投資收益增加與營業利益改善，調整後淨利為 199.09 億元、年增 92%。</p>
+      <p class="body">AI 業務是主要成長動力：AI 雲與算力服務營收 609.73 億元、年增 53%，外部客戶經常性收入成長 67%，AI 相關產品收入連續第 13 個季度三位數增長；相較之下，大陸電商營收年減 5%、國際電商因歐盟海關改革下滑 8%，但淘寶閃購虧損收斂帶動電商集團調整後營業獲利年增 243%。</p>
+      <p class="body">AI 投資也帶來資金壓力：第三季資本支出年增 60%，主要用於擴大 AI 算力與資料中心建設，同期自由現金流淨流出 344.72 億元、較去年同期擴大；財務長徐宏表示，將重視資本回報率、爭取儘早實現自由現金流轉正。</p>
+      <p class="body">市場反應與前景：美國近期收緊先進 AI 晶片出口限制，阿里港股 19 日大跌 5.51%、報 80.55 港元，美股盤前跌 1.47%、報 83.11 美元；野村證券分析，管制可能使大陸企業更難取得高階算力，但阿里憑藉既有晶片資源與資金實力，相較獨立 AI 新創仍具優勢。</p>
+      <p class="body">布局：執行長吳泳銘表示，旗下平頭哥半導體已申請赴港上市，真武 M890 已全面上線，並規劃 2027 年第一季推出新一代「真武 V900」AI 晶片、2028 年推出 J900 晶片，供應鏈全面進入大規模量產；阿里將持續推動晶片、雲端與 AI 模型整合。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.ctee.com.tw/news/20261120700143-439901" target="_blank" rel="noopener">工商時報</a><a href="https://cn.tradingview.com/news/gelonghui:871da949fe3f9:0/" target="_blank" rel="noopener">格隆匯</a><span class="note">淨利年增 213% 主因股權投資收益增加，調整後淨利年增 92%；財報數字為截至 9 月 30 日的季度。</span></div>
+    </article>
+    <article class="card" id="card-10">
+      <div class="head"><span class="num">10</span><span class="tag tag-model">模型</span></div>
+      <h3>商湯 SenseNova U1 Pro 登頂 Design Arena 中國雙榜、全球第六</h3>
+      <p class="en">未確認</p>
+      <p class="lede">Design Arena 11 月 19 日更新圖片榜單，商湯 SenseNova U1 Pro 在圖片生成與圖片編輯雙榜均列中國第一、全球第六，僅次於 OpenAI 的 GPT Image 2.x 系列。</p>
+      <p class="body">全球 AI 設計評測平台 Design Arena 11 月 19 日更新圖片榜單，商湯 SenseNova U1 Pro 在圖片生成與圖片編輯兩大榜單中均位列中國第一，全球排名第六，僅次於 OpenAI 的 GPT Image 2.x 系列模型。</p>
+      <p class="body">評測方式：Design Arena 採用同題生成、匿名兩兩對比與真實用戶投票機制，透過 Elo 評分形成動態排名；效果與成本評測顯示，SenseNova U1 Pro 在獲得較高用戶偏好的同時，也具備有競爭力的生成成本。</p>
+      <p class="body">能力：除單張圖片生成與編輯外，SenseNova U1 Pro 支援複雜視覺任務的連續處理，可從論文中提取資訊並生成視覺內容，也能根據產品圖片完成素材處理、商品圖與詳情頁設計，或依創意需求製作海報、菜單與分鏡圖。</p>
+      <p class="body">背景：這是中國模型在 Design Arena 圖片雙榜同時奪下本土第一；用戶可透過商湯小浣熊線上體驗 SenseNova U1 Pro。</p>
+      <p class="body">意義：圖片生成已成為中美模型競爭的新戰場，OpenAI 的 GPT Image 系列仍居榜首，商湯此次登頂顯示中國廠商在圖像模型的使用者偏好上已逼近第一梯隊，但榜單排名會隨用戶投票持續變動。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.163.com/tech/article/LC41M05U00098IEO.html" target="_blank" rel="noopener">網易科技</a><a href="https://www.tokenpost.com/news/technology/61201" target="_blank" rel="noopener">TokenPost</a><span class="note">榜單排名為 Design Arena 11 月 19 日更新時的動態排名，會隨用戶投票持續變動；圖片生成榜單的全球第六為兩大榜單共同名次。</span></div>
+    </article>
+    <article class="card" id="card-11">
+      <div class="head"><span class="num">11</span><span class="tag tag-other">其他</span></div>
+      <h3>馬斯克在 DealBook 峰會挺黃仁勳回歸：稱輝達董事會決定不明智</h3>
+      <p class="en">未確認</p>
+      <p class="lede">馬斯克 11 月 19 日在 DealBook 峰會公開批評輝達董事會不讓黃仁勳回任「不是一個明智的決定」，並將黃仁勳比喻為巔峰時期的喬丹。</p>
+      <p class="body">馬斯克 11 月 19 日透過線上方式出席《紐約時報》DealBook 峰會，當時他人在深圳、隨川普訪華出席 APEC；他公開批評輝達董事會不讓黃仁勳回任「不是一個明智的決定」。</p>
+      <p class="body">馬斯克將黃仁勳比喻為巔峰時期的喬丹，稱「沒有人能真正取代黃仁勳」；呼籲黃仁勳回歸的網路請願持續發酵，馬斯克已簽署，但各家媒體報導的簽名人數出入甚大。</p>
+      <p class="body">背景：黃仁勳 11 月 11 日辭去輝達執行長職務，起因是婚外情醜聞與疑似中國情報人員的關聯指控；輝達董事會 11 月 17 日在財報電話會上表態不考慮讓黃仁勳回任，並已啟動外部獵才尋找永久接班人。</p>
+      <p class="body">同日加州檢方對輝達發出調查傳票，事件持續延燒；馬斯克的發言是繼川普、Palmer Luckey 等人之後，又一位科技界重量級人物公開挺黃仁勳回歸。</p>
+      <p class="body">意義：黃仁勳去留已從公司治理事件演變為牽動 AI 供應鏈、出口管制與市場信心的政治議題，董事會與輿論的拉鋸仍在持續。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://fnc.ebc.net.tw/fncnews/world/223198" target="_blank" rel="noopener">東森財經</a><a href="https://www.sohu.com/a/1103465212_122114041" target="_blank" rel="noopener">搜狐</a><span class="note">網路請願簽名人數各家報導不一（2 萬至 20 萬人以上），本條不採用單一數字；馬斯克發言地點與行程為媒體報導。</span></div>
+    </article>
+    <article class="card" id="card-12">
+      <div class="head"><span class="num">12</span><span class="tag tag-other">其他</span></div>
+      <h3>美股三大指數跌逾 2%：Anthropic 上市未能提振 AI 信心，台股同日重挫 1,768 點</h3>
+      <p class="en">S&amp;P 500, Nasdaq, Dow End Lower As Anthropic Trading Debut Fails To Provide Adequate Confidence — ANT, META, AAPL, GME In Focus</p>
+      <p class="lede">美股 11 月 19 日三大指數收盤皆跌逾 2%，道瓊跌破 5 萬點，標普 500 創下自 2024 年 4 月以來最長連跌；台股同日跌 1,768 點、創史上第 7 大收盤跌點。</p>
+      <p class="body">美股 11 月 19 日開高走低，三大指數收盤皆跌逾 2%：道瓊跌 1,101.11 點（-2.19%）至 49,097.06 點，為 6 月以來首度收在 5 萬點之下；標普 500 跌 147.80 點（-2.02%）至 7,175.83 點，創下自 2024 年 4 月以來最長連跌；那斯達克跌 550.69 點（-2.25%）至 23,879.20 點。</p>
+      <p class="body">Anthropic 上市首日雖漲 17%，卻未能提振整體 AI 信心：市場持續質疑 AI 基建龐大支出的回報、債務水準與循環融資疑慮；輝達跌 3.3%，AMD 遭放空機構 Hunterbrook 發報告指控以融資與擔保支撐客戶購片、形成循環交易，股價盤中一度暴跌 11%、收跌 7.7%。</p>
+      <p class="body">拋售蔓延至其他資產：比特幣跌近 2% 至 61,737 美元；現貨黃金盤中跌逾 2.5%、連續第四個交易日下跌，為六個月來最長連跌；白銀跌近 5%、跌破 43 美元；KBW 銀行指數跌 1.9%、本週累跌 6.6%，50 日均線跌破 200 日均線形成「死亡交叉」。</p>
+      <p class="body">政策面亦不利：芝加哥聯準銀行總裁 Goolsbee 表示，面對連續數月高於預期的通膨，下月利率會議將保留所有選項，不排除大幅升息；聯準會鷹派立場推升美元與公債殖利率。</p>
+      <p class="body">台股同日同步重挫：加權指數終場跌 1,768.02 點（-4.40%）至 38,426.89 點，創史上第 7 大收盤跌點，失守年線 39,368 點，成交值 8,952.81 億元；台積電跌 75 元收 2,100 元（-3.45%），聯發科跌 5.58%，上市櫃合計逾 200 檔跌停。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://stocktwits.com/news-articles/markets/equity/s-and-p-500-nasdaq-dow-end-lower-as-anthropic-trading-debut-fails-to-provide-adequate-confidence/cNbio2mR90v" target="_blank" rel="noopener">Stocktwits</a><a href="https://longbridge.com/en/news/306182916" target="_blank" rel="noopener">Longbridge</a><a href="https://www.ctee.com.tw/news/20261119701239-430201" target="_blank" rel="noopener">工商時報</a><span class="note">AMD 遭放空機構 Hunterbrook 指控循環交易為該機構說法，尚未經獨立證實；台股跌點統計為收盤數據。</span></div>
+    </article>
+    <article class="card" id="card-13">
+      <div class="head"><span class="num">13</span><span class="tag tag-funding">融資</span></div>
+      <h3>Anthropic 上市有望為慈善帶來 1,560 億美元：公益基金持股 5%，員工認捐另計</h3>
+      <p class="en">Anthropic&#x27;s IPO could deliver $156B to charity</p>
+      <p class="lede">TechCrunch 推算 Anthropic 此次 IPO 有望為慈善帶來高達 1,560 億美元：公益基金獲配 5% 股份約 800 億美元，員工認捐約 230 億美元、公司配對約 530 億美元。</p>
+      <p class="body">TechCrunch 11 月 19 日依 Anthropic 招股文件推算，這次 IPO 有望為慈善帶來高達 1,560 億美元：公司公益基金（Public Benefit Fund，類似 OpenAI 的基金會）獲配 5% 股份、近 8.5 億股，以當時約 95 美元股價計，規模約 800 億美元。</p>
+      <p class="body">員工認捐是第二大來源：員工已承諾將持股捐給自選公益事業，公司將按年資以 3 比 1（資深員工）或 1 比 1（新進員工）配對捐贈；招股文件顯示，公司已預留逾 5.5 億股履行 9 月 30 日前的認捐，據此推算員工認捐約 230 億美元、公司配對約 530 億美元。</p>
+      <p class="body">創辦人亦承諾捐出 80% 個人持股；合計約兩成 Anthropic 股份已指定用於公益；公益基金另設成長觸發機制：公司估值每較 IPO 價格上漲 50%，可再追加 2% 持股，下一個基準約為每股 124.50 美元。</p>
+      <p class="body">用途：公益基金首筆承諾為 2 億美元，研究 AI 對勞工的影響；Anthropic 表示將考慮捐助公益組織或「直接分配給特定人群」，被外界解讀為可能與全民基本收入相關的試探；公司上週另向舊金山市捐贈 5,000 萬美元，該筆捐款並非出自公益基金。</p>
+      <p class="body">但數字充滿變數：1,560 億美元是以約 95 美元股價推算的潛在總額，相當於美國 2025 年全年捐款 6,170 億美元的約四分之一；員工認捐能否兌現、配對何時發放、股價後續走勢皆未定，公益基金的治理細節也尚未公布。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://techcrunch.com/2026/11/19/anthropics-ipo-could-deliver-156-billion-to-charity/" target="_blank" rel="noopener">TechCrunch</a><a href="https://wired24.co.za/2026/11/19/anthropics-ipo-could-raise-156-billion-for-charitable-causes/" target="_blank" rel="noopener">Wired24</a><span class="note">1,560 億美元為 TechCrunch 以約 95 美元股價推算的潛在總額，非已實現捐款；員工認捐與配對金額皆為推算，須待實際履行；本條僅 TechCrunch 原創報導，Wired24 為轉載。</span></div>
+    </article>
+    <article class="card" id="card-14">
+      <div class="head"><span class="num">14</span><span class="tag tag-app">應用</span></div>
+      <h3>Uber 砍 AI 程式工具預算：Claude Code 互動 40 萬 token 即壓縮，推理強度降至中等</h3>
+      <p class="en">Uber blew through its AI budget, then dialed back context and reasoning in its AI coding tools</p>
+      <p class="lede">VentureBeat 報導 Uber 因 AI 程式工具開支失控而收緊設定：Claude Code 互動在 40 萬 token 即自動壓縮，推理強度預設降至中等，啟動時不再載入 MCP 工具定義。</p>
+      <p class="body">VentureBeat 11 月 19 日報導，Uber 因 AI 程式工具開支失控而收緊設定：Claude Code 互動 session 在 40 萬 token 即自動壓縮，即使模型支援百萬級上下文；推理強度預設改為中等而非最高。</p>
+      <p class="body">其他節流措施：啟動時不再載入 MCP 工具定義，藉此減少每次互動的 token 消耗；上述調整顯示，即使是大型科技公司，也開始為 AI 程式工具的用量與成本設下硬性上限。</p>
+      <p class="body">背景：AI 程式工具的 token 用量隨代理式工作流程普及而暴增，長上下文與高強度推理雖提升品質，卻讓成本同步膨脹；Uber 的做法反映企業正從「放任使用」轉向「精算成本」。</p>
+      <p class="body">影響：對 Anthropic 等模型商而言，企業客戶收緊用量可能影響 API 收入成長；對開發者而言，自動壓縮與較低推理強度可能影響長任務的連貫性與品質。</p>
+      <p class="body">對照：同一天 Anthropic 以史上最大 IPO 登陸資本市場，市場為 AI 模型公司的成長故事給出天價估值；另一邊，Uber 這類大型企業客戶卻開始為 AI 工具的帳單設限，顯示 AI 經濟的另一面是成本紀律，而非無上限的投入。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://venturebeat.com/infrastructure/uber-blew-through-its-ai-budget-then-dialed-back-context-and-reasoning-in-its-ai-coding-tools" target="_blank" rel="noopener">VentureBeat</a><span class="note">本條僅 VentureBeat 一家報導，Uber 未公開證實相關設定細節；40 萬 token 壓縮門檻與推理強度調整皆為該報導說法。</span></div>
+    </article>
+    <article class="card" id="card-15">
+      <div class="head"><span class="num">15</span><span class="tag tag-app">應用</span></div>
+      <h3>Superhuman 把 Go 助理推向全產品線：個人化助理、20 個第三方代理與公開 SDK</h3>
+      <p class="en">Superhuman pushes its Go assistant everywhere</p>
+      <p class="lede">Superhuman 11 月 19 日宣布將個人化 Go 助理擴展至整個產品線並公開 Go SDK，新增 DeepL、Databricks 等 20 個第三方代理整合，Go 已有逾 100 萬活躍用戶。</p>
+      <p class="body">生產力軟體 Superhuman（前身為 Grammarly）11 月 19 日在首屆用戶大會 Superhuman Assembly 宣布，將個人化 Go 助理擴展至整個產品線，並公開 Go SDK：Go 可跨 App 學習上下文、在 Docs 與 Mail 內原生運作，主動查看行程、起草回信，並透過 SDK 新增 DeepL、Databricks 等 20 個第三方代理整合。</p>
+      <p class="body">新的個人化助理可由用戶命名、指派工作、追蹤專案與待辦事項，在背景留意需要處理的事項、建議下一步並以用戶的寫作風格起草內容，同時管理其他代理團隊；所有行動皆須用戶核准。</p>
+      <p class="body">產品細節：Mail 的 Ask AI 更名為 Go，新增跨工具搜尋、企業知識庫查詢與自動草稿；Docs 代理可原生運作並在背景執行任務、依事件觸發工作流程；Fathom 則推出即時協作筆記，整合視訊、螢幕分享與音訊。</p>
+      <p class="body">時程：個人化助理將在未來幾個月內逐步推出，可透過 Superhuman Community 搶先體驗；Docs 代理 12 月 1 日向自助用戶開放測試版，企業版預計 2027 年第一季上線；Go SDK 即日起向合作夥伴與客戶全面開放。</p>
+      <p class="body">規模：執行長 Shishir Mehrotra 表示，Go 已有逾 100 萬活躍用戶；Superhuman 於 9 月收購筆記工具 Fathom，為 Go 補齊會議與對話上下文，此次擴展是該公司把整套產品轉型為代理系統的關鍵一步。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://techcrunch.com/2026/11/19/superhuman-pushes-its-go-assistant-everywhere/" target="_blank" rel="noopener">TechCrunch</a><a href="https://siliconangle.com/2026/11/19/superhuman-unveils-personal-ai-assistant-and-expands-go-across-entire-suite/" target="_blank" rel="noopener">SiliconANGLE</a><span class="note">個人化助理與部分整合為分階段推出，全面上線時程未定；100 萬活躍用戶為公司說法。</span></div>
+    </article>
+  </section>
+  <footer>
+  <p>來源說明：本期 15 條，皆來自官方部落格、英文與中文科技媒體、跑分榜與社群；發布類條目依方案 B 以兩個獨立來源核對事件日期，核對不上的已降級或棄用；發布時間不確定者標「未確認」，不猜測。</p>
+  <p>排除說明：微軟 Copilot「工作的新作業系統」（Ignite 主題演講為 11 月 17 日）、OpenAI 前沿風險報告與 Gemini 4 Neon（皆為 11 月 18 日發布，前一期已報導）、Claude Fable 5.2 解黑洞物理問題（Anthropic 於 11 月 9 日宣布）、Firecrawl Alexandria（9 月 22 日隨 B 輪推出，11 月 19 日報導為目錄擴充）、Meta Muse 隱私爭議（路透原始調查為 11 月 18 日）等，事件日皆在視窗外，已排除。</p>
+  <p>未收錄：Google「鏡像維度」Chrome 代理測試、xAI Grok 頭巾圖像訴訟、AI 槍枝警報誤報訴訟、Meta Muse Charm 傳定價 300 美元、千問代議價爆紅、36氪大模型「退潮」分析等，或為單一來源傳聞、或原文連結與精確時間未能核實，重要性相對較低。</p>
+  <p>單一來源說明：Uber 收緊 AI 程式工具設定僅 VentureBeat 一家報導，Anthropic 慈善 1,560 億美元為 TechCrunch 原創推算，皆已於條目備註中說明；其餘發布類條目皆以兩個獨立來源核對事件日期。</p>
+  <p>本期未能讀取：The Verge、Ars Technica（網域阻擋，改以搜尋核實）、MIT Technology Review（頁面空白）、Wired；VentureBeat RSS（改以瀏覽器讀取成功）；36氪、量子位、TechOrange、新智元（網域待售）、Reddit、知乎、X 未直接讀取，以搜尋核實；Hacker News 以搜尋摘要核實。跑分榜：Design Arena 因 SenseNova U1 Pro 登頂而有變動，已納入相關條目；Artificial Analysis 文生圖榜單新增 Kling Image 4.0（11 月 17 日上線，重要性較低未立條）；LMArena、Aider、SWE-bench、HELM、LiveBench 視窗內無登頂、超車或新模型上榜。</p>
+  </footer>
+</div>
+</body>
+</html>

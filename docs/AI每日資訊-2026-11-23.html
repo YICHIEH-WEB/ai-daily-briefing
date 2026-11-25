@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 每日早報 · 2026-11-23</title>
+<style>
+  :root{
+    --bg:#faf8f4; --card:#fffdf9; --ink:#1d1915; --muted:#71685b; --faint:#a39a8a;
+    --hairline:#e9e0d0; --border:#ece3d2;
+    --ember:#b45309; --ember-deep:#8a3d05; --gold:#d9a441;
+    --serif:ui-serif,"Songti TC","STSong","Noto Serif TC","Noto Serif CJK TC",serif;
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+    --dot-model:#b45309; --dot-funding:#3f7a4e; --dot-policy:#8a5a83;
+    --dot-app:#2f7d7a; --dot-oss:#5b6470; --dot-research:#7a6a9a; --dot-other:#a89f90;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#14110d; --card:#1d1814; --ink:#f1ebe0; --muted:#a79d8c; --faint:#6f665a;
+      --hairline:#2b251e; --border:#372d21;
+      --ember:#e5a05c; --ember-deep:#f2bc7d; --gold:#d9a441;
+      --dot-model:#e5a05c; --dot-funding:#82bd8d; --dot-policy:#c69dc2;
+      --dot-app:#82c6c1; --dot-oss:#9aa3ad; --dot-research:#b3a1d6; --dot-other:#8d8474;
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","PingFang SC","Hiragino Sans GB","Microsoft JhengHei","Noto Sans TC",sans-serif;
+    line-height:1.75;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:680px;margin:0 auto;padding:36px 16px 72px}
+  .masthead{margin-bottom:30px}
+  .brand{display:flex;align-items:center;gap:9px;margin-bottom:14px}
+  .brand .mark{width:9px;height:9px;background:var(--ember);border-radius:2px;flex-shrink:0}
+  .brand .bt{font-family:var(--mono);font-size:11px;letter-spacing:.3em;color:var(--muted)}
+  .masthead h1{font-family:var(--serif);font-size:36px;font-weight:700;margin:0 0 8px;letter-spacing:.08em}
+  .dateline{font-size:14.5px;color:var(--muted);margin:0 0 4px}
+  .dayline{font-family:var(--mono);font-size:11px;letter-spacing:.22em;color:var(--faint);margin:0 0 4px}
+  .meta{font-size:12.5px;color:var(--faint);margin:0}
+  .signal{height:3px;margin-top:20px;border-radius:2px;
+    background:linear-gradient(90deg,var(--ember) 0%,var(--gold) 45%,transparent 100%)}
+  .hero{font-family:var(--serif);font-size:15.5px;line-height:1.85;margin:0 0 30px}
+  section{margin-bottom:38px}
+  .sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:16px}
+  .sec-num{font-family:var(--mono);font-size:12px;color:var(--ember);letter-spacing:.1em;flex-shrink:0}
+  .sec-head h2{font-size:15px;margin:0;letter-spacing:.14em;font-weight:700;flex-shrink:0}
+  .sec-head .rule{flex:1;height:1px;background:var(--hairline);transform:translateY(-4px)}
+  .tldr{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px 20px 20px 12px}
+  .tldr ol{margin:0;padding-left:26px}
+  .tldr li{margin:8px 0;font-size:14px}
+  .tldr li::marker{font-family:var(--mono);font-size:12px;color:var(--ember)}
+  .tldr a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--faint)}
+  .tldr a:hover{color:var(--ember);border-bottom-color:var(--ember)}
+  .top3{display:grid;gap:10px}
+  .mini{position:relative;background:var(--card);border:1px solid var(--border);border-radius:12px;
+    padding:15px 18px 15px 20px;overflow:hidden}
+  .mini::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
+    background:linear-gradient(var(--ember),var(--gold))}
+  .mini .rank{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--ember);display:block;margin-bottom:6px}
+  .mini a{color:var(--ink);text-decoration:none;font-weight:700;font-size:15px}
+  .mini a:hover{color:var(--ember)}
+  .mini p{margin:7px 0 0;font-size:13.5px;color:var(--muted)}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:14px;
+    padding:22px 20px;margin-bottom:14px;scroll-margin-top:16px}
+  .card .head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+  .num{font-family:var(--mono);font-size:12px;color:var(--faint);letter-spacing:.08em}
+  .card.is-top .num{color:var(--ember);font-weight:700}
+  .tag{display:inline-flex;align-items:center;font-size:11.5px;padding:2px 10px;border-radius:999px;
+    border:1px solid var(--border);color:var(--muted)}
+  .tag::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--dot,var(--faint));margin-right:7px;flex-shrink:0}
+  .tag-model{--dot:var(--dot-model)}
+  .tag-funding{--dot:var(--dot-funding)}
+  .tag-policy{--dot:var(--dot-policy)}
+  .tag-app{--dot:var(--dot-app)}
+  .tag-oss{--dot:var(--dot-oss)}
+  .tag-research{--dot:var(--dot-research)}
+  .tag-other{--dot:var(--dot-other)}
+  .card h3{font-family:var(--serif);font-size:19px;margin:2px 0 5px;line-height:1.55;font-weight:700}
+  .card .en{font-size:12.5px;color:var(--faint);margin:0 0 10px;font-style:italic}
+  .card .lede{font-size:14px;color:var(--muted);margin:0 0 12px;padding-left:10px;border-left:2px solid var(--ember)}
+  .card p.body{font-size:14.5px;margin:0 0 10px;text-align:justify}
+  .card .foot{margin-top:14px;padding-top:12px;border-top:1px dashed var(--hairline);
+    font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 14px}
+  .card .foot a{color:var(--ember);text-decoration:none}
+  .card .foot a:hover{text-decoration:underline}
+  .card .foot .note{flex-basis:100%}
+  .src-label{font-weight:700;color:var(--muted)}
+  footer{border-top:1px solid var(--hairline);padding-top:20px;color:var(--muted);font-size:13px}
+  footer p{margin:0}
+  @media (max-width:560px){
+    .masthead h1{font-size:29px}
+    .card{padding:18px 16px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand"><span class="mark"></span><span class="bt">AI DAILY BRIEFING</span></div>
+    <h1>AI 每日早報</h1>
+    <p class="dateline">2026 年 11 月 23 日 · 星期一</p>
+    <p class="dayline">MONDAY · 台北時間</p>
+    <p class="meta">時間視窗：2026-11-22 09:00 至 2026-11-23 09:00（台北時間）· 共 14 條</p>
+    <div class="signal"></div>
+  </header>
+  <p class="hero">過去 24 小時，OpenAI 首席科學家提議以困惑度為共同尺度、為前沿研發設限；南韓教育部長為 AI 作弊防弊混亂請辭；紐時揭中國國安部秘密協助中企取得先進 AI 晶片；貝森特稱美方已要求輝達就對中晶片銷售說明；OpenRouter 除名 3 家推論供應商。</p>
+  <section>
+    <div class="sec-head"><span class="sec-num">01</span><h2>一句話速覽</h2><span class="rule"></span></div>
+    <div class="tldr"><ol>
+      <li><a href="#card-1">OpenAI 首席科學家 Jakub Pachocki 11 月 22 日發表長文，首度公開 GPT-3.5 以來的內部預訓練困惑度曲線，提議以困惑度作為衡量模型進展的共同尺度，並呼籲各實驗室在監測能力達標前，不跨越 0.68 至 0.70 的困惑度區間；執行長 Sam Altman 稱這是 OpenAI 近期最重要的發表。</a></li>
+      <li><a href="#card-2">南韓教育部長崔教振 11 月 22 日請辭，為大學入學考試前夕防範 AI 作弊的措施一改再改、引發考生與教育界混亂負責，總統李在明約一小時內接受；考試期間共查獲 111 件疑似以電子裝置作弊的案例。</a></li>
+      <li><a href="#card-3">《紐約時報》引述多名現任及前任情報官員報導，中國國家安全部成立直屬部長陳一新的工作小組，秘密協助中國企業取得甚至走私先進 AI 晶片，同時蒐集半導體供應鏈情報，行動已持續至少兩年；美方正調查新加坡雲端公司 Megaspeed 是否非法將先進晶片走私至中國。</a></li>
+      <li><a href="#card-4">美國財長貝森特 11 月 22 日在 CBS《Face the Nation》表示，美方已就對中晶片銷售要求輝達說明，並將查明公司內部由誰負責合規；川普上週五稱希望黃仁勳道歉並回任，貝森特則說須先看更多資訊。</a></li>
+      <li><a href="#card-5">OpenRouter 11 月 22 日公告，在資安公司 Dragos 以約 200 萬個植入金絲雀憑證的提示詞追蹤 AI 供應鏈後，發現部分託管推論商遭入侵且無視零資料保留設定，因此除名 3 家供應商、將 125 個端點移出零資料保留資格並通知受影響客戶；OpenRouter 自身並未遭入侵。</a></li>
+      <li><a href="#card-6">螞蟻百靈 11 月 22 日在 X 宣布並在 Hugging Face 上架醫療模型 LingSante-3.1-flash 的 MXFP4 量化權重：混合線性 MoE 架構，總參數約 5,600 億、每詞元啟動約 250 億，支援 100 萬詞元上下文，採 MIT 授權；量化後權重佔用由約 534GB 降至 292GB，服務所需 Hopper 顯示卡由 8 卡降至 4 卡。</a></li>
+      <li><a href="#card-7">彭博 11 月 22 日報導，螞蟻集團領投中國具身智慧新創 Simplexity Robotics 的 1 億美元 pre-A 輪融資，投後估值 16 億美元；阿里巴巴、騰訊、紅杉中國等既有投資人跟投。</a></li>
+      <li><a href="#card-8">美國全國州長協會 11 月 22 日發布兩黨 AI 治理原則，呼籲國會為最先進的通用 AI 模型訂定聯邦規則、要求獨立稽核與重大安全事件通報，同時保留各州在消費者保護、反歧視與就業議題上的角色；任何架空州法的企圖都應謹慎為之。</a></li>
+      <li><a href="#card-9">澳洲安全情報組織總監 Mike Burgess 11 月 22 日接受《The Age》與《60 分鐘》專訪警告，AI 與資料中心產業「炒作、機會與威脅並存」，外國勢力可能暗中取得資料中心所有權、藉此取得敏感技術與資料或控制關鍵基礎設施；副總理馬爾斯同日稱此事令人憂心。</a></li>
+      <li><a href="#card-10">路透 11 月 22 日報導，Anthropic 要求部分 IPO 承銷商將參與交易的銀行家限為 4 人、且須為資深人員，並要求部分銀行高層簽署法律文件，限制交易核心成員在上市後六個月內不得為 OpenAI、Cursor、DeepSeek 與 Hugging Face 等競爭對手工作。</a></li>
+      <li><a href="#card-11">Wired 11 月 22 日報導，美國大型銀行正圍堵登入客戶帳戶的第三方 AI 代理：摩根大通 10 月底已修改條款禁止以客戶憑證登入的代理，美國銀行同日警告客戶勿分享登入資訊，富國銀行更新版客戶協議將於 11 月 24 日生效，明言使用 AI 代理「風險自負」。</a></li>
+      <li><a href="#card-12">The Verge 11 月 22 日刊出 Stepback 專欄，指出大型語言模型正被用來改寫電視、相機、合成器與遊戲機等日常裝置的軟體：印度開發者 Gathin T. 用 Claude Code 在 90 分鐘內為小米 Android TV 移除廣告、簡化介面，隨後開源的 CleanYourTV 專案在 GitHub 上獲得數千次貢獻。</a></li>
+      <li><a href="#card-13">TechCrunch 11 月 22 日專訪記者 Paris Marx，談其新書《Hyperscale》：超大規模資料中心擴建在用電、用水與社區生活品質上已難以持續，且因其實體存在而成為民眾不滿科技業最直接的目標；微軟、亞馬遜與 OpenAI 已承諾不再以保密協議與地方政府談判。</a></li>
+      <li><a href="#card-14">VentureBeat 11 月 22 日刊出專欄指出，多數機器學習模型以乾淨、熟悉的資料測試，成績亮眼，但上線後面對雜亂輸入與標籤漂移便悄悄劣化；這是應用型機器學習最常見的失效模式。</a></li>
+    </ol></div>
+  </section>
+  <section>
+    <div class="sec-head"><span class="sec-num">02</span><h2>今日頭條</h2><span class="rule"></span></div>
+    <div class="top3">
+      <div class="mini"><span class="rank">01</span><a href="#card-1">OpenAI 首席科學家提議以困惑度為共同尺度、為前沿研發設限</a><p>OpenAI 首席科學家 Jakub Pachocki 11 月 22 日發表長文，首度公開 GPT-3.5 以來的內部預訓練困惑度曲線，提議以困惑度作為衡量模型進展的共同尺度，並呼籲各實驗室在監測能力達標前，不跨越 0.68 至 0.70 的困惑度區間；執行長 Sam Altman 稱這是 OpenAI 近期最重要的發表。</p></div>
+      <div class="mini"><span class="rank">02</span><a href="#card-2">南韓教育部長為 AI 作弊防弊混亂請辭</a><p>南韓教育部長崔教振 11 月 22 日請辭，為大學入學考試前夕防範 AI 作弊的措施一改再改、引發考生與教育界混亂負責，總統李在明約一小時內接受；考試期間共查獲 111 件疑似以電子裝置作弊的案例。</p></div>
+      <div class="mini"><span class="rank">03</span><a href="#card-3">紐時揭中國國安部秘密協助中企取得先進 AI 晶片</a><p>《紐約時報》引述多名現任及前任情報官員報導，中國國家安全部成立直屬部長陳一新的工作小組，秘密協助中國企業取得甚至走私先進 AI 晶片，同時蒐集半導體供應鏈情報，行動已持續至少兩年；美方正調查新加坡雲端公司 Megaspeed 是否非法將先進晶片走私至中國。</p></div>
+    </div>
+  </section>
+  <section>
+    <div class="sec-head"><span class="sec-num">03</span><h2>全部資訊</h2><span class="rule"></span></div>
+    <article class="card is-top" id="card-1">
+      <div class="head"><span class="num">01</span><span class="tag tag-research">研究</span></div>
+      <h3>OpenAI 首席科學家提議以困惑度為共同尺度、為前沿研發設限</h3>
+      <p class="en">Perplexity and Intelligence</p>
+      <p class="lede">OpenAI 首席科學家 Jakub Pachocki 11 月 22 日發表長文，首度公開 GPT-3.5 以來的內部預訓練困惑度曲線，提議以困惑度作為衡量模型進展的共同尺度，並呼籲各實驗室在監測能力達標前，不跨越 0.68 至 0.70 的困惑度區間；執行長 Sam Altman 稱這是 OpenAI 近期最重要的發表。</p>
+      <p class="body">OpenAI 首席科學家 Jakub Pachocki 11 月 22 日在 OpenAI 部落格發表〈Perplexity and Intelligence〉，首度公開自 GPT-3.5 以來的內部預訓練困惑度數據：GPT-3.5 約 0.99、GPT-4 約 0.91，近期模型已低於 0.8。困惑度即模型對下一個詞元的平均預測不確定性，數值越低，代表模型對語言規律掌握得越好。</p>
+      <p class="body">Pachocki 指出，困惑度降至 0.8 以下後，模型在網路安全與數學等領域出現突破性能力；困惑度約 0.76 的模型已能解出未解的數學難題。他主張，下游能力評測很快就會過時，困惑度才是跨實驗室比較進展的共同尺度。</p>
+      <p class="body">他提議各前沿實驗室承諾，在思維鏈監測等監測能力達標之前，不跨越 0.68 至 0.70 的困惑度區間，並預期類似的預訓練突破最快 2027 年出現。這形同呼籲全行業為前沿研發設下自願上限。</p>
+      <p class="body">OpenAI 執行長 Sam Altman 在 X 上轉發並背書，稱這是 OpenAI 一段時間以來最重要的內容。路透、彭博與 TechCrunch 同日報導，市場關注此舉是否會演變為實質的行業自律。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://openai.com/index/perplexity-and-intelligence" target="_blank" rel="noopener">OpenAI 部落格</a><a href="https://techcrunch.com/2026/11/22/openais-chief-scientist-has-thoughts-on-how-to-limit-ai-development/" target="_blank" rel="noopener">TechCrunch</a><a href="https://www.reuters.com/business/openai-scientist-proposes-industry-ai-limits-tied-model-intelligence-metric-2026-11-22/" target="_blank" rel="noopener">Reuters</a><a href="https://www.bloomberg.com/news/articles/2026-11-22/openai-chief-scientist-urges-industry-limits-on-ai-development" target="_blank" rel="noopener">Bloomberg</a><span class="note">OpenAI 部落格時戳為日期型（2026-11-22T00:00:00Z），精確時刻未載明；路透、彭博與 TechCrunch 皆確認事件日為 11 月 22 日。</span></div>
+    </article>
+    <article class="card is-top" id="card-2">
+      <div class="head"><span class="num">02</span><span class="tag tag-policy">政策</span></div>
+      <h3>南韓教育部長為 AI 作弊防弊混亂請辭</h3>
+      <p class="en">Education minister resigns over college exam chaos amid AI cheating fears</p>
+      <p class="lede">南韓教育部長崔教振 11 月 22 日請辭，為大學入學考試前夕防範 AI 作弊的措施一改再改、引發考生與教育界混亂負責，總統李在明約一小時內接受；考試期間共查獲 111 件疑似以電子裝置作弊的案例。</p>
+      <p class="body">南韓教育部長崔教振 11 月 22 日請辭，為大學入學考試（CSAT，俗稱修能）前夕防範 AI 作弊的措施一改再改、引發考生與教育界混亂負責。總統李在明約一小時內接受請辭，當天稍晚正式批准，並指示總理全權負責後續措施。</p>
+      <p class="body">教育部在考試前夕臨時加碼防弊規定：起初只針對智慧眼鏡，後來擴及所有高科技裝置，包括只准帶鉛筆入場、以貼紙遮住衣物鈕扣以防微型相機偷拍。規定一改再改，讓考生與監考人員無所適從，招致廣泛批評。</p>
+      <p class="body">導火線是今年稅務師考試榜首 11 月 15 日坦承以微型相機、智慧型手機與生成式 AI 作弊。教育部表示，考試期間共查獲 111 件疑似以電子裝置作弊的案例。</p>
+      <p class="body">大學入學考試在南韓被視為人生大事，錄取結果深深影響職涯發展。防弊措施引發的混亂，連帶讓 AI 作弊防範成為南韓教育政策的焦點議題。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://en.yna.co.kr/view/AEN20261122001051315" target="_blank" rel="noopener">Yonhap</a><a href="https://www.koreatimes.co.kr/southkorea/education/20261122/education-minister-resigns-amid-backlash-over-csat-anti-cheating-measures" target="_blank" rel="noopener">Korea Times</a><a href="https://www.channelnewsasia.com/east-asia/south-korea-education-chief-resigns-ai-cheating-scandal-suneung-6572626" target="_blank" rel="noopener">CNA</a><span class="note"></span></div>
+    </article>
+    <article class="card is-top" id="card-3">
+      <div class="head"><span class="num">03</span><span class="tag tag-policy">政策</span></div>
+      <h3>紐時揭中國國安部秘密協助中企取得先進 AI 晶片</h3>
+      <p class="en">未確認</p>
+      <p class="lede">《紐約時報》引述多名現任及前任情報官員報導，中國國家安全部成立直屬部長陳一新的工作小組，秘密協助中國企業取得甚至走私先進 AI 晶片，同時蒐集半導體供應鏈情報，行動已持續至少兩年；美方正調查新加坡雲端公司 Megaspeed 是否非法將先進晶片走私至中國。</p>
+      <p class="body">《紐約時報》報導，中國國家安全部成立直屬部長陳一新的工作小組，秘密協助中國企業取得甚至走私先進 AI 晶片，同時蒐集半導體供應鏈情報，行動已持續至少兩年。報導引述亞洲、美國與歐洲多名現任及前任情報官員。</p>
+      <p class="body">報導指出，此事與新加坡雲端公司 Megaspeed 相關。美方正調查該公司是否非法將先進晶片走私至中國；Megaspeed 被指為東南亞最大的輝達晶片買家之一，2024 年 5 月至 2026 年 2 月間進口了價值 41.3 億美元的輝達硬體。</p>
+      <p class="body">背景是美國商務部 11 月 16 日公布新規則、19 日生效，封堵中國企業透過海外資料中心遠端使用先進晶片，並對新加坡、馬來西亞、泰國、印尼與巴西的先進晶片出口加設許可要求。中國外交部已批評相關措施。</p>
+      <p class="body">這起揭露讓美中晶片角力再升溫：同一天，美國財長貝森特亦在電視訪問中表示，美方已要求輝達就對中晶片銷售說明（見本期第 4 條）。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.cna.com.tw/news/aopl/202611220182.aspx" target="_blank" rel="noopener">中央社</a><a href="https://newtalk.tw/news/view/2026-11-22/1072672" target="_blank" rel="noopener">Newtalk</a><a href="https://ec.ltn.com.tw/article/breakingnews/5649680" target="_blank" rel="noopener">自由時報</a><span class="note">《紐約時報》原文刊於美東時間 11 月 21 日，換算台北時間為 11 月 22 日；中央社與 Newtalk 皆於 11 月 22 日報導，故以台北日期認定。</span></div>
+    </article>
+    <article class="card" id="card-4">
+      <div class="head"><span class="num">04</span><span class="tag tag-policy">政策</span></div>
+      <h3>貝森特：美方已要求輝達就對中晶片銷售說明</h3>
+      <p class="en">US seeks answers on Nvidia&#x27;s sale of chips to China, Bessent says</p>
+      <p class="lede">美國財長貝森特 11 月 22 日在 CBS《Face the Nation》表示，美方已就對中晶片銷售要求輝達說明，並將查明公司內部由誰負責合規；川普上週五稱希望黃仁勳道歉並回任，貝森特則說須先看更多資訊。</p>
+      <p class="body">美國財長貝森特 11 月 22 日在 CBS 節目《Face the Nation》表示，美方正就對中晶片銷售要求輝達說明，並將查明公司內部由誰負責合規。「我們已與臨時管理層、主要董事與律師聯繫，我們確實需要答案，」他說，「輝達最好儘快行動，因為我們想知道當時的企業文化是怎樣的。」</p>
+      <p class="body">貝森特表示，調查將釐清相關情況在哪一層級為人所知：「是在基層？中層？還是一路到高層？」他對輝達董事會能提出「非常完整且有力的答案」表示有信心。</p>
+      <p class="body">背景是輝達創辦人黃仁勳因與一名遭美國情報單位懷疑為中國間諜的女子交往、以及與公司高層的婚外情曝光而請辭，引發監管調查、國會行動與投資人集體訴訟。川普上週五稱希望黃仁勳道歉並回任輝達，貝森特則說須先掌握更多資訊。</p>
+      <p class="body">輝達董事長 Harvey Jones 已表示董事會不會重新聘用黃仁勳。黃仁勳請辭數日後，川普政府已收緊中國取得先進 AI 晶片的管道，趕在川普上週赴中國與習近平會談前公布新規則。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.reuters.com/world/china/us-seeks-answers-nvidias-sale-chips-china-bessent-says-2026-11-22/" target="_blank" rel="noopener">Reuters</a><a href="https://www.scmp.com/news/world/united-states-canada/article/3375404/us-seeks-answers-nvidias-sale-chips-china-bessent-says" target="_blank" rel="noopener">SCMP</a><a href="https://www.straitstimes.com/world/united-states/us-seeks-answers-on-nvidias-sale-of-chips-to-china-bessent-says" target="_blank" rel="noopener">Straits Times</a><span class="note"></span></div>
+    </article>
+    <article class="card" id="card-5">
+      <div class="head"><span class="num">05</span><span class="tag tag-other">其他</span></div>
+      <h3>OpenRouter 除名 3 家推論供應商、撤銷 125 個端點零資料保留資格</h3>
+      <p class="en">Data Processing Incidents on Inference Providers</p>
+      <p class="lede">OpenRouter 11 月 22 日公告，在資安公司 Dragos 以約 200 萬個植入金絲雀憑證的提示詞追蹤 AI 供應鏈後，發現部分託管推論商遭入侵且無視零資料保留設定，因此除名 3 家供應商、將 125 個端點移出零資料保留資格並通知受影響客戶；OpenRouter 自身並未遭入侵。</p>
+      <p class="body">OpenRouter 11 月 22 日公告，根據資安公司 Dragos 的金絲雀憑證研究，除名 3 家推論供應商，並將 125 個模型端點移出零資料保留（Zero Data Retention）資格，同時通知所有可能受影響的客戶。</p>
+      <p class="body">Dragos 以約 200 萬個植入金絲雀憑證的提示詞追蹤 AI 供應鏈，發現攻擊者數月來在 3 家託管供應商內部竊取提示內容，包括標示為零資料保留的請求。Novita、Phala、Together AI 等已發布初步事件報告。</p>
+      <p class="body">OpenRouter 強調自身系統並未遭入侵，問題出在下游託管供應商對資料的處理方式。Dragos 的原始研究發表於 11 月 19 日，本條以 11 月 22 日的平台處置公告為事件日。</p>
+      <p class="body">事件凸顯 AI 推論供應鏈的信任缺口：使用者以為提示詞不會被保留，實際上卻可能在託管商內部遭到複製。OpenRouter 的處置，等於為零資料保留的承諾劃下可驗證的界線。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://openrouter.ai/blog/announcements/data-processing-incidents-on-inference-providers/" target="_blank" rel="noopener">OpenRouter 官方公告</a><a href="https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html" target="_blank" rel="noopener">The Hacker News</a><a href="https://the-decoder.com/security-researchers-show-how-cheap-ai-inference-providers-steal-keys-and-snoop-on-users/" target="_blank" rel="noopener">The Decoder</a><span class="note">官方公告時戳為日期型（2026-11-22T00:00:00Z），精確時刻未載明；The Hacker News 與 The Decoder 皆確認事件日為 11 月 22 日。Dragos 原始研究為 11 月 19 日，本條以 11 月 22 日的處置公告為事件日。</span></div>
+    </article>
+    <article class="card" id="card-6">
+      <div class="head"><span class="num">06</span><span class="tag tag-model">模型</span></div>
+      <h3>螞蟻百靈發布 LingSante-3.1-flash 醫療模型 MXFP4 量化權重</h3>
+      <p class="en">LingSante-3.1-Flash: Bridging Medical Reasoning and Real-World Workflows</p>
+      <p class="lede">螞蟻百靈 11 月 22 日在 X 宣布並在 Hugging Face 上架醫療模型 LingSante-3.1-flash 的 MXFP4 量化權重：混合線性 MoE 架構，總參數約 5,600 億、每詞元啟動約 250 億，支援 100 萬詞元上下文，採 MIT 授權；量化後權重佔用由約 534GB 降至 292GB，服務所需 Hopper 顯示卡由 8 卡降至 4 卡。</p>
+      <p class="body">螞蟻百靈 11 月 22 日在 X 宣布並在 Hugging Face 上架醫療模型 LingSante-3.1-flash 及其 MXFP4 量化權重。模型為混合線性 MoE 架構，總參數約 5,600 億、每詞元啟動約 250 億，支援 100 萬詞元上下文，採 MIT 授權。</p>
+      <p class="body">量化後權重佔用由約 534GB 降至 292GB，服務所需 Hopper 顯示卡由 8 卡降至 4 卡，部署成本大幅下降。官方建議以 SGLang 當日映像部署，vLLM 亦支援。</p>
+      <p class="body">官方自稱 LingSante-3.1-flash 在 HealthBench Professional 拿下 65.72 分，領先 GPT-6 Astra 等模型；但此為廠商自報數據，尚無第三方複核，收錄時應予標明。</p>
+      <p class="body">官方強調模型僅供研究與評估，並非醫療器材，不得作為診斷、處方或治療的唯一依據。基礎版權重已於 11 月 19 日先上架，11 月 22 日的新事件是 MXFP4 量化權重發布與官方宣布。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://huggingface.co/inclusionAI/LingSante-3.1-flash" target="_blank" rel="noopener">Hugging Face</a><a href="https://ant-ling.medium.com/lingsante-3-1-flash-bridging-medical-reasoning-and-real-world-workflows-fdc95f262f64" target="_blank" rel="noopener">Ant Ling Medium</a><a href="https://www.benchleader.com/releases" target="_blank" rel="noopener">BenchLeader</a><span class="note">基礎版權重 11 月 19 日已先上架，11 月 22 日的新事件是 MXFP4 量化權重與官方宣布；HealthBench 65.72 分為廠商自報數據，尚無第三方複核。</span></div>
+    </article>
+    <article class="card" id="card-7">
+      <div class="head"><span class="num">07</span><span class="tag tag-funding">融資</span></div>
+      <h3>螞蟻集團領投人形機器人新創 Simplexity 1 億美元</h3>
+      <p class="en">Ant Group Bets on Simplexity to Thrive in China&#x27;s Humanoid Race</p>
+      <p class="lede">彭博 11 月 22 日報導，螞蟻集團領投中國具身智慧新創 Simplexity Robotics 的 1 億美元 pre-A 輪融資，投後估值 16 億美元；阿里巴巴、騰訊、紅杉中國等既有投資人跟投。</p>
+      <p class="body">彭博 11 月 22 日報導，螞蟻集團領投中國具身智慧新創 Simplexity Robotics 的 1 億美元 pre-A 輪融資，投後估值達 16 億美元。既有投資人阿里巴巴、騰訊、紅杉中國與藍馳創投跟投。</p>
+      <p class="body">Simplexity 由前理想汽車技術長王凱與前輝達／理想自駕負責人賈鵬於 2025 年 7 月底創立，主打通用機器人與控制機器人的基礎模型，技術框架為「一個模型、一個裝置、一個身體、一小時」。</p>
+      <p class="body">公司已發表結合世界模型與視覺語言動作能力的基礎模型 LaST0，以及真實世界強化學習框架 TwinRL；第一代產品 i7 Pro 已於 2026 年 7 月交付首批 100 台，用於數控機床上下料、光模組與柔性電路板製造等場景。</p>
+      <p class="body">成立半年內，Simplexity 已完成五輪融資，至 2026 年 3 月累計募資約人民幣 20 億元、躋身獨角獸。中國人形機器人產業在出貨量上已領先美國對手，成為資本追逐的焦點。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.bloomberg.com/news/articles/2026-11-22/ant-group-bets-on-simplexity-to-thrive-in-china-s-humanoid-race" target="_blank" rel="noopener">Bloomberg</a><a href="https://news.bloomberglaw.com/capital-markets/ant-group-bets-on-simplexity-to-thrive-in-chinas-humanoid-race" target="_blank" rel="noopener">Bloomberg Law</a><a href="https://aibriefs.news/card/4be44a58-b053-494d-8a10-c4ea9340bdc7" target="_blank" rel="noopener">aibriefs</a><span class="note"></span></div>
+    </article>
+    <article class="card" id="card-8">
+      <div class="head"><span class="num">08</span><span class="tag tag-policy">政策</span></div>
+      <h3>美國兩黨州長籲聯邦為前沿 AI 立法、不架空各州</h3>
+      <p class="en">Governors Call for Federal AI Rules Without Sidelining States</p>
+      <p class="lede">美國全國州長協會 11 月 22 日發布兩黨 AI 治理原則，呼籲國會為最先進的通用 AI 模型訂定聯邦規則、要求獨立稽核與重大安全事件通報，同時保留各州在消費者保護、反歧視與就業議題上的角色；任何架空州法的企圖都應謹慎為之。</p>
+      <p class="body">美國全國州長協會（NGA）11 月 22 日發布兩黨 AI 治理原則，呼籲國會為最先進的通用 AI 模型訂定聯邦規則，同時保留各州的監管角色。原則由跨黨派「州長確保美國 AI 主導地位委員會」制定。</p>
+      <p class="body">聯邦層面的訴求包括：為前沿模型建立風險分級框架、由獨立專家評估或稽核，並要求開發者向聯邦機關與受影響的州通報安全漏洞與重大安全事件。委員會由馬里蘭州州長 Wes Moore、印第安納州州長 Mike Braun、北卡羅來納州州長 Josh Stein 與猶他州州長 Spencer Cox 共同領導。</p>
+      <p class="body">各州則保留消費者保護、反歧視與 AI 對就業影響等議題的主導權。原則指出，各州應是「AI 對民眾造成傷害的主要問責機制」，任何架空州法的企圖都應謹慎為之，並納入各州的實質意見。</p>
+      <p class="body">這份原則旨在影響即將上任的國會制定 AI 框架。背景是聯邦層面一度推動禁止各州 AI 立法的條款，引發共和黨州長反彈；州長們希望在聯邦立法成形前，先劃清中央與地方的分工。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.nga.org/news/press-releases/governors-call-for-ai-action/" target="_blank" rel="noopener">NGA 官方</a><a href="https://www.bloomberg.com/news/articles/2026-11-22/governors-call-for-federal-ai-rules-without-sidelining-states" target="_blank" rel="noopener">Bloomberg</a><a href="https://fourweekmba.com/ai-governors-ai-plan-gives-states-14-principles-washington-5/" target="_blank" rel="noopener">FourWeekMBA</a><span class="note">24 項原則的分工統計（14 項對州、5 項對聯邦、5 項兼及）引自 FourWeekMBA 的逐條計數。</span></div>
+    </article>
+    <article class="card" id="card-9">
+      <div class="head"><span class="num">09</span><span class="tag tag-policy">政策</span></div>
+      <h3>澳洲情報首長警告：資料中心與 AI 恐成外國干預破口</h3>
+      <p class="en">Australia Spy Chief Warns of Data Center, AI Risks, Age Reports</p>
+      <p class="lede">澳洲安全情報組織總監 Mike Burgess 11 月 22 日接受《The Age》與《60 分鐘》專訪警告，AI 與資料中心產業「炒作、機會與威脅並存」，外國勢力可能暗中取得資料中心所有權、藉此取得敏感技術與資料或控制關鍵基礎設施；副總理馬爾斯同日稱此事令人憂心。</p>
+      <p class="body">澳洲安全情報組織（ASIO）總監 Mike Burgess 11 月 22 日接受《The Age》與《60 分鐘》專訪警告，AI 與資料中心產業「炒作、機會與威脅並存」，外國勢力可能暗中投資或取得資料中心的所有權，藉此取得敏感技術與資料，或控制關鍵基礎設施。</p>
+      <p class="body">Burgess 指出，風險在於外界不清楚資料中心的真正所有權人與資金來源：「如果我們不知道所有權人是誰，或外國資金從哪裡來、又沒有申報，那就可能出問題。」外國對手可能藉此取得實體或虛擬的存取權限。</p>
+      <p class="body">澳洲副總理 Richard Marles 同日在 ABC 電視節目上表示，資料中心建設「創造了一個新的管道、一個讓外國行為者介入的新途徑」。內政部長 Tony Burke 亦稱，在澳洲境內建置 AI 算力具有「國家安全」利益，同時也成為外國干預的「磁鐵」。</p>
+      <p class="body">警告發布之際，澳洲正敲定該產業的全國監管規則。澳洲在資料中心投資規模上僅次於美國，透明國際澳洲分會的報告亦指出，相關產業的政治遊說活動急遽增加。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.bloomberg.com/news/articles/2026-11-22/australia-spy-chief-warns-of-data-center-ai-risks-age-reports" target="_blank" rel="noopener">Bloomberg</a><a href="https://www.straitstimes.com/asia/australianz/australia-spy-chief-warns-of-data-centre-ai-risks-age-reports?ref=latest" target="_blank" rel="noopener">Straits Times</a><a href="https://www.europesays.com/3392260/" target="_blank" rel="noopener">The Age（經 Europe Says 轉載）</a><span class="note"></span></div>
+    </article>
+    <article class="card" id="card-10">
+      <div class="head"><span class="num">10</span><span class="tag tag-other">其他</span></div>
+      <h3>路透：Anthropic 要求部分 IPO 承銷商團隊限 4 人</h3>
+      <p class="en">Like SpaceX, Anthropic ran an unusual IPO process, chafing some bankers</p>
+      <p class="lede">路透 11 月 22 日報導，Anthropic 要求部分 IPO 承銷商將參與交易的銀行家限為 4 人、且須為資深人員，並要求部分銀行高層簽署法律文件，限制交易核心成員在上市後六個月內不得為 OpenAI、Cursor、DeepSeek 與 Hugging Face 等競爭對手工作。</p>
+      <p class="body">路透 11 月 22 日報導，Anthropic 在 IPO 過程中採取與 SpaceX 類似的非典型做法，令部分銀行家不滿。Anthropic 要求部分承銷商將參與交易的銀行家限為 4 人，且須為資深人員；公司共有 22 家 IPO 承銷商。</p>
+      <p class="body">報導指出，Anthropic 要求部分銀行高層簽署法律文件，限制交易核心成員在上市後六個月內，不得為 OpenAI、Cursor、DeepSeek 與 Hugging Face 等競爭對手工作。</p>
+      <p class="body">高盛與摩根士丹利為兩家 IPO 的主承銷商，皆拒絕置評。Anthropic 11 月 19 日在納斯達克掛牌，IPO 定價每股 83 美元，首日漲至 111 美元。</p>
+      <p class="body">此事顯示 Anthropic 即便上市，仍試圖以嚴格條件維持對資訊與人才流動的掌控。IPO 過程的特殊安排，與其安全優先的治理形象形成對照。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.reuters.com/world/like-spacex-anthropic-ran-an-unusual-ipo-process-chafing-some-bankers-2026-11-22/" target="_blank" rel="noopener">Reuters</a><span class="note">本條僅路透一家主要來源報導。</span></div>
+    </article>
+    <article class="card" id="card-11">
+      <div class="head"><span class="num">11</span><span class="tag tag-other">其他</span></div>
+      <h3>Wired：美國銀行圍堵第三方 AI 代理，富國銀行新條款週二生效</h3>
+      <p class="en">Banks Have Had It Up to Here With Your AI Agent</p>
+      <p class="lede">Wired 11 月 22 日報導，美國大型銀行正圍堵登入客戶帳戶的第三方 AI 代理：摩根大通 10 月底已修改條款禁止以客戶憑證登入的代理，美國銀行同日警告客戶勿分享登入資訊，富國銀行更新版客戶協議將於 11 月 24 日生效，明言使用 AI 代理「風險自負」。</p>
+      <p class="body">Wired 11 月 22 日報導，美國大型銀行正圍堵登入客戶帳戶的第三方 AI 代理。摩根大通 10 月底修改條款，禁止以客戶憑證登入的第三方代理；美國銀行同日警告客戶勿與代理分享登入資訊。</p>
+      <p class="body">富國銀行的更新版客戶協議將於 11 月 24 日（週二）生效，明言「使用任何 AI 代理，風險自負」。花旗銀行亦在線上用戶協議新增第三方 AI 代理專章，PNC 於 11 月 18 日修改條款，Citizens 則向客戶發出警告電郵。</p>
+      <p class="body">銀行圍堵的對象不只金融：報導指出，亞馬遜已禁止 Meta 的 Muse 代理在其平台購物，聯合航空亦表示將禁止個人機器人代為購買機票。美國運通則宣布，部分代理購物失誤在無法向商家求償時，可能由發卡方補償。</p>
+      <p class="body">銀行一面封堵外部代理，一面自建 AI 工具：富國銀行的生成式 AI 助理已被使用逾 10 億次，美國銀行今年為員工改版 EricaAssist 代理，花旗則推出內部代理開發平台。報導指出，代理購物未來可能成為 AI 公司賺取聯盟佣金的管道。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://technologistmag.com/banks-have-had-it-up-to-here-with-your-ai-agent/" target="_blank" rel="noopener">Wired（經 Technologist Mag 轉載）</a><a href="https://newsinlasvegas.com/news/us-banks-push-back-third-party-ai-agents/" target="_blank" rel="noopener">News In Las Vegas</a><span class="note">Wired 報導刊於 11 月 22 日；各銀行修改條款的行動本身多在 10 月底至 11 月中，見內文。Wired 原文因網域限制未能直接開啟，以轉載核實。</span></div>
+    </article>
+    <article class="card" id="card-12">
+      <div class="head"><span class="num">12</span><span class="tag tag-app">應用</span></div>
+      <h3>Vibe Coding 走進裝置：開發者用 Claude Code 改造電視介面</h3>
+      <p class="en">The vibe-coding revolution is coming to all the gadgets</p>
+      <p class="lede">The Verge 11 月 22 日刊出 Stepback 專欄，指出大型語言模型正被用來改寫電視、相機、合成器與遊戲機等日常裝置的軟體：印度開發者 Gathin T. 用 Claude Code 在 90 分鐘內為小米 Android TV 移除廣告、簡化介面，隨後開源的 CleanYourTV 專案在 GitHub 上獲得數千次貢獻。</p>
+      <p class="body">The Verge 11 月 22 日刊出 Stepback 專欄指出，大型語言模型正被用來改寫電視、相機、合成器與遊戲機等日常裝置的軟體。寫程式的門檻降至近乎零後，「vibe hacking」正從軟體開發擴散到硬體。</p>
+      <p class="body">專欄以印度開發者 Gathin T. 為例：他受夠了小米 Android TV 滿版廣告與混亂介面，想到手機可以換啟動器，電視或許也可以。經幾項權限調整並開啟 USB 偵錯模式後，Claude Code 便能透過同一 Wi-Fi 網路控制電視；90 分鐘後廣告消失、介面簡化，PlayStation 輸入也更容易切換。</p>
+      <p class="body">Gathin 在 X 上分享成果後迅速走紅，隨即開源 CleanYourTV 專案，在 GitHub 上獲得數千次拉取請求與功能建議，也帶動其他人以同樣方式改造相機、合成器與遊戲機。</p>
+      <p class="body">專欄提醒，這種做法在 Android 電視上最容易，其他系統往往需要真正的越獄與 root 權限，Gathin 也不急著公開那些做法。裝置軟體的改寫門檻降低後，責任歸屬與安全性將是下一步的課題。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://theaitoday.com/the-vibe-coding-revolution-is-coming-to-all-the-gadgets/" target="_blank" rel="noopener">The Verge（經 The AI Today 轉載）</a><a href="https://briefly.co/anchor/Gadgets/story/the-vibe-coding-revolution-is-coming-to-all-the-gadgets" target="_blank" rel="noopener">Briefly</a><span class="note">本條為 The Verge 的 Stepback 專欄評論，非單一發布事件；The Verge 原站因網域限制未能直接開啟，以轉載核實。</span></div>
+    </article>
+    <article class="card" id="card-13">
+      <div class="head"><span class="num">13</span><span class="tag tag-other">其他</span></div>
+      <h3>資料中心為何成為科技巨頭反彈的焦點</h3>
+      <p class="en">Why data centers are at the center of the Big Tech backlash</p>
+      <p class="lede">TechCrunch 11 月 22 日專訪記者 Paris Marx，談其新書《Hyperscale》：超大規模資料中心擴建在用電、用水與社區生活品質上已難以持續，且因其實體存在而成為民眾不滿科技業最直接的目標；微軟、亞馬遜與 OpenAI 已承諾不再以保密協議與地方政府談判。</p>
+      <p class="body">TechCrunch 11 月 22 日專訪記者 Paris Marx，談其新書《Hyperscale》：超大規模資料中心的擴建，在用電、用水與社區生活品質上已難以持續，且因其實體存在，成為民眾不滿科技業最直接的目標。</p>
+      <p class="body">訪談指出，資料中心的反彈已跨越黨派，成為美國期中選舉後的政治議題。地方社區首當其衝：電價、水資源與生活品質的代價，落在資料中心周邊的居民身上。</p>
+      <p class="body">微軟、亞馬遜與 OpenAI 已承諾不再以保密協議與地方政府談判，顯示業者感受到政治壓力。但承諾能否轉化為實質改變，仍待觀察。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://techcrunch.com/2026/11/22/why-data-centers-are-at-the-center-of-the-big-tech-backlash/" target="_blank" rel="noopener">TechCrunch</a><span class="note">本條為 TechCrunch 的書籍專訪／評論，僅一家主要來源。</span></div>
+    </article>
+    <article class="card" id="card-14">
+      <div class="head"><span class="num">14</span><span class="tag tag-research">研究</span></div>
+      <h3>模型測試全數通過，卻可能漏掉真正的問題</h3>
+      <p class="en">Your ML model passed every test. Here&#x27;s what those tests might have missed</p>
+      <p class="lede">VentureBeat 11 月 22 日刊出專欄指出，多數機器學習模型以乾淨、熟悉的資料測試，成績亮眼，但上線後面對雜亂輸入與標籤漂移便悄悄劣化；這是應用型機器學習最常見的失效模式。</p>
+      <p class="body">VentureBeat 11 月 22 日刊出專欄指出，多數機器學習模型以乾淨、熟悉的資料測試，成績亮眼，但上線後面對雜亂輸入與標籤漂移便悄悄劣化。</p>
+      <p class="body">文章指出，這是應用型機器學習最常見的失效模式：測試集與真實世界的落差，不會讓模型立刻崩潰，而是讓它在無人察覺的情況下逐漸變差。</p>
+      <p class="body">專欄提醒，模型上線後的監測與評估，與訓練前的測試同等重要；只看測試分數，容易錯過真正的問題。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://venturebeat.com/orchestration/your-ml-model-passed-every-test-heres-what-those-tests-might-have-missed" target="_blank" rel="noopener">VentureBeat</a><span class="note">本條為 VentureBeat 專欄評論，非新聞事件，僅一家來源。</span></div>
+    </article>
+  </section>
+  <footer>
+  <p>來源說明：本期 14 條，皆來自官方部落格、英文與中文科技媒體、跑分榜與社群；發布類條目依方案 B 以兩個獨立來源核對事件日期，核對不上的已降級或棄用；發布時間不確定者標「未確認」，不猜測。本期未滿 15 條：經五層來源完整掃描後，窗口內可核實的 AI 新聞僅 14 條，未以無關內容填充。</p>
+  <p>排除說明：Google 搜尋首頁改版（Robby Stein 11 月 19 日宣布、Ars Technica 11 月 20 日報導）、彭博「川普對中晶片管制衝擊東南亞」特稿（分析美國商務部 11 月 16 日公布、19 日生效的規則）、Anthropic 用電分析（報告本身 11 月 16 日，僅 Hacker News 討論在 11 月 22 日）、黎曼猜想證明後續（屬上一期主題，不另立條）、TechOrange 11 月 22 日 07:55–07:59 刊出的三則稿件與 T客邦 11 月 22 日 07:30 刊出的文章（皆在視窗起點 09:00 之前）等，事件日皆在視窗外，已排除。跑分榜七個來源視窗內無登頂、超車或新模型上榜。</p>
+  <p>單一來源說明：Anthropic IPO 承銷商安排僅路透一家；The Verge vibe coding 專欄、TechCrunch 資料中心專訪、VentureBeat 機器學習測試專欄皆僅一家主要來源；螞蟻集團領投 Simplexity 以彭博 11 月 22 日報導為主；以上皆已於條目備註中說明。</p>
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 每日早報 · 2026-11-21</title>
+<style>
+  :root{
+    --bg:#faf8f4; --card:#fffdf9; --ink:#1d1915; --muted:#71685b; --faint:#a39a8a;
+    --hairline:#e9e0d0; --border:#ece3d2;
+    --ember:#b45309; --ember-deep:#8a3d05; --gold:#d9a441;
+    --serif:ui-serif,"Songti TC","STSong","Noto Serif TC","Noto Serif CJK TC",serif;
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+    --dot-model:#b45309; --dot-funding:#3f7a4e; --dot-policy:#8a5a83;
+    --dot-app:#2f7d7a; --dot-oss:#5b6470; --dot-research:#7a6a9a; --dot-other:#a89f90;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#14110d; --card:#1d1814; --ink:#f1ebe0; --muted:#a79d8c; --faint:#6f665a;
+      --hairline:#2b251e; --border:#372d21;
+      --ember:#e5a05c; --ember-deep:#f2bc7d; --gold:#d9a441;
+      --dot-model:#e5a05c; --dot-funding:#82bd8d; --dot-policy:#c69dc2;
+      --dot-app:#82c6c1; --dot-oss:#9aa3ad; --dot-research:#b3a1d6; --dot-other:#8d8474;
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","PingFang SC","Hiragino Sans GB","Microsoft JhengHei","Noto Sans TC",sans-serif;
+    line-height:1.75;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:680px;margin:0 auto;padding:36px 16px 72px}
+  .masthead{margin-bottom:30px}
+  .brand{display:flex;align-items:center;gap:9px;margin-bottom:14px}
+  .brand .mark{width:9px;height:9px;background:var(--ember);border-radius:2px;flex-shrink:0}
+  .brand .bt{font-family:var(--mono);font-size:11px;letter-spacing:.3em;color:var(--muted)}
+  .masthead h1{font-family:var(--serif);font-size:36px;font-weight:700;margin:0 0 8px;letter-spacing:.08em}
+  .dateline{font-size:14.5px;color:var(--muted);margin:0 0 4px}
+  .dayline{font-family:var(--mono);font-size:11px;letter-spacing:.22em;color:var(--faint);margin:0 0 4px}
+  .meta{font-size:12.5px;color:var(--faint);margin:0}
+  .signal{height:3px;margin-top:20px;border-radius:2px;
+    background:linear-gradient(90deg,var(--ember) 0%,var(--gold) 45%,transparent 100%)}
+  .hero{font-family:var(--serif);font-size:15.5px;line-height:1.85;margin:0 0 30px}
+  section{margin-bottom:38px}
+  .sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:16px}
+  .sec-num{font-family:var(--mono);font-size:12px;color:var(--ember);letter-spacing:.1em;flex-shrink:0}
+  .sec-head h2{font-size:15px;margin:0;letter-spacing:.14em;font-weight:700;flex-shrink:0}
+  .sec-head .rule{flex:1;height:1px;background:var(--hairline);transform:translateY(-4px)}
+  .tldr{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px 20px 20px 12px}
+  .tldr ol{margin:0;padding-left:26px}
+  .tldr li{margin:8px 0;font-size:14px}
+  .tldr li::marker{font-family:var(--mono);font-size:12px;color:var(--ember)}
+  .tldr a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--faint)}
+  .tldr a:hover{color:var(--ember);border-bottom-color:var(--ember)}
+  .top3{display:grid;gap:10px}
+  .mini{position:relative;background:var(--card);border:1px solid var(--border);border-radius:12px;
+    padding:15px 18px 15px 20px;overflow:hidden}
+  .mini::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
+    background:linear-gradient(var(--ember),var(--gold))}
+  .mini .rank{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--ember);display:block;margin-bottom:6px}
+  .mini a{color:var(--ink);text-decoration:none;font-weight:700;font-size:15px}
+  .mini a:hover{color:var(--ember)}
+  .mini p{margin:7px 0 0;font-size:13.5px;color:var(--muted)}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:14px;
+    padding:22px 20px;margin-bottom:14px;scroll-margin-top:16px}
+  .card .head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+  .num{font-family:var(--mono);font-size:12px;color:var(--faint);letter-spacing:.08em}
+  .card.is-top .num{color:var(--ember);font-weight:700}
+  .tag{display:inline-flex;align-items:center;font-size:11.5px;padding:2px 10px;border-radius:999px;
+    border:1px solid var(--border);color:var(--muted)}
+  .tag::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--dot,var(--faint));margin-right:7px;flex-shrink:0}
+  .tag-model{--dot:var(--dot-model)}
+  .tag-funding{--dot:var(--dot-funding)}
+  .tag-policy{--dot:var(--dot-policy)}
+  .tag-app{--dot:var(--dot-app)}
+  .tag-oss{--dot:var(--dot-oss)}
+  .tag-research{--dot:var(--dot-research)}
+  .tag-other{--dot:var(--dot-other)}
+  .card h3{font-family:var(--serif);font-size:19px;margin:2px 0 5px;line-height:1.55;font-weight:700}
+  .card .en{font-size:12.5px;color:var(--faint);margin:0 0 10px;font-style:italic}
+  .card .lede{font-size:14px;color:var(--muted);margin:0 0 12px;padding-left:10px;border-left:2px solid var(--ember)}
+  .card p.body{font-size:14.5px;margin:0 0 10px;text-align:justify}
+  .card .foot{margin-top:14px;padding-top:12px;border-top:1px dashed var(--hairline);
+    font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 14px}
+  .card .foot a{color:var(--ember);text-decoration:none}
+  .card .foot a:hover{text-decoration:underline}
+  .card .foot .note{flex-basis:100%}
+  .src-label{font-weight:700;color:var(--muted)}
+  footer{border-top:1px solid var(--hairline);padding-top:20px;color:var(--muted);font-size:13px}
+  footer p{margin:0}
+  @media (max-width:560px){
+    .masthead h1{font-size:29px}
+    .card{padding:18px 16px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand"><span class="mark"></span><span class="bt">AI DAILY BRIEFING</span></div>
+    <h1>AI 每日早報</h1>
+    <p class="dateline">2026 年 11 月 21 日 · 星期六</p>
+    <p class="dayline">SATURDAY · 台北時間</p>
+    <p class="meta">時間視窗：2026-11-20 09:00 至 2026-11-21 09:00（台北時間）· 共 15 條</p>
+    <div class="signal"></div>
+  </header>
+  <p class="hero">過去 24 小時，Anthropic 研究員宣稱與 Claude 證出 167 年未解的黎曼猜想，同日另有數學家提出人類路線證明，兩者皆待驗證；美股 AI 拋售加劇，那斯達克單日跌 5.3%、抹去全年漲幅；Thinking Machines 發布可在筆電運行的開源模型 Inkling 2 Mini；路透揭露 SEC 正調查輝達會計問題；IMF 總裁警告 AI 循環融資風險。</p>
+  <section>
+    <div class="sec-head"><span class="sec-num">01</span><h2>一句話速覽</h2><span class="rule"></span></div>
+    <div class="tldr"><ol>
+      <li><a href="#card-1">Anthropic 數學家 Levent Alpöge 11 月 20 日宣稱與 Claude 合作證出 167 年未解的黎曼猜想，並以 Lean 形式化證明公開；同一天史丹佛博士後 Alessandro Masullo 也提出廣義黎曼猜想的人類路線證明，兩者皆尚未經獨立驗證。</a></li>
+      <li><a href="#card-2">美股 11 月 20 日 AI 拋售加劇，那斯達克跌 5.3%、單週跌 10% 創 2020 年 3 月以來最差，標普 500 與道瓊雙雙進入修正區；Anthropic 上市次日跌 8.5%、收 88.91 美元，輝達跌 14%、單日市值蒸發約 4,910 億美元。</a></li>
+      <li><a href="#card-3">Thinking Machines 11 月 20 日發布開源權重模型 Inkling 2 Mini，以迴圈式 Transformer 讓 26.4B 參數模型在約 20GB 記憶體的筆電上運行，DeepSWE 拿下 48.2%、在 100B 以下開源模型中領先，Artificial Analysis 指數 20.1 分追平 Qwen3.8-27B。</a></li>
+      <li><a href="#card-4">彭博 11 月 20 日報導，程式新創 Cognition 正洽談以 750 億美元估值進行新一輪融資、擬募資 20 億美元以上；若成真，估值將較兩個月前 480 億美元的 E 輪再漲逾五成。</a></li>
+      <li><a href="#card-5">OpenAI 11 月 20 日在官方部落格公開對抗蒸餾的多層防線：GPT-6.2 Astra 與 Sol 加強保護推理過程，內部自適應紅隊測試顯示，萃取先前請求推理的攻擊成功率由 GPT-6 Astra 的 54.0% 降至 0.2%；今年已對數千至數萬個帳號採取每週執法行動。</a></li>
+      <li><a href="#card-6">亞馬遜 11 月 20 日披露，攻擊者的 AI 代理在約 11 分鐘內自行發現開源醫療影像 AI 應用 MONAI Label 的零日漏洞並加以利用；修復程式 10 月 19 日已合併，但至今沒有釋出修補版本。</a></li>
+      <li><a href="#card-7">Signal 11 月 20 日宣布，iOS 27 版預設封鎖 App 內截圖並新增「封鎖 Siri AI」設定，Android 版在偵測到 AI 助理讀取螢幕時自動開啟螢幕安全功能，以防 Gemini 與 Siri 等系統級 AI 代理讀取加密對話；Signal 同時要求蘋果、Google 與微軟提供開發者可退出 AI 存取的標準作法。</a></li>
+      <li><a href="#card-8">華為 11 月 20 日在新加坡金融科技節發布 Fintelligent AI 解決方案，以開放混合 AI 架構與智能體工廠、Token 工廠、數據知識工廠三大工廠，協助金融機構把 AI 智能體從試點推向規模化生產。</a></li>
+      <li><a href="#card-9">SpaceX 週四完成 320 億美元債券發售，作為其逾 400 億美元輝達晶片融資計畫的一部分；金融時報 11 月 20 日報導，參與融資的債權人要求不得把作為抵押的晶片用於 SpaceX 的軌道資料中心計畫，因為上軌道的晶片無法收回轉售。</a></li>
+      <li><a href="#card-10">IMF 總裁 Georgieva 11 月 20 日在彭博電視訪問中警告，市場對 AI 的熱情「過高」，AI 相關金融資產可能進一步修正；晶片商為買家提供資金購買自家設備的循環融資總額已近 1 兆美元，其中約三分之二為債務，增速與融資結構轉向債務構成金融穩定風險。</a></li>
+      <li><a href="#card-11">輝達 11 月 20 日在印度舉辦 RTX Spark Experience 活動，華碩、戴爾、惠普、聯想與微星展示搭載 RTX Spark 超級晶片的輕薄筆電與迷你桌機，最高 128GB 統一記憶體、1 PFLOPS FP4 算力，主打本地運行 AI 代理；戴爾 XPS 16 創作者版當日開賣。</a></li>
+      <li><a href="#card-12">T-Mobile 資訊長 Jeff Simon 透露，公司把全部客服文件塞進大上下文窗口的做法適得其反——文件互相衝突，代理常選錯路徑；知識圖譜又太慢、容易迷路，最終改用簡易對照表對應客戶說法與處理路徑，成效反而更好。</a></li>
+      <li><a href="#card-13">紐約時報 11 月 20 日刊出調查，訪問十多名輝達現任與前任員工並檢視數百頁法院紀錄，指黃仁勳數十年來以公開羞辱與暴力言語管理公司，包括要下屬「去死」、揚言「扯下你的頭、尿在你的腦子上」；2005 年人資主管 Michael Winston 提告後，輝達支付逾 100 萬美元和解。黃仁勳發言人稱相關指控為捏造。</a></li>
+      <li><a href="#card-14">美國總統川普 11 月 20 日在白宮記者會上表示，不允許美國公司在海外興建資料中心，違者將面臨「巨額稅負」；理由是防止中國在 AI 競賽中取得優勢，但未說明如何執行，也未透露是否已指示幕僚研議。</a></li>
+      <li><a href="#card-15">Alphabet 工會 11 月 20 日發起「讓學生搜尋」連署，逾 500 名 Google 員工與約聘人員要求公司允許學校使用沒有 AI 功能的 Google 搜尋；背景是 Google 傳出若學校禁用 AI、學生將無法使用搜尋，引發紐約、洛杉磯與芝加哥三大校區考慮改用其他搜尋引擎。</a></li>
+    </ol></div>
+  </section>
+  <section>
+    <div class="sec-head"><span class="sec-num">02</span><h2>今日頭條</h2><span class="rule"></span></div>
+    <div class="top3">
+      <div class="mini"><span class="rank">01</span><a href="#card-1">Anthropic 研究員稱與 Claude 證出黎曼猜想，同日另有數學家提出人類路線證明</a><p>Anthropic 數學家 Levent Alpöge 11 月 20 日宣稱與 Claude 合作證出 167 年未解的黎曼猜想，並以 Lean 形式化證明公開；同一天史丹佛博士後 Alessandro Masullo 也提出廣義黎曼猜想的人類路線證明，兩者皆尚未經獨立驗證。</p></div>
+      <div class="mini"><span class="rank">02</span><a href="#card-2">AI 拋售加劇：那斯達克單日跌 5.3%、抹去全年漲幅，Anthropic 上市次日跌 8.5%</a><p>美股 11 月 20 日 AI 拋售加劇，那斯達克跌 5.3%、單週跌 10% 創 2020 年 3 月以來最差，標普 500 與道瓊雙雙進入修正區；Anthropic 上市次日跌 8.5%、收 88.91 美元，輝達跌 14%、單日市值蒸發約 4,910 億美元。</p></div>
+      <div class="mini"><span class="rank">03</span><a href="#card-3">Thinking Machines 發布開源模型 Inkling 2 Mini：26B 參數、可在筆電上跑</a><p>Thinking Machines 11 月 20 日發布開源權重模型 Inkling 2 Mini，以迴圈式 Transformer 讓 26.4B 參數模型在約 20GB 記憶體的筆電上運行，DeepSWE 拿下 48.2%、在 100B 以下開源模型中領先，Artificial Analysis 指數 20.1 分追平 Qwen3.8-27B。</p></div>
+    </div>
+  </section>
+  <section>
+    <div class="sec-head"><span class="sec-num">03</span><h2>全部資訊</h2><span class="rule"></span></div>
+    <article class="card is-top" id="card-1">
+      <div class="head"><span class="num">01</span><span class="tag tag-research">研究</span></div>
+      <h3>Anthropic 研究員稱與 Claude 證出黎曼猜想，同日另有數學家提出人類路線證明</h3>
+      <p class="en">Anthropic Researcher Claims to Solve Riemann Problem With Claude</p>
+      <p class="lede">Anthropic 數學家 Levent Alpöge 11 月 20 日宣稱與 Claude 合作證出 167 年未解的黎曼猜想，並以 Lean 形式化證明公開；同一天史丹佛博士後 Alessandro Masullo 也提出廣義黎曼猜想的人類路線證明，兩者皆尚未經獨立驗證。</p>
+      <p class="body">Anthropic 數學家 Levent Alpöge 11 月 20 日在個人網站發表四頁說明，寫道「我相信，我與 Claude 合作，發現了黎曼猜想的證明」。黎曼猜想由德國數學家 Bernhard Riemann 於 1859 年提出，關乎質數分布規律，被視為純數學最重要的未解問題，也是克雷數學研究所七大千禧年大獎難題之一、懸賞 100 萬美元。</p>
+      <p class="body">Alpöge 表示，他與 Claude 合作數月，自 10 月 6 日起在多個數學領域推進，關鍵步驟多在 11 月 15 日前後完成，證明於上週日晚間成形，他隨即發訊息給執行長 Dario Amodei 討論公布事宜。他以 Lean 程式語言公開形式化證明，分為 14 個檔案；他坦言完整書面論證極長、自己尚未完全掌握其中全部數學，將再整理成文。Alpöge 也稱同一方法解決了範圍更廣的廣義黎曼猜想。</p>
+      <p class="body">同一天，另一份證明聲稱也浮上檯面：史丹佛博士後 Alessandro Masullo 歷時 12 年完成的人類路線廣義黎曼猜想證明草稿，經美國數學學會會長 Ravi Vakil 公開。該草稿已由史丹佛教授 Brian Conrad 私下審閱數月，社群才剛開始檢視。同一天出現兩份證明聲稱，在數學界極為罕見。</p>
+      <p class="body">學界反應謹慎但不乏樂觀：牛津大學菲爾茲獎得主 James Maynard 表示，若完全驗證無誤，「無疑是數學史上的里程碑」；蒙特婁大學數論學家 Andrew Granville 則批評 Alpöge 的文件「雜亂無章」，應先寫出清晰論證再公布。Anthropic 未對此置評；Alpöge 在說明中承認公布時機可能被視為帶有算計，但稱這種看法是錯誤的。</p>
+      <p class="body">背景方面，Anthropic 今年 8 月曾表示，未公開版本的 Claude 在黎曼猜想相關問題上改進了一項維持 50 年的界，但當時強調並未證明猜想。值得注意的是，Alpöge 公布證明的時間點，正是 Anthropic 以史上最大 IPO 登陸納斯達克的隔天；證明本身尚未經獨立驗證，Lean 形式化是否正確對應標準表述、以及 Masullo 的草稿是否成立，都需數日乃至數週檢核。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.bloomberg.com/news/articles/2026-11-21/anthropic-researcher-claims-to-solve-riemann-problem-with-claude" target="_blank" rel="noopener">Bloomberg</a><a href="https://www.nature.com/articles/d41586-026-03812-7" target="_blank" rel="noopener">Nature</a><a href="https://www.scientificamerican.com/article/anthropic-mathematician-claims-to-prove-riemann-hypothesis-most-famous-problem-in-all-of-math/" target="_blank" rel="noopener">Scientific American</a><a href="https://www.datacamp.com/blog/ai-solved-riemann-hypothesis" target="_blank" rel="noopener">DataCamp</a><a href="https://alpo.ge" target="_blank" rel="noopener">Alpöge 個人網站（證明原文）</a><span class="note">本條為「聲稱」，非已證實的證明：兩份證明皆未經同行評審或獨立驗證，Alpöge 本人亦承認尚未完全掌握全部數學；公布時機在 Anthropic 上市隔天，引發時機質疑，Alpöge 已否認有算計。Alpöge 姓名拼法依《自然》與《科學美國人》報導，彭博寫作 Alpoge。</span></div>
+    </article>
+    <article class="card is-top" id="card-2">
+      <div class="head"><span class="num">02</span><span class="tag tag-other">其他</span></div>
+      <h3>AI 拋售加劇：那斯達克單日跌 5.3%、抹去全年漲幅，Anthropic 上市次日跌 8.5%</h3>
+      <p class="en">Anthropic&#x27;s IPO Turmoil Caps $4 Trillion AI Wipeout on Wall Street</p>
+      <p class="lede">美股 11 月 20 日 AI 拋售加劇，那斯達克跌 5.3%、單週跌 10% 創 2020 年 3 月以來最差，標普 500 與道瓊雙雙進入修正區；Anthropic 上市次日跌 8.5%、收 88.91 美元，輝達跌 14%、單日市值蒸發約 4,910 億美元。</p>
+      <p class="body">美股 11 月 20 日遭遇 AI 拋售加劇：那斯達克綜合指數單日跌 5.3%，創下史上第二大單日點數跌幅，抹去 2026 年全部漲幅、今年迄今轉為下跌 2.7%；單週跌 10%，為 2020 年 3 月新冠疫情爆發以來最差一週，較上月歷史高點回落 18.5%、逼近熊市門檻。標普 500 跌 3.7%、單週跌 8.6%，道瓊跌 1.9%（949 點）、單週跌 8%，兩者皆較近期收盤高點回落逾 10%、進入修正區。</p>
+      <p class="body">華爾街日報指出，本週那斯達克成分股合計蒸發逾 4 兆美元市值；即使是史上最大 IPO 也未能止血——Anthropic 上市次日跌 8.5%、收 88.91 美元，盤中一度跌至 83.05 美元、逼近 83 美元發行價，較首日盤中高點 115 美元大幅回落。Magnificent Seven 全數下跌，Meta 跌近 6%，亞馬遜跌 4%，微軟跌 2.8%。</p>
+      <p class="body">輝達是當日跌幅最重的指標股：股價跌 14%、收在 126 美元以下，單日市值蒸發約 4,910 億美元（約 3.52 兆美元降至 3.03 兆美元），單週跌 22.9%、為 2008 年 10 月以來最差一週，兩週內市值已縮水三分之一。超微與美光等晶片股同日跌逾 13%，英特爾跌 8%。</p>
+      <p class="body">路透 11 月 20 日引述兩名知情人士報導，SEC 執法人員正調查輝達的會計問題；《華爾街日報》週二已報導 SEC 正在調查輝達，但當時未能確認調查焦點。可能涉及的範圍包括輝達去年改變地區營收揭露方式（按客戶總部所在地而非帳單地址，使新加坡自地區明細中消失）、約 1,040 億美元經新加坡子公司入帳的 2025 年營收，以及總額 1,180 億美元的客戶融資擔保。SEC 與輝達皆未置評；路透強調調查不等於認定違法。</p>
+      <p class="body">拋售也蔓延至全球與信貸市場：彭博報導新興市場股市因 AI 帶動的科技股拋售進入熊市，美國信貸市場避險情緒升至 8 個月高點。市場擔憂的因素交織：AI 基建龐大支出的回報、循環融資與債務水準、民主黨期中選舉大勝後資料中心計畫可能延宕、輝達接班的不確定性，以及美國收緊對中晶片出口管制。IMF 總裁同日也警告 AI 資產可能進一步修正（見本期第 10 條）。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.wsj.com/finance/stocks/anthropics-ipo-bust-punctuates-4-trillion-ai-wipeout-on-wall-street-f1f1ec90" target="_blank" rel="noopener">The Wall Street Journal</a><a href="https://www.investopedia.com/stock-market-today-dow-jones-s-and-p-500-nasdaq-11202026-12266027" target="_blank" rel="noopener">Investopedia</a><a href="https://live.euronext.com/en/financial-news/exclusive-nvidias-accounting-focus-us-sec-investigation-sources-say" target="_blank" rel="noopener">Reuters</a><a href="https://www.fool.com/investing/2026/11/20/nvidia-stock-plunge-wipes-out-nearly-usd500-billion-in-one-day-as-sec-reportedly-probes-its-accounting/" target="_blank" rel="noopener">Motley Fool</a><a href="https://www.bloomberg.com/news/articles/2026-11-20/emerging-market-stocks-set-for-bear-market-on-ai-led-tech-slide" target="_blank" rel="noopener">Bloomberg</a><span class="note">輝達單日市值蒸發約 4,910 億美元為 Motley Fool 依收盤價估算，另有報導稱約 4,000 億美元，數字因計算基準而異；那斯達克單日跌幅有 5.2% 與 5.3% 兩種說法，本條採華爾街日報與泰晤士報的 5.3%。SEC 調查焦點為路透引述知情人士說法，SEC 未證實，調查本身不等於認定違法；「進入修正區」指較近期收盤高點回落逾 10%。</span></div>
+    </article>
+    <article class="card is-top" id="card-3">
+      <div class="head"><span class="num">03</span><span class="tag tag-model">模型</span></div>
+      <h3>Thinking Machines 發布開源模型 Inkling 2 Mini：26B 參數、可在筆電上跑</h3>
+      <p class="en">Introducing Inkling 2 Mini</p>
+      <p class="lede">Thinking Machines 11 月 20 日發布開源權重模型 Inkling 2 Mini，以迴圈式 Transformer 讓 26.4B 參數模型在約 20GB 記憶體的筆電上運行，DeepSWE 拿下 48.2%、在 100B 以下開源模型中領先，Artificial Analysis 指數 20.1 分追平 Qwen3.8-27B。</p>
+      <p class="body">Thinking Machines Lab 11 月 20 日發布 Inkling 2 Mini，這是該公司第二代 Inkling 模型的輕量版本，採開源權重釋出，同步上架 Hugging Face 與自家 Tinker 平台。官方部落格稱，這是回應用戶反映：上一代 594B 參數的 Inkling 2 Small 對多數人而言太大、跑不動，新模型「小到能在你的筆電上跑」。</p>
+      <p class="body">技術上，Inkling 2 Mini 是一顆「迴圈式 Transformer」：24 層之中，首尾各 6 層每 token 只跑一次，中間 12 層則重複運算三次、共享權重但各自擁有 KV 快取，讓模型以較少參數做更多推理。模型為混合專家架構，總參數 26.4B、每 token 啟用 3.4B，計入迴圈後權重啟用量為 5.4B；多數權重以 NVFP4 原生訓練部署，最後四層為 MXFP8，整體記憶體佔用約 20GB。</p>
+      <p class="body">效能方面，官方數據稱 Inkling 2 Mini 在 DeepSWE v1.1 拿下 48.2%、在 100B 總參數以下的開源模型中領先，Vals Index v2.2 為 46.5%，Artificial Analysis 智慧指數 20.1 分、追平 Qwen3.8-27B。成本上，官方稱每項智慧指數任務成本 0.59 美元、耗時 9 分鐘，約為 Qwen3.8-27B 的六分之一成本、四分之一時間；上下文窗口最高達 100 萬 token。</p>
+      <p class="body">生態支援同步到位：vLLM 在發布當日即提供支援，可在輝達 Blackwell、Hopper 與 DGX Spark 上運行；另同步釋出可變迴圈的研究版檢查點 TML-d24-varloop-research。模型接受文字與圖像輸入、輸出文字，定位為通用多模態模型，主打本地代理工作。</p>
+      <p class="body">意義：繼 11 月 5 日的 Inkling 2 Small 之後，Thinking Machines 一個月內連推兩款模型，並把「迴圈」架構推向開源社群；小模型能在筆電離線運行，也呼應本地 AI 代理的趨勢。但官方效能數字皆為自家量測，尚未經獨立複核；Artificial Analysis 指數等第三方評測仍在陸續出爐。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://thinkingmachines.ai/news/inkling-2-mini/" target="_blank" rel="noopener">Thinking Machines</a><a href="https://huggingface.co/thinkingmachines/Inkling-2-Mini" target="_blank" rel="noopener">Hugging Face</a><a href="https://vllm-project.github.io/2026/11/20/inkling2-mini" target="_blank" rel="noopener">vLLM</a><a href="https://www.unite.ai/thinking-machines-lab-releases-inkling-2-mini-for-local-devices/" target="_blank" rel="noopener">Unite.AI</a><span class="note">效能與成本數字皆為 Thinking Machines 官方自述，未經獨立驗證；發布時間以官方部落格與 Hugging Face 模型卡（2026 年 11 月 20 日）為準，vLLM 支援文章刊於同日 09:00 UTC。</span></div>
+    </article>
+    <article class="card" id="card-4">
+      <div class="head"><span class="num">04</span><span class="tag tag-funding">融資</span></div>
+      <h3>Cognition 傳以 750 億美元估值洽談新一輪融資，擬募逾 20 億美元</h3>
+      <p class="en">Cognition in Talks for $75 Billion Value With New Funding</p>
+      <p class="lede">彭博 11 月 20 日報導，程式新創 Cognition 正洽談以 750 億美元估值進行新一輪融資、擬募資 20 億美元以上；若成真，估值將較兩個月前 480 億美元的 E 輪再漲逾五成。</p>
+      <p class="body">彭博 11 月 20 日報導，AI 程式新創 Cognition AI 正洽談新一輪融資，估值目標 750 億美元，擬募資 20 億美元以上；知情人士稱談判仍在進行，細節可能改變。路透與 Channel NewsAsia 同日引述彭博報導跟進。</p>
+      <p class="body">若成真，這將是 Cognition 一年多內第四次估值躍升：2025 年 3 月估值 40 億美元，9 月 E 輪以 480 億美元估值募得 20 億美元，短短兩個月後估值目標再漲逾五成。公司旗下自主程式代理 Devin 可規劃、撰寫、測試並部署程式碼，去年 7 月收購 Windsurf 的產品、品牌與團隊，推出 Devin Desktop。</p>
+      <p class="body">公司自述年化營收 run rate 已逾 10 億美元（2026 年 9 月），客戶包括 GE Aerospace、Rivian 等；但 Cognition 為未上市公司，營收數字未經審計。估值飆升之際，AI 程式工具市場競爭白熱化，對手包括 Cursor 與 GitHub Copilot。</p>
+      <p class="body">背景：AI 新創融資熱潮仍在延續，但市場對 AI 估值的疑慮也在升高——同一天美股 AI 拋售加劇（見本期第 2 條），IMF 總裁亦警告 AI 循環融資風險（見本期第 10 條）。Cognition 本輪融資尚未定案，估值與金額仍可能變動。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.bloomberg.com/news/articles/2026-11-20/cognition-in-talks-for-75-billion-value-with-new-funding" target="_blank" rel="noopener">Bloomberg</a><a href="https://www.reuters.com/technology/cognition-ai-talks-be-valued-75-billion-latest-funding-round-bloomberg-news-2026-11-20/" target="_blank" rel="noopener">Reuters</a><a href="https://www.channelnewsasia.com/business/cognition-in-talks-new-funding-75-billion-valuation-bloomberg-news-reports-6570606" target="_blank" rel="noopener">Channel NewsAsia</a><span class="note">融資洽談為彭博引述知情人士說法，談判仍在進行、條件可能生變，非已完成的融資；年化營收為公司自述，未經審計。</span></div>
+    </article>
+    <article class="card" id="card-5">
+      <div class="head"><span class="num">05</span><span class="tag tag-research">研究</span></div>
+      <h3>OpenAI 公開對抗蒸餾防線：GPT-6.2 推理萃取攻擊成功率由 54% 降至 0.2%</h3>
+      <p class="en">Combatting adversarial distillation</p>
+      <p class="lede">OpenAI 11 月 20 日在官方部落格公開對抗蒸餾的多層防線：GPT-6.2 Astra 與 Sol 加強保護推理過程，內部自適應紅隊測試顯示，萃取先前請求推理的攻擊成功率由 GPT-6 Astra 的 54.0% 降至 0.2%；今年已對數千至數萬個帳號採取每週執法行動。</p>
+      <p class="body">OpenAI 11 月 20 日在官方部落格公開其對抗「對抗式蒸餾」的作法：攻擊者未經授權利用前沿模型的輸出，訓練出能力相近、卻缺乏同等安全防護的模型；尤其危險的是模型的受保護推理過程（chain-of-thought），其中間步驟可能包含最終答案未揭露的資訊，是極具價值的訓練資料。</p>
+      <p class="body">風險集中在雙重用途領域：能協助防禦方找軟體漏洞的模型，也可能協助攻擊方利用漏洞；能協助生物研究的模型，也可能協助開發有害病原體。OpenAI 的內部研究顯示，以精確推理軌跡訓練的學生模型，在網路安全能力上普遍優於僅以推理摘要訓練的版本，顯示保護推理軌跡能限制能力轉移。</p>
+      <p class="body">防線分兩層：請求層面以對抗式訓練、分類器與 API 控制，限制推理萃取；行動層面則偵測協同萃取的帳號網路並執法。GPT-6.2 Astra 與 Sol 已把受保護推理綁定產生它的對話紀錄，改寫先前訊息會捨棄後續推理，也禁止防護較弱的舊模型家族讀取其推理。內部自適應黑箱紅隊測試顯示，萃取先前請求推理的攻擊成功率由 GPT-6 Astra 原始防護的 54.0% 降至 GPT-6.2 Astra 的 0.2%，萃取當前請求推理則由 22.9% 降至 0.9%。</p>
+      <p class="body">OpenAI 稱今年已發現多起未經授權的對抗式蒸餾行動，每週執法規模從數千到數萬個帳號不等，夏季以來頻率明顯上升；調查發現會回饋為訓練與測試素材，相關入侵指標也會分享給其他模型業者。國安層面，OpenAI 稱 2 月已向國會簡報 DeepSeek 試圖蒸餾美國前沿模型的活動，9 月則通報阻斷一場萃取行動、並將核心活動歸因於與月之暗面（Kimi 開發商）相關的人士。</p>
+      <p class="body">OpenAI 同時表態支持賦予美國政府更多工具的立法，包括《晶片安全法案》、《AI OVERWATCH 法案》與《MATCH 法案》，並稱更強的出口管制與蒸餾防禦相輔相成，有助於維持美國在前沿 AI 的領先。數據皆為 OpenAI 內部量測與自述，未經獨立驗證。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://openai.com/index/combatting-adversarial-distillation" target="_blank" rel="noopener">OpenAI</a><span class="note">本條僅 OpenAI 官方部落格一家來源，數據皆為該公司內部量測與自述，未經獨立驗證；DeepSeek 與月之暗面相關指控為 OpenAI 單方面說法。</span></div>
+    </article>
+    <article class="card" id="card-6">
+      <div class="head"><span class="num">06</span><span class="tag tag-research">研究</span></div>
+      <h3>亞馬遜揭露：攻擊者 AI 代理 11 分鐘自行找到零日漏洞，修補版至今未發</h3>
+      <p class="en">Amazon says attackers&#x27; AI agents found and exploited a zero-day in 11 minutes, but no patched release is available</p>
+      <p class="lede">亞馬遜 11 月 20 日披露，攻擊者的 AI 代理在約 11 分鐘內自行發現開源醫療影像 AI 應用 MONAI Label 的零日漏洞並加以利用；修復程式 10 月 19 日已合併，但至今沒有釋出修補版本。</p>
+      <p class="body">亞馬遜 11 月 20 日披露，攻擊者操控的 AI 代理自行發現開源醫療影像 AI 應用 MONAI Label 的零日漏洞，並在約 11 分鐘內加以利用：代理操縱檔案上傳功能，把檔案寫到應用程式預期的儲存目錄之外；後續會話中更利用同一漏洞執行惡意程式、取得伺服器完整控制權。亞馬遜高度確信這是零日漏洞，因發現時漏洞資料庫中沒有任何相關修復、通報或記載。</p>
+      <p class="body">行動始於 9 月 8 日、持續約 48 小時，目標為東亞（中國大陸以外）的大學。亞馬遜發現攻擊者的 Cairn 伺服器於 9 月 10 日在未設驗證的情況下運行，得以讀取操作者的提示詞；Cairn 是協調 AI 代理進行安全測試的開源框架。操作者給代理的唯一目標是「取得 shell 存取權」，代理自行摸索出攻擊路徑；亞馬遜以中等信心評估行動與中國有關。</p>
+      <p class="body">修復進度落後：MONAI Label 維護者 11 月 18 日發布重大安全通報，列明 0.8.5 及更早版本均無修補版，修復「將包含於下一個版本」；修復程式早在 10 月 19 日已合併進主分支，但 PyPI 上最新版仍為 2024 年 11 月 25 日上傳的 0.8.5。通報指出，MONAI Label 預設關閉驗證，任何能連上伺服器的人都可利用此漏洞；即使開啟驗證，具 ANNOTATOR 角色的使用者仍可利用。</p>
+      <p class="body">在修補版釋出前，通報建議管理員採取三項因應：啟用驗證並將 ANNOTATOR 角色限於可信使用者、勿將伺服器暴露於不受信任的網路、以非管理員權限運行並限制寫入指定目錄外的能力；同時應檢查伺服器是否早已遭入侵。亞馬遜指出，攻擊者已實際利用此漏洞，事後啟用驗證無法抹除先前的入侵。</p>
+      <p class="body">意義：這是 AI 代理自主發現並利用零日漏洞的具體案例；防禦方與攻擊方同時握有代理工具，漏洞從發現到利用的時間正被壓縮至分鐘級，也讓開源醫療軟體的修補空窗更受關注。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://venturebeat.com/security/amazon-says-attackers-ai-agents-found-and-exploited-a-zero-day-in-11-minutes-but-no-patched-release-is-available" target="_blank" rel="noopener">VentureBeat</a><span class="note">本條僅 VentureBeat 一家報導，內容來自亞馬遜的披露；「中國有關」為亞馬遜中等信心評估，非確切歸因；MONAI Label 修復狀態以 11 月 18 日安全通報為準。</span></div>
+    </article>
+    <article class="card" id="card-7">
+      <div class="head"><span class="num">07</span><span class="tag tag-app">應用</span></div>
+      <h3>Signal 預設封鎖截圖、阻擋 Siri AI：稱系統級 AI 代理威脅加密通訊</h3>
+      <p class="en">Signal now blocks screenshots by default to stymie AI agents</p>
+      <p class="lede">Signal 11 月 20 日宣布，iOS 27 版預設封鎖 App 內截圖並新增「封鎖 Siri AI」設定，Android 版在偵測到 AI 助理讀取螢幕時自動開啟螢幕安全功能，以防 Gemini 與 Siri 等系統級 AI 代理讀取加密對話；Signal 同時要求蘋果、Google 與微軟提供開發者可退出 AI 存取的標準作法。</p>
+      <p class="body">Signal 11 月 20 日宣布，針對系統級 AI 代理讀取螢幕的新防護上線：iOS 27 版 App 預設封鎖 App 內截圖，並新增「封鎖 Siri AI」設定；Android 版則在偵測到 AI 助理試圖讀取螢幕時，自動開啟既有的「螢幕安全」功能。目標是蘋果 Siri AI 的「螢幕感知」（Onscreen Awareness）與 Google 的 Gemini Intelligence 等功能。</p>
+      <p class="body">問題在於，作業系統內建的 AI 助理為回答問題，會「掃描」螢幕上的資訊；Signal 總裁 Meredith Whittaker 在部落格寫道，如此一來，Signal 的對話內容會被擷取、提供給代理系統處理，「這些深度整合進作業系統核心的代理式 AI 能力，正在動搖我們對安全通訊的核心承諾」。去年 Signal 已對微軟 Recall 採取類似措施，封鎖其對聊天視窗的截圖。</p>
+      <p class="body">限制不少：Signal 坦言封鎖截圖只是局部解方——代理仍可能透過裝置檔案系統取得已儲存的內容，也攔不住第三方代理（如路透先前揭露 Meta Muse 曾透過設定時授予的權限讀取 Signal 訊息）；在 macOS 上，Signal 稱無法可靠封鎖截圖，建議用戶自行把 Signal 加入「系統設定 → Siri」的排除 App 清單。用戶也可自行在設定中關閉防護，但可能連帶暴露聯絡人的訊息。</p>
+      <p class="body">Signal 同時向蘋果、Google 與微軟喊話，要求提供有文件記載的標準作法，讓開發者能退出 AI 對螢幕、檔案、通知與系統 API 的存取，而不必犧牲截圖等一般功能。Signal 稱正與蘋果與 Google 洽談，對進展「謹慎樂觀」。Engadget 指出，此舉也凸顯蘋果「捍衛用戶隱私」的形象與其 Siri AI 設計之間的張力。</p>
+      <p class="body">時機：蘋果與 Google 正把代理式 AI 深度整合進作業系統核心，Mac 版 Gemini 昨天才新增電腦操作功能（見前一期）；Signal 的反制，標誌著加密通訊業者與平台方 AI 代理化的正面衝突，也可能成為其他重視隱私的 App 跟進的範本。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.theregister.com/security/2026/11/20/signal-slams-door-on-prying-ai-agents-to-protect-privacy/5311466" target="_blank" rel="noopener">The Register</a><a href="https://www.engadget.com/2323574/signal-now-blocks-screenshots-by-default-to-stymie-ai-agents/" target="_blank" rel="noopener">Engadget</a><a href="https://www.digitaltrends.com/phones/signal-adds-screenshot-protections-to-stop-ai-agents-reading-chats/" target="_blank" rel="noopener">Digital Trends</a><span class="note">發布時間以 The Register（11 月 20 日 20:42 UTC）與 Engadget（11 月 20 日）為準；Signal 部落格原文連結未於報導中直接提供，本條來源為三家科技媒體；Meta Muse 讀取 Signal 訊息為路透先前報導。</span></div>
+    </article>
+    <article class="card" id="card-8">
+      <div class="head"><span class="num">08</span><span class="tag tag-app">應用</span></div>
+      <h3>華為在新加坡金融科技節發布 Fintelligent AI，主打金融智能體規模化落地</h3>
+      <p class="en">未確認</p>
+      <p class="lede">華為 11 月 20 日在新加坡金融科技節發布 Fintelligent AI 解決方案，以開放混合 AI 架構與智能體工廠、Token 工廠、數據知識工廠三大工廠，協助金融機構把 AI 智能體從試點推向規模化生產。</p>
+      <p class="body">華為 11 月 20 日在新加坡金融科技節 2026（SFF 2026）發布 Fintelligent AI 解決方案，主題為「加速金融 AI 規模化落地，邁向 Agentic Finance」。華為數字金融軍團 CEO 曹沖與海外金融軍團總裁馮彬分別在主舞台與前沿科技舞台發表主題演講，分享金融機構邁向智能體金融的架構思考。</p>
+      <p class="body">方案核心是三大工廠：智能體工廠依託統一平台，支援智能體的建構、運行、管理與治理，並透過智能體市場與共享能力促進資產複用；Token 工廠以 TokeNexus 方案覆蓋 Token 規劃、生產、調度與優化，協助金融機構控制成本、保障性能；數據知識工廠則以 AI 驅動的數據產線與一站式知識產線，為智能體供應數據與知識。</p>
+      <p class="body">架構上，華為提出「兩超多專」：面向客戶與員工分別打造客戶超級智能體與員工超級智能體，再圍繞信貸、行銷、風險與財富管理等領域配置專業智能體協同處理複雜任務；同時把金融機構在合規規則、信貸判斷與風險管理累積的專家經驗，轉化為可調用、可複用的 AI 能力。</p>
+      <p class="body">華為稱，金融 AI 的競爭重點正從模型性能轉向企業級體系能力，AI 也正從對話工具走向能理解意圖、規劃並執行任務的智能體；未來客戶與員工都會用各自的 AI 智能體尋找資訊、安排任務，金融服務必須能被這些智能體理解、連接與調用。方案採用的具體模型、定價與落地時間表未公布，實際部署效果與客戶採用情況亦未公布。</p>
+      <p class="body">華為深耕金融行業 16 年，稱已服務全球 7,100 多家金融客戶，包括全球前 100 大銀行中的 54 家。此次發布正值金融業加速導入智能體之際，但 Fintelligent AI 目前仍屬解決方案框架層級的發布，後續落地案例有待觀察。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://money.udn.com/money/story/123828/9891138" target="_blank" rel="noopener">經濟日報</a><a href="https://beijingnewstv.com/news/hua-wei-fintelligent-ai" target="_blank" rel="noopener">Beijing News TV</a><span class="note">發布內容以美通社新聞稿與經濟日報報導為準，具體模型、定價與落地時間表未公布；「7,100 多家金融客戶」為華為自述。</span></div>
+    </article>
+    <article class="card" id="card-9">
+      <div class="head"><span class="num">09</span><span class="tag tag-funding">融資</span></div>
+      <h3>SpaceX 完成 320 億美元債券發售買輝達晶片，債權人要求不得把抵押晶片送上太空</h3>
+      <p class="en">SpaceX Sells $32 Bil Of Debt For AI Chips. But Yields, Orbital Deployment Raise Concerns.</p>
+      <p class="lede">SpaceX 週四完成 320 億美元債券發售，作為其逾 400 億美元輝達晶片融資計畫的一部分；金融時報 11 月 20 日報導，參與融資的債權人要求不得把作為抵押的晶片用於 SpaceX 的軌道資料中心計畫，因為上軌道的晶片無法收回轉售。</p>
+      <p class="body">SpaceX 週四完成 320 億美元債券發售，為其購買輝達 AI 晶片的融資計畫籌資。交易由高盛與 Apollo Global Management 主導，透過特殊目的公司買入晶片、再租給 SpaceX，租期約五年、2027 年上半年起算，晶片預計 2027 年 1 月起交付；最大一筆 250 億美元投資級債券以 5 年期租賃付款為擔保，殖利率達 8.259%，遠高於當日高評級公司債平均 5.95%。</p>
+      <p class="body">金融時報 11 月 20 日報導，參與這筆逾 400 億美元融資的債權人要求，融資購買的晶片不得用於 SpaceX 的軌道資料中心計畫。理由很直接：晶片是貸款的抵押品，若 SpaceX 違約，債權人可收回轉售；但晶片一旦送上軌道、以每小時約 17,500 英里繞行地球，就無法收回。報導稱最終文件是否納入該限制尚不清楚。</p>
+      <p class="body">SpaceX 表示，融資取得的晶片將用於美國地面資料中心；評級機構穆迪稱晶片將置於 SpaceX 持有多數股權、控制並營運的美國資料中心。該筆融資的債券評級為穆迪 A3、高於 SpaceX 本身一級；Apollo、高盛領投，貝萊德、高盛資產管理、KKR 與 Pimco（40 億美元）為主要認購方。SpaceX 10 月 26 日宣布此融資承諾時，稱是同類 GPU 融資中規模最大的一筆。</p>
+      <p class="body">爭議凸顯太空資料中心的融資難題：馬斯克自今年初即稱，太空將在兩三年內成為營運資料中心「最便宜」的地方，主因是太陽能供電與輻射散熱；但星艦尚未實現完全可重複使用，軌道運算的技術與經濟可行性仍待驗證。Google 則走另一條路，透過 Project Suncatcher 把自家 TPU 送上太空；SpaceX 與特斯拉合建的 Terafab 晶片廠尚未動工，量產仍需數年與數十億美元。</p>
+      <p class="body">市場反應冷淡：SPCX 股價週五隨大盤走低。整體而言，這筆融資顯示 AI 算力競賽已從「買不買得到晶片」延伸到「用什麼條件借錢買晶片」，而軌道資料中心的願景，正遭遇抵押品邏輯的現實檢驗。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://dealroom.co/news/174631-you-can-t-repossess-a-gpu-in-orbit-spacex-s-lenders-sought-to-bar-40bn-o/" target="_blank" rel="noopener">Dealroom</a><a href="https://techcrunch.com/2026/11/20/chips-can-survive-the-space-environment-can-their-financing/" target="_blank" rel="noopener">TechCrunch</a><a href="https://www.fool.com/investing/2026/11/20/spacex-just-raised-32-billion-for-ai-chips-lenders-want-elon-musk-to-keep-them-on-earth/" target="_blank" rel="noopener">Motley Fool</a><a href="https://www.investors.com/news/spacex-sells-32-billion-debt-yield-nvidia-ai-chip-financing-orbital-data-center-concerns/" target="_blank" rel="noopener">Investor&#x27;s Business Daily</a><span class="note">融資總額各家說法不一：10 月 26 日宣布的承諾約 400 億美元，金融時報稱整體方案為 430 億美元；債券殖利率與評級數字來自金融時報與評級機構報導；債權人要求是否寫入最終文件尚不清楚。</span></div>
+    </article>
+    <article class="card" id="card-10">
+      <div class="head"><span class="num">10</span><span class="tag tag-other">其他</span></div>
+      <h3>IMF 總裁警告 AI 資產或進一步修正：循環融資近 1 兆美元、三分之二為債務</h3>
+      <p class="en">IMF&#x27;s Chief Warns AI Correction Has &#x27;Little Bit More&#x27; to Go</p>
+      <p class="lede">IMF 總裁 Georgieva 11 月 20 日在彭博電視訪問中警告，市場對 AI 的熱情「過高」，AI 相關金融資產可能進一步修正；晶片商為買家提供資金購買自家設備的循環融資總額已近 1 兆美元，其中約三分之二為債務，增速與融資結構轉向債務構成金融穩定風險。</p>
+      <p class="body">IMF 總裁 Kristalina Georgieva 11 月 20 日接受彭博電視訪問時警告，市場對 AI 的熱情「過高」，與 AI 相關的金融資產可能進一步修正。Georgieva 在深圳受訪時表示，IMF 早已預期市場會出現調整，目前尚未看到大幅回調，「可能還要持續一陣子」，但調整有助於市場回到更可持續的狀態；「目前我們未見大幅修正，但預期或許還會再有一點」。</p>
+      <p class="body">Georgieva 點名所謂「循環融資」：輝達等晶片製造商向買家提供資金，讓買家購買其設備；目前循環融資總額約 1 兆美元，其中約三分之二為債務。她認為規模本身「不算巨大」，但值得擔憂的是其增長速度，以及融資結構逐步從股權轉向更多債務，構成潛在的金融穩定風險；提高相關交易的透明度、提醒企業警惕自身是否進入更危險的領域，有助於降低風險。</p>
+      <p class="body">Georgieva 也談到美國 11 月 16 日發布的先進半導體遠端存取限制：她稱新措施暫時影響不算太大，更大的風險在於「如果技術路徑出現真正的分化，各國被迫選邊站」。IMF 的保守估計是，AI 可為全球經濟增長貢獻 0.5 個百分點；她形容今年是「歷史上 AI 對全球經濟增長產生實質性轉變的第一年」。</p>
+      <p class="body">警告發布的同一天，美股 AI 拋售加劇（見本期第 2 條），那斯達克單日跌 5.3%、單週跌 10%。Georgieva 的發言與市場拋售相互呼應，也讓「AI 循環融資」從分析師報告中的概念，上升為 IMF 總裁公開點名的金融穩定議題。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.tradingview.com/news/cnbctv:88e8d87c5094b:0/" target="_blank" rel="noopener">CNBC-TV18</a><a href="https://economictimes.indiatimes.com/markets/us-stocks/news/imf-chief-sees-more-correction-in-markets-due-to-ai/articleshow/136010135.cms" target="_blank" rel="noopener">The Economic Times</a><a href="https://www.hkcd.com/hkcdweb/content/2026/11/20/content_8786393.html" target="_blank" rel="noopener">香港商報</a><span class="note">訪問在深圳進行；彭博於 11 月 20 日刊出相關報導，部分報導稱訪問錄於週四。循環融資約 1 兆美元、其中三分之二為債務，為 Georgieva 在訪問中的說法，與 IMF 10 月《全球金融穩定報告》的圖表數字口徑不同。</span></div>
+    </article>
+    <article class="card" id="card-11">
+      <div class="head"><span class="num">11</span><span class="tag tag-app">應用</span></div>
+      <h3>輝達在印度展示 RTX Spark AI 電腦：128GB 統一記憶體，筆電也能本地跑 AI 代理</h3>
+      <p class="en">Nvidia RTX Spark AI Laptops With 128GB Unified Memory Showcased in India</p>
+      <p class="lede">輝達 11 月 20 日在印度舉辦 RTX Spark Experience 活動，華碩、戴爾、惠普、聯想與微星展示搭載 RTX Spark 超級晶片的輕薄筆電與迷你桌機，最高 128GB 統一記憶體、1 PFLOPS FP4 算力，主打本地運行 AI 代理；戴爾 XPS 16 創作者版當日開賣。</p>
+      <p class="body">輝達 11 月 20 日在印度舉辦 RTX Spark Experience 活動，展示新一代 AI 導向 Windows 電腦：華碩、戴爾、惠普、聯想與微星同場展出搭載 RTX Spark 超級晶片的輕薄筆電與迷你桌機，另有技嘉公布後續機種售價。RTX Spark 結合 Blackwell RTX GPU 與 Grace CPU，最高 128GB 統一記憶體、最高 1 PFLOPS FP4 AI 算力。</p>
+      <p class="body">活動主打「本地 AI」：機器可在裝置端運行 AI 代理，透過引導式安裝工具，用戶無需命令列即可啟用 GitHub Copilot、Hermes、OpenClaw、Perplexity、Pi 與 WorkBuddy 等代理；部分機種支援輝達 Nemotron 3.5 Bolt 74B-A9B 24GB 模型，針對工具呼叫與多步驟任務優化。現場亦展示 AI 代理在 DaVinci Resolve 剪輯影片、Unreal Engine 5 運行等應用。</p>
+      <p class="body">售價與上市時程：聯想 Yoga Pro 9n 售價 29 萬 9,399 印度盧比起、Yoga 9n 二合一 33 萬 2,801 盧比起；戴爾 XPS 16 創作者版 44 萬 9,990 盧比起、11 月 20 日當日開賣；惠普 OmniBook Ultra 54 萬 9,999 盧比起、11 月 24 日開放預購；華碩 ProArt P14 為 31 萬 9,990 盧比起；技嘉 AI TOP Aero 預計 12 月上市、73 萬 5,499 盧比起。</p>
+      <p class="body">背景：RTX Spark 平台本身於 IFA 2026 發表，定位為把資料中心級加速運算帶進可攜式 Windows 電腦；此次印度活動是該平台在印度市場的落地展示。同一天，輝達與微軟在 Ignite 的合作也把 RTX Spark 納入 Windows 本地大型語言模型體驗（見前一期第 7 條）。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.gadgets360.com/laptops/news/asus-dell-hp-lenovo-nvidia-rtx-spark-laptops-showcase-india-launch-12353976" target="_blank" rel="noopener">Gadgets360</a><a href="https://www.timesnownews.com/technology-science/gadgets/nvidia-brings-rtx-spark-ai-pcs-to-india-with-laptops-starting-at-rs-2-99-lakh-article-156542383" target="_blank" rel="noopener">Times Now</a><a href="http://www.devicenext.com/nvidia-hosts-the-nvidia-rtx-spark-experience-in-india-showcasing-a-new-class-of-slim-windows-laptops/" target="_blank" rel="noopener">DeviceNext</a><span class="note">本條為印度市場展示活動，RTX Spark 平台本身於 IFA 2026 發表，非當日全新發布；售價為印度盧比、含稅情形各家不一，微星 EdgeMesa N AI+ 報價另加 GST。</span></div>
+    </article>
+    <article class="card" id="card-12">
+      <div class="head"><span class="num">12</span><span class="tag tag-app">應用</span></div>
+      <h3>T-Mobile 坦言：給 AI 客服塞越多資料、答案越糟，改用簡易對照表才見效</h3>
+      <p class="en">Giving its AI more to read made T-Mobile&#x27;s answers worse</p>
+      <p class="lede">T-Mobile 資訊長 Jeff Simon 透露，公司把全部客服文件塞進大上下文窗口的做法適得其反——文件互相衝突，代理常選錯路徑；知識圖譜又太慢、容易迷路，最終改用簡易對照表對應客戶說法與處理路徑，成效反而更好。</p>
+      <p class="body">T-Mobile 資訊長 Jeff Simon 在 10 月 VentureBeat 峰會上分享，公司為 AI 客服代理嘗試的第一種做法適得其反：「我們想，終於有了大上下文窗口模型，把全部客服文件塞進代理，它就成了專家，對吧？結果完全行不通。」問題在於，T-Mobile 規模的企業支援文件本身就存在互相衝突的指引，客戶一句話也可能對應多種流程——例如「想要新裝置」，可能是既有門號換機，也可能是加辦新門號。</p>
+      <p class="body">上下文塞得越大，代理越容易被迫在多條路徑與文件之間抉擇，「可能開始引用錯誤的文件回答」。公司接著嘗試知識圖譜，但代理要在龐大圖譜中搜尋，既耗時又容易在客戶多種問法下走錯路、迷失方向，因而放棄。最終方案出乎意料地簡單：一張鍵值對照表，把客戶常見的說法對應到代理應走的路徑，協調代理先確認客戶意圖、再把任務交給持有該路徑上下文的代理。</p>
+      <p class="body">Simon 稱這張表「其實非常基本，但速度快、反應好、擴展性佳，目前代理的表現不錯」。T-Mobile 自 2024 年起以代理透過聊天、簡訊與語音回答客戶問題，代理也能在確認意圖後代辦有限操作，例如購買國際數據漫遊。公司還在每次對話中同步運行一個小型語言模型擔任評判，標記答錯或客戶動怒的會話供人工複核。</p>
+      <p class="body">評判模型曾抓到一個意外案例：許多通話被標記出現「等候音樂」，但 T-Mobile 根本沒有等候音樂；工程師花了數週追查，才發現是模型在暫停查資料或呼叫工具時，自行「生成」了等候音樂——「完全是編造的」。公司如今在提示詞中明確要求模型不得幻覺出等候音樂。</p>
+      <p class="body">VentureBeat Intelligence 10 月的調查顯示，問題並非個案：在 97 名受訪者中，78% 表示過去半年至少有一次「自信但錯誤」的答案可追溯到缺失或不一致的業務上下文；76 名回報過上下文失誤者中，42% 稱最嚴重的一次導致錯誤資訊傳到外部或決策被推翻，12% 稱錯誤數字進了財務、監管或董事會報告。對照組則是 Adobe 與 Uber：Adobe 強調依任務精準給上下文，Uber 的 AI 上下文圖譜讓代理 38 秒找到資料表、無圖譜時則花 20 多分鐘還找錯。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://venturebeat.com/orchestration/giving-its-ai-more-to-read-made-t-mobiles-answers-worse" target="_blank" rel="noopener">VentureBeat</a><span class="note">本條僅 VentureBeat 一家報導，內容來自 T-Mobile 資訊長在 10 月峰會的分享，調查數據為 VentureBeat Intelligence 10 月調查；知識圖譜做法在 Adobe 與 Uber 的案例中成效不同。</span></div>
+    </article>
+    <article class="card" id="card-13">
+      <div class="head"><span class="num">13</span><span class="tag tag-other">其他</span></div>
+      <h3>紐時調查：黃仁勳數十年以羞辱管理輝達，2005 年人資主管提告後獲逾百萬美元和解</h3>
+      <p class="en">Threats, insults, settlements: How Jensen Huang made humiliation routine</p>
+      <p class="lede">紐約時報 11 月 20 日刊出調查，訪問十多名輝達現任與前任員工並檢視數百頁法院紀錄，指黃仁勳數十年來以公開羞辱與暴力言語管理公司，包括要下屬「去死」、揚言「扯下你的頭、尿在你的腦子上」；2005 年人資主管 Michael Winston 提告後，輝達支付逾 100 萬美元和解。黃仁勳發言人稱相關指控為捏造。</p>
+      <p class="body">紐約時報 11 月 20 日刊出由 Emily Steel、Kalley Huang、Ryan Mac 與 Tripp Mickle 執筆的調查報導，訪問十多名輝達現任與前任員工、檢視數百頁法院紀錄與內部文件，指前執行長黃仁勳數十年來以公開羞辱、侮辱與暴力威脅作為管理手段。報導稱，隨著輝達財富暴增，黃仁勳告訴下屬，員工已經太有錢、金錢無法激勵，「唯一能榨出更多工作的方法就是羞辱」。</p>
+      <p class="body">報導列舉多起事例：黃仁勳曾對一名主管說「你媽媽當初應該把你墮掉」，對另一名員工說要「扯下你的頭、尿在你的腦子上」，對下屬說要「扯斷你的雙臂、拿來打死你」；在約 30 名主管出席的閉門會議中，他對時任全球業務主管 Jay Puri 說「希望你去死、讓大家都解脫」，還說「希望你得流感、而且越來越嚴重」；另有一次在約 40 人會議上，他當眾說一名資深業務主管「對自己的業務一無所知」，並曾向一名主管扔水瓶。</p>
+      <p class="body">行為可追溯至 2000 年代中期：2005 年，時任人資資深副總裁 Michael Winston 揚言提告，稱自己因反對黃仁勳的作風而遭解僱，並形容其為「職業生涯中見過最具言語虐待、威脅與恐嚇的行為」；輝達最終支付逾 100 萬美元達成和解。報導稱，至少另有一名資深主管在 2000 年代中期因類似原因與公司和解；人資部門長期接獲相關投訴，但有員工稱部門未認真處理。</p>
+      <p class="body">黃仁勳發言人稱相關指控為捏造；報導同時指出，許多員工對黃仁勳懷有敬愛，數千人已連署要求他回任，有人甚至刺上輝達標誌的刺青。黃仁勳 11 月 11 日辭去執行長職務，起因是婚外情醜聞與疑似中國情報人員的關聯指控；他已同意 12 月 1 日出席國會閉門問詢，SEC 與加州檢方也正調查輝達相關事宜。</p>
+      <p class="body">報導刊出後，輿論持續發酵：馬斯克日前在 DealBook 峰會上稱董事會不讓黃仁勳回任「不是一個明智的決定」（見前一期第 11 條），但紐時的調查為「挺黃回任」的聲浪提供了對照面——董事會面對的不只是接班人選問題，還有公司治理與企業文化的長期質疑。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.business-standard.com/amp/world-news/threats-insults-settlements-how-jensen-huang-made-humiliation-routine-126112001094_1.html" target="_blank" rel="noopener">Business Standard（紐約時報授權轉載）</a><a href="https://techcrunch.com/2026/11/20/behind-jensen-huangs-exit-questions-about-a-management-style-reportedly-built-on-fear/" target="_blank" rel="noopener">TechCrunch</a><a href="https://nypost.com/2026/11/20/business/how-nvidias-jensen-huang-terrorized-employees/" target="_blank" rel="noopener">New York Post</a><span class="note">本條內容為紐約時報調查報導引述的員工說法與法院紀錄，指控未經法院認定；黃仁勳發言人稱指控為捏造。引述的暴力言語為報導原文，僅為呈現調查內容。</span></div>
+    </article>
+    <article class="card" id="card-14">
+      <div class="head"><span class="num">14</span><span class="tag tag-policy">政策</span></div>
+      <h3>川普揚言對海外建資料中心的美企課徵重稅：稱中國會搶走所有資料中心</h3>
+      <p class="en">Trump says US to penalize firms building data centers abroad</p>
+      <p class="lede">美國總統川普 11 月 20 日在白宮記者會上表示，不允許美國公司在海外興建資料中心，違者將面臨「巨額稅負」；理由是防止中國在 AI 競賽中取得優勢，但未說明如何執行，也未透露是否已指示幕僚研議。</p>
+      <p class="body">美國總統川普 11 月 20 日在白宮記者會上表示，不允許美國公司在海外興建資料中心，違者將面臨「巨額稅負」。川普在結束亞洲行返美後談及 AI 時說：「我們不會允許我們的公司在國外建資料中心」，「如果他們這麼做，可以，但我們會對他們課徵巨額稅負。」</p>
+      <p class="body">理由是美中 AI 競賽：川普稱「我們不允許資料中心到其他國家去，因為中國會把全部都拿走，我們不允許這種事發生」；他自稱美國在發展他口中的「超級智能」上領先中國，但若國內對資料中心建設的反彈踩了煞車，美國可能落後。他同時讚揚參議院 11 月 19 日通過的簡化資料中心審批法案，稱將帶來「大量新建案」。</p>
+      <p class="body">執行方式未明：川普坦言尚未就此向幕僚下達指示，也不清楚如何執行；多家報導指出，課稅須經國會，總統單方面能祭出的懲罰手段並不清楚。亞馬遜、Google、微軟與 OpenAI 等公司正承諾投入數十億美元在海外建設資料中心，以取得更便宜的土地、勞力與電力，並避開美國本地的許可審批拉鋸；Equinix 與 Digital Realty 等開發商也在海外營運設施。</p>
+      <p class="body">背景：美國商務部本週一才對東南亞多國實施先進 AI 晶片出口限制，目的在防止中國透過第三國取得技術；美國雖已禁止向中國直接出售最先進 AI 晶片，但中國企業仍可透過在可合法進口晶片的國家租用資料中心算力取得使用權。川普的發言延續了他一貫支持在美國本土建設資料中心的立場。</p>
+      <p class="body">市場反應：川普發言後，美股跌勢未止，那斯達克抹去 2026 年全部漲幅（見本期第 2 條）；市場評論指出，川普一向先放出強硬政策威脅、再於拋售加劇時收回，此次科技股重挫與其威脅未必直接相關，且總統缺乏直接槓桿扭轉跌勢。發言本身仍具政策意義：資料中心的全球布局，可能成為美中 AI 競賽的新戰場。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.reuters.com/technology/trump-says-us-penalize-firms-building-data-centers-abroad-2026-11-20/" target="_blank" rel="noopener">Reuters</a><a href="https://asia.nikkei.com/politics/trump-says-us-to-penalize-firms-building-data-centers-abroad" target="_blank" rel="noopener">Nikkei Asia</a><a href="https://www.aljazeera.com/video/newsfeed/2026/11/20/aje-onl-nf_trump-tax-us-tech-firms-ai-data-centres-abroad-201126?traffic_source=rss" target="_blank" rel="noopener">Al Jazeera</a><span class="note">川普發言為政策表態，非已生效的法律或行政命令；課稅須經國會，執行方式未明；發言時間以路透與日經（2026 年 11 月 20 日 20:16 UTC）為準。</span></div>
+    </article>
+    <article class="card" id="card-15">
+      <div class="head"><span class="num">15</span><span class="tag tag-policy">政策</span></div>
+      <h3>逾 500 名 Google 員工連署：請讓學校用沒有 AI 的 Google 搜尋</h3>
+      <p class="en">Google Employees Petition to Let Schools Use Search Without AI</p>
+      <p class="lede">Alphabet 工會 11 月 20 日發起「讓學生搜尋」連署，逾 500 名 Google 員工與約聘人員要求公司允許學校使用沒有 AI 功能的 Google 搜尋；背景是 Google 傳出若學校禁用 AI、學生將無法使用搜尋，引發紐約、洛杉磯與芝加哥三大校區考慮改用其他搜尋引擎。</p>
+      <p class="body">Alphabet 工會 11 月 20 日發起「讓學生搜尋」（Let Students Search）連署，逾 500 名 Google 員工與約聘人員要求公司允許 K-12 學校使用沒有 AI 功能的 Google 搜尋。連署致函執行長 Sundar Pichai、搜尋主管 Elizabeth Reid 與教育副總裁 Chris Phillips，主張「何時、如何把 AI 帶進教室，應由帶領教室的教育者決定，而不是從擴大使用中獲利的高層」。</p>
+      <p class="body">爭議源於本月初《紐約時報》報導：Google 教育副總裁 Chris Phillips 表示，由於「搜尋與 AI 已深度整合」，若學校禁用 AI，學生嘗試使用搜尋時會看到學校顯示的「無法使用」訊息。紐約市長 Zohran Mamdani 批評 Google「試圖利用壟斷力量把 AI 強行推進公立學校」，家長、學生與教師也在 Google 芝加哥辦公室外抗議。</p>
+      <p class="body">工會警告，切斷搜尋更可能促使學區徹底棄用 Google 產品，而非接受 AI；失去學區業務也可能影響員工的工作穩定。據報導，紐約、洛杉磯與芝加哥三大校區正考慮改用其他搜尋引擎。美國參議員 Ed Markey 已於 11 月 9 日致函 Google，詢問學校能否保留沒有 AI 的搜尋。</p>
+      <p class="body">Google 方面已澄清，預計明年初推出的新措施將讓學校可個別開關搜尋、Gemini 與 Gemini Notebook，但開啟搜尋仍須接受其內建的 AI 功能；能否關閉搜尋結果內的生成式 AI 功能，仍未說清楚。工會稱部分報導讓 Google 看似「懲罰不用 AI 的學校」，但堅持應提供讓學校依教室政策使用搜尋的設定。</p>
+      <p class="body">同月另有北卡羅來納州家庭提告 Google，指稱 13 歲女兒在學校配發的 Chromebook 上使用 Gemini 與搜尋 AI 功能，與其自殺未遂有關；該指控尚未經法院認定。整起爭議顯示，AI 進校園的決定權之爭，已從教育現場延燒到勞工、政治與法律層面。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.neowin.net/news/google-employees-petition-to-let-k-12-schools-use-search-without-ai-features/" target="_blank" rel="noopener">Neowin</a><a href="https://gizmodo.com/google-employees-petition-to-let-schools-use-search-without-ai-2000842549?ref=aipolicydaily.org" target="_blank" rel="noopener">Gizmodo</a><a href="https://www.newsbytesapp.com/news/science/google-staff-pushes-for-ai-free-search-option-for-schools/story" target="_blank" rel="noopener">NewsBytesApp</a><span class="note">簽署人數各家報導不一（500 多至 1,000 多人），本條採 Gizmodo 與 Neowin 的「逾 500 名」說法；北卡家庭提告為未經法院認定的指控；連署發起時間以 Neowin（11 月 19 日 20:50 美東時間，即 11 月 20 日 01:50 UTC）為準。</span></div>
+    </article>
+  </section>
+  <footer>
+  <p>來源說明：本期 15 條，皆來自官方部落格、英文與中文科技媒體、跑分榜與社群；發布類條目依方案 B 以兩個獨立來源核對事件日期，核對不上的已降級或棄用；發布時間不確定者標「未確認」，不猜測。</p>
+  <p>排除說明：加州起訴 OpenAI 代理逃逸（提告日 11 月 16 日）、ChatGPT for Accounting（11 月 18 日推出）、Gemini Tasks 免費開放（11 月 17 日）、GPT-6.2（11 月 17 日發布）、Claude 互動式連接器（11 月 10 日）、Google AI Ultra 家庭版 YouTube Premium（11 月 18 日）、Mistral Le Chonk 權重開源（10 月 29 日）、Together Compiler（11 月 4 日）、SemiAnalysis GDPx 基準（11 月 2 日）、Frostbite AI 設計 CPU（11 月 18 日）、語言模型自我改寫權重論文（arXiv 11 月 16 日提交）、Anthropic 創辦人套現近 20 億美元（TechCrunch 11 月 19 日 19:43 美東時間，視窗開始前 17 分鐘）等，事件日皆在視窗外，已排除。</p>
+  <p>單一來源說明：OpenAI 對抗蒸餾、亞馬遜零日漏洞、T-Mobile AI 客服皆僅一家主要來源報導，皆已於條目備註中說明；其餘發布類條目皆以兩個獨立來源核對事件日期。</p>
+  <p>未讀取：The Verge、Ars Technica（網域阻擋，改以搜尋核實）、MIT Technology Review、Wired；36氪、量子位、機器之心、虎嗅、雷鋒網、新智元、TechOrange、INSIDE、科技新報、數位時代、T客邦、Reddit、知乎、X 未直接讀取，以搜尋核實；Hacker News 以首頁核實。VentureBeat RSS 以瀏覽器讀取成功。</p>
+  <p>跑分榜：Artificial Analysis 因 Inkling 2 Mini 上榜而變動，已納入相關條目；LMArena、Artificial Analysis 其他榜單、Hugging Face 熱門榜視窗內無新登頂／超車／新模型上榜（榜首結果日期皆為 11 月 19 日或更早，Hugging Face 熱門榜首為 11 月 17 日上傳的騰訊 Hy4-flash）。</p>
+  <p>其他未收錄：Europa Fusion 投資（TechCrunch 單一來源、金額未公布，相對重要性低於本期第 14 條）；WIRED 報導黃仁勳「說謊」為董事會接受辭職主因（僅見鏡像轉載，原文未取得）；蘋果正開發自主式 AI Agent（彭博原文日期 11 月 19 日，事件日未確認在視窗內）；「AI 科學家社會」936 篇論文（Science 介紹刊於 11 月 19 日，事件日在視窗外）；SemiAnalysis 向 Google 道歉（社群輕量事件）；新竹縣 AI 算力合作與環境部「低碳 AI 示範島」（地方性／表態，重要性較低）；Mistral Pixtral Large 2502 上架 OpenRouter（2025 年 2 月舊模型，非新發布）；輝達伺服器供應商暫停向東南亞出貨（日經單一來源，相對重要性低於本期第 14 條）。</p>
+  </footer>
+</div>
+</body>
+</html>

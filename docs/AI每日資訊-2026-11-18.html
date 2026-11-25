@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 每日早報 · 2026-11-18</title>
+<style>
+  :root{
+    --bg:#faf8f4; --card:#fffdf9; --ink:#1d1915; --muted:#71685b; --faint:#a39a8a;
+    --hairline:#e9e0d0; --border:#ece3d2;
+    --ember:#b45309; --ember-deep:#8a3d05; --gold:#d9a441;
+    --serif:ui-serif,"Songti TC","STSong","Noto Serif TC","Noto Serif CJK TC",serif;
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+    --dot-model:#b45309; --dot-funding:#3f7a4e; --dot-policy:#8a5a83;
+    --dot-app:#2f7d7a; --dot-oss:#5b6470; --dot-research:#7a6a9a; --dot-other:#a89f90;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#14110d; --card:#1d1814; --ink:#f1ebe0; --muted:#a79d8c; --faint:#6f665a;
+      --hairline:#2b251e; --border:#372d21;
+      --ember:#e5a05c; --ember-deep:#f2bc7d; --gold:#d9a441;
+      --dot-model:#e5a05c; --dot-funding:#82bd8d; --dot-policy:#c69dc2;
+      --dot-app:#82c6c1; --dot-oss:#9aa3ad; --dot-research:#b3a1d6; --dot-other:#8d8474;
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","PingFang SC","Hiragino Sans GB","Microsoft JhengHei","Noto Sans TC",sans-serif;
+    line-height:1.75;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:680px;margin:0 auto;padding:36px 16px 72px}
+  .masthead{margin-bottom:30px}
+  .brand{display:flex;align-items:center;gap:9px;margin-bottom:14px}
+  .brand .mark{width:9px;height:9px;background:var(--ember);border-radius:2px;flex-shrink:0}
+  .brand .bt{font-family:var(--mono);font-size:11px;letter-spacing:.3em;color:var(--muted)}
+  .masthead h1{font-family:var(--serif);font-size:36px;font-weight:700;margin:0 0 8px;letter-spacing:.08em}
+  .dateline{font-size:14.5px;color:var(--muted);margin:0 0 4px}
+  .dayline{font-family:var(--mono);font-size:11px;letter-spacing:.22em;color:var(--faint);margin:0 0 4px}
+  .meta{font-size:12.5px;color:var(--faint);margin:0}
+  .signal{height:3px;margin-top:20px;border-radius:2px;
+    background:linear-gradient(90deg,var(--ember) 0%,var(--gold) 45%,transparent 100%)}
+  .hero{font-family:var(--serif);font-size:15.5px;line-height:1.85;margin:0 0 30px}
+  section{margin-bottom:38px}
+  .sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:16px}
+  .sec-num{font-family:var(--mono);font-size:12px;color:var(--ember);letter-spacing:.1em;flex-shrink:0}
+  .sec-head h2{font-size:15px;margin:0;letter-spacing:.14em;font-weight:700;flex-shrink:0}
+  .sec-head .rule{flex:1;height:1px;background:var(--hairline);transform:translateY(-4px)}
+  .tldr{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px 20px 20px 12px}
+  .tldr ol{margin:0;padding-left:26px}
+  .tldr li{margin:8px 0;font-size:14px}
+  .tldr li::marker{font-family:var(--mono);font-size:12px;color:var(--ember)}
+  .tldr a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--faint)}
+  .tldr a:hover{color:var(--ember);border-bottom-color:var(--ember)}
+  .top3{display:grid;gap:10px}
+  .mini{position:relative;background:var(--card);border:1px solid var(--border);border-radius:12px;
+    padding:15px 18px 15px 20px;overflow:hidden}
+  .mini::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
+    background:linear-gradient(var(--ember),var(--gold))}
+  .mini .rank{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--ember);display:block;margin-bottom:6px}
+  .mini a{color:var(--ink);text-decoration:none;font-weight:700;font-size:15px}
+  .mini a:hover{color:var(--ember)}
+  .mini p{margin:7px 0 0;font-size:13.5px;color:var(--muted)}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:14px;
+    padding:22px 20px;margin-bottom:14px;scroll-margin-top:16px}
+  .card .head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+  .num{font-family:var(--mono);font-size:12px;color:var(--faint);letter-spacing:.08em}
+  .card.is-top .num{color:var(--ember);font-weight:700}
+  .tag{display:inline-flex;align-items:center;font-size:11.5px;padding:2px 10px;border-radius:999px;
+    border:1px solid var(--border);color:var(--muted)}
+  .tag::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--dot,var(--faint));margin-right:7px;flex-shrink:0}
+  .tag-model{--dot:var(--dot-model)}
+  .tag-funding{--dot:var(--dot-funding)}
+  .tag-policy{--dot:var(--dot-policy)}
+  .tag-app{--dot:var(--dot-app)}
+  .tag-oss{--dot:var(--dot-oss)}
+  .tag-research{--dot:var(--dot-research)}
+  .tag-other{--dot:var(--dot-other)}
+  .card h3{font-family:var(--serif);font-size:19px;margin:2px 0 5px;line-height:1.55;font-weight:700}
+  .card .en{font-size:12.5px;color:var(--faint);margin:0 0 10px;font-style:italic}
+  .card .lede{font-size:14px;color:var(--muted);margin:0 0 12px;padding-left:10px;border-left:2px solid var(--ember)}
+  .card p.body{font-size:14.5px;margin:0 0 10px;text-align:justify}
+  .card .foot{margin-top:14px;padding-top:12px;border-top:1px dashed var(--hairline);
+    font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 14px}
+  .card .foot a{color:var(--ember);text-decoration:none}
+  .card .foot a:hover{text-decoration:underline}
+  .card .foot .note{flex-basis:100%}
+  .src-label{font-weight:700;color:var(--muted)}
+  footer{border-top:1px solid var(--hairline);padding-top:20px;color:var(--muted);font-size:13px}
+  footer p{margin:0}
+  @media (max-width:560px){
+    .masthead h1{font-size:29px}
+    .card{padding:18px 16px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand"><span class="mark"></span><span class="bt">AI DAILY BRIEFING</span></div>
+    <h1>AI 每日早報</h1>
+    <p class="dateline">2026 年 11 月 18 日 · 星期三</p>
+    <p class="dayline">WEDNESDAY · 台北時間</p>
+    <p class="meta">時間視窗：2026-11-17 09:00 至 2026-11-18 09:00（台北時間）· 共 15 條</p>
+    <div class="signal"></div>
+  </header>
+  <p class="hero">過去 24 小時，輝達首份沒有黃仁勳的財報繳出 1158 億美元營收、年增 103%，董事會明言無意讓他回任；OpenAI 發布 GPT-6.2 Astra 與 Sol，微軟在 Ignite 一口氣推出七款 MAI 模型；Anthropic IPO 超額認購近七倍，輝達停售中國 AI 晶片、中國警告報復。</p>
+  <section>
+    <div class="sec-head"><span class="sec-num">01</span><h2>一句話速覽</h2><span class="rule"></span></div>
+    <div class="tldr"><ol>
+      <li><a href="#card-1">輝達首份沒有黃仁勳的財報營收 1158 億美元、年增 103%，第四季財測上看 1300 億美元；董事長明言董事會無意讓黃仁勳回任。</a></li>
+      <li><a href="#card-2">OpenAI 發布 GPT-6.2 Astra 與 Sol，旗艦 API 降價 20%、評測分數全面提升，但 Astra 也成為首款被評為自我改進高風險的對外模型。</a></li>
+      <li><a href="#card-3">微軟在 Ignite 2026 發布七款自研 MAI 模型，主打程式、資安、影像與語音，MAI Code 2 號稱以 5% 成本達到 Claude Opus 5.5 約 96% 表現。</a></li>
+      <li><a href="#card-4">Anthropic IPO 認購近發行量的七倍，紅杉與 Lightspeed 擬加碼；修正文件揭露 IPO 後亞馬遜持股約 15%、谷歌約 14%，以及對微軟至少 472 億美元的算力承諾。</a></li>
+      <li><a href="#card-5">輝達臨時執行長表示，公司已不再向中國出貨 AI 晶片；中國則警告將對美國收緊晶片出口管制作出報復，雙方對峙升級。</a></li>
+      <li><a href="#card-6">Google DeepMind 分拆的 AI 製藥公司 Isomorphic Labs 完成 50 億美元 C 輪融資，由 Greenoaks 與紅杉領投，將把 AI 設計的候選藥物推向臨床試驗。</a></li>
+      <li><a href="#card-7">法國具身智慧新創 Genesis AI 完成 5 億美元 A 輪融資、投後估值 35 億美元，將量產以感測手套訓練的通用機器人 Eno，2027 年擴大交付。</a></li>
+      <li><a href="#card-8">倫敦新創 Model ML 完成 2.5 億美元 B 輪融資、估值 15 億美元，以 AI 代理自動化投行建模、簡報與盡職調查等初級工作。</a></li>
+      <li><a href="#card-9">Google 將 Gemini 的 Tasks 代理功能向美國、日本、韓國、加拿大、澳洲與印度免費開放，搭載 Gemini 4 Hydrogen，可代打電話、預約與結帳。</a></li>
+      <li><a href="#card-10">OpenAI 推出 ChatGPT for Sales，內建銷售外掛與 30 多個合作夥伴外掛，可串接 Salesforce、HubSpot 等工具，協助業務備會、寫提案與跟進。</a></li>
+      <li><a href="#card-11">OpenAI 宣布北約核心機構透過 Daybreak 使用其網安模型，每月用量高達 3000 億 tokens；歐洲多國網安機構亦已接入，烏克蘭用它強化民用基礎設施防禦。</a></li>
+      <li><a href="#card-12">資安公司 Calif 披露以 AI 助手一小時找到 OpenJDK 嚴重漏洞 Java4Shell，可未授權遠端執行程式碼；甲骨文同日發布修補，影響 Java 17 至 27。</a></li>
+      <li><a href="#card-13">據《華爾街日報》與彭博報導，企業卡新創 Ramp 正洽談至少 10 億美元的新一輪募資，估值上看 750 億美元，將是今年內第三輪。</a></li>
+      <li><a href="#card-14">Instagram 推出「內容保護」工具，協助創作者揪出未經授權的轉貼與 AI 竄改影片，即使畫面被改、沿用原音訊也能偵測。</a></li>
+      <li><a href="#card-15">Spotify 向所有藝人推出「藝人檔案保護」工具，可控管掛在自己名下的音樂，防範深偽歌曲與錯誤歸屬；索尼上月要求下架逾 26 萬首深偽歌曲。</a></li>
+    </ol></div>
+  </section>
+  <section>
+    <div class="sec-head"><span class="sec-num">02</span><h2>今日頭條</h2><span class="rule"></span></div>
+    <div class="top3">
+      <div class="mini"><span class="rank">01</span><a href="#card-1">輝達第三季營收 1158 億美元、年增 103%，上調財測、董事會排除黃仁勳回任</a><p>輝達首份沒有黃仁勳的財報營收 1158 億美元、年增 103%，第四季財測上看 1300 億美元；董事長明言董事會無意讓他回任。</p></div>
+      <div class="mini"><span class="rank">02</span><a href="#card-2">OpenAI 發布 GPT-6.2 Astra 與 Sol：旗艦降價兩成，首獲「自我改進高風險」評級</a><p>OpenAI 發布 GPT-6.2 Astra 與 Sol，旗艦 API 降價兩成；Astra 成為首款被評為自我改進高風險的對外模型。</p></div>
+      <div class="mini"><span class="rank">03</span><a href="#card-3">微軟 Ignite 一口氣發布七款 MAI 模型：程式模型號稱以 5% 成本逼近 Opus 5.5</a><p>微軟在 Ignite 發布七款自研 MAI 模型，MAI Code 2 號稱以 5% 成本達到 Claude Opus 5.5 約 96% 表現。</p></div>
+    </div>
+  </section>
+  <section>
+    <div class="sec-head"><span class="sec-num">03</span><h2>全部資訊</h2><span class="rule"></span></div>
+    <article class="card is-top" id="card-1">
+      <div class="head"><span class="num">01</span><span class="tag tag-other">其他</span></div>
+      <h3>輝達第三季營收 1158 億美元、年增 103%，上調財測、董事會排除黃仁勳回任</h3>
+      <p class="en">Nvidia Boosts Forecast While Quashing Idea of Huang&#x27;s Return</p>
+      <p class="lede">輝達首份沒有黃仁勳的財報營收 1158 億美元、年增 103%，第四季財測上看 1300 億美元；董事長明言董事會無意讓黃仁勳回任。</p>
+      <p class="body">輝達 11 月 17 日美股盤後公布 2027 財年第三季財報，這是創辦人黃仁勳 11 月 12 日辭職後的第一份財報，由臨時執行長、原財務長 Colette Kress 領銜電話會議。單季營收 1158.4 億美元、年增 103%，調整後每股盈餘 2.68 美元，雙雙高於市場預期的 1091 億美元與 2.48 美元；資料中心營收 1076 億美元、年增 110%，占總營收約 93%。</p>
+      <p class="body">公司同步上調展望，預估第四季營收 1300 億美元（上下浮動 3%），高於市場預期的 1253 億美元；不過第四季毛利率預估降至 71% 至 72%，低於第三季的 74.9%。Kress 同時把 2028 財年營收成長預期由 70% 提高至 75%，並表示 Vera Rubin 平台「開局強勁」、已開始出貨。</p>
+      <p class="body">人事是市場最關注的焦點。新任董事長 Harvey Jones 在電話會議開場即表明，董事會一致接受黃仁勳的辭職，「無意讓 Jensen 回任執行長」；黃仁勳稍早則公開表示，若董事會邀請，他願意回任。Kress 強調公司「一切照常」，客戶、供應商與合作夥伴都百分之百支持。</p>
+      <p class="body">財報同時揭露，輝達本季買回庫藏股與發放股利共 281 億美元，庫藏股授權餘額約 2273 億美元；Kress 表示，前沿實驗室客戶約占今年資料中心營收的 15%，反映大型實驗室正自建資料中心。財報發布後，輝達盤後股價一度上揚逾 4%。</p>
+      <p class="body">不過挑戰仍在：黃仁勳已同意本月稍晚赴國會作證，美國財政部也關注輝達的中國營收問題；公司財測仍假設來自中國的資料中心運算營收為零。接班人選的搜尋正在進行，董事會表示將同時考慮內部與外部人選。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.bloomberg.com/news/articles/2026-11-17/nvidia-delivers-solid-outlook-in-first-post-huang-earnings" target="_blank" rel="noopener">Bloomberg</a><a href="https://www.businesstimes.com.sg/international/global/nvidia-boosts-forecast-while-quashing-idea-huangs-return" target="_blank" rel="noopener">The Business Times</a><span class="note">發布時間：Bloomberg 2026-11-17T21:24:23+00:00（UTC）；The Business Times 2026-11-18T06:15:00+08:00（UTC+8）。營收與財測數字引自輝達官方財報與多家媒體報導；盤後股價為盤後交易即時數字，會持續變動；「無意回任」為董事長在電話會議上的表述。</span></div>
+    </article>
+    <article class="card is-top" id="card-2">
+      <div class="head"><span class="num">02</span><span class="tag tag-model">模型</span></div>
+      <h3>OpenAI 發布 GPT-6.2 Astra 與 Sol：旗艦降價兩成，首獲「自我改進高風險」評級</h3>
+      <p class="en">Introducing GPT-6.2 Astra and Sol</p>
+      <p class="lede">OpenAI 發布 GPT-6.2 Astra 與 Sol，旗艦 API 降價 20%、評測分數全面提升，但 Astra 也成為首款被評為自我改進高風險的對外模型。</p>
+      <p class="body">OpenAI 11 月 17 日發布 GPT-6.2 Astra 與 Sol，兩款模型即日起在 ChatGPT Work 與 Codex 上線，開放 Plus、Pro、Enterprise 與 Edu 用戶使用，開發者也可透過 API 取用；一般 Chat 對話模式本次並未加入新模型。</p>
+      <p class="body">Astra 定位為旗艦模型，鎖定最困難的專業專案；Sol 則是平價高效的日常模型。Astra 標準 API 價格較前代下調 20%，每百萬輸入 tokens 8 美元、輸出 40 美元；Sol 維持每百萬輸入 2 美元、輸出 10 美元不變。</p>
+      <p class="body">評測成績方面，獨立評測機構 Artificial Analysis 的智慧指數給 Astra 62 分（前代 57 分）、Sol 57 分（前代 55 分）；OpenAI 稱 Sol 在 Cognition 的 FrontierCode 2.0 上以約五分之一成本，拿到與 Astra 相差不到 0.5 分的成績。Astra 在 Agents&#x27; Last Exam 上領先 GPT-6 Astra 5.2 分、領先 Claude Fable 5.2 5.5 分，成本僅為後者的 5%（據第三方彙整）。</p>
+      <p class="body">安全性是本次發布的另一重點。系統卡顯示，兩款模型在 OpenAI 整備框架下皆被評為網路安全「重大」等級、生物與化學能力「高」等級；Astra 更成為首款被評為 AI 自我改進「高」等級的對外模型。OpenAI 表示，兩款模型上線時已對高風險網路安全協助設下更嚴格的防護。</p>
+      <p class="body">市場反應並不一致。VentureBeat 報導，部分重度用戶抱怨新模型「幾乎無法使用」，早期印象兩極；但評測數據顯示新模型在多項基準上確實優於前代。同日 OpenAI 也更新法律專用設定 Astra for Law，改以 GPT-6.2 Astra 為基礎，開放所有 ChatGPT Enterprise 客戶申請使用。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://openai.com/index/introducing-gpt-6-2-astra-sol" target="_blank" rel="noopener">OpenAI</a><a href="https://www.unite.ai/openai-releases-gpt-6-2-astra-with-first-high-self-improvement-rating/" target="_blank" rel="noopener">Unite.AI</a><a href="https://venturebeat.com/technology/essentially-unusable-openai-launches-gpt-6-2-astra-and-sol-to-negative-reception-from-ai-power-users" target="_blank" rel="noopener">VentureBeat</a><span class="note">發布時間：OpenAI 2026-11-17T17:45:00+00:00（UTC）；Unite.AI 2026-11-17（未確認）；VentureBeat 2026-11-17T22:33:40+00:00（UTC）。評測分數為 OpenAI 自述與 Artificial Analysis 獨立評測；「幾乎無法使用」為 VentureBeat 引述個別用戶說法，屬早期印象、非定論；Astra for Law 為 9 月 17 日首發的法律專用設定，本次為改版更新。</span></div>
+    </article>
+    <article class="card is-top" id="card-3">
+      <div class="head"><span class="num">03</span><span class="tag tag-model">模型</span></div>
+      <h3>微軟 Ignite 一口氣發布七款 MAI 模型：程式模型號稱以 5% 成本逼近 Opus 5.5</h3>
+      <p class="en">Microsoft Unveils AI Models for Coding, Cybersecurity as It Takes on Anthropic, OpenAI</p>
+      <p class="lede">微軟在 Ignite 2026 發布七款自研 MAI 模型，主打程式、資安、影像與語音，MAI Code 2 號稱以 5% 成本達到 Claude Opus 5.5 約 96% 表現。</p>
+      <p class="body">微軟 11 月 17 日在舊金山 Ignite 2026 開幕主題演講中，由執行長 Satya Nadella 發布七款自研 MAI 模型，涵蓋程式、資安、影像、即時語音、轉錄與決策，核心訴求是「性價比」，直接對標 OpenAI 與 Anthropic 的前沿模型。</p>
+      <p class="body">主角是程式模型 MAI Code 2 與輕量版 Code 2 Flash。微軟稱 Code 2 在四項指定程式評測的平均表現達 GPT-6.1 Sol 的約 98%、成本約四成；對 Anthropic 的 Claude Opus 5.5 則為約 96% 表現、僅 5% 成本。兩款模型即日起在 GitHub Copilot 上線，Flash 另以有限預覽登上 Microsoft Foundry。</p>
+      <p class="body">其餘五款包括資安模型 MAI Cyber 2 Flash、影像模型 MAI Image 2.7、即時語音模型 MAI Realtime 1、醫療轉錄模型 Dragon Copilot Transcribe，以及決策模型 Microsoft-Decision-1.1。微軟稱 Cyber 2 Flash 在 CyberGymE2E 評測上與 GPT-6 Astra 品質相當，單次任務成本不到對方的 2%，初期僅提供給通過審核的防禦方客戶。</p>
+      <p class="body">微軟同時推出 MAI Licensed Weights 方案，讓受信任的客戶可透過 Frontier Company 合作取得模型權重，在自家 Azure 環境中微調與部署；不過供應時程、價格與適用模型清單尚未公布。Copilot 方面則推出多人協作空間 Copilot Workspaces 與可 24 小時自主推進任務的 Autopilot。</p>
+      <p class="body">需要留意的是，成本比較多半採用促銷價或微軟自選的評測組合，獨立驗證仍待後續。路透指出，微軟 AI 執行長 Mustafa Suleyman 認為，分工明確的專用模型策略正在發揮作用；但同日 OpenAI 與 Anthropic 的新動態，也讓這場成本競賽的勝負更難預料。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://blogs.microsoft.com/blog/2026/11/17/ignite-2026-building-the-frontier-ecosystem/" target="_blank" rel="noopener">Microsoft</a><a href="https://wncy.com/2026/11/17/microsoft-unveils-ai-models-for-coding-cybersecurity-as-it-takes-on-anthropic-openai/" target="_blank" rel="noopener">Reuters</a><span class="note">發布時間：Microsoft 2026-11-17T18:36:03+00:00（UTC）；Reuters 2026-11-17T18:18:22+00:00（UTC）。效能與成本數字為微軟自述，成本比較採促銷價或自選評測組合，未經獨立驗證；MAI Licensed Weights 目前僅「即將推出」，透過 Frontier Company 合作提供。</span></div>
+    </article>
+    <article class="card" id="card-4">
+      <div class="head"><span class="num">04</span><span class="tag tag-funding">融資</span></div>
+      <h3>Anthropic IPO 超額認購近七倍；修正文件揭露亞馬遜、谷歌持股與微軟 472 億美元算力承諾</h3>
+      <p class="en">Anthropic&#x27;s IPO Is 7x Oversubscribed, but Its Record Depends on $26 Billion From Its Own Suppliers</p>
+      <p class="lede">Anthropic IPO 認購近發行量的七倍，紅杉與 Lightspeed 擬加碼；修正文件揭露 IPO 後亞馬遜持股約 15%、谷歌約 14%，以及對微軟至少 472 億美元的算力承諾。</p>
+      <p class="body">據彭博 11 月 17 日報導，Anthropic 的 IPO 已吸引近發行量七倍的認購訂單，距離 11 月 18 日定價僅剩一天；另有報導稱，紅杉資本與 Lightspeed 等既有投資人計畫在 IPO 中加碼認購。發行價區間為每股 70 至 78 美元、共 8.25 億股，完全稀釋估值上看約 1.4 兆美元。</p>
+      <p class="body">Anthropic 同日向美國證管會提交修正招股文件，揭露 IPO 及同步進行的 260 億美元私募配售完成後，亞馬遜將持有約 15% 股權、谷歌約 14%。其中谷歌的持股包含約 1.35 億股無投票權股票，來自其在私募配售中斥資約 100 億美元認購的部分。</p>
+      <p class="body">文件也揭露一筆龐大的算力承諾：Anthropic 與微軟簽訂的協議，承諾在 2026 年 11 月至 2033 年 6 月間採購至少 472 億美元、最多 492 億美元的算力，且無論實際用量多少都須履約。相較之下，公司對谷歌的算力承諾約 1213 億美元、對亞馬遜約 1100 億美元；整體已承諾支出約 9009 億美元。</p>
+      <p class="body">以發行價區間中點每股 74 美元計算，Anthropic 預計本次 IPO 淨募資約 846 億美元，若承銷商全數行使超額配售權則上看 937 億美元，將超越 SpaceX 今年 6 月的上市規模，成為歷來最大 IPO 之一。另有市場預估，掛牌後首月可望吸引逾 190 億美元的指數相關買盤。</p>
+      <p class="body">不過市場氣氛並不全然樂觀。AI 股近六週大幅回檔、那斯達克 100 指數下跌約 12%，加上 Anthropic 背負 62 億美元債務，投資人對 AI 估值的疑慮仍在。11 月 18 日的定價結果，將是檢驗機構需求的第一個硬指標。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://memeburn.com/anthropics-ipo-is-7x-oversubscribed-but-its-record-depends-on-26-billion/" target="_blank" rel="noopener">Memeburn（引述彭博）</a><a href="https://www.bloomberg.com/news/articles/2026-11-17/anthropic-backers-sequoia-lightspeed-set-to-invest-more-in-ipo" target="_blank" rel="noopener">Bloomberg</a><a href="https://www.unite.ai/ar/anthropic-targets-84-6-billion-in-net-ipo-proceeds-at-midpoint/" target="_blank" rel="noopener">Unite.AI</a><span class="note">發布時間：Memeburn（引述彭博） 2026-11-17T01:27:49+00:00（UTC）；Bloomberg 2026-11-17T23:53:15+00:00（UTC）；Unite.AI 2026-11-17（未確認）。「超額認購近七倍」為彭博報導的市場消息；持股與算力承諾數字引自 Anthropic 修正招股文件；定價與掛牌日期為市場預期，SEC 文件未定死，仍可能變動。</span></div>
+    </article>
+    <article class="card" id="card-5">
+      <div class="head"><span class="num">05</span><span class="tag tag-policy">政策</span></div>
+      <h3>輝達停售中國 AI 晶片；中國警告將報復美國新一輪出口管制</h3>
+      <p class="en">Nvidia Stops Selling AI Chips to China Despite US Approval</p>
+      <p class="lede">輝達臨時執行長表示，公司已不再向中國出貨 AI 晶片；中國則警告將對美國收緊晶片出口管制作出報復，雙方對峙升級。</p>
+      <p class="body">據彭博 11 月 18 日報導，輝達臨時執行長 Colette Kress 在 11 月 17 日的財報電話會議上表示，公司已不再向中國出貨 AI 晶片。報導指出，此舉發生在美國政府已批准部分對中出貨的背景下，顯示輝達在合規與政治風險之間選擇了更保守的立場。</p>
+      <p class="body">中國方面迅速回應。中國商務部 11 月 17 日警告，將對美國的新一輪晶片出口管制採取報復措施，並呼籲美方回到對話。美國商務部 11 月 16 日發布臨時最終規則，要求向可能供中國等受限國家企業使用算力的海外資料中心出口先進 AI 晶片時須取得許可，鎖定可提供逾 1200 萬總處理效能的設施。</p>
+      <p class="body">新規的直接導火線是 Megaspeed 事件，該公司被指為中國企業安排近 120 億美元的輝達晶片訂單；美國商務部表示，新制是為了防止既有實體出口管制被遠端雲端算力架空。規則同時新增對印尼、馬來西亞、新加坡、泰國與巴西的先進半導體出口許可要求。</p>
+      <p class="body">同日輝達董事會宣布成立國安與出口管制監督常設委員會，由董事 Suzanne Nora Johnson 擔任主席，成員包括 Stephen C. Neal 與 John O. Dabiri，每季至少開會一次，負責監督公司的國安政策、出口管制合規與全球貿易風險。黃仁勳已同意本月稍晚赴國會作證。</p>
+      <p class="body">值得注意的是，輝達財測仍假設來自中國的資料中心運算營收為零，顯示公司短期內並不指望恢復對中出貨。中國的報復形式與時程尚未明朗，後續發展將牽動全球 AI 晶片供應鏈的布局。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.bloomberg.com/news/articles/2026-11-18/interim-nvidia-ceo-says-it-s-no-longer-sending-ai-chips-to-china" target="_blank" rel="noopener">Bloomberg</a><a href="https://www.bloomberg.com/news/articles/2026-11-17/china-warns-us-of-retaliation-over-chip-curbs-urges-dialogue" target="_blank" rel="noopener">Bloomberg</a><a href="https://techcrunch.com/2026/11/17/nvidias-first-big-move-after-jensen-huangs-exit-targets-national-security/" target="_blank" rel="noopener">TechCrunch</a><span class="note">發布時間：Bloomberg 2026-11-18T00:09:05+00:00（UTC）；Bloomberg 2026-11-17T13:58:37+00:00（UTC）；TechCrunch 2026-11-17T14:05:00+00:00（UTC）。「停售」為彭博引述 Kress 在電話會議上的說法；中國報復的具體形式尚未公布；出口管制新規為臨時最終規則，刊登於聯邦公報後生效。</span></div>
+    </article>
+    <article class="card" id="card-6">
+      <div class="head"><span class="num">06</span><span class="tag tag-funding">融資</span></div>
+      <h3>Isomorphic Labs 募 50 億美元 C 輪，朝臨床試驗推進 AI 設計藥物</h3>
+      <p class="en">Isomorphic Labs Raises $5B to Take Drug Candidates to Clinical Trials</p>
+      <p class="lede">Google DeepMind 分拆的 AI 製藥公司 Isomorphic Labs 完成 50 億美元 C 輪融資，由 Greenoaks 與紅杉領投，將把 AI 設計的候選藥物推向臨床試驗。</p>
+      <p class="body">AI 藥物研發公司 Isomorphic Labs 11 月 17 日宣布完成 50 億美元 C 輪融資，由 Greenoaks 與紅杉資本共同領投，Andreessen Horowitz 等新投資人參與，Alphabet 大幅加碼，Thrive、MGX 與 GV 等既有投資人跟投。公司未公布本輪估值。</p>
+      <p class="body">Isomorphic Labs 於 2021 年自 Google DeepMind 分拆，創辦人暨執行長 Demis Hassabis 已卸下 DeepMind 負責人職務，專注藥物研發。公司打造的藥物設計引擎 IsoDDE，結合多種模擬 AI 模型探索化學空間，協助設計新藥、預測藥性，並在製作與測試前反覆優化候選藥物。</p>
+      <p class="body">公司表示，其藥物研發計畫已在腫瘤學與免疫學領域取得「正面的臨床前結果」，新資金將用於把首批候選藥物推進臨床試驗，並把藥物設計引擎拓展至更多疾病領域。合作夥伴包括諾華、禮來與嬌生。</p>
+      <p class="body">本輪距離今年 5 月由 Thrive 領投的 21 億美元 B 輪僅約半年，顯示資本市場對 AI 製藥的熱度持續升溫。彭博本月稍早報導，Isomorphic Labs 尋求以 500 億美元估值募資；若屬實，估值將遠高於多數同業。</p>
+      <p class="body">不過 AI 設計藥物能否真正通過臨床驗證仍是未定之數，Isomorphic Labs 至今尚未有候選藥物進入人體試驗。隨著資金到位，首批臨床數據將成為檢驗其平台價值的關鍵。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://techcrunch.com/2026/11/17/isomorphic-labs-raises-5b-as-it-looks-to-take-drug-candidates-to-clinical-trials/" target="_blank" rel="noopener">TechCrunch</a><a href="https://www.reuters.com/legal/litigation/ai-drug-developer-isomorphic-raises-5-billion-series-c-round-2026-11-17/" target="_blank" rel="noopener">Reuters</a><span class="note">發布時間：TechCrunch 2026-11-17T14:50:00+00:00（UTC）；Reuters 2026-11-17（未確認）。估值未公布，「尋求 500 億美元估值」為彭博本月稍早的報導；臨床前結果為公司自述，尚未經獨立驗證。</span></div>
+    </article>
+    <article class="card" id="card-7">
+      <div class="head"><span class="num">07</span><span class="tag tag-funding">融資</span></div>
+      <h3>法國機器人新創 Genesis AI 募 5 億美元、估值 35 億美元，量產手套訓練的 Eno 機器人</h3>
+      <p class="en">Genesis AI Raises $500M to Deploy Glove-Wearing Robots</p>
+      <p class="lede">法國具身智慧新創 Genesis AI 完成 5 億美元 A 輪融資、投後估值 35 億美元，將量產以感測手套訓練的通用機器人 Eno，2027 年擴大交付。</p>
+      <p class="body">法國具身智慧新創 Genesis AI 11 月 17 日宣布完成 5 億美元 A 輪融資，投後估值 35 億美元，由 Khosla Ventures、Premji Invest 與 Eclipse 共同領投；參投方包括前 Google 執行長 Eric Schmidt、法國創業家 Xavier Niel、輝達創投與法國國家投資銀行 Bpifrance。</p>
+      <p class="body">Genesis 由前 Mistral AI 研究員 Théophile Gervet 與執行長周嫻共同創立，2024 年成立、2025 年 7 月以 1.05 億美元種子輪脫離隱身。公司採取垂直整合策略：自行產生訓練資料、開發生成式 AI 模型，並同步設計與製造機器人硬體。</p>
+      <p class="body">旗艦產品 Eno 為通用型機器人，主打靈巧操作能力：透過感測手套記錄人類手部動作進行訓練，雙手各有 20 個驅動自由度。公司稱已製造 30 至 40 台 Eno，正在少數客戶端測試，量產預計 2027 年透過美國製造商進行。</p>
+      <p class="body">新資金將用於擴大資料採集與大規模訓練、提升機器人的手部操作能力，並擴大 Eno 的生產與部署。周嫻表示，公司初期優先布局美國市場，計畫建立美國供應鏈、代工與客戶群。</p>
+      <p class="body">本輪是歐洲機器人領域歷來最大規模融資之一，反映投資人對 AI 賦能工廠機器人的押注。不過公司未公布營收與付費客戶數量，Eno 能否真正走進工廠量產，仍待 2027 年的交付表現驗證。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://techcrunch.com/2026/11/17/genesis-ai-raises-500-million-to-deploy-electric-glove-wearing-robots/" target="_blank" rel="noopener">TechCrunch</a><a href="https://www.reuters.com/business/finance/french-robot-maker-genesis-raises-500-million-35-billion-valuation-2026-11-17/" target="_blank" rel="noopener">Reuters</a><span class="note">發布時間：TechCrunch 2026-11-17T14:00:00+00:00（UTC）；Reuters 2026-11-17（未確認）。估值與客戶數為公司自述；「歐洲最大規模之一」為路透報導的描述；量產時程為公司目標，尚未實現。</span></div>
+    </article>
+    <article class="card" id="card-8">
+      <div class="head"><span class="num">08</span><span class="tag tag-funding">融資</span></div>
+      <h3>Model ML 募 2.5 億美元、估值 15 億美元，以 AI 代理取代投行初級分析師工作</h3>
+      <p class="en">Model ML Raises $250M to Automate Investment Banking Grunt Work</p>
+      <p class="lede">倫敦新創 Model ML 完成 2.5 億美元 B 輪融資、估值 15 億美元，以 AI 代理自動化投行建模、簡報與盡職調查等初級工作。</p>
+      <p class="body">倫敦新創 Model ML 11 月 17 日宣布完成 2.5 億美元 B 輪融資，估值 15 億美元，由 General Atlantic 與早期投資人 QED Investors 共同領投。距離去年宣布的 7500 萬美元 A 輪僅約一年，估值已翻倍。</p>
+      <p class="body">公司由兄弟 Chaz 與 Arnie Englander 共同創立，成立約三年，開發的 AI 代理可串接客戶的系統、資料與工具，包括 Excel 與 PowerPoint，自動完成財務建模、簡報製作與盡職調查報告等工作。</p>
+      <p class="body">這些正是投資銀行與管理顧問公司中，初級分析師最耗時、也最重複的環節。Model ML 的賣點是讓資深銀行家把時間花在判斷與客戶關係上，而非資料整理；同類競爭者包括 Hebbia 與 Rogo，後者今年 4 月以 20 億美元估值募資 1.6 億美元。</p>
+      <p class="body">Anthropic 與 OpenAI 近期也推出面向金融專業人士的工具，顯示投行工作流程正成為 AI 代理的兵家必爭之地。不過金融機構對資料安全與輸出準確度的要求極高，AI 代理能否真正通過合規審查，仍是各家必須跨過的門檻。</p>
+      <p class="body">Model ML 未公布營收與客戶數量，僅稱業務持續成長。隨著 B 輪資金到位，公司計畫擴大產品與市場團隊，把代理部署到更多銀行與顧問公司。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://techcrunch.com/2026/11/17/model-ml-raises-250m-to-automate-investment-banking-grunt-work/" target="_blank" rel="noopener">TechCrunch</a><a href="https://www.at-pulse.com/editions/2026-11-17/#ai" target="_blank" rel="noopener">AT Pulse</a><span class="note">發布時間：TechCrunch 2026-11-17T19:32:00+00:00（UTC）；AT Pulse 2026-11-17（未確認）。估值與客戶成長為公司自述；競爭者融資金額引自 TechCrunch 報導；營收與客戶數未公布。</span></div>
+    </article>
+    <article class="card" id="card-9">
+      <div class="head"><span class="num">09</span><span class="tag tag-app">應用</span></div>
+      <h3>Google Gemini Tasks 六國免費上線：可代打電話、代購物，還能用簡訊與 Email 指派</h3>
+      <p class="en">Google Expands Access to Gemini Tasks, Which Can Help With Calls, Purchases</p>
+      <p class="lede">Google 將 Gemini 的 Tasks 代理功能向美國、日本、韓國、加拿大、澳洲與印度免費開放，搭載 Gemini 4 Hydrogen，可代打電話、預約與結帳。</p>
+      <p class="body">Google 11 月 17 日宣布，Gemini 的 Tasks 功能即日起向美國、日本、韓國、加拿大、澳洲與印度免費開放，搭載新模型 Gemini 4 Hydrogen，覆蓋數億用戶。此前這項功能僅提供給 Google AI Pro 與 Ultra 付費用戶。</p>
+      <p class="body">Tasks 是 Gemini 的代理模式：使用者把任務交給它，它可在背景完成多步驟工作，例如打電話給車行預約保養、代找美容或維修空檔、比價並以 Google Pay 結帳，甚至在授權下登入網站。Google 產品副總裁 Josh Woodward 稱，自己已用它替家裡的休旅車預約保養。</p>
+      <p class="body">美國用戶還獲得一組進階功能：可透過簡訊與 Email 指派任務（Text with Gemini、Email with Gemini），不必打開 Gemini App；通話功能在印第安納、路易斯安那、明尼蘇達、蒙大拿與內布拉斯加五州暫不提供。購物結帳採用代理支付協議，支援 Mastercard 與 Visa 的數位憑證。</p>
+      <p class="body">Tasks 的前身是今年 5 月以 Gemini Spark 之名向少數測試者推出的全天候代理，8 月擴大至 AI Pro 與 Ultra 訂閱用戶，10 月整合進 Gemini App 本體。免費版可每天排程一次任務，Pro 與 Ultra 用戶則可每小時排程，並有 Gmail 與新聞觸發條件。</p>
+      <p class="body">Google 坦言，Tasks 仍可能無法完成任務或偏離目標，使用者須自行確認結果。值得注意的是，歐洲經濟區、英國、瑞士與奈及利亞不在本次開放範圍，免費版也不適用工作與學校帳號。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://blog.google/innovation-and-ai/products/gemini-app/tasks-in-gemini-free-new-features/" target="_blank" rel="noopener">Google</a><a href="https://techcrunch.com/2026/11/17/google-expands-access-to-gemini-tasks-which-can-help-with-calls-purchases/" target="_blank" rel="noopener">TechCrunch</a><span class="note">發布時間：Google 2026-11-17T17:00:00+00:00（UTC）；TechCrunch 2026-11-17T19:02:00+00:00（UTC）。免費開放國家與功能細節引自 Google 官方部落格與 TechCrunch；Tasks 仍可能出錯，為 Google 自述的限制。</span></div>
+    </article>
+    <article class="card" id="card-10">
+      <div class="head"><span class="num">10</span><span class="tag tag-app">應用</span></div>
+      <h3>OpenAI 推出 ChatGPT for Sales：銷售外掛串接 Salesforce 等 30 多個工具</h3>
+      <p class="en">Introducing ChatGPT for Sales</p>
+      <p class="lede">OpenAI 推出 ChatGPT for Sales，內建銷售外掛與 30 多個合作夥伴外掛，可串接 Salesforce、HubSpot 等工具，協助業務備會、寫提案與跟進。</p>
+      <p class="body">OpenAI 11 月 17 日推出 ChatGPT for Sales，鎖定銷售團隊的日常工作：理解客戶、減少雜務、加速成交。產品核心是 OpenAI 自家的銷售外掛，提供從挑選目標帳戶、會前準備到撰寫跟進信的現成工作流程。</p>
+      <p class="body">同時上線的還有 30 多個新增與強化的合作夥伴外掛，涵蓋六類工作流程：內容與賦能（Confluence、Guru、Seismic）、帳戶與交易（Salesforce、HubSpot、Close CRM）、找尋買家（Apollo、Clay、Common Room）、對話轉行動（Gong、Otter.ai、Granola）、績效與風險（Backstory、Hex），以及報價與合約（Docusign、Ironclad、PandaDoc）。</p>
+      <p class="body">ChatGPT 可藉此彙整散落在 CRM、通話紀錄與潛在客戶工具中的資訊，替業務準備客戶簡報、分析交易卡關原因，或在會後自動起草跟進信並把下一步存回 CRM。OpenAI 強調，答案來自團隊已在使用的工具，而非憑空推測。</p>
+      <p class="body">常駐代理 dot 也能使用同一批外掛與客戶脈絡，在對話之間持續推進工作，例如每天早上檢查交易動態、標示需要關注的變化，並主動提出會議摘要與跟進建議供使用者審閱。</p>
+      <p class="body">ChatGPT for Sales 由 ChatGPT Business 與 Enterprise 管理員在管理後台啟用，合作夥伴外掛的可用性依方案、地區與工作區設定而異。這是 OpenAI 繼 ChatGPT for Healthcare 之後，再次針對特定職業推出垂直產品，顯示其企業市場策略正加速分眾化。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://openai.com/index/introducing-chatgpt-for-sales" target="_blank" rel="noopener">OpenAI</a><a href="https://myindustrynews.net/TenantSites/1bf91c5e-dbc9-4e91-a10c-d949ca1d094d/2026/11/272c05c7-fdee-4372-b8fb-3dc126581fb4.html" target="_blank" rel="noopener">MyIndustryNews</a><span class="note">發布時間：OpenAI 2026-11-17T08:00:00+00:00（UTC）；MyIndustryNews 2026-11-17（未確認）。上線日期引自 OpenAI 官方 RSS（11 月 17 日 08:00 UTC）與當日新聞彙整；外掛可用性依方案、地區與工作區設定而異。</span></div>
+    </article>
+    <article class="card" id="card-11">
+      <div class="head"><span class="num">11</span><span class="tag tag-other">其他</span></div>
+      <h3>OpenAI 與北約合作 Daybreak：盟國網防每月用掉高達 3000 億 tokens</h3>
+      <p class="en">Strengthening NATO and Allied Cyber Defenses with AI</p>
+      <p class="lede">OpenAI 宣布北約核心機構透過 Daybreak 使用其網安模型，每月用量高達 3000 億 tokens；歐洲多國網安機構亦已接入，烏克蘭用它強化民用基礎設施防禦。</p>
+      <p class="body">OpenAI 11 月 17 日在北約年度科技盛會 NATO Edge 上宣布，與北約通訊與資訊局（NCIA）合作，讓北約核心機構透過 Daybreak 計畫使用其先進網路安全模型，協助保護盟國網路。北約早期使用量已達每月高達 3000 億個輸入與輸出 tokens。</p>
+      <p class="body">Daybreak 是 OpenAI 今年 5 月推出的計畫，把前沿模型交給受信任的防禦方，用於授權的安全工作：審查程式碼、調查可疑活動、驗證漏洞，以及開發與測試修補程式。本次宣布是該計畫首次公布具名的政府客戶。</p>
+      <p class="body">歐洲多國機構已有具體成果：歐盟網安局 ENISA 用相關模型在歐盟機構使用的軟體中找出四個漏洞，修補程式皆已發布；波蘭 CERT Polska 則在 MikroTik RouterOS 中找出六個漏洞，廠商已發布修補。法國 ANSSI 與德國、波蘭的國家網安機構亦已接入。</p>
+      <p class="body">烏克蘭數位轉型部正使用 Daybreak 強化民用基礎設施的網路防禦，協助當地團隊更快找出軟體漏洞、開發與測試修補程式。OpenAI 也支援了北約網路防禦卓越中心 11 月初在塔林舉行的 Crossed Swords 2026 演習，參與者在演習中建立、部署並評估用於網路作戰的 AI 代理。</p>
+      <p class="body">OpenAI 國家安全政策負責人 Sasha Baker 表示，防禦民主國家的人應該擁有最先進的技術。值得注意的是，OpenAI 未公布合約金額，也未說明北約使用的是哪一層級的模型；外界對 AI 網安工具的獨立測試仍在持續。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://openai.com/index/strengthening-nato-allied-cyber-defences-ai" target="_blank" rel="noopener">OpenAI</a><a href="https://www.defenseone.com/technology/2026/11/openai-gives-nato-access-most-advanced-cybersecurity-ai/417296/" target="_blank" rel="noopener">Defense One</a><span class="note">發布時間：OpenAI 2026-11-17（未確認）；Defense One 2026-11-17T19:39:00-05:00（UTC-5）。用量與漏洞數字為 OpenAI 自述；合約金額與模型層級未公布；Crossed Swords 2026 演習於 11 月 2 日至 6 日在塔林舉行。</span></div>
+    </article>
+    <article class="card" id="card-12">
+      <div class="head"><span class="num">12</span><span class="tag tag-research">研究</span></div>
+      <h3>AI 一小時找到 Java 嚴重漏洞 Java4Shell：未授權遠端執行，甲骨文同日修補</h3>
+      <p class="en">Calif Uses AI to Find Java4Shell as OpenJDK and Oracle Ship Fixes</p>
+      <p class="lede">資安公司 Calif 披露以 AI 助手一小時找到 OpenJDK 嚴重漏洞 Java4Shell，可未授權遠端執行程式碼；甲骨文同日發布修補，影響 Java 17 至 27。</p>
+      <p class="body">資安公司 Calif 11 月 17 日披露名為 Java4Shell 的嚴重漏洞（CVE-2026-114938），位於 OpenJDK 以手寫組語實作的硬體加速 Base64 解碼器，影響在支援 AVX-512 VBMI 的 x86-64 處理器上運行的 OpenJDK 17.0.6 以後版本，包括 Java 17、21、25 與 27。</p>
+      <p class="body">研究員 Quang Luong 在 OpenAI 的 Codex 協助下，約一小時就找到這個漏洞，兩小時後做出第一個可用的攻擊程式，AI 用量成本不到 200 美元。Calif 進一步展示，在 Jira、Confluence、Jenkins、Keycloak 等應用的預設安裝中，可在未授權的情況下遠端執行程式碼。</p>
+      <p class="body">嚴重程度評分方面，Calif 給出 CVSS 4.0 的 9.2 分（重大），甲骨文則以 CVSS 3.1 評為 8.1 分（高），差異來自甲骨文將攻擊複雜度列為「高」。受影響的發行版包括 Oracle Java SE、Amazon Corretto、Eclipse Temurin、微軟與紅帽的 OpenJDK 建置版本。</p>
+      <p class="body">甲骨文 11 月 17 日隨 11 月重大修補更新發布修補程式，OpenJDK 同日發布安全公告；美國網路安全暨基礎設施安全局（CISA）亦發布警示，敦促各組織立即修補。無法立即更新的系統，可先以 JVM 參數停用硬體加速的 Base64 功能作為暫時緩解。</p>
+      <p class="body">Calif 表示，目前尚未接獲野外遭利用的通報，但漏洞細節在修補前已有外洩，相關攻擊鏈將在各組織有時間升級後再公布。事件再度顯示，AI 正同時成為找漏洞與修漏洞的加速器，防禦方的修補速度成為關鍵。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.unite.ai/calif-uses-ai-to-find-java4shell-as-openjdk-and-oracle-ship-fixes/" target="_blank" rel="noopener">Unite.AI</a><a href="https://censys.com/advisory/cve-2026-114938/" target="_blank" rel="noopener">Censys</a><span class="note">發布時間：Unite.AI 2026-11-17（未確認）；Censys 2026-11-17（未確認）。漏洞發現過程與評分為 Calif 自述，尚未經獨立驗證；攻擊程式未公開，Calif 僅公布可重現記憶體覆寫的概念驗證；野外利用情況截至 11 月 17 日尚無通報。</span></div>
+    </article>
+    <article class="card" id="card-13">
+      <div class="head"><span class="num">13</span><span class="tag tag-funding">融資</span></div>
+      <h3>據報導，Ramp 洽談新一輪募資、估值上看 750 億美元，一年內第三度募資</h3>
+      <p class="en">Coatue, Thrive in Talks to Value Ramp Up to $75 Billion</p>
+      <p class="lede">據《華爾街日報》與彭博報導，企業卡新創 Ramp 正洽談至少 10 億美元的新一輪募資，估值上看 750 億美元，將是今年內第三輪。</p>
+      <p class="body">據《華爾街日報》與彭博 11 月 17 日報導，企業卡新創 Ramp 正與投資人洽談新一輪募資，規模至少 10 億美元，估值上看 700 億至 750 億美元，由現有投資人 Coatue Management 與 Thrive Capital 領投。洽談仍處早期階段，細節可能變動，Ramp 對兩家媒體的置評請求皆未回應。</p>
+      <p class="body">若本輪完成，將是 Ramp 一年內的第三輪募資。公司 10 月 15 日才宣布以 600 億美元估值募資 18.5 億美元，由 Dragoneer 領投；短短一個月內估值再漲逾 100 億美元，反映市場對其成長的追捧。</p>
+      <p class="body">Ramp 成立於 2019 年，主力業務為企業卡與支出管理，另推出協助企業管理 AI 支出的新產品 Router。公司 10 月表示，年化營收已突破 20 億美元，約為去年同期的兩倍，成長動能部分來自客戶在 AI 上的支出激增。</p>
+      <p class="body">新資金部分將預留用於併購機會；公司也可能最快明年上市，但尚未設定時間表，並正觀察 Anthropic 即將到來的 IPO，以判斷科技股上市窗口的冷熱。</p>
+      <p class="body">值得注意的是，Ramp 的募資節奏正值 AI 股大幅回檔之際，顯示優質新創的資金動能與公開市場走勢出現分化。不過洽談尚未定案，估值仍可能隨市場變化而調整。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.bloomberg.com/news/articles/2026-11-17/coatue-thrive-in-talks-to-lead-ramp-round-at-70-billion-value" target="_blank" rel="noopener">Bloomberg</a><a href="https://www.wsj.com/finance/corporate-card-startup-ramp-raising-funds-at-70-billion-valuation-631b071a" target="_blank" rel="noopener">The Wall Street Journal</a><span class="note">發布時間：Bloomberg 2026-11-17T20:24:44+00:00（UTC）；The Wall Street Journal 2026-11-17（未確認）。本條為《華爾街日報》與彭博引述知情人士的報導，洽談仍處早期、尚未定案；估值區間兩家報導略有出入（700 億至 750 億美元）。</span></div>
+    </article>
+    <article class="card" id="card-14">
+      <div class="head"><span class="num">14</span><span class="tag tag-app">應用</span></div>
+      <h3>Instagram 推出內容保護工具：揪出未授權轉貼與 AI 竄改影片</h3>
+      <p class="en">Instagram&#x27;s New Tool for Creators Targets Unauthorized Reposts and AI-Modified Videos</p>
+      <p class="lede">Instagram 推出「內容保護」工具，協助創作者揪出未經授權的轉貼與 AI 竄改影片，即使畫面被改、沿用原音訊也能偵測。</p>
+      <p class="body">Instagram 11 月 17 日宣布推出新的創作者工具「內容保護」（content protection），協助創作者保護原創影片，偵測未經授權的轉貼與 AI 竄改內容。該工具已先在 Facebook 上線，本次擴大至 Instagram。</p>
+      <p class="body">工具的偵測範圍不只傳統轉貼，也涵蓋生成式 AI 內容：即使 AI 生成影片改動了畫面，只要沿用了創作者原創內容的音訊，系統仍可偵測並標示。這回應了創作者對原創內容遭輕易複製、再散布的擔憂。</p>
+      <p class="body">生成式 AI 讓竄改既有影片變得更容易，創作者的原創內容經常在未經授權的情況下被改作、搬運。Meta 表示，新工具的目標是讓創作者對自己的內容有更多掌控，減少未經授權的使用。</p>
+      <p class="body">目前 Meta 未公布工具的覆蓋範圍、上線時程細節與申訴流程，實際偵測準確率仍待創作者實測驗證。隨著 AI 生成內容持續湧入社群平台，平台方的內容溯源與保護機制正成為新的競爭焦點。</p>
+      <p class="body">同日 Spotify 亦推出類似的創作者保護工具（見第 15 條），顯示大型平台正同步強化對 AI 仿冒與竄改內容的防禦。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://techcrunch.com/2026/11/17/instagrams-new-tool-for-creators-targets-unauthorized-reposts-and-ai-modified-videos/" target="_blank" rel="noopener">TechCrunch</a><span class="note">發布時間：TechCrunch 2026-11-17T15:00:00+00:00（UTC）。本條僅以 TechCrunch 單一來源報導；工具覆蓋範圍與上線時程細節未公布。</span></div>
+    </article>
+    <article class="card" id="card-15">
+      <div class="head"><span class="num">15</span><span class="tag tag-app">應用</span></div>
+      <h3>Spotify 推出藝人檔案保護工具，防範深偽歌曲掛在真藝人名下</h3>
+      <p class="en">Spotify&#x27;s New Tool Aims to Stop Deepfakes from Being Attributed to Real Artists</p>
+      <p class="lede">Spotify 向所有藝人推出「藝人檔案保護」工具，可控管掛在自己名下的音樂，防範深偽歌曲與錯誤歸屬；索尼上月要求下架逾 26 萬首深偽歌曲。</p>
+      <p class="body">Spotify 11 月 17 日向所有藝人推出「藝人檔案保護」（Artist Profile Protection）工具，讓藝人可控管出現在自己名下的音樂。該工具經過八個月測試後正式全面上線。</p>
+      <p class="body">工具要解決的是串流平台長期存在的問題：音樂可能因刻意冒充、詮釋資料錯誤或同名藝人，而出現在錯誤的藝人檔案下。隨著 AI 生成音樂大量湧入，這類錯誤歸屬與深偽冒充的情況更加嚴重。</p>
+      <p class="body">據 Billboard 上月報導，索尼音樂已要求各數位平台下架逾 26 萬首深偽歌曲，數量較該公司 3 月揭露時近乎翻倍，顯示 AI 生成音樂的冒充問題正在快速擴大。</p>
+      <p class="body">Spotify 未公布工具的具體運作細節，例如藝人能否主動標記可疑曲目、平台審核的時程為何。隨著生成式音樂工具普及，串流平台對內容真偽的把關壓力只會越來越大。</p>
+      <p class="body">同日 Instagram 亦推出內容保護工具（見第 14 條），兩大平台同日出招，顯示內容平台正把 AI 仿冒與竄改列為優先處理的信任與安全議題。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://techcrunch.com/2026/11/17/spotifys-new-tool-aims-to-stop-deepfakes-from-being-attributed-to-real-artists/" target="_blank" rel="noopener">TechCrunch</a><span class="note">發布時間：TechCrunch 2026-11-17T14:00:00+00:00（UTC）。本條僅以 TechCrunch 單一來源報導；索尼下架數字引自 Billboard 上月報導，經 TechCrunch 轉述。</span></div>
+    </article>
+  </section>
+  <footer>
+  <p>來源說明：本期 15 條，皆來自官方部落格、英文與中文科技媒體、跑分榜與社群；發布類條目依方案 B 以兩個獨立來源核對事件日期，核對不上的已降級或棄用；發布時間不確定者標「未確認」，不猜測。</p>
+  <p>排除說明：AMD 完成收購 World Labs（11 月 16 日宣布，李飛飛出任執行副總裁暨首席科學家）、蘋果 macOS 27.3 的 AI 代理權限管控（TechCrunch 11 月 16 日 21:01 UTC 報導）、Google Gemini 關閉紀錄後仍保留約兩個月（隱私中心 11 月 16 日更新）、DeepMind 策略長 Sekhon 跳槽 Anthropic（The Information 11 月 16 日報導）、亞馬遜 ARTEX 報告（報告本身為 11 月 13 日，VentureBeat 11 月 17 日文章為跟進報導）等，事件日皆在視窗外，已排除；OpenAI 的 Astra for Law 更新版已併入 GPT-6.2 條目，不另立條。</p>
+  <p>未收錄：Fountain Orchestra 前線員工代理、SiMa.ai Palette 3.0 邊緣晶片、AWS SageMaker HyperPod 支援 NVIDIA Dynamo、輝達基板與封裝擴產協議、Anthropic Linked billing 測試版、Clay 銷售外掛、Google GTIG 北韓後門 Claude Code 報告等，重要性相對較低。</p>
+  <p>單一來源說明：Instagram 與 Spotify 兩條僅以 TechCrunch 單一來源報導，已於條目備註中說明；Ramp 洽談案以《華爾街日報》與彭博雙來源交叉核實。</p>
+  <p>本期未能讀取：The Verge、Ars Technica（網域阻擋，改以搜尋核實）、MIT Technology Review（頁面空白）、Wired、VentureBeat RSS（curl 429，改以瀏覽器讀取成功）；DeepMind 部落格、Anthropic 官網、Microsoft AI 部落格、NVIDIA 新聞中心未直接打開（以搜尋與報導核實）；36氪、機器之心、量子位、虎嗅、雷鋒網、新智元、TechOrange、INSIDE、科技新報、數位時代、T客邦、Reddit、知乎、X（未直接讀取，以搜尋核實）；Hacker News 首頁以搜尋彙整核實。跑分榜七個來源（LMArena、Artificial Analysis、Hugging Face 榜單、Aider、SWE-bench、HELM、LiveBench）未逐一打開；掃描期間未見視窗內登頂、超車或新模型上榜的報導（Artificial Analysis 榜單變動已反映於 GPT-6.2 條目）。</p>
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 每日早報 · 2026-11-22</title>
+<style>
+  :root{
+    --bg:#faf8f4; --card:#fffdf9; --ink:#1d1915; --muted:#71685b; --faint:#a39a8a;
+    --hairline:#e9e0d0; --border:#ece3d2;
+    --ember:#b45309; --ember-deep:#8a3d05; --gold:#d9a441;
+    --serif:ui-serif,"Songti TC","STSong","Noto Serif TC","Noto Serif CJK TC",serif;
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+    --dot-model:#b45309; --dot-funding:#3f7a4e; --dot-policy:#8a5a83;
+    --dot-app:#2f7d7a; --dot-oss:#5b6470; --dot-research:#7a6a9a; --dot-other:#a89f90;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#14110d; --card:#1d1814; --ink:#f1ebe0; --muted:#a79d8c; --faint:#6f665a;
+      --hairline:#2b251e; --border:#372d21;
+      --ember:#e5a05c; --ember-deep:#f2bc7d; --gold:#d9a441;
+      --dot-model:#e5a05c; --dot-funding:#82bd8d; --dot-policy:#c69dc2;
+      --dot-app:#82c6c1; --dot-oss:#9aa3ad; --dot-research:#b3a1d6; --dot-other:#8d8474;
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","PingFang SC","Hiragino Sans GB","Microsoft JhengHei","Noto Sans TC",sans-serif;
+    line-height:1.75;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:680px;margin:0 auto;padding:36px 16px 72px}
+  .masthead{margin-bottom:30px}
+  .brand{display:flex;align-items:center;gap:9px;margin-bottom:14px}
+  .brand .mark{width:9px;height:9px;background:var(--ember);border-radius:2px;flex-shrink:0}
+  .brand .bt{font-family:var(--mono);font-size:11px;letter-spacing:.3em;color:var(--muted)}
+  .masthead h1{font-family:var(--serif);font-size:36px;font-weight:700;margin:0 0 8px;letter-spacing:.08em}
+  .dateline{font-size:14.5px;color:var(--muted);margin:0 0 4px}
+  .dayline{font-family:var(--mono);font-size:11px;letter-spacing:.22em;color:var(--faint);margin:0 0 4px}
+  .meta{font-size:12.5px;color:var(--faint);margin:0}
+  .signal{height:3px;margin-top:20px;border-radius:2px;
+    background:linear-gradient(90deg,var(--ember) 0%,var(--gold) 45%,transparent 100%)}
+  .hero{font-family:var(--serif);font-size:15.5px;line-height:1.85;margin:0 0 30px}
+  section{margin-bottom:38px}
+  .sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:16px}
+  .sec-num{font-family:var(--mono);font-size:12px;color:var(--ember);letter-spacing:.1em;flex-shrink:0}
+  .sec-head h2{font-size:15px;margin:0;letter-spacing:.14em;font-weight:700;flex-shrink:0}
+  .sec-head .rule{flex:1;height:1px;background:var(--hairline);transform:translateY(-4px)}
+  .tldr{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px 20px 20px 12px}
+  .tldr ol{margin:0;padding-left:26px}
+  .tldr li{margin:8px 0;font-size:14px}
+  .tldr li::marker{font-family:var(--mono);font-size:12px;color:var(--ember)}
+  .tldr a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--faint)}
+  .tldr a:hover{color:var(--ember);border-bottom-color:var(--ember)}
+  .top3{display:grid;gap:10px}
+  .mini{position:relative;background:var(--card);border:1px solid var(--border);border-radius:12px;
+    padding:15px 18px 15px 20px;overflow:hidden}
+  .mini::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
+    background:linear-gradient(var(--ember),var(--gold))}
+  .mini .rank{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--ember);display:block;margin-bottom:6px}
+  .mini a{color:var(--ink);text-decoration:none;font-weight:700;font-size:15px}
+  .mini a:hover{color:var(--ember)}
+  .mini p{margin:7px 0 0;font-size:13.5px;color:var(--muted)}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:14px;
+    padding:22px 20px;margin-bottom:14px;scroll-margin-top:16px}
+  .card .head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+  .num{font-family:var(--mono);font-size:12px;color:var(--faint);letter-spacing:.08em}
+  .card.is-top .num{color:var(--ember);font-weight:700}
+  .tag{display:inline-flex;align-items:center;font-size:11.5px;padding:2px 10px;border-radius:999px;
+    border:1px solid var(--border);color:var(--muted)}
+  .tag::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--dot,var(--faint));margin-right:7px;flex-shrink:0}
+  .tag-model{--dot:var(--dot-model)}
+  .tag-funding{--dot:var(--dot-funding)}
+  .tag-policy{--dot:var(--dot-policy)}
+  .tag-app{--dot:var(--dot-app)}
+  .tag-oss{--dot:var(--dot-oss)}
+  .tag-research{--dot:var(--dot-research)}
+  .tag-other{--dot:var(--dot-other)}
+  .card h3{font-family:var(--serif);font-size:19px;margin:2px 0 5px;line-height:1.55;font-weight:700}
+  .card .en{font-size:12.5px;color:var(--faint);margin:0 0 10px;font-style:italic}
+  .card .lede{font-size:14px;color:var(--muted);margin:0 0 12px;padding-left:10px;border-left:2px solid var(--ember)}
+  .card p.body{font-size:14.5px;margin:0 0 10px;text-align:justify}
+  .card .foot{margin-top:14px;padding-top:12px;border-top:1px dashed var(--hairline);
+    font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 14px}
+  .card .foot a{color:var(--ember);text-decoration:none}
+  .card .foot a:hover{text-decoration:underline}
+  .card .foot .note{flex-basis:100%}
+  .src-label{font-weight:700;color:var(--muted)}
+  footer{border-top:1px solid var(--hairline);padding-top:20px;color:var(--muted);font-size:13px}
+  footer p{margin:0}
+  @media (max-width:560px){
+    .masthead h1{font-size:29px}
+    .card{padding:18px 16px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand"><span class="mark"></span><span class="bt">AI DAILY BRIEFING</span></div>
+    <h1>AI 每日早報</h1>
+    <p class="dateline">2026 年 11 月 22 日 · 星期日</p>
+    <p class="dayline">SUNDAY · 台北時間</p>
+    <p class="meta">時間視窗：2026-11-21 09:00 至 2026-11-22 09:00（台北時間）· 共 13 條</p>
+    <div class="signal"></div>
+  </header>
+  <p class="hero">過去 24 小時，聯合國「殺手機器人」談判破局、僅同意再談兩年；特斯拉開始推送 FSD v15、稱關鍵干預率提升 25 倍；美財長稱無需再加碼輝達對中晶片限制，眾院報告揭近 88 萬顆晶片獲批；亞馬遜傳以 75 億美元收購 AI 新創 Decart；Etsy 澄清不會用賣家內容訓練仿冒型 AI。</p>
+  <section>
+    <div class="sec-head"><span class="sec-num">01</span><h2>一句話速覽</h2><span class="rule"></span></div>
+    <div class="tldr"><ol>
+      <li><a href="#card-1">聯合國《特定常規武器公約》審查會議 11 月 21 日結束，128 個締約國僅同意再談兩年、於 2028 年前研議管制致命自主武器系統的可能協定，未承諾具法律約束力的規則。</a></li>
+      <li><a href="#card-2">特斯拉 11 月 21 日開始向首批車主推送 FSD v15，稱全新視覺編碼器讓關鍵干預率提升 25 倍，並新增即時視覺化「Reality View」；不過 25 倍一數未附底數與數據，尚無法獨立驗證。</a></li>
+      <li><a href="#card-3">美國財長貝森特表示，現行對中晶片限制已足夠、無需再加碼；眾院外委會報告同時揭露，美國商務部已批准向具中國關聯的企業出口 879,868 顆輝達 H200 與超微 MI325X 晶片。</a></li>
+      <li><a href="#card-4">《金融時報》11 月 21 日報導，亞馬遜正就收購以色列 AI 新創 Decart 進行最後階段談判，交易估值約 75 億美元，最快下週宣布，但談判仍可能破局，雙方皆未證實。</a></li>
+      <li><a href="#card-5">Etsy 修改使用條款、新增可用賣家內容訓練 AI 的文字後引發賣家出走抗議，營運副總裁 James Ossman 發文澄清不會用賣家內容訓練仿冒原創作品的模型，並承諾在 12 月 16 日生效前寄出修訂版條款。</a></li>
+      <li><a href="#card-6">中國南水北調集團 11 月 21 日發布升級版「天河」大模型 V2，防汛方面接入 27 顆遙感衛星、237 部氣象雷達，形勢分析由小時級壓縮至分鐘級；水質方面整編入庫 5,000 萬條監測數據，可模擬污染物遷移並生成閘門調度建議。</a></li>
+      <li><a href="#card-7">llama.cpp 11 月 21 日發布預發布版 b12602，納入針對英特爾 SYCL 後端的 MoE 權重解包最佳化，貢獻者回報在 Arc Pro B60 上提示處理速度提升約 70%，但生成速度幾乎不變；數據未經獨立實測。</a></li>
+      <li><a href="#card-8">TechCrunch 11 月 21 日指出，本週出現兩個輝達：財報營收亮眼，臨時執行長 Colette Kress 堅稱公司運作無虞；另一邊馬斯克等人公開推動黃仁勳回任、甚至發起請願，黃仁勳本人也表示願意回來。</a></li>
+      <li><a href="#card-9">The Verge 11 月 21 日刊出 Decoder 專訪，資深 AI 記者 Hayden Field 探討 Anthropic 上市後，安全優先的承諾能否在公開市場存活：約 9,000 億美元的算力承諾與股東壓力，正考驗其治理設計。</a></li>
+      <li><a href="#card-10">TechCrunch 11 月 21 日盤點可透過簡訊使用的 AI 代理，包括估值達 100 億美元的 Instinct，以及 Ask Proxy、Caddy、Comma、Fambot、Folk、Poke、Underdog 等，顯示 AI 代理正從 App 走向訊息介面。</a></li>
+      <li><a href="#card-11">微劇新創 Shortical 推出全 AI 製作劇集《Inevitable》，主演 Aki Avni 將自己的臉授權給公司製作數位分身，是該公司首次使用真人肖像；Shortical 官網已打出「LICENSE YOUR FACE」，徵求更多人洽談肖像授權。</a></li>
+      <li><a href="#card-12">Wired 11 月 21 日專欄指出，上週 Outlook、蘋果、美國銀行、美聯航等一連串停電並非 AI 駭客協同攻擊，但 AI 正加速漏洞發現與利用，迫使企業更快修補，超出既有系統負荷；2026 年已揭露的漏洞總數突破 10 萬件。</a></li>
+      <li><a href="#card-13">VentureBeat 11 月 21 日刊出客座分析：數萬台加速器組成的 AI 叢集裡硬體故障是常態，修正都靠韌體與軟體發布送達，能否安全快速地全叢集更新，決定了實際可用算力。</a></li>
+    </ol></div>
+  </section>
+  <section>
+    <div class="sec-head"><span class="sec-num">02</span><h2>今日頭條</h2><span class="rule"></span></div>
+    <div class="top3">
+      <div class="mini"><span class="rank">01</span><a href="#card-1">聯合國「殺手機器人」談判破局：僅同意再談兩年</a><p>聯合國《特定常規武器公約》審查會議 11 月 21 日結束，128 個締約國僅同意再談兩年、於 2028 年前研議管制致命自主武器系統的可能協定，未承諾具法律約束力的規則。</p></div>
+      <div class="mini"><span class="rank">02</span><a href="#card-2">特斯拉開始推送 FSD v15：稱關鍵干預率提升 25 倍</a><p>特斯拉 11 月 21 日開始向首批車主推送 FSD v15，稱全新視覺編碼器讓關鍵干預率提升 25 倍，並新增即時視覺化「Reality View」；不過 25 倍一數未附底數與數據，尚無法獨立驗證。</p></div>
+      <div class="mini"><span class="rank">03</span><a href="#card-3">美財長稱無需再加碼輝達對中晶片限制；眾院報告揭近 88 萬顆晶片獲批</a><p>美國財長貝森特表示，現行對中晶片限制已足夠、無需再加碼；眾院外委會報告同時揭露，美國商務部已批准向具中國關聯的企業出口 879,868 顆輝達 H200 與超微 MI325X 晶片。</p></div>
+    </div>
+  </section>
+  <section>
+    <div class="sec-head"><span class="sec-num">03</span><h2>全部資訊</h2><span class="rule"></span></div>
+    <article class="card is-top" id="card-1">
+      <div class="head"><span class="num">01</span><span class="tag tag-policy">政策</span></div>
+      <h3>聯合國「殺手機器人」談判破局：僅同意再談兩年</h3>
+      <p class="en">Nations at UN talks on AI killer robots agree to more talks but no firm commitment to rein them in</p>
+      <p class="lede">聯合國《特定常規武器公約》審查會議 11 月 21 日結束，128 個締約國僅同意再談兩年、於 2028 年前研議管制致命自主武器系統的可能協定，未承諾具法律約束力的規則。</p>
+      <p class="body">聯合國《特定常規武器公約》（CCW）審查會議 11 月 21 日在日內瓦結束，128 個締約國僅同意在兩年內研擬關於致命自主武器系統（LAWS）的國際文書，未承諾具法律約束力的禁令或條約。談判自 11 月 16 日展開，延至 11 月 21 日凌晨（日內瓦時間）才達成妥協。</p>
+      <p class="body">美國、俄羅斯、以色列等主要軍事大國反對強硬措辭與具約束力的承諾，主張先就定義與原則達成共識。近百個國家原本推動直接展開條約談判，但在反對聲浪下，只能接受把時程延至 2028 年的折衷方案。</p>
+      <p class="body">倡議團體批評這是把問題再拖兩年。人權觀察等組織指出，致命自主武器已在實戰中出現，拖延談判等於放任各國繼續部署缺乏人類實質控制的武器系統。</p>
+      <p class="body">這場談判是聯合國多年來處理「殺手機器人」議題的主要場域，但始終卡在共識決門檻。本次僅同意再談兩年，意味具約束力的國際規範最快也要 2028 年才有眉目。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.channelnewsasia.com/world/united-nations-regulate-ai-killer-robots-weapons-6571256" target="_blank" rel="noopener">CNA</a><a href="https://asia.nikkei.com/politics/international-relations/countries-agree-to-un-talks-aiming-to-regulate-killer-robots-by-2028" target="_blank" rel="noopener">Nikkei Asia</a><a href="https://www.wprl.org/npr-news/2026-11-21/killer-robots-u-n-talks-fall-short-of-hopes-for-legally-binding-rules" target="_blank" rel="noopener">NPR</a><span class="note"></span></div>
+    </article>
+    <article class="card is-top" id="card-2">
+      <div class="head"><span class="num">02</span><span class="tag tag-app">應用</span></div>
+      <h3>特斯拉開始推送 FSD v15：稱關鍵干預率提升 25 倍</h3>
+      <p class="en">Tesla launches FSD v15, targets its biggest weaknesses, from signs to potholes</p>
+      <p class="lede">特斯拉 11 月 21 日開始向首批車主推送 FSD v15，稱全新視覺編碼器讓關鍵干預率提升 25 倍，並新增即時視覺化「Reality View」；不過 25 倍一數未附底數與數據，尚無法獨立驗證。</p>
+      <p class="body">特斯拉 11 月 21 日 19:24（UTC）在 X 上宣布，FSD v15「現已開始推送」，首批車主當天收到更新。特斯拉 AI 軟體負責人 Ashok Elluswamy 同日表示，v15 已交給第一波車主。</p>
+      <p class="body">官方稱 v15 升級了端到端駕駛網路的每個環節，核心是全新的視覺編碼器，與 Robotaxi 與人形機器人 Optimus 共用，並以數百萬部網路影片訓練，泛化能力與數據效率更好。特斯拉稱新編碼器讓關鍵干預率提升 25 倍，官方貼文則寫「安全關鍵情境的處理能力提升 25 倍」。</p>
+      <p class="body">不過 25 倍一數未附底數、測試方法或數據，外界無法獨立驗證。特斯拉亦未公布哪些車款、硬體或地區先收到更新，也未給出版本號。</p>
+      <p class="body">新版另新增即時視覺化「Reality View」（發布說明稱 Tesla Augmented Reality），以單一端到端視覺化取代過去多個模型訊號，官方稱運算量更低，駕駛可「看見並控制 FSD 的規劃」。其他改進包括標誌與坑洞辨識、學區速限處理、遇測速相機減速，以及單車架模式；導航學習目前僅涵蓋行程起點與終點。</p>
+      <p class="body">v15 仍屬 FSD（Supervised），駕駛須全程保持警覺、隨時準備接手。馬斯克稱廣泛推送在下個月，實際表現仍待車主實測檢驗。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://electrek.co/2026/11/21/tesla-fsd-v15-rollout-25x-safety-reality-view/" target="_blank" rel="noopener">Electrek</a><a href="https://gizmodo.com/its-like-gta-musk-touts-video-game-like-update-to-tesla-fsd-2000843584" target="_blank" rel="noopener">Gizmodo</a><a href="https://mezha.net/eng/news/mezha-c0e5302c0ba406d47121537d_tesla_begins_rolling/" target="_blank" rel="noopener">Mezha</a><span class="note">25 倍為特斯拉官方說法，未附底數與數據，尚無法獨立驗證；官方貼文與發布說明對 25 倍的表述略有出入（安全關鍵情境／關鍵干預率）。</span></div>
+    </article>
+    <article class="card is-top" id="card-3">
+      <div class="head"><span class="num">03</span><span class="tag tag-policy">政策</span></div>
+      <h3>美財長稱無需再加碼輝達對中晶片限制；眾院報告揭近 88 萬顆晶片獲批</h3>
+      <p class="en">Nearly 880,000 AI chips cleared for China, but Bessent sees no need for fresh Nvidia curbs</p>
+      <p class="lede">美國財長貝森特表示，現行對中晶片限制已足夠、無需再加碼；眾院外委會報告同時揭露，美國商務部已批准向具中國關聯的企業出口 879,868 顆輝達 H200 與超微 MI325X 晶片。</p>
+      <p class="body">美國財長貝森特 11 月 20 日（美國時間）在 CNBC 訪問中表示，現行對中晶片限制已經足夠，「不需要再加碼」。他說：「適當的晶片限制已經到位，遠端存取也已受到限制。」這番話是他在隨川普總統出訪亞洲返國後發表的。</p>
+      <p class="body">背景是美國政府本週採取行動，封堵中國遠端使用最新半導體的管道。貝森特的表態，等於為現行管制畫下界線，短期內不會再擴大對輝達等公司的對中銷售限制。</p>
+      <p class="body">同一時間，眾院外委會 11 月 19 日公布的報告揭露，美國商務部產業安全局（BIS）已批准向具中國關聯的企業出口 879,868 顆輝達 H200 與超微 MI325X 晶片，涵蓋 21 件許可申請，期間為 2025 年 12 月至 2026 年 5 月，申請總量逾 340 萬顆。</p>
+      <p class="body">獲批數量包括騰訊 15 萬顆、阿里巴巴 7.5 萬顆、百度 4.3 萬顆、比亞迪 4,000 顆，四家皆列名五角大廈的中國軍方關聯企業清單。報告指出，截至 2026 年 5 月 11 日，獲批晶片皆未實際出貨；外委會主席 Brian Mast 另點名輝達申請文件中的兩家疑似走私幌子公司。</p>
+      <p class="body">輝達回應稱，相關授權附帶嚴格條件與有限數量，且公司現已停止向中國出貨 H200。民主黨首席議員 Gregory Meeks 則批評，政府對出口管制的執行不力，國會須嚴格監督。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.moneycontrol.com/news/business/nearly-880-000-ai-chips-cleared-for-china-but-bessent-sees-no-need-for-fresh-nvidia-curbs-14085929.html" target="_blank" rel="noopener">Moneycontrol（美聯社）</a><a href="https://global.newspim.com/news/view/20261120000302" target="_blank" rel="noopener">NewsPim</a><span class="note">貝森特受訪為美國時間 11 月 20 日週五，美聯社報導刊出於 11 月 21 日 01:20 UTC（在視窗內）；眾院報告本身於 11 月 19 日公布。貝森特發言部分僅美聯社通稿一家主要來源。</span></div>
+    </article>
+    <article class="card" id="card-4">
+      <div class="head"><span class="num">04</span><span class="tag tag-funding">融資</span></div>
+      <h3>亞馬遜傳以 75 億美元收購 AI 新創 Decart，最快下週宣布</h3>
+      <p class="en">Amazon nearing $7.5B deal to buy AI start-up Decart: FT</p>
+      <p class="lede">《金融時報》11 月 21 日報導，亞馬遜正就收購以色列 AI 新創 Decart 進行最後階段談判，交易估值約 75 億美元，最快下週宣布，但談判仍可能破局，雙方皆未證實。</p>
+      <p class="body">《金融時報》11 月 21 日（週六）報導，亞馬遜正就收購以色列 AI 新創 Decart 進行最後階段談判，交易估值約 75 億美元，協議最快下週宣布，但談判仍可能破局。亞馬遜與 Decart 皆未對報導置評。</p>
+      <p class="body">Decart 由 Dean Leitersdorf、Orian Leitersdorf 與 Moshe Shalev 於 2023 年創立，主力產品是協助開發者在不同廠牌晶片上執行 AI 推論的軟體，可降低對輝達的依賴。這正是亞馬遜看上的價值：AWS 客戶若能更自由地選用晶片，亞馬遜自家 Trainium 等晶片也有更多發揮空間。</p>
+      <p class="body">以色列財經媒體 Calcalist 早在 11 月 18 日已先報導，交易結構逾 70 億美元，採現金、股票與延後支付組合，部分款項視 Decart 達標與否而定，總價可近 75 億美元；三位創辦人已同意留任五年，大筆款項延至第五年支付。</p>
+      <p class="body">《華爾街日報》10 月 11 日亦曾報導，亞馬遜當時洽談的價格約 70 億美元；Decart 今年 5 月的估值約 40 億美元。部分報導稱，交易可能在 11 月 30 日開幕的 AWS re:Invent 大會前後宣布，但時間與最終條件皆未確認。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.tradingview.com/news/seekingalpha:71b3d28ff094b:0-amazon-nearing-7-5b-deal-to-buy-ai-start-up-decart-ft/" target="_blank" rel="noopener">Financial Times（經 Seeking Alpha）</a><a href="https://www.calcalistech.com/ctechnews/article/uckadwd7r" target="_blank" rel="noopener">Calcalist</a><span class="note">談判未簽約、可能破局，雙方皆未證實；Calcalist 11 月 18 日已先報導，本條以《金融時報》11 月 21 日的報導為主。</span></div>
+    </article>
+    <article class="card" id="card-5">
+      <div class="head"><span class="num">05</span><span class="tag tag-policy">政策</span></div>
+      <h3>Etsy 澄清不會用賣家內容訓練仿冒型 AI，承諾修訂爭議條款</h3>
+      <p class="en">Etsy says it will not use sellers&#x27; content to train AI after they revolt over policy changes</p>
+      <p class="lede">Etsy 修改使用條款、新增可用賣家內容訓練 AI 的文字後引發賣家出走抗議，營運副總裁 James Ossman 發文澄清不會用賣家內容訓練仿冒原創作品的模型，並承諾在 12 月 16 日生效前寄出修訂版條款。</p>
+      <p class="body">Etsy 10 月 26 日公布的新版使用條款新增一項文字，稱 Etsy 及其「第三方合作夥伴與供應商」有權使用賣家內容，「開發、訓練、測試與改進人工智慧與機器學習技術」，預定 12 月 16 日生效。條款一出，手工藝賣家擔心作品被拿去訓練 AI，紛紛關店抗議。</p>
+      <p class="body">《紐約時報》11 月 20 日報導，Etsy 將修訂條款，並在生效前把新版文字直接寄給賣家。Etsy 營運副總裁 James Ossman 隨後在官網發文澄清：「我們不會用你的內容訓練用來仿冒你的原創作品、或取代你的創造力的 AI 模型。這一點沒有改變。」</p>
+      <p class="body">Ossman 強調賣家仍擁有自己的作品，Etsy「不會主張你的創作為我們所有，也不會授權他人這麼做」。他同時列出 Etsy 現有用 AI 的方式：自動翻譯商品描述、把商品用於行銷活動，以及訓練協助監控商店表現、優化商品刊登的工具。</p>
+      <p class="body">但澄清範圍有限：Etsy 仍會以賣家內容訓練上述工具用途的模型，也承認部分第三方合作夥伴可取得數據（用於防詐與站外曝光）。Ossman 另稱 Etsy 禁止 AI 爬蟲抓取站內內容訓練模型。值得注意的是，Ossman 的承諾並未寫入條款本身，修訂版文字也尚未公布，澄清能否讓賣家回流仍待觀察。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.engadget.com/2324090/etsy-not-use-seller-content-train-ai/" target="_blank" rel="noopener">Engadget</a><a href="https://www.thehypemagazine.com/2026/11/21/etsy-ai-policy-seller-revolt-creator-economy/" target="_blank" rel="noopener">The Hype Magazine</a><span class="note">Ossman 的承諾未寫入條款，修訂版文字尚未公布；Etsy 仍會以賣家內容訓練翻譯、行銷與商店經營工具等用途的模型。</span></div>
+    </article>
+    <article class="card" id="card-6">
+      <div class="head"><span class="num">06</span><span class="tag tag-app">應用</span></div>
+      <h3>南水北調「天河」大模型 V2 發布：防汛分析由小時級壓至分鐘級</h3>
+      <p class="en">未確認</p>
+      <p class="lede">中國南水北調集團 11 月 21 日發布升級版「天河」大模型 V2，防汛方面接入 27 顆遙感衛星、237 部氣象雷達，形勢分析由小時級壓縮至分鐘級；水質方面整編入庫 5,000 萬條監測數據，可模擬污染物遷移並生成閘門調度建議。</p>
+      <p class="body">中國南水北調集團 11 月 21 日發布升級版「天河」大模型 V2。央視新聞、第一財經與每經網同日報導，V2 從 V1 的夯實基礎轉向深化應用，推動水網管理向數據、機理與智能協同決策轉型。</p>
+      <p class="body">防汛方面，V2 接入 27 顆遙感衛星與 237 部氣象雷達，形勢分析由小時級壓縮至分鐘級，可更快掌握降雨與水情變化。</p>
+      <p class="body">水質方面，V2 整編入庫 5,000 萬條監測數據，可模擬污染物與藻類的遷移擴散，並生成閘門調度建議，協助調度人員決策。</p>
+      <p class="body">「天河」是南水北調工程的水利行業大模型，應用場景集中在調水工程的防汛與水質管理。本次升級屬於行業應用模型的迭代，規模與通用大模型不同。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.nbd.com.cn/articles/2026-11-21/4654822.html" target="_blank" rel="noopener">每經網（轉載央視新聞）</a><a href="https://www.yicai.com/news/103449020.html" target="_blank" rel="noopener">第一財經</a><a href="https://tv.cctv.com/2026/11/21/VIDEV6Cr1oosZkz1Bh7g73Td261121.shtml" target="_blank" rel="noopener">央視新聞</a><span class="note">本條來源為央視新聞、第一財經與每經網，不在固定 41 個來源清單內；事件與發布皆在視窗內。</span></div>
+    </article>
+    <article class="card" id="card-7">
+      <div class="head"><span class="num">07</span><span class="tag tag-oss">開源</span></div>
+      <h3>llama.cpp 預發布 b12602：英特爾 Arc 顯示卡 MoE 推論加速</h3>
+      <p class="en">Can llama.cpp b12602 speed up local AI on Intel Arc?</p>
+      <p class="lede">llama.cpp 11 月 21 日發布預發布版 b12602，納入針對英特爾 SYCL 後端的 MoE 權重解包最佳化，貢獻者回報在 Arc Pro B60 上提示處理速度提升約 70%，但生成速度幾乎不變；數據未經獨立實測。</p>
+      <p class="body">開源推論引擎 llama.cpp 11 月 21 日發布預發布版 b12602，納入 PR #31428，針對英特爾 SYCL 後端改進分組 XMX 矩陣乘法：跳過共享本地記憶體（SLM）的中繼，改把量化 MoE 權重直接解包進 Intel DPAS／XMX 矩陣指令用的暫存器。</p>
+      <p class="body">貢獻者回報的測試顯示，在一張 Arc Pro B60 上跑 Qwen3-30B-A3B Q4_K_M，512 個 token 的提示處理由每秒約 1,338 個 token 升至約 2,317 個（+72.9%），2,048 個 token 的提示處理提升約 69.9%。但逐字生成（解碼）速度幾乎不變，僅 +0.1%。</p>
+      <p class="body">另一組以 Qwen3.8-Flash-Next 在三張 Arc Pro B60 上的測試，提示處理提升約 21%，解碼同樣幾乎不變。換言之，這次最佳化加快的是讀入提示的階段，而非逐字生成的階段。</p>
+      <p class="body">新版另附 macOS、iOS 與多種 Ubuntu 版本的預編譯執行檔；新設定 GGML_SYCL_MMID_ESIMD 預設開啟。須注意：b12602 為預發布版，數據來自專案貢獻者、未經獨立實測，生產環境部署前應自行評估穩定性與回滾需求。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://ingoampt.com/llama-cpp-b12602-intel-arc-local-ai-prompt-speed/" target="_blank" rel="noopener">INGOAMPT</a><a href="https://oossa.com/en/llama-cpp-b12602-release-adds-sycl-gemm-tweak-and-new-binaries" target="_blank" rel="noopener">Oossa</a><span class="note">b12602 為預發布版；效能數據為貢獻者回報，未經獨立實測。</span></div>
+    </article>
+    <article class="card" id="card-8">
+      <div class="head"><span class="num">08</span><span class="tag tag-other">其他</span></div>
+      <h3>輝達的兩種面貌：財報亮眼，黃仁勳回鍋呼聲高漲</h3>
+      <p class="en">A tale of two Nvidias</p>
+      <p class="lede">TechCrunch 11 月 21 日指出，本週出現兩個輝達：財報營收亮眼，臨時執行長 Colette Kress 堅稱公司運作無虞；另一邊馬斯克等人公開推動黃仁勳回任、甚至發起請願，黃仁勳本人也表示願意回來。</p>
+      <p class="body">TechCrunch 11 月 21 日的 Equity 播客指出，本週出現兩個輝達：一邊是財報營收亮眼，臨時執行長 Colette Kress 在財報電話會議上堅稱公司運作無虞；另一邊是黃仁勳去留的風波未平，馬斯克等人公開推動他回任，甚至有人發起請願。</p>
+      <p class="body">黃仁勳本人也表示願意回來。播客指出，輝達董事會與高層的動向仍是市場關注焦點，投資人一邊看財報數字，一邊看人事僵局何時解開。</p>
+      <p class="body">播客另提及，輝達不再向中國出售 H200 晶片，與美國收緊遠端存取限制有關；本期第 3 條另有眾院報告與財長發言的完整脈絡。</p>
+      <p class="body">黃仁勳請辭與相關調查的完整背景，見上一期第 13 條《紐約時報》調查；本條聚焦財報與回鍋請願的新進展。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://techcrunch.com/2026/11/21/a-tale-of-two-nvidias/" target="_blank" rel="noopener">TechCrunch</a><span class="note">本條僅 TechCrunch 一家主要來源報導；黃仁勳調查的完整背景見上一期第 13 條，本條聚焦財報與回鍋請願的新角度。</span></div>
+    </article>
+    <article class="card" id="card-9">
+      <div class="head"><span class="num">09</span><span class="tag tag-other">其他</span></div>
+      <h3>Anthropic 上市後還能把安全放第一嗎？The Verge 專訪談治理難題</h3>
+      <p class="en">Can Anthropic afford to put safety first?</p>
+      <p class="lede">The Verge 11 月 21 日刊出 Decoder 專訪，資深 AI 記者 Hayden Field 探討 Anthropic 上市後，安全優先的承諾能否在公開市場存活：約 9,000 億美元的算力承諾與股東壓力，正考驗其治理設計。</p>
+      <p class="body">The Verge 11 月 21 日刊出 Decoder 播客專訪，主持人 Nilay Patel 與資深 AI 記者 Hayden Field 討論 Anthropic 上市後，安全優先的承諾能否在公開市場存活。這是該系列「AI 在真實生活」三集中的最後一集。</p>
+      <p class="body">Anthropic 11 月 19 日在納斯達克掛牌，IPO 定價每股 83 美元，首日漲至 111 美元，募資規模創紀錄。但股價次日即大幅回落，市場開始檢驗其治理承諾能否頂住股東壓力。</p>
+      <p class="body">專訪指出，Anthropic 未來數年約 9,000 億美元的算力承諾，是安全與成長拉扯的核心：公司必須持續擴大營收、支付算力帳單，安全品牌同時也是它向企業客戶推銷的主打賣點。《大西洋月刊》同週的文章亦提到約 9,000 億美元的算力承諾。</p>
+      <p class="body">治理方面，七位創辦人握有單一股份、掌握 50.1% 投票權；長期利益信託（Long-Term Benefit Trust）可任免七席董事中的四席，但無法干預日常決策。Field 認為，OpenAI 似乎樂見 Anthropic 先上市，藉此觀察公開市場如何對待安全優先的實驗室。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.theverge.com/podcast/1038701/anthropic-ipo-ai-safety-openai-nvidia-structure" target="_blank" rel="noopener">The Verge</a><span class="note">本條為 The Verge 的 Decoder 專訪；約 9,000 億美元算力承諾一數，《大西洋月刊》同週的文章亦有相同說法。</span></div>
+    </article>
+    <article class="card" id="card-10">
+      <div class="head"><span class="num">10</span><span class="tag tag-app">應用</span></div>
+      <h3>能住在簡訊裡的 AI 代理盤點：從通用助理到家庭、旅遊專用</h3>
+      <p class="en">Here are the top AI agents that can live in your text messages</p>
+      <p class="lede">TechCrunch 11 月 21 日盤點可透過簡訊使用的 AI 代理，包括估值達 100 億美元的 Instinct，以及 Ask Proxy、Caddy、Comma、Fambot、Folk、Poke、Underdog 等，顯示 AI 代理正從 App 走向訊息介面。</p>
+      <p class="body">TechCrunch 11 月 21 日盤點可透過簡訊使用的 AI 代理。名單包括估值達 100 億美元的 Instinct，以及 Ask Proxy、Caddy、Comma、Fambot、Folk、Poke、Underdog 等。</p>
+      <p class="body">這些代理的定位各異：從通用個人助理，到家庭、旅遊、工作等專用場景。使用者不用另裝 App，在簡訊對話裡就能請代理辦事。</p>
+      <p class="body">盤點反映一個趨勢：AI 代理的入口正從 App 走向訊息介面。簡訊的門檻低、觸及廣，對不常裝新 App 的使用者尤其友善；但代理能讀取簡訊內容，也讓隱私與授權邊界成為下一步的課題。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://techcrunch.com/2026/11/21/all-the-ai-agents-that-can-live-in-your-text-messages/" target="_blank" rel="noopener">TechCrunch</a><span class="note">本條僅 TechCrunch 一家主要來源報導，屬盤點類文章，非單一發布事件。</span></div>
+    </article>
+    <article class="card" id="card-11">
+      <div class="head"><span class="num">11</span><span class="tag tag-app">應用</span></div>
+      <h3>賣臉給 AI 微劇：演員授權肖像給 Shortical 製作數位分身</h3>
+      <p class="en">Is selling an AI version of your face to this microdrama startup the future of Hollywood?</p>
+      <p class="lede">微劇新創 Shortical 推出全 AI 製作劇集《Inevitable》，主演 Aki Avni 將自己的臉授權給公司製作數位分身，是該公司首次使用真人肖像；Shortical 官網已打出「LICENSE YOUR FACE」，徵求更多人洽談肖像授權。</p>
+      <p class="body">微劇新創 Shortical 推出全 AI 製作劇集《Inevitable》，主演 Aki Avni 將自己的臉授權給公司製作數位分身。該劇上週在洛杉磯首映，是 Shortical 首次使用真人肖像。</p>
+      <p class="body">Shortical 官網已打出「LICENSE YOUR FACE」，徵求更多人提交社群帳號洽談肖像授權。公司顯然想把肖像授權做成生意：演員授權自己的臉，換取 AI 劇集的使用費或分潤。</p>
+      <p class="body">這預示演員肖像授權可能成為新的商業模式，但授權範圍、期限與報酬如何界定，仍是未解的問題。AI 生成影像的肖像權爭議，正從社群迷因走向正式商業合約。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://techcrunch.com/2026/11/21/is-selling-an-ai-version-of-your-face-to-this-microdrama-startup-the-future-of-hollywood/" target="_blank" rel="noopener">TechCrunch</a><span class="note">本條僅 TechCrunch 一家主要來源報導。</span></div>
+    </article>
+    <article class="card" id="card-12">
+      <div class="head"><span class="num">12</span><span class="tag tag-other">其他</span></div>
+      <h3>停電潮才剛開始：AI 讓修補速度跟不上漏洞</h3>
+      <p class="en">The Outages Are Just Getting Started</p>
+      <p class="lede">Wired 11 月 21 日專欄指出，上週 Outlook、蘋果、美國銀行、美聯航等一連串停電並非 AI 駭客協同攻擊，但 AI 正加速漏洞發現與利用，迫使企業更快修補，超出既有系統負荷；2026 年已揭露的漏洞總數突破 10 萬件。</p>
+      <p class="body">Wired 11 月 21 日專欄指出，上週 Outlook、蘋果、美國銀行、美聯航、NSA 等一連串停電，並非 AI 駭客協同攻擊，各有例行原因。但把這些事件連起來看，仍透露一個結構性問題：AI 正在加速漏洞的發現與利用。</p>
+      <p class="body">AI 工具讓攻擊者更快找到弱點，也讓防守方必須更快修補，修補速度逐漸跟不上漏洞出現的速度。2026 年已揭露的漏洞總數突破 10 萬件，創下新高。</p>
+      <p class="body">Cloudflare 執行長預期，未來兩年將持續動盪。專欄提醒，真正的風險不在某一次停電，而在修補節奏長期落後於漏洞節奏，系統性風險正在累積。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://dnyuz.com/2026/11/21/the-outages-are-just-getting-started/" target="_blank" rel="noopener">Wired（經 Dnyuz 轉載）</a><span class="note">本條為 Wired 評論分析文；Wired 原文因網域限制未能直接開啟，以轉載核實。</span></div>
+    </article>
+    <article class="card" id="card-13">
+      <div class="head"><span class="num">13</span><span class="tag tag-other">其他</span></div>
+      <h3>最快的 AI 叢集，也可能被發布流程拖住</h3>
+      <p class="en">Even the fastest AI clusters can be held back by their release pipelines</p>
+      <p class="lede">VentureBeat 11 月 21 日刊出客座分析：數萬台加速器組成的 AI 叢集裡硬體故障是常態，修正都靠韌體與軟體發布送達，能否安全快速地全叢集更新，決定了實際可用算力。</p>
+      <p class="body">VentureBeat 11 月 21 日刊出基礎設施與發布工程負責人 Vinayak Vashishtha 的客座分析：最快的 AI 叢集，也可能被發布流程拖住。數萬台加速器組成的叢集裡，硬體故障是常態，修正都得靠韌體與軟體發布送達。</p>
+      <p class="body">作者以自身韌體分批推送事故為例指出，能否安全、快速地把更新推向全叢集，決定了實際可用算力（goodput）——帳面算力再大，推不出去也沒用。</p>
+      <p class="body">文章另談 AI 代理已開始協助發布維運：工單分類、清理與草稿撰寫都可交給代理，但涉及整個機群的操作仍須人類決策。發布流程的穩健程度，正成為 AI 基礎設施競爭的新戰場。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://venturebeat.com/orchestration/even-the-fastest-ai-clusters-can-be-held-back-by-their-release-pipelines" target="_blank" rel="noopener">VentureBeat</a><span class="note">本條為 VentureBeat 客座觀點分析文，非新聞事件。</span></div>
+    </article>
+  </section>
+  <footer>
+  <p>來源說明：本期 13 條，皆來自官方部落格、英文與中文科技媒體、跑分榜與社群；發布類條目依方案 B 以兩個獨立來源核對事件日期，核對不上的已降級或棄用；發布時間不確定者標「未確認」，不猜測。本期未滿 15 條：經五層來源完整掃描後，窗口內可核實的 AI 新聞僅 13 條，未以無關內容填充。</p>
+  <p>排除說明：ChatGPT Wallet（OpenAI 11 月 13 日推出）、Meta AI 主管深偽影片（The Verge 11 月 17 日報導）、Google 停用智慧音箱上的 Google Assistant（11 月 20 日宣布）、亞馬遜「世界產品圖譜」（路透 11 月 13 日報導）、騰訊混元 Reddit AMA（貼文為 11 月 20 日 23:10 台北時間）、奧勒岡州起訴 OpenAI（11 月 17 日提告）、輝達洽購 Inception（The Information 11 月 19 日報導）、KKR 旗下 Helix 洽購 EdgeCore（彭博 11 月 20 日報導）、Linger 開源（事件 11 月 19 日）、ChatGPT Space 開放 Plus（11 月 20 日）、Claude 行動版改版（11 月 20 日宣布）、Watch Duty Gemini 野火警報（Google 部落格 11 月 20 日）、Arena Alignment Index 更新（11 月 19 日公布）、Dragos 金絲雀研究（原文 11 月 20 日）、NebuSec Muse 劫持研究（研究 11 月 20 日發布）、蘋果徵才打造 AI 代理（11 月 20 日前後，時間未確認）、Meta Muse Charm 定價 300 美元（傳聞 11 月 20 日前後，時間未確認）、Google 首頁 AI 對話紀錄（11 月 19 日上線）、METR 時間視野圖更新（11 月 20 日）、多力多滋 AI 誤判訴訟（11 月 17 日提告）、Meta 重新評估淨零目標（11 月 19 日永續報告）、馬雅遺址 AI「發現」（事件 11 月 10–11 日）等，事件日皆在視窗外，已排除。黎曼猜想證明後續（Lean 社群認證與質疑同日並存）屬上一期主題，不另立條。</p>
+  <p>單一來源說明：輝達的兩種面貌、簡訊 AI 代理盤點、Shortical、Anthropic 安全專訪、Wired 停電分析皆僅一家主要來源報導；VentureBeat 叢集分析為客座觀點文；亞馬遜收購 Decart 以《金融時報》11 月 21 日報導為主，Calcalist 11 月 18 日先報導，雙方皆未證實；貝森特發言僅美聯社通稿一家（眾院報告部分另有路透報導）；南水北調「天河」V2 來源為央視新聞／第一財經，不在固定 41 個來源清單內；以上皆已於條目備註中說明。</p>
+  </footer>
+</div>
+</body>
+</html>
