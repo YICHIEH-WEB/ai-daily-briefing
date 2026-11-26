@@ -1,0 +1,1028 @@
+{
+  "_說明": "AI 每日早報 2026-11-26 第十七期真實資料。時間視窗：2026-11-25 09:00 至 2026-11-26 09:00（台北時間）。本期 15 條；發布類條目依方案 B 以兩個獨立來源核對事件日期。",
+  "dateline": "2026 年 11 月 26 日 · 星期四",
+  "dayLine": "THURSDAY · 台北時間",
+  "entries": [
+    {
+      "anchor": "card-1",
+      "category": "政策",
+      "en": "FCC authorizes SpaceX plan to put up to 1 million AI data-center satellites in orbit",
+      "entryNo": 1,
+      "is_top3": true,
+      "n": 1,
+      "note": "批准時間為美東 11 月 25 日 12:55（17:55 UTC）；部署時程為 FCC 許可條件；反對方為 Amazon、Viasat 與美國天文學會。",
+      "one_line_summary": "美國聯邦通訊委員會 11 月 25 日批准 SpaceX 在太空部署多達 100 萬顆 AI 資料中心衛星的計畫，要求首顆衛星 2033 年 11 月前升空、2040 年前完成全部部署；衛星將以雷射鏈路互連、運行於 500 至 1,002 公里軌道，Amazon、Viasat 與美國天文學會曾提出反對。",
+      "paras": [
+        "SpaceX 提出名為 Starmind 的計畫，要把 AI 資料中心搬上太空：在軌道上部署大量衛星，直接在太空中提供 AI 運算能力，避開地面資料中心面臨的土地與電力瓶頸。",
+        "美國聯邦通訊委員會 11 月 25 日批准這項計畫，允許 SpaceX 部署多達 100 萬顆 AI 資料中心衛星。許可附帶明確的部署時程：首顆衛星須在 2033 年 11 月前升空，2035 年前完成 10%、2038 年前完成 50%、2040 年前完成全部部署。",
+        "技術上，衛星將運行於 500 至 1,002 公里高度的軌道，衛星之間以雷射鏈路互連，射頻通訊作為備援。如此龐大的星座規模，遠超過現有 Starlink 的部署量，也意味著太空軌道資源的競爭將進一步升溫。",
+        "Amazon、Viasat 與美國天文學會曾對此計畫提出反對，擔憂軌道擁擠、碰撞風險與對天文觀測的干擾。FCC 仍予放行，這是監管機構首次為軌道 AI 資料中心開綠燈，也為其他業者跟進太空算力鋪路。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "WSJ",
+          "url": "https://www.wsj.com/business/fcc-authorizes-spacex-to-build-1-million-data-centers-in-space-0eb20ee7"
+        },
+        {
+          "label": "Reuters",
+          "url": "https://www.reuters.com/business/media-telecom/us-authorizes-spacex-deploy-1-million-satellites-data-centers-space-2026-11-25/"
+        },
+        {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/25/fcc-approves-spacex-plan-to-put-ai-data-centers-in-space/"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "WSJ",
+          "published_at": "2026-11-25T00:00:00+00:00",
+          "timezone": "UTC",
+          "url": "https://www.wsj.com/business/fcc-authorizes-spacex-to-build-1-million-data-centers-in-space-0eb20ee7"
+        },
+        {
+          "name": "Reuters",
+          "published_at": "2026-11-25T00:00:00+00:00",
+          "timezone": "UTC",
+          "url": "https://www.reuters.com/business/media-telecom/us-authorizes-spacex-deploy-1-million-satellites-data-centers-space-2026-11-25/"
+        },
+        {
+          "name": "TechCrunch",
+          "published_at": "2026-11-25T00:00:00+00:00",
+          "timezone": "UTC",
+          "url": "https://techcrunch.com/2026/11/25/fcc-approves-spacex-plan-to-put-ai-data-centers-in-space/"
+        }
+      ],
+      "summary_zh": "SpaceX 提出名為 Starmind 的計畫，要把 AI 資料中心搬上太空，以軌道上的衛星提供算力。美國聯邦通訊委員會（FCC）11 月 25 日批准這項計畫，允許 SpaceX 部署多達 100 萬顆衛星。許可附帶部署時程：首顆衛星須在 2033 年 11 月前升空，2035 年前完成 10%、2038 年前完成 50%、2040 年前完成全部部署。衛星將運行於 500 至 1,002 公里高度的軌道，以雷射鏈路互連、射頻作為備援。Amazon、Viasat 與美國天文學會曾對此計畫提出反對，擔憂軌道擁擠與天文觀測干擾；FCC 仍予放行，太空算力競賽正式進入監管落地階段。",
+      "tag": "policy",
+      "tagLabel": "政策",
+      "title": "FCC 批准 SpaceX 太空 AI 資料中心計畫，最多部署 100 萬顆衛星",
+      "title_en": "FCC authorizes SpaceX plan to put up to 1 million AI data-center satellites in orbit",
+      "title_zh": "FCC 批准 SpaceX 太空 AI 資料中心計畫，最多部署 100 萬顆衛星",
+      "summary_en": "SpaceX has proposed a plan called Starmind to move AI data centers into space, using satellites in orbit to provide computing power. The U.S. Federal Communications Commission (FCC) approved the plan on Nov 25, allowing SpaceX to deploy up to 1 million AI data-center satellites. The authorization comes with a deployment schedule: the first satellite must launch by November 2033, 10% by 2035, 50% by 2038, and the full constellation by 2040. The satellites will operate in orbits 500 to 1,002 kilometers high, linked by laser connections with radio frequency as backup. Amazon, Viasat, and the American Astronomical Society had objected to the plan, citing orbital congestion and interference with astronomical observations; the FCC approved it anyway, marking the formal entry of space-based computing into the regulatory arena.",
+      "paras_en": [
+        "SpaceX has proposed a plan called Starmind to move AI data centers into space: deploying a large number of satellites in orbit to provide AI computing power directly from space, sidestepping the land and power bottlenecks facing ground-based data centers.",
+        "The U.S. Federal Communications Commission approved the plan on Nov 25, allowing SpaceX to deploy up to 1 million AI data-center satellites. The authorization comes with a clear deployment schedule: the first satellite must launch by November 2033, 10% by 2035, 50% by 2038, and the full constellation by 2040.",
+        "Technically, the satellites will operate in orbits 500 to 1,002 kilometers high, linked to one another by laser connections, with radio-frequency communications as backup. A constellation of this scale far exceeds the current Starlink deployment and means competition for orbital resources will intensify further.",
+        "Amazon, Viasat, and the American Astronomical Society had objected to the plan, citing orbital congestion, collision risk, and interference with astronomical observations. The FCC approved it anyway, the first time a regulator has green-lit an orbital AI data center, paving the way for other companies to follow into space-based computing."
+      ],
+      "one_line_summary_en": "The U.S. Federal Communications Commission approved SpaceX's plan on Nov 25 to deploy up to 1 million AI data-center satellites in space, requiring the first satellite to launch by November 2033 and the full deployment to be completed by 2040. The satellites will be linked by laser connections and operate in orbits 500 to 1,002 kilometers high; Amazon, Viasat, and the American Astronomical Society had objected to the plan."
+    },
+    {
+      "anchor": "card-2",
+      "category": "研究",
+      "en": "Google's Cogentic posts six AI math papers, claiming a proven bound for factoring integers",
+      "entryNo": 2,
+      "is_top3": true,
+      "n": 2,
+      "note": "六篇皆未經同行評審；Lean 4 證明已承諾但尚未公開；GitHub 倉庫註明非 Google 官方產品；L[1/3, 105] 為證明界推進，常數 105 遠大於篩法的約 1.92，不代表實際分解更快。",
+      "one_line_summary": "Google 的 AI 數學代理 Cogentic 11 月 25 日在 GitHub 一口氣發表六篇數學論文，宣稱在無條件整數分解上取得 L[1/3, 105] 的證明界，大幅推進 1992 年 Lenstra–Pomerance 的 L[1/2] 紀錄；六篇皆未經同行評審，Lean 4 證明已承諾但尚未公開。",
+      "paras": [
+        "Google 的 AI 數學代理 Cogentic 11 月 25 日在 GitHub 公開六篇數學論文，涵蓋整數分解、離散對數、賽局理論與圖論。Cogentic 是 Google 內部以 AI 代理自動探索數學問題的研究計畫。",
+        "最受矚目的是整數分解論文：宣稱在無條件設定下取得 L[1/3, 105] 的證明界，大幅推進 1992 年 Lenstra–Pomerance 以來的 L[1/2] 紀錄。整數分解的難度是 RSA 等公鑰密碼學的安全基礎，因此任何進展都格外引人注目。",
+        "其餘五篇分別處理確定性分解的 L[3/4] 界、離散對數問題、奈許均衡的 1/5 近似、對數秩（log-rank）的改進，以及 Harary 邊重建問題。不過六篇論文皆未經同行評審，Lean 4 形式化證明已承諾但尚未公開，學界仍在等待驗證。",
+        "需要特別說明的是，L[1/3, 105] 是證明理論上的推進，常數 105 遠大於數域篩法的約 1.92，實際分解並未因此變快，也不構成對現有加密的威脅。GitHub 倉庫亦註明「這不是 Google 官方產品」，顯示這仍是研究性質的探索。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "FourWeekMBA",
+          "url": "https://fourweekmba.com/ai-googles-cogentic-posts-6-ai-math-papers-one-on-factoring/"
+        },
+        {
+          "label": "MLQ",
+          "url": "https://mlq.ai/news/googles-cogentic-agent-posts-six-math-papers-led-by-a-claimed-proven-l13-bound-for-factoring-integers/"
+        },
+        {
+          "label": "RDWorldOnline",
+          "url": "https://www.rdworldonline.com/google-cogentic-ai-integer-factoring-bounds-lean-proofs/"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "FourWeekMBA",
+          "published_at": "2026-11-25T00:00:00+00:00",
+          "timezone": "UTC",
+          "url": "https://fourweekmba.com/ai-googles-cogentic-posts-6-ai-math-papers-one-on-factoring/"
+        },
+        {
+          "name": "MLQ",
+          "published_at": "2026-11-25T00:00:00+00:00",
+          "timezone": "UTC",
+          "url": "https://mlq.ai/news/googles-cogentic-agent-posts-six-math-papers-led-by-a-claimed-proven-l13-bound-for-factoring-integers/"
+        },
+        {
+          "name": "RDWorldOnline",
+          "published_at": "2026-11-25T00:00:00+00:00",
+          "timezone": "UTC",
+          "url": "https://www.rdworldonline.com/google-cogentic-ai-integer-factoring-bounds-lean-proofs/"
+        }
+      ],
+      "summary_zh": "Google 的 AI 數學代理 Cogentic 11 月 25 日在 GitHub 公開六篇數學論文，涵蓋整數分解、離散對數、賽局理論與圖論等多個主題。最受矚目的是整數分解：論文宣稱在無條件設定下取得 L[1/3, 105] 的證明界，大幅推進 1992 年 Lenstra–Pomerance 以來的 L[1/2] 紀錄。其餘論文包括確定性分解 L[3/4] 界、離散對數、奈許均衡 1/5 近似、對數秩改進與 Harary 邊重建問題。需要注意的是，這是證明理論的推進而非更快的攻擊：常數 105 遠大於篩法的約 1.92，實際分解並未變快。六篇論文皆未經同行評審，Lean 4 形式化證明已承諾但尚未公開，倉庫亦註明「這不是 Google 官方產品」。",
+      "tag": "research",
+      "tagLabel": "研究",
+      "title": "Google Cogentic 一口氣發表六篇數學論文，宣稱整數分解證明界大幅推進",
+      "title_en": "Google's Cogentic posts six AI math papers, claiming a proven bound for factoring integers",
+      "title_zh": "Google Cogentic 一口氣發表六篇數學論文，宣稱整數分解證明界大幅推進",
+      "summary_en": "Google's AI math agent Cogentic published six math papers on GitHub on Nov 25, covering integer factorization, discrete logarithms, game theory, and graph theory. The most eye-catching is the integer-factorization paper, which claims an unconditional proven bound of L[1/3, 105], a major advance over the L[1/2] record set by Lenstra–Pomerance in 1992. The other papers cover a deterministic factoring bound of L[3/4], discrete logarithms, a 1/5-approximation for Nash equilibria, an improvement on log-rank, and the Harary edge-reconstruction problem. Importantly, this is an advance in proof theory, not a faster attack: the constant 105 is far larger than the number field sieve's roughly 1.92, so actual factoring has not become faster. None of the six papers has been peer-reviewed, the promised Lean 4 formal proofs have not yet been made public, and the repository notes that \"this is not an official Google product.\"",
+      "paras_en": [
+        "Google's AI math agent Cogentic published six math papers on GitHub on Nov 25, covering integer factorization, discrete logarithms, game theory, and graph theory. Cogentic is a Google research program in which AI agents autonomously explore mathematical problems.",
+        "The most eye-catching is the integer-factorization paper, which claims an unconditional proven bound of L[1/3, 105], a major advance over the L[1/2] record set by Lenstra–Pomerance in 1992. The difficulty of integer factorization is the security foundation of public-key cryptography such as RSA, so any progress draws exceptional attention.",
+        "The other five papers address a deterministic factoring bound of L[3/4], the discrete logarithm problem, a 1/5-approximation for Nash equilibria, an improvement on log-rank, and the Harary edge-reconstruction problem. However, none of the six papers has been peer-reviewed, and the promised Lean 4 formal proofs have not yet been made public, so the academic community is still awaiting verification.",
+        "It is important to note that L[1/3, 105] is an advance in proof theory: the constant 105 is far larger than the number field sieve's roughly 1.92, so actual factoring has not become faster, and it poses no threat to existing encryption. The GitHub repository also notes that \"this is not an official Google product,\" indicating that this remains research-oriented exploration."
+      ],
+      "one_line_summary_en": "Google's AI math agent Cogentic published six math papers on GitHub on Nov 25, claiming an unconditional proven bound of L[1/3, 105] for integer factorization, a major advance over the L[1/2] record set by Lenstra–Pomerance in 1992. None of the six papers has been peer-reviewed, and the promised Lean 4 proofs have not yet been made public."
+    },
+    {
+      "anchor": "card-3",
+      "category": "應用",
+      "en": "XPeng's humanoid robot IRON enters mass production in January 2027",
+      "entryNo": 3,
+      "is_top3": true,
+      "n": 3,
+      "note": "發布會為 11 月 25 日下午於廣州舉行的第八屆小鵬科技日；量產與上市時程為官方說法。",
+      "one_line_summary": "小鵬汽車 11 月 25 日在第八屆科技日宣布，人形機器人 IRON 將於 2027 年 1 月量產，2027 年第一季先進門市擔任銷售導購「實習」，第二季正式發布；IRON 身高 170 公分、重 62 公斤，具 76 個自由度、1,500 多個觸覺點，搭載 3 顆圖靈 AI 晶片、算力 2,250 TOPS。",
+      "paras": [
+        "小鵬汽車 11 月 25 日下午在廣州舉行的第八屆小鵬科技日上，宣布人形機器人 IRON 的量產與上市時程：2027 年 1 月開始量產。",
+        "按照規劃，IRON 將在 2027 年第一季先進入小鵬門市，擔任銷售導購「實習」，在真實門市環境中接待顧客；2027 年第二季正式發布。這種「先實習、後發布」的安排，讓機器人在受控場景中先累積實戰經驗。",
+        "硬體規格方面，IRON 身高 170 公分、重 62 公斤，具備 76 個自由度與 1,500 多個觸覺點，搭載 3 顆圖靈 AI 晶片，總算力達 2,250 TOPS。觸覺點的數量顯示小鵬強調精細操作能力，而非僅止於行走與展示。",
+        "小鵬同時宣布，第二代 VLA（視覺語言動作模型）將於 2027 年上半年在全球首批交付。VLA 是讓機器人理解指令、看見環境並執行動作的關鍵模型，其進度將直接決定 IRON 在門市的實際表現。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "中國新聞網",
+          "url": "http://www.chinanews.com.cn/cj/2026/11-25/10737811.shtml"
+        },
+        {
+          "label": "TechEdt",
+          "url": "https://www.techedt.com/xpeng-targets-january-2027-for-mass-production-of-its-iron-humanoid-robot"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "中國新聞網",
+          "published_at": "2026-11-25T21:32:00+08:00",
+          "timezone": "UTC+08:00",
+          "url": "http://www.chinanews.com.cn/cj/2026/11-25/10737811.shtml"
+        },
+        {
+          "name": "TechEdt",
+          "published_at": "2026-11-25T00:00:00+00:00",
+          "timezone": "UTC",
+          "url": "https://www.techedt.com/xpeng-targets-january-2027-for-mass-production-of-its-iron-humanoid-robot"
+        }
+      ],
+      "summary_zh": "小鵬汽車 11 月 25 日下午在廣州舉行的第八屆小鵬科技日上，宣布人形機器人 IRON 的量產時程：2027 年 1 月開始量產，2027 年第一季先進門市擔任銷售導購「實習」，第二季正式發布。IRON 身高 170 公分、重 62 公斤，具備 76 個自由度與 1,500 多個觸覺點，搭載 3 顆圖靈 AI 晶片，總算力達 2,250 TOPS。小鵬同時宣布，第二代 VLA（視覺語言動作模型）將於 2027 年上半年在全球首批交付。從量產到門市實習再到正式發布，小鵬為 IRON 排出一條明確的商業化時間表，人形機器人正式從展示走向銷售第一線。",
+      "tag": "app",
+      "tagLabel": "應用",
+      "title": "小鵬人形機器人 IRON 明年 1 月量產，首季進店當銷售導購「實習」",
+      "title_en": "XPeng's humanoid robot IRON enters mass production in January 2027",
+      "title_zh": "小鵬人形機器人 IRON 明年 1 月量產，首季進店當銷售導購「實習」",
+      "summary_en": "XPeng announced the mass-production timeline for its humanoid robot IRON at the 8th XPeng Tech Day in Guangzhou on the afternoon of Nov 25: mass production begins in January 2027, IRON will start \"interning\" as a sales guide in stores in the first quarter of 2027, and the official launch follows in the second quarter. IRON stands 170 cm tall, weighs 62 kg, has 76 degrees of freedom and more than 1,500 touch points, and carries three Turing AI chips with a combined 2,250 TOPS of computing power. XPeng also announced that its second-generation VLA (vision-language-action) model will begin its first global deliveries in the first half of 2027. From mass production to store internship to official launch, XPeng has laid out a clear commercialization timeline, taking its humanoid robot from demonstration to the sales floor.",
+      "paras_en": [
+        "XPeng announced the mass-production and launch timeline for its humanoid robot IRON at the 8th XPeng Tech Day in Guangzhou on the afternoon of Nov 25: mass production begins in January 2027.",
+        "Under the plan, IRON will first enter XPeng stores in the first quarter of 2027 to \"intern\" as a sales guide, serving customers in a real retail environment, with the official launch following in the second quarter of 2027. This \"intern first, launch later\" arrangement lets the robot accumulate real-world experience in a controlled setting.",
+        "On hardware, IRON stands 170 cm tall, weighs 62 kg, has 76 degrees of freedom and more than 1,500 touch points, and carries three Turing AI chips with a combined 2,250 TOPS. The number of touch points shows XPeng is emphasizing fine manipulation, not just walking and display.",
+        "XPeng also announced that its second-generation VLA (vision-language-action) model will begin its first global deliveries in the first half of 2027. VLA is the key model that lets a robot understand instructions, see its environment, and act, so its progress will directly determine how IRON performs in stores."
+      ],
+      "one_line_summary_en": "XPeng announced at its 8th Tech Day on Nov 25 that its humanoid robot IRON will enter mass production in January 2027, start \"interning\" as a sales guide in stores in the first quarter of 2027, and officially launch in the second quarter. IRON stands 170 cm tall, weighs 62 kg, has 76 degrees of freedom and more than 1,500 touch points, and carries three Turing AI chips delivering 2,250 TOPS."
+    },
+    {
+      "anchor": "card-4",
+      "category": "政策",
+      "en": "EU proposes Quantum Act and €50 billion sovereign tech equity fund",
+      "entryNo": 4,
+      "is_top3": false,
+      "n": 4,
+      "note": "500 億歐元為目標規模，非已核准預算；基金預計於下一個多年期財政框架（2028–2034 年）開始時運作。",
+      "one_line_summary": "歐盟執委會 11 月 25 日提出《量子法案》，並規劃規模 500 億歐元的主權科技股權基金，目標讓歐洲在 2030 年前領先量子科技；基金涵蓋 AI、量子、半導體與網路安全，預計於 2028–2034 年多年期財政框架開始時運作，500 億歐元為目標規模、非已核准預算。",
+      "paras": [
+        "歐盟執委會 11 月 25 日提出《量子法案》，並同步規劃規模 500 億歐元的主權科技股權基金，目標讓歐洲在 2030 年前成為量子科技的領先者。",
+        "基金涵蓋 AI、量子運算、半導體與網路安全等關鍵領域，定位為歐洲的「主權科技」投資工具。提案同時納入採購偏好：公共採購將優先考慮歐洲企業，以扶植本土供應鏈。",
+        "需要注意的是，500 億歐元是目標規模而非已核准預算，基金預計於下一個多年期財政框架（2028–2034 年）開始時才運作。從提案到實際出資，仍有一段立法與協商的路要走。",
+        "這項提案是歐盟面對美中科技競賽的最新回應：美國以私人資本與聯邦計畫推動 AI 與量子，中國以國家計畫加速追趕，歐盟則試圖以公共股權基金補上投資缺口。實際立法與出資規模，仍待成員國與歐洲議會討論。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "Reuters",
+          "url": "https://live.euronext.com/en/financial-news/europe-plans-eu50-billion-sovereign-tech-equity-fund-boost-quantum-technology"
+        },
+        {
+          "label": "CNA",
+          "url": "https://www.channelnewsasia.com/world/eu-plans-50-billion-euro-investment-in-ai-quantum-computing-6581386"
+        },
+        {
+          "label": "tech.eu",
+          "url": "https://tech.eu/2026/11/25/eu-proposes-eur50-billion-equity-fund-to-support-quantum-and-essential-sovereign-tech/"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "Reuters",
+          "published_at": "2026-11-25T00:00:00+00:00",
+          "timezone": "UTC",
+          "url": "https://live.euronext.com/en/financial-news/europe-plans-eu50-billion-sovereign-tech-equity-fund-boost-quantum-technology"
+        },
+        {
+          "name": "CNA",
+          "published_at": "2026-11-25T00:00:00+00:00",
+          "timezone": "UTC",
+          "url": "https://www.channelnewsasia.com/world/eu-plans-50-billion-euro-investment-in-ai-quantum-computing-6581386"
+        },
+        {
+          "name": "tech.eu",
+          "published_at": "2026-11-25T12:05:00+00:00",
+          "timezone": "UTC",
+          "url": "https://tech.eu/2026/11/25/eu-proposes-eur50-billion-equity-fund-to-support-quantum-and-essential-sovereign-tech/"
+        }
+      ],
+      "summary_zh": "歐盟執委會 11 月 25 日提出《量子法案》，並同步規劃規模 500 億歐元的主權科技股權基金，目標讓歐洲在 2030 年前成為量子科技的領先者。基金涵蓋 AI、量子運算、半導體與網路安全等關鍵領域，並將給予歐洲企業採購上的優先待遇，以強化科技主權。需要注意的是，500 億歐元是目標規模而非已核准預算，基金預計於下一個多年期財政框架（2028–2034 年）開始時才運作。這項提案是歐盟面對美中科技競賽的最新回應，實際立法與出資仍待成員國與歐洲議會討論。",
+      "tag": "policy",
+      "tagLabel": "政策",
+      "title": "歐盟提出《量子法案》與 500 億歐元主權科技股權基金，目標 2030 年領先量子",
+      "title_en": "EU proposes Quantum Act and €50 billion sovereign tech equity fund",
+      "title_zh": "歐盟提出《量子法案》與 500 億歐元主權科技股權基金，目標 2030 年領先量子",
+      "summary_en": "The European Commission proposed a Quantum Act on Nov 25, together with a sovereign tech equity fund with a target scale of €50 billion, aiming for Europe to lead quantum technology by 2030. The fund covers key areas including AI, quantum computing, semiconductors, and cybersecurity, and will give European firms preference in procurement to strengthen technological sovereignty. Importantly, €50 billion is a target scale, not an approved budget, and the fund is expected to become operational only at the start of the next multiannual financial framework (2028–2034). The proposal is the EU's latest response to the U.S.–China technology race, with actual legislation and funding still subject to discussion among member states and the European Parliament.",
+      "paras_en": [
+        "The European Commission proposed a Quantum Act on Nov 25, together with a sovereign tech equity fund with a target scale of €50 billion, aiming for Europe to lead quantum technology by 2030.",
+        "The fund covers key areas including AI, quantum computing, semiconductors, and cybersecurity, positioning it as Europe's \"sovereign tech\" investment vehicle. The proposal also includes a procurement preference: public procurement will prioritize European firms to support domestic supply chains.",
+        "Importantly, €50 billion is a target scale, not an approved budget, and the fund is expected to become operational only at the start of the next multiannual financial framework (2028–2034). There is still a long legislative and negotiation road between the proposal and actual disbursement.",
+        "The proposal is the EU's latest response to the U.S.–China technology race: the United States advances AI and quantum through private capital and federal programs, China accelerates with national plans, and the EU is trying to close its investment gap with a public equity fund. Actual legislation and funding levels remain subject to discussion among member states and the European Parliament."
+      ],
+      "one_line_summary_en": "The European Commission proposed a Quantum Act on Nov 25, together with a €50 billion sovereign tech equity fund, aiming for Europe to lead quantum technology by 2030. The fund covers AI, quantum, semiconductors, and cybersecurity and is expected to become operational at the start of the 2028–2034 multiannual financial framework; €50 billion is a target scale, not an approved budget."
+    },
+    {
+      "anchor": "card-5",
+      "category": "其他",
+      "en": "S&P considers Nvidia credit downgrade over governance and key-man risks",
+      "entryNo": 5,
+      "is_top3": false,
+      "n": 5,
+      "note": "僅 TechCrunch 一家報導，尚未經標普或輝達證實；評級檢討預計 90 天內完成。",
+      "one_line_summary": "標普全球評級考慮下調輝達的信用評級，理由是黃仁勳請辭又復職引發的治理疑慮與「關鍵人物」風險；評級檢討預計 90 天內完成，若下調將由 AA 降至 AA-；目前僅 TechCrunch 一家報導，尚未經標普或輝達證實。",
+      "paras": [
+        "標普全球評級正在考慮下調輝達的信用評級，理由是黃仁勳請辭又復職的風波所引發的治理疑慮與「關鍵人物」風險。",
+        "據報導，評級檢討預計在 90 天內完成；若決定下調，輝達的評級將由 AA 降至 AA-。評級機構關注的是董事會在短時間內先接受請辭、又恢復職務的決策過程，以及公司對創辦人兼執行長的依賴程度。",
+        "這起風波源自黃仁勳 11 月 12 日因婚外情請辭、11 月 23 日復職，短短 12 天內的大逆轉。黃仁勳已在 11 月 24 日的全員大會上道歉，並承諾接受定期 360 度評核，但評級機構顯然仍在觀察後續發展。",
+        "需要注意的是，目前僅 TechCrunch 一家報導此事，尚未經標普或輝達證實。即使下調至 AA-，仍屬投資級高評級，不至於動搖輝達的融資能力；但對一家市值居全球前列的公司而言，評級檢討本身就是值得注意的訊號。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks/"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "TechCrunch",
+          "published_at": "2026-11-25T22:44:00+00:00",
+          "timezone": "UTC",
+          "url": "https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks/"
+        }
+      ],
+      "summary_zh": "標普全球評級正在考慮下調輝達的信用評級，理由是黃仁勳請辭又復職的風波所引發的治理疑慮與「關鍵人物」風險。據報導，評級檢討預計在 90 天內完成，若決定下調，輝達的評級將由 AA 降至 AA-。這起風波源自黃仁勳 11 月 12 日因婚外情請辭、11 月 23 日復職，短短 12 天內的大逆轉讓評級機構重新評估輝達對單一領導人的依賴程度。需要注意的是，目前僅 TechCrunch 一家報導此事，尚未經標普或輝達證實；AA- 仍屬投資級高評級，下調本身不至於動搖輝達的融資能力，但象徵意義不小。",
+      "tag": "other",
+      "tagLabel": "其他",
+      "title": "標普考慮下調輝達信用評級，稱治理與「關鍵人物」風險",
+      "title_en": "S&P considers Nvidia credit downgrade over governance and key-man risks",
+      "title_zh": "標普考慮下調輝達信用評級，稱治理與「關鍵人物」風險",
+      "summary_en": "S&P Global Ratings is considering downgrading Nvidia's credit rating, citing governance concerns and \"key man\" risk arising from the turmoil over Jensen Huang's resignation and reinstatement. The ratings review is expected to conclude within 90 days; if a downgrade is decided, Nvidia's rating would fall from AA to AA-. The turmoil stems from Huang's resignation on Nov 12 over an extramarital affair and his reinstatement on Nov 23, a dramatic reversal within 12 days that has prompted the ratings agency to reassess Nvidia's dependence on a single leader. Note that only TechCrunch has reported this so far, and neither S&P nor Nvidia has confirmed it; AA- would still be a high investment-grade rating, so a downgrade would not undermine Nvidia's financing ability, but its symbolic significance is considerable.",
+      "paras_en": [
+        "S&P Global Ratings is considering downgrading Nvidia's credit rating, citing governance concerns and \"key man\" risk arising from the turmoil over Jensen Huang's resignation and reinstatement.",
+        "According to the report, the ratings review is expected to conclude within 90 days; if a downgrade is decided, Nvidia's rating would fall from AA to AA-. The ratings agency is focused on the board's decision-making process — accepting the resignation and then reversing course within a short time — and on the company's dependence on its founder-CEO.",
+        "The turmoil stems from Huang's resignation on Nov 12 over an extramarital affair and his reinstatement on Nov 23, a dramatic reversal within 12 days. Huang apologized at the Nov 24 all-hands meeting and committed to regular 360-degree reviews, but the ratings agency is evidently still watching how events develop.",
+        "Note that only TechCrunch has reported this so far, and neither S&P nor Nvidia has confirmed it. Even a downgrade to AA- would still be a high investment-grade rating and would not undermine Nvidia's financing ability; but for a company whose market value ranks among the world's largest, a ratings review is itself a signal worth noting."
+      ],
+      "one_line_summary_en": "S&P Global Ratings is considering downgrading Nvidia's credit rating, citing governance concerns and \"key man\" risk after Jensen Huang's resignation and reinstatement. The review is expected to conclude within 90 days, and a downgrade would take the rating from AA to AA-; only TechCrunch has reported this so far, and neither S&P nor Nvidia has confirmed it."
+    },
+    {
+      "anchor": "card-6",
+      "category": "政策",
+      "en": "Anthropic CEO Dario Amodei calls accusations of surrendering human control to AI \"absurd\"",
+      "entryNo": 6,
+      "is_top3": false,
+      "n": 6,
+      "note": "僅 TechCrunch 一家報導，X 原文連結未取得；Axios 報導為 11 月 24 日，指逾 20 名消息來源稱員工質疑未發布模型能否安全推出。",
+      "one_line_summary": "Anthropic 執行長 Dario Amodei 11 月 25 日在 X 發文，駁斥「交出人類自由意志」的指控「荒謬」；他回應 Axios 前一日報導——逾 20 名消息來源稱員工質疑未發布的模型能否安全推出——並劃出底線：反對遞迴自我改進。",
+      "paras": [
+        "Anthropic 執行長 Dario Amodei 11 月 25 日在 X 發文，回應外界對 Anthropic 安全立場的質疑，駁斥「交出人類自由意志」的指控「荒謬」。",
+        "他的發文是回應 Axios 前一日的報導：該報導引述逾 20 名消息來源，稱 Anthropic 員工質疑公司未發布的模型能否安全推出。報導曝光後，Anthropic 是否為了競爭而放鬆安全標準，成為外界關注的焦點。",
+        "Amodei 在文中劃出底線，表明反對讓 AI 進行遞迴自我改進，並強調人類必須保有控制權。他試圖以此回應「交出控制權」的批評，說明 Anthropic 仍有不可退讓的紅線。",
+        "需要注意的是，目前僅 TechCrunch 一家報導此事，X 原文連結未取得。這場爭論也反映 AI 安全路線在業界內部仍有分歧：當模型能力快速推進，安全評估的速度與標準該如何拿捏，連領先實驗室內部都沒有共識。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/25/anthropics-dario-amodei-calls-accusations-of-surrendering-human-control-to-ai-absurd/"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "TechCrunch",
+          "published_at": "2026-11-25T00:00:00+00:00",
+          "timezone": "UTC",
+          "url": "https://techcrunch.com/2026/11/25/anthropics-dario-amodei-calls-accusations-of-surrendering-human-control-to-ai-absurd/"
+        }
+      ],
+      "summary_zh": "Anthropic 執行長 Dario Amodei 11 月 25 日在 X 發文，回應外界對 Anthropic 安全立場的質疑，駁斥「交出人類自由意志」的指控「荒謬」。他的發文是回應 Axios 前一日的報導：該報導引述逾 20 名消息來源，稱 Anthropic 員工質疑公司未發布的模型能否安全推出。Amodei 在文中劃出底線，表明反對讓 AI 進行遞迴自我改進，並強調人類必須保有控制權。需要注意的是，目前僅 TechCrunch 一家報導此事，X 原文連結未取得；這場爭論也反映 AI 安全路線在業界內部仍有分歧。",
+      "tag": "policy",
+      "tagLabel": "政策",
+      "title": "Anthropic 執行長 Amodei 發文駁「交出人類自由意志」指控，稱荒謬",
+      "title_en": "Anthropic CEO Dario Amodei calls accusations of surrendering human control to AI \"absurd\"",
+      "title_zh": "Anthropic 執行長 Amodei 發文駁「交出人類自由意志」指控，稱荒謬",
+      "summary_en": "Anthropic CEO Dario Amodei posted on X on Nov 25, responding to questions about Anthropic's safety stance and calling accusations of \"surrendering human free will\" \"absurd.\" His post responded to an Axios report from the previous day, which cited more than 20 sources saying Anthropic employees doubted whether the company's unreleased models could be safely released. In his post, Amodei drew a line, stating his opposition to recursive self-improvement by AI and emphasizing that humans must retain control. Note that only TechCrunch has reported this so far and the link to the original X post was not obtained; the dispute also reflects ongoing disagreement within the industry over AI safety strategy.",
+      "paras_en": [
+        "Anthropic CEO Dario Amodei posted on X on Nov 25, responding to questions about Anthropic's safety stance and calling accusations of \"surrendering human free will\" \"absurd.\"",
+        "His post responded to an Axios report from the previous day, which cited more than 20 sources saying Anthropic employees doubted whether the company's unreleased models could be safely released. After the report, whether Anthropic was loosening its safety standards for the sake of competition became a focus of outside attention.",
+        "In his post, Amodei drew a line, stating his opposition to recursive self-improvement by AI and emphasizing that humans must retain control. He was trying to answer the \"surrendering control\" criticism by showing that Anthropic still has lines it will not cross.",
+        "Note that only TechCrunch has reported this so far, and the link to the original X post was not obtained. The dispute also reflects disagreement within the industry over AI safety strategy: as model capabilities advance rapidly, how to calibrate the speed and standards of safety evaluation is a question on which even leading labs have no internal consensus."
+      ],
+      "one_line_summary_en": "Anthropic CEO Dario Amodei posted on X on Nov 25, calling accusations of \"surrendering human free will\" \"absurd.\" He was responding to an Axios report from the previous day, in which more than 20 sources said employees doubted whether unreleased models could be safely released, and he drew a line against recursive self-improvement."
+    },
+    {
+      "anchor": "card-7",
+      "category": "其他",
+      "en": "U.S. spy agencies reportedly breached; suspected China-linked ARTEX AI tool",
+      "entryNo": 7,
+      "is_top3": false,
+      "n": 7,
+      "note": "紐約時報原文為付費牆，經 Ynet、BleepingComputer、Gizmodo 轉述核實；ARTEX 為 2026 年 7 月由中國開發者發布的 AI 滲透測試工具；FinCEN 同日另行披露遭入侵；FBI NCIC 入侵為前一週末報導的獨立事件。",
+      "one_line_summary": "紐約時報 11 月 25 日報導，美國中央情報局、國家地理空間情報局與國家情報總監辦公室的開源情報分析系統傳遭入侵，未分類資料外洩、機密資料未受影響，疑似與中國有關；攻擊疑似濫用 2026 年 7 月由中國開發者發布的 AI 滲透測試工具 ARTEX。",
+      "paras": [
+        "紐約時報 11 月 25 日報導，美國中央情報局（CIA）、國家地理空間情報局（NGA）與國家情報總監辦公室（ODNI）共用的開源情報分析系統傳遭入侵。",
+        "報導指出，未分類資料外洩，但機密資料未受影響；入侵疑似與中國有關。開源情報系統彙整的是公開來源資料，雖不涉機密，仍是情報工作的重要基礎設施。",
+        "攻擊疑似濫用名為 ARTEX 的 AI 滲透測試工具：該工具由中國開發者於 2026 年 7 月發布，原為合法滲透測試用途，後被改用於攻擊。這是 AI 工具被武器化、反過來攻擊情報機構的罕見案例。",
+        "同一天，美國財政部金融犯罪執法局（FinCEN）也另外披露遭入侵；聯邦調查局國家犯罪資訊中心（NCIC）前一週末的入侵報導則是獨立事件。紐約時報原文為付費牆，本條經 Ynet、BleepingComputer 與 Gizmodo 轉述核實。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "Ynet",
+          "url": "https://www.ynetnews.com/article/by8einq1mx"
+        },
+        {
+          "label": "BleepingComputer",
+          "url": "https://www.bleepingcomputer.com/news/security/hackers-reportedly-breached-cia-intelligence-analysis-system/"
+        },
+        {
+          "label": "Gizmodo",
+          "url": "https://gizmodo.com/u-s-spying-agencies-reportedly-hacked-2000845088"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "Ynet",
+          "published_at": "2026-11-25T02:02:24+00:00",
+          "timezone": "UTC",
+          "url": "https://www.ynetnews.com/article/by8einq1mx"
+        },
+        {
+          "name": "BleepingComputer",
+          "published_at": "2026-11-25T02:45:03-05:00",
+          "timezone": "UTC-05:00",
+          "url": "https://www.bleepingcomputer.com/news/security/hackers-reportedly-breached-cia-intelligence-analysis-system/"
+        },
+        {
+          "name": "Gizmodo",
+          "published_at": "2026-11-25T03:13:55+00:00",
+          "timezone": "UTC",
+          "url": "https://gizmodo.com/u-s-spying-agencies-reportedly-hacked-2000845088"
+        }
+      ],
+      "summary_zh": "紐約時報 11 月 25 日報導，美國中央情報局（CIA）、國家地理空間情報局（NGA）與國家情報總監辦公室（ODNI）共用的開源情報分析系統傳遭入侵。報導指出，未分類資料外洩，但機密資料未受影響；入侵疑似與中國有關。攻擊疑似濫用名為 ARTEX 的 AI 滲透測試工具：該工具由中國開發者於 2026 年 7 月發布，原為合法滲透測試用途，後被改用於攻擊。同一天，美國財政部金融犯罪執法局（FinCEN）也另外披露遭入侵；聯邦調查局國家犯罪資訊中心（NCIC）前一週末的入侵報導則是獨立事件。紐約時報原文為付費牆，本條經 Ynet、BleepingComputer 與 Gizmodo 轉述核實。",
+      "tag": "other",
+      "tagLabel": "其他",
+      "title": "美情報機構傳遭入侵，疑中國開發的 AI 滲透工具 ARTEX 遭濫用",
+      "title_en": "U.S. spy agencies reportedly breached; suspected China-linked ARTEX AI tool",
+      "title_zh": "美情報機構傳遭入侵，疑中國開發的 AI 滲透工具 ARTEX 遭濫用",
+      "summary_en": "The New York Times reported on Nov 25 that an open-source intelligence analysis system shared by the U.S. Central Intelligence Agency (CIA), the National Geospatial-Intelligence Agency (NGA), and the Office of the Director of National Intelligence (ODNI) was reportedly breached. According to the report, unclassified data was exposed but no classified data was compromised, and the breach is suspected to be linked to China. The attack is suspected to have abused an AI penetration-testing tool called ARTEX, released in July 2026 by a Chinese developer for legitimate penetration testing and later repurposed for attacks. On the same day, the U.S. Treasury's Financial Crimes Enforcement Network (FinCEN) separately disclosed a breach of its own, while the FBI's National Crime Information Center (NCIC) breach reported the preceding weekend is a separate incident. The New York Times original is paywalled; this item was verified through Ynet, BleepingComputer, and Gizmodo.",
+      "paras_en": [
+        "The New York Times reported on Nov 25 that an open-source intelligence analysis system shared by the U.S. Central Intelligence Agency (CIA), the National Geospatial-Intelligence Agency (NGA), and the Office of the Director of National Intelligence (ODNI) was reportedly breached.",
+        "According to the report, unclassified data was exposed but no classified data was compromised, and the breach is suspected to be linked to China. Open-source intelligence systems aggregate publicly available material; though not classified, they remain important infrastructure for intelligence work.",
+        "The attack is suspected to have abused an AI penetration-testing tool called ARTEX, released in July 2026 by a Chinese developer for legitimate penetration testing and later repurposed for attacks. This is a rare case of an AI tool being weaponized and turned against intelligence agencies.",
+        "On the same day, the U.S. Treasury's Financial Crimes Enforcement Network (FinCEN) separately disclosed a breach of its own, while the FBI's National Crime Information Center (NCIC) breach reported the preceding weekend is a separate incident. The New York Times original is paywalled; this item was verified through Ynet, BleepingComputer, and Gizmodo."
+      ],
+      "one_line_summary_en": "The New York Times reported on Nov 25 that an open-source intelligence analysis system shared by the CIA, the National Geospatial-Intelligence Agency, and the Office of the Director of National Intelligence was reportedly breached, exposing unclassified data while classified data was unaffected, with a suspected link to China. The attack is suspected to have abused ARTEX, an AI penetration-testing tool released in July 2026 by a Chinese developer."
+    },
+    {
+      "anchor": "card-8",
+      "category": "應用",
+      "en": "Anthropic migrates Messages API from Python to Rust with Claude leading the rewrite",
+      "entryNo": 8,
+      "is_top3": false,
+      "n": 8,
+      "note": "數據為 Anthropic 官方自述；上線過程未停機、未凍結功能開發。",
+      "one_line_summary": "Anthropic 11 月 25 日發表工程文章，說明如何讓 Claude 代理主導、把 Messages API 從 Python 重寫為 Rust：Claude 約一週寫出首版核心請求路徑，以線上 Python 版為準、影子流量比對，結果每請求 CPU 用量降約七成、首次回應時間中位數快約兩成，且全程未停機、未凍結功能開發。",
+      "paras": [
+        "Anthropic 11 月 25 日發表工程文章，說明如何讓 Claude 代理主導、把 Messages API 從 Python 重寫為 Rust。Messages API 是 Claude 對外服務的核心介面，承載了絕大多數的模型呼叫流量。",
+        "背景是 API 流量從 2024 年初到 2026 年秋暴增約 1,800 倍，Python 服務已難以為繼；到 2026 年 5 月，Claude 已寫下逾八成合併程式碼。與其說這是一次語言遷移，不如說是 AI 寫程式能力的壓力測試。",
+        "重寫過程中，Claude 約一週就寫出首版核心請求路徑；團隊以上線的 Python 版為準，再以影子流量逐一比對，確保新舊實作行為一致。這種「以舊版為 oracle」的做法，是大型遷移能否不翻車的關鍵。",
+        "成果是每請求 CPU 用量降約七成、首次回應時間中位數快約兩成，且全程未停機、未凍結功能開發。數據為 Anthropic 官方自述；這篇工程文章本身，也成了 AI 代理主導大型重構的最佳示範。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "Anthropic",
+          "url": "https://www.anthropic.com/research/migrating-api-to-rust"
+        },
+        {
+          "label": "Pragmatic Engineer",
+          "url": "https://newsletter.pragmaticengineer.com/p/how-anthropic-builds-software-in"
+        },
+        {
+          "label": "ai.info",
+          "url": "https://AI.INFO/news/anthropic-messages-api-python-rust-migration"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "Anthropic",
+          "published_at": "2026-11-25T00:00:00+00:00",
+          "timezone": "UTC",
+          "url": "https://www.anthropic.com/research/migrating-api-to-rust"
+        },
+        {
+          "name": "Pragmatic Engineer",
+          "published_at": "2026-11-25T00:00:00+00:00",
+          "timezone": "UTC",
+          "url": "https://newsletter.pragmaticengineer.com/p/how-anthropic-builds-software-in"
+        },
+        {
+          "name": "ai.info",
+          "published_at": "2026-11-25T00:00:00+00:00",
+          "timezone": "UTC",
+          "url": "https://AI.INFO/news/anthropic-messages-api-python-rust-migration"
+        }
+      ],
+      "summary_zh": "Anthropic 11 月 25 日發表工程文章，說明如何讓 Claude 代理主導、把 Messages API 從 Python 重寫為 Rust。背景是 API 流量從 2024 年初到 2026 年秋暴增約 1,800 倍，Python 服務已難以為繼；到 2026 年 5 月，Claude 已寫下逾八成合併程式碼。重寫過程中，Claude 約一週就寫出首版核心請求路徑，團隊以上線的 Python 版為準、再以影子流量逐一比對，確保行為一致。成果是每請求 CPU 用量降約七成、首次回應時間中位數快約兩成，且全程未停機、未凍結功能開發。",
+      "tag": "app",
+      "tagLabel": "應用",
+      "title": "Anthropic 用 Claude 把 Messages API 從 Python 重寫成 Rust，CPU 用量降七成",
+      "title_en": "Anthropic migrates Messages API from Python to Rust with Claude leading the rewrite",
+      "title_zh": "Anthropic 用 Claude 把 Messages API 從 Python 重寫成 Rust，CPU 用量降七成",
+      "summary_en": "Anthropic published an engineering post on Nov 25 describing how Claude agents led the rewrite of its Messages API from Python to Rust. The background: API traffic grew roughly 1,800-fold from early 2024 to fall 2026, outgrowing the Python service, and by May 2026 Claude was already writing more than 80% of merged code. During the rewrite, Claude produced the first version of the core request path in about a week, and the team used the production Python API as an oracle, shadowing live traffic to verify identical behavior. The result: about 70% less CPU per request and a median time-to-first-token roughly 20% faster, shipped without downtime and without freezing feature development.",
+      "paras_en": [
+        "Anthropic published an engineering post on Nov 25 describing how Claude agents led the rewrite of its Messages API from Python to Rust. The Messages API is the core interface for Claude's external services, carrying the vast majority of model-call traffic.",
+        "The background: API traffic grew roughly 1,800-fold from early 2024 to fall 2026, outgrowing the Python service, and by May 2026 Claude was already writing more than 80% of merged code. Rather than a simple language migration, this was a stress test of AI coding ability.",
+        "During the rewrite, Claude produced the first version of the core request path in about a week; the team used the production Python version as the oracle, shadowing live traffic to compare each case and ensure identical behavior between the old and new implementations. This \"old version as oracle\" approach is the key to a large migration that does not go wrong.",
+        "The result: about 70% less CPU per request and a median time-to-first-token roughly 20% faster, shipped without downtime and without freezing feature development. The figures are Anthropic's own; the engineering post itself has become the best demonstration of AI agents leading a large-scale refactor."
+      ],
+      "one_line_summary_en": "Anthropic published an engineering post on Nov 25 describing how Claude agents led the rewrite of its Messages API from Python to Rust: Claude wrote the first version of the core request path in about a week, the production Python API served as the oracle with live traffic shadowed for comparison, and the result was about 70% less CPU per request and a median time-to-first-token about 20% faster, shipped without downtime or a feature freeze."
+    },
+    {
+      "anchor": "card-9",
+      "category": "應用",
+      "en": "OpenAI begins limited trials of Private Inference alpha",
+      "entryNo": 9,
+      "is_top3": false,
+      "n": 9,
+      "note": "適用模型與定價尚未公布；為 9 月 29 日 DevDay 發表的 Private Intelligence 計畫一環；零資料保留涵蓋處理完成之後的階段。",
+      "one_line_summary": "OpenAI 執行長 Sam Altman 11 月 25 日在 X 宣布，Private Inference 開始小規模客戶內測：以機密運算讓提示與回應在模型處理時仍加密於可驗證環境中，處理完成後適用零資料保留；這是 9 月 29 日 DevDay 發表的 Private Intelligence 計畫一環，適用模型與定價尚未公布。",
+      "paras": [
+        "OpenAI 執行長 Sam Altman 11 月 25 日在 X 宣布，Private Inference 開始小規模客戶內測。這是 OpenAI 在 9 月 29 日 DevDay 發表的 Private Intelligence 計畫一環，目標是讓企業敢把敏感資料交給 OpenAI 處理。",
+        "技術上以機密運算為基礎：提示與回應在模型處理時仍加密於可驗證環境中，連 OpenAI 也無法在運算過程中讀取內容；處理完成後則適用零資料保留政策。這回應了企業長期以來的疑慮：資料交給模型商，到底會不會被看見。",
+        "Private Inference 目前為 API 預覽，適用模型與定價尚未公布；它曾於 11 月 20 日的 Azure 大會上亮相。內測對象僅限一小群客戶，顯示 OpenAI 仍在驗證機密運算的穩定性與效能成本。",
+        "對企業用戶而言，Private Inference 若能兌現承諾，將降低金融、醫療等高度監管產業採用外部模型的門檻；對 OpenAI 而言，這也是與 Anthropic、Google 爭奪企業市場的信任籌碼。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "The Decoder",
+          "url": "https://the-decoder.com/openai-wants-companies-to-trust-it-with-sensitive-work-by-promising-not-to-look-at-their-data/"
+        },
+        {
+          "label": "Unite.AI",
+          "url": "https://www.unite.ai/openai-begins-limited-customer-trials-of-alpha-private-inference/"
+        },
+        {
+          "label": "KuCoin",
+          "url": "https://www.kucoin.com/news/flash/openai-tests-private-inference-with-select-customers"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "The Decoder",
+          "published_at": "2026-11-25T18:22:02+00:00",
+          "timezone": "UTC",
+          "url": "https://the-decoder.com/openai-wants-companies-to-trust-it-with-sensitive-work-by-promising-not-to-look-at-their-data/"
+        },
+        {
+          "name": "Unite.AI",
+          "published_at": "2026-11-25T00:00:00+00:00",
+          "timezone": "UTC",
+          "url": "https://www.unite.ai/openai-begins-limited-customer-trials-of-alpha-private-inference/"
+        },
+        {
+          "name": "KuCoin",
+          "published_at": "2026-11-25T17:33:32+00:00",
+          "timezone": "UTC",
+          "url": "https://www.kucoin.com/news/flash/openai-tests-private-inference-with-select-customers"
+        }
+      ],
+      "summary_zh": "OpenAI 執行長 Sam Altman 11 月 25 日在 X 宣布，Private Inference 開始小規模客戶內測。這是 OpenAI 在 9 月 29 日 DevDay 發表的 Private Intelligence 計畫一環，目標是讓企業敢把敏感資料交給 OpenAI 處理。技術上以機密運算為基礎：提示與回應在模型處理時仍加密於可驗證環境中，處理完成後則適用零資料保留政策。Private Inference 目前為 API 預覽，適用模型與定價尚未公布；它曾於 11 月 20 日的 Azure 大會上亮相。",
+      "tag": "app",
+      "tagLabel": "應用",
+      "title": "OpenAI 推出 Private Inference 內測，承諾模型運算時也不看用戶資料",
+      "title_en": "OpenAI begins limited trials of Private Inference alpha",
+      "title_zh": "OpenAI 推出 Private Inference 內測，承諾模型運算時也不看用戶資料",
+      "summary_en": "OpenAI CEO Sam Altman announced on X on Nov 25 that Private Inference has entered limited customer trials. It is part of Private Intelligence, the program unveiled at DevDay on September 29, aimed at giving enterprises the confidence to hand sensitive data to OpenAI. Technically it relies on confidential computing: prompts and responses remain encrypted inside attested environments while the model processes them, and Zero Data Retention applies once processing is complete. Private Inference is currently an API preview, with applicable models and pricing undisclosed; it was previewed at an Azure conference on Nov 20.",
+      "paras_en": [
+        "OpenAI CEO Sam Altman announced on X on Nov 25 that Private Inference has entered limited customer trials. It is part of Private Intelligence, the program unveiled at DevDay on September 29, aimed at giving enterprises the confidence to hand sensitive data to OpenAI.",
+        "Technically it relies on confidential computing: prompts and responses remain encrypted inside attested environments while the model processes them, so even OpenAI cannot read the content during computation; once processing is complete, Zero Data Retention applies. This addresses a long-standing enterprise concern: when data is handed to a model provider, will it be seen?",
+        "Private Inference is currently an API preview, with applicable models and pricing undisclosed; it was previewed at an Azure conference on Nov 20. The trial is limited to a small group of customers, indicating that OpenAI is still validating the stability and performance cost of confidential computing.",
+        "For enterprise users, if Private Inference delivers on its promise, it will lower the barrier for highly regulated industries such as finance and healthcare to adopt external models; for OpenAI, it is also a trust chip in the contest with Anthropic and Google for the enterprise market."
+      ],
+      "one_line_summary_en": "OpenAI CEO Sam Altman announced on X on Nov 25 that Private Inference has entered limited customer trials: using confidential computing, prompts and responses stay encrypted inside attested environments while the model processes them, and Zero Data Retention applies once processing is complete. It is part of the Private Intelligence program unveiled at DevDay on September 29; applicable models and pricing are undisclosed."
+    },
+    {
+      "anchor": "card-10",
+      "category": "政策",
+      "en": "42 state attorneys general challenge Character.AI plan to auction users' private chats",
+      "entryNo": 10,
+      "is_top3": false,
+      "n": 10,
+      "note": "事件以 11 月 25 日計，康乃狄克州檢察長新聞稿日期為 11 月 24 日；拍賣預定 12 月 1 日；唯一已披露競標者為 11 月 13 日成立的 Smirks and Pangs Acquisition LLC。",
+      "one_line_summary": "42 位美國州檢察長挑戰 Character.AI 拍賣用戶私人對話的計畫：該公司破產拍賣預定 12 月 1 日舉行，涉及逾 2,100 萬美國帳戶、其中逾 210 萬為未成年人，唯一已披露的競標者為 11 月 13 日才成立的 Smirks and Pangs Acquisition LLC。",
+      "paras": [
+        "42 位美國州檢察長挑戰 Character.AI 拍賣用戶私人對話的計畫。Character.AI 正處破產程序，拍賣預定 12 月 1 日舉行，拍賣標的包括用戶與 AI 角色的私人對話。",
+        "拍賣涉及逾 2,100 萬美國帳戶，其中逾 210 萬為未成年人。對話內容往往包含高度私人的情感傾訴，一旦易主，隱私風險不言而喻。",
+        "唯一已披露的競標者，是 11 月 13 日才成立、11 月 14 日即獲選的 Smirks and Pangs Acquisition LLC；若交易破局，將收取 35 萬美元分手費。競標者的背景與拍賣程序的透明度，同樣受到質疑。",
+        "檢察長們主張，私人對話不應成為可拍賣的資產，尤其涉及大量未成年人。這場法律戰將決定 AI 陪伴應用的用戶資料歸屬，也可能為其他 AI 公司的破產處置立下先例。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/25/state-ags-fight-character-ais-plan-to-auction-off-users-private-chats/"
+        },
+        {
+          "label": "Colorado AG",
+          "url": "https://coag.gov/press-releases/weiser-challenges-auction-of-millions-of-private-character-ai-conversations/"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "TechCrunch",
+          "published_at": "2026-11-25T17:35:58+00:00",
+          "timezone": "UTC",
+          "url": "https://techcrunch.com/2026/11/25/state-ags-fight-character-ais-plan-to-auction-off-users-private-chats/"
+        },
+        {
+          "name": "Colorado AG",
+          "published_at": "2026-11-25T00:00:00+00:00",
+          "timezone": "UTC",
+          "url": "https://coag.gov/press-releases/weiser-challenges-auction-of-millions-of-private-character-ai-conversations/"
+        }
+      ],
+      "summary_zh": "42 位美國州檢察長挑戰 Character.AI 拍賣用戶私人對話的計畫。Character.AI 正處破產程序，拍賣預定 12 月 1 日舉行，拍賣標的包括用戶與 AI 角色的私人對話，涉及逾 2,100 萬美國帳戶、其中逾 210 萬為未成年人。唯一已披露的競標者，是 11 月 13 日才成立、11 月 14 日即獲選的 Smirks and Pangs Acquisition LLC；若交易破局，將收取 35 萬美元分手費。檢察長們主張，私人對話不應成為可拍賣的資產，尤其涉及大量未成年人；這場法律戰將決定 AI 陪伴應用的用戶資料歸屬。",
+      "tag": "policy",
+      "tagLabel": "政策",
+      "title": "42 州檢察長挑戰 Character.AI 拍賣用戶私人對話，涉 210 萬未成年人",
+      "title_en": "42 state attorneys general challenge Character.AI plan to auction users' private chats",
+      "title_zh": "42 州檢察長挑戰 Character.AI 拍賣用戶私人對話，涉 210 萬未成年人",
+      "summary_en": "Forty-two U.S. state attorneys general are challenging Character.AI's plan to auction off users' private conversations. Character.AI is in bankruptcy proceedings, and the auction is scheduled for Dec 1, with the assets including private conversations between users and AI characters, covering more than 21 million U.S. accounts, of which more than 2.1 million belong to minors. The sole disclosed bidder is Smirks and Pangs Acquisition LLC, set up on Nov 13 and selected on Nov 14; if the deal falls through, it would collect a $350,000 break-up fee. The attorneys general argue that private conversations should not be auctionable assets, especially when so many minors are involved; the legal battle will decide who owns user data in AI companion apps.",
+      "paras_en": [
+        "Forty-two U.S. state attorneys general are challenging Character.AI's plan to auction off users' private conversations. Character.AI is in bankruptcy proceedings, and the auction is scheduled for Dec 1, with the assets including private conversations between users and AI characters.",
+        "The auction covers more than 21 million U.S. accounts, of which more than 2.1 million belong to minors. The conversations often contain deeply personal emotional disclosures, so a change of ownership would carry obvious privacy risks.",
+        "The sole disclosed bidder is Smirks and Pangs Acquisition LLC, set up on Nov 13 and selected on Nov 14; if the deal falls through, it would collect a $350,000 break-up fee. The bidder's background and the transparency of the auction process have also drawn scrutiny.",
+        "The attorneys general argue that private conversations should not be auctionable assets, especially when so many minors are involved. The legal battle will decide who owns user data in AI companion apps, and may set a precedent for how other AI companies' bankruptcies are handled."
+      ],
+      "one_line_summary_en": "Forty-two U.S. state attorneys general are challenging Character.AI's plan to auction off users' private conversations: the bankruptcy auction is scheduled for Dec 1 and covers more than 21 million U.S. accounts, including more than 2.1 million minors, with the sole disclosed bidder being Smirks and Pangs Acquisition LLC, set up only on Nov 13."
+    },
+    {
+      "anchor": "card-11",
+      "category": "其他",
+      "en": "Nvidia B300 lead times reportedly stretch to 40 weeks; RTX 60 may face delays",
+      "entryNo": 11,
+      "is_top3": false,
+      "n": 11,
+      "note": "輝達未證實；交期數據引述台灣 ODM 業者說法；36氪報導刊於 11 月 25 日 08:45（北京時間）。",
+      "one_line_summary": "TrendForce 11 月 25 日引述台灣 ODM 業者報導，輝達 B300 新訂單交期拉長至 26 至 40 週、GB300 為 14 至 26 週，近兩季多數新訂單要到 2027 年第二至三季才能交貨；記憶體供應吃緊下，輝達傳砍 GeForce RTX 50 供應、RTX 60 量產（目標 2027 年底）恐延後，輝達未證實。",
+      "paras": [
+        "TrendForce 11 月 25 日引述台灣 ODM 業者報導，輝達 B300 新訂單交期拉長至 26 至 40 週，GB300 為 14 至 26 週，DGX Station GB300 約 26 週、RTX Pro 至少 26 週。",
+        "近兩季的多數新訂單，預計要到 2027 年第二至三季才能交貨。交期拉長反映 AI 伺服器需求仍遠超供給，也意味著雲端業者與企業的算力擴張計畫將被迫排隊。",
+        "記憶體供應吃緊是另一重壓力：記憶體廠優先供應伺服器 DRAM，GDDR7 供應受限，輝達傳出削減 GeForce RTX 50 供應，原定 2027 年底量產的 RTX 60 也可能延後。AI 需求正在排擠消費級顯示卡的產能。",
+        "需要注意的是，輝達未證實上述說法；36氪亦於 11 月 25 日 08:45 報導相關交期消息。交期數據引述供應鏈說法，實際交付仍以輝達官方排程為準。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "TrendForce",
+          "url": "https://www.trendforce.com/news/2026/11/25/news-nvidia-b300-lead-times-reportedly-hit-40-weeks-rtx-60-may-face-delays-as-memory-supply-tightens/"
+        },
+        {
+          "label": "WCCFTech",
+          "url": "https://wccftech.com/nvidia-faces-booming-demand-despite-woes-as-b300-lead-times-reportedly-stretch-to-40-weeks-for-new-orders-gb300-buyers-now-face-14-to-26-weeks-says-report/"
+        },
+        {
+          "label": "KuCoin",
+          "url": "https://www.kucoin.com/news/flash/nvidia-ai-gpu-delivery-delays-push-rtx-60-series-production-to-2027"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "TrendForce",
+          "published_at": "2026-11-25T00:00:00+00:00",
+          "timezone": "UTC",
+          "url": "https://www.trendforce.com/news/2026/11/25/news-nvidia-b300-lead-times-reportedly-hit-40-weeks-rtx-60-may-face-delays-as-memory-supply-tightens/"
+        },
+        {
+          "name": "WCCFTech",
+          "published_at": "2026-11-25T00:00:00+00:00",
+          "timezone": "UTC",
+          "url": "https://wccftech.com/nvidia-faces-booming-demand-despite-woes-as-b300-lead-times-reportedly-stretch-to-40-weeks-for-new-orders-gb300-buyers-now-face-14-to-26-weeks-says-report/"
+        },
+        {
+          "name": "KuCoin",
+          "published_at": "2026-11-24T23:42:57+00:00",
+          "timezone": "UTC",
+          "url": "https://www.kucoin.com/news/flash/nvidia-ai-gpu-delivery-delays-push-rtx-60-series-production-to-2027"
+        }
+      ],
+      "summary_zh": "TrendForce 11 月 25 日引述台灣 ODM 業者報導，輝達 B300 新訂單交期拉長至 26 至 40 週，GB300 為 14 至 26 週，DGX Station GB300 約 26 週、RTX Pro 至少 26 週。近兩季的多數新訂單，預計要到 2027 年第二至三季才能交貨，顯示 AI 伺服器需求仍遠超供給。記憶體供應吃緊是另一重壓力：記憶體廠優先供應伺服器 DRAM，GDDR7 供應受限，輝達傳出削減 GeForce RTX 50 供應，原定 2027 年底量產的 RTX 60 也可能延後。需要注意的是，輝達未證實上述說法；36氪亦於 11 月 25 日 08:45 報導相關交期消息。",
+      "tag": "other",
+      "tagLabel": "其他",
+      "title": "輝達 B300 交期傳拉長至 40 週，RTX 60 量產恐延後",
+      "title_en": "Nvidia B300 lead times reportedly stretch to 40 weeks; RTX 60 may face delays",
+      "title_zh": "輝達 B300 交期傳拉長至 40 週，RTX 60 量產恐延後",
+      "summary_en": "TrendForce reported on Nov 25, citing Taiwanese ODMs, that lead times for new Nvidia B300 orders have stretched to 26–40 weeks, GB300 to 14–26 weeks, DGX Station GB300 to about 26 weeks, and RTX Pro to at least 26 weeks. Most new orders from the past two quarters are not expected to be delivered until the second to third quarter of 2027, showing that demand for AI servers still far exceeds supply. Tight memory supply adds further pressure: memory makers are prioritizing server DRAM, GDDR7 supply is constrained, Nvidia is reportedly cutting GeForce RTX 50 supply, and mass production of the RTX 60, targeted for late 2027, may slip. Note that Nvidia has not confirmed any of this; 36Kr also reported on the lead times at 08:45 on Nov 25.",
+      "paras_en": [
+        "TrendForce reported on Nov 25, citing Taiwanese ODMs, that lead times for new Nvidia B300 orders have stretched to 26–40 weeks, GB300 to 14–26 weeks, DGX Station GB300 to about 26 weeks, and RTX Pro to at least 26 weeks.",
+        "Most new orders from the past two quarters are not expected to be delivered until the second to third quarter of 2027. The lengthening lead times reflect AI server demand still far exceeding supply, and mean cloud providers' and enterprises' compute expansion plans will have to wait in line.",
+        "Tight memory supply adds further pressure: memory makers are prioritizing server DRAM, GDDR7 supply is constrained, Nvidia is reportedly cutting GeForce RTX 50 supply, and mass production of the RTX 60, targeted for late 2027, may slip. AI demand is crowding out capacity for consumer graphics cards.",
+        "Note that Nvidia has not confirmed any of this; 36Kr also reported on the lead times at 08:45 on Nov 25. The lead-time figures come from supply-chain sources, and actual deliveries still depend on Nvidia's official schedule."
+      ],
+      "one_line_summary_en": "TrendForce reported on Nov 25, citing Taiwanese ODMs, that lead times for new Nvidia B300 orders have stretched to 26–40 weeks and GB300 to 14–26 weeks, with most new orders from the past two quarters not deliverable until the second to third quarter of 2027. With memory supply tight, Nvidia is reportedly cutting GeForce RTX 50 supply and mass production of the RTX 60, targeted for late 2027, may slip; Nvidia has not confirmed this."
+    },
+    {
+      "anchor": "card-12",
+      "category": "研究",
+      "en": "Riemann hypothesis proof slimmed down: Sernau version cuts 17M lines to 300,000",
+      "entryNo": 12,
+      "is_top3": false,
+      "n": 12,
+      "note": "原版 Alpöge 證明（11 月 20 日）與 Lean 驗證（11 月 21 日）為視窗外事件，本條僅收 11 月 25 日的 Sernau 精簡版；兩版本皆可編譯，驗證進行中。",
+      "one_line_summary": "Anthropic 研究員 Luke Sernau 11 月 25 日發布黎曼猜想證明的精簡版，把 Alpöge 原版約 1,700 萬行縮至 30 萬行可讀版（精簡版 7.6 萬行），以 Apache 授權釋出；數學家 Andrew Sutherland 已於同日開始驗算，兩版本皆可編譯。",
+      "paras": [
+        "Anthropic 研究員 Luke Sernau 11 月 25 日發布黎曼猜想證明的精簡版，把 Alpöge 原版約 1,700 萬行大幅縮減為 30 萬行可讀版（精簡版 7.6 萬行），以 Apache 授權釋出。",
+        "原版 Alpöge 證明於 11 月 20 日發表、Lean 驗證於 11 月 21 日完成，皆在視窗外；本條僅收 11 月 25 日的 Sernau 精簡版。Sernau 的貢獻不在於新的數學主張，而在於把機器生成的龐大證明壓縮到人類可處理的規模。",
+        "數學家 Andrew Sutherland 已於同日開始驗算，兩版本皆可編譯，驗證工作仍在進行。編譯通過只是第一步：證明是否正確，仍需數學社群逐項檢查。",
+        "從 1,700 萬行到 30 萬行，精簡版讓人類數學家真正有機會讀懂這份證明，也讓後續的檢查與質疑得以展開。黎曼猜想是數學界最著名的未解難題之一，任何宣稱的證明都將面臨最嚴格的檢視。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "Wikipedia",
+          "url": "https://en.wikipedia.org/wiki/Alp%C3%B6ge%27s_proof_of_the_Riemann_hypothesis"
+        },
+        {
+          "label": "HN Companion",
+          "url": "https://app.hncompanion.com/item?id=50648050"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "Wikipedia",
+          "published_at": "2026-11-25T00:00:00+00:00",
+          "timezone": "UTC",
+          "url": "https://en.wikipedia.org/wiki/Alp%C3%B6ge%27s_proof_of_the_Riemann_hypothesis"
+        },
+        {
+          "name": "HN Companion",
+          "published_at": "2026-11-25T00:00:00+00:00",
+          "timezone": "UTC",
+          "url": "https://app.hncompanion.com/item?id=50648050"
+        }
+      ],
+      "summary_zh": "Anthropic 研究員 Luke Sernau 11 月 25 日發布黎曼猜想證明的精簡版，把 Alpöge 原版約 1,700 萬行大幅縮減為 30 萬行可讀版（精簡版 7.6 萬行），以 Apache 授權釋出。原版 Alpöge 證明於 11 月 20 日發表、Lean 驗證於 11 月 21 日完成，皆在視窗外；本條僅收 11 月 25 日的 Sernau 精簡版。數學家 Andrew Sutherland 已於同日開始驗算，兩版本皆可編譯，驗證工作仍在進行。從 1,700 萬行到 30 萬行，精簡版讓人類數學家真正有機會讀懂這份證明，也讓後續的檢查與質疑得以展開。",
+      "tag": "research",
+      "tagLabel": "研究",
+      "title": "黎曼猜想證明再瘦身：Sernau 版從 1,700 萬行縮至 30 萬行可讀版",
+      "title_en": "Riemann hypothesis proof slimmed down: Sernau version cuts 17M lines to 300,000",
+      "title_zh": "黎曼猜想證明再瘦身：Sernau 版從 1,700 萬行縮至 30 萬行可讀版",
+      "summary_en": "Anthropic researcher Luke Sernau released a slimmed-down version of the Riemann hypothesis proof on Nov 25, cutting Alpöge's original roughly 17 million lines to 300,000 lines in a readable version (76,000 lines in compact form), released under the Apache license. The original Alpöge proof was published on Nov 20 and its Lean verification completed on Nov 21, both outside the window; this item covers only the Nov 25 Sernau release. Mathematician Andrew Sutherland began checking it the same day, and both versions compile, with verification still underway. From 17 million lines to 300,000, the slimmed version gives human mathematicians a real chance to read the proof, allowing further checking and scrutiny to proceed.",
+      "paras_en": [
+        "Anthropic researcher Luke Sernau released a slimmed-down version of the Riemann hypothesis proof on Nov 25, cutting Alpöge's original roughly 17 million lines to 300,000 lines in a readable version (76,000 lines in compact form), released under the Apache license.",
+        "The original Alpöge proof was published on Nov 20 and its Lean verification completed on Nov 21, both outside the window; this item covers only the Nov 25 Sernau release. Sernau's contribution is not a new mathematical claim, but compressing a machine-generated, enormous proof down to a scale humans can handle.",
+        "Mathematician Andrew Sutherland began checking it the same day, and both versions compile, with verification still underway. Compiling is only the first step: whether the proof is correct still requires the mathematics community to check it item by item.",
+        "From 17 million lines to 300,000, the slimmed version gives human mathematicians a real chance to read the proof, allowing further checking and scrutiny to proceed. The Riemann hypothesis is one of the most famous unsolved problems in mathematics, and any claimed proof will face the strictest examination."
+      ],
+      "one_line_summary_en": "Anthropic researcher Luke Sernau released a slimmed-down version of the Riemann hypothesis proof on Nov 25, cutting Alpöge's original roughly 17 million lines to 300,000 lines in a readable version (76,000 lines compact), released under the Apache license. Mathematician Andrew Sutherland began checking it the same day, and both versions compile."
+    },
+    {
+      "anchor": "card-13",
+      "category": "應用",
+      "en": "Amazon and Meta reportedly in talks to lift blockade on AI agent Muse",
+      "entryNo": 13,
+      "is_top3": false,
+      "n": 13,
+      "note": "僅 TechCrunch 轉述《財富》報導一家，談判本身未經證實；爭議點為搜尋結果呈現方式與廣告。",
+      "one_line_summary": "據《財富》報導、TechCrunch 11 月 25 日轉述，亞馬遜與 Meta 正在談判解除對 AI 代理 Muse 的封鎖；爭議點為搜尋結果呈現方式與廣告，談判本身未經證實。",
+      "paras": [
+        "據《財富》報導、TechCrunch 11 月 25 日轉述，亞馬遜與 Meta 正在談判，解除對 AI 代理 Muse 的封鎖。",
+        "Muse 是 Anthropic 開發的 AI 代理，能代用戶在網路上執行任務；亞馬遜與 Meta 先前皆對其設限，擔憂它繞過自家介面、直接與用戶互動。當代理成為新的流量入口，平台的守門人角色便受到挑戰。",
+        "談判的爭議點包括搜尋結果的呈現方式與廣告：平台希望保有對內容呈現與變現方式的控制，代理則希望直接為用戶辦事。如何分潤、如何標示，成為雙方拉鋸的焦點。",
+        "需要注意的是，目前僅 TechCrunch 轉述《財富》報導一家，談判本身未經證實。但無論結果如何，這場談判都反映平台與 AI 代理之間的權力拉鋸才剛開始，類似的談判未來只會更多。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/2026/11/25/amazon-and-meta-reportedly-in-talks-to-lift-blockade-on-ai-agent-muse/"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "TechCrunch",
+          "published_at": "2026-11-25T14:10:00+00:00",
+          "timezone": "UTC",
+          "url": "https://techcrunch.com/2026/11/25/amazon-and-meta-reportedly-in-talks-to-lift-blockade-on-ai-agent-muse/"
+        }
+      ],
+      "summary_zh": "據《財富》報導、TechCrunch 11 月 25 日轉述，亞馬遜與 Meta 正在談判，解除對 AI 代理 Muse 的封鎖。Muse 是 Anthropic 開發的 AI 代理，能代用戶在網路上執行任務；亞馬遜與 Meta 先前皆對其設限，擔憂它繞過自家介面、直接與用戶互動。談判的爭議點包括搜尋結果的呈現方式與廣告：平台希望保有對內容呈現與變現方式的控制，代理則希望直接為用戶辦事。需要注意的是，目前僅 TechCrunch 轉述《財富》報導一家，談判本身未經證實；但無論結果如何，這場談判都反映平台與 AI 代理之間的權力拉鋸才剛開始。",
+      "tag": "app",
+      "tagLabel": "應用",
+      "title": "傳亞馬遜與 Meta 談判解除對 AI 代理 Muse 的封鎖",
+      "title_en": "Amazon and Meta reportedly in talks to lift blockade on AI agent Muse",
+      "title_zh": "傳亞馬遜與 Meta 談判解除對 AI 代理 Muse 的封鎖",
+      "summary_en": "According to Fortune, as reported by TechCrunch on Nov 25, Amazon and Meta are in talks to lift their blockade on Muse, Anthropic's AI agent. Muse can carry out tasks on the web on users' behalf; Amazon and Meta had previously restricted it, concerned that it would bypass their own interfaces and interact with users directly. The sticking points in the talks include how search results are presented and advertising: the platforms want to retain control over content presentation and monetization, while the agent wants to act directly for users. Note that only TechCrunch relaying Fortune has reported this, and the talks themselves are unconfirmed; whatever the outcome, the negotiation reflects a power struggle between platforms and AI agents that is only just beginning.",
+      "paras_en": [
+        "According to Fortune, as reported by TechCrunch on Nov 25, Amazon and Meta are in talks to lift their blockade on Muse, Anthropic's AI agent.",
+        "Muse is an AI agent developed by Anthropic that can carry out tasks on the web on users' behalf; Amazon and Meta had previously restricted it, concerned that it would bypass their own interfaces and interact with users directly. When an agent becomes a new gateway for traffic, the platforms' gatekeeper role is challenged.",
+        "The sticking points in the talks include how search results are presented and advertising: the platforms want to retain control over content presentation and monetization, while the agent wants to act directly for users. How revenue is shared and how content is labeled have become the focus of the tug-of-war.",
+        "Note that only TechCrunch relaying Fortune has reported this, and the talks themselves are unconfirmed. But whatever the outcome, the negotiation reflects a power struggle between platforms and AI agents that is only just beginning, and similar negotiations will only become more common."
+      ],
+      "one_line_summary_en": "According to Fortune, as reported by TechCrunch on Nov 25, Amazon and Meta are in talks to lift their blockade on Muse, Anthropic's AI agent. The sticking points are how search results are presented and advertising; the talks themselves are unconfirmed."
+    },
+    {
+      "anchor": "card-14",
+      "category": "政策",
+      "en": "MIT Technology Review: AI is straining America's open-records systems",
+      "entryNo": 14,
+      "is_top3": false,
+      "n": 14,
+      "note": "數據引述 MIT Technology Review 報導；部分州已開始以法規回應。",
+      "one_line_summary": "MIT Technology Review 11 月 25 日報導，AI 新創募資逾 1 億美元、把公開紀錄收割為 AI 銷售情報，申請量暴增拖垮美國各州公開紀錄系統：教育部的申請中至少 29% 部分由 AI 撰寫、長度翻倍，賓州申訴量 2026 年約 6,000 件、較 2021 年翻倍，部分引用為 AI 幻覺。",
+      "paras": [
+        "MIT Technology Review 11 月 25 日報導，AI 新創募資逾 1 億美元，把公開紀錄收割為 AI 銷售情報，申請量暴增拖垮美國各州的公開紀錄系統。公開紀錄法原是為了讓公民監督政府，如今卻成了 AI 公司的資料礦場。",
+        "數據顯示：Starbridge 募資 5,200 萬美元、Pursuit 募資 2,550 萬美元；SmartProcure 與 Pursuit 每年合計約 18 萬件申請，NationGraph 每天為客戶提交約 1 萬件。這些申請多半是為了取得政府採購與合約資訊，再餵給 AI 銷售工具。",
+        "美國教育部 7 月的紀錄顯示，至少 29% 的申請至少部分由 AI 撰寫，長度約為以往兩倍；賓州申訴量 2026 年約 6,000 件、較 2021 年的約 3,000 件翻倍，部分引用為 AI 幻覺。承辦人員被迫花更多時間分辨真假申請，真正公民的請求反而被排擠。",
+        "各州已開始回應：加州認定 AI 系統不是「公眾」，印第安納州允許機關拒絕疑似爬蟲的申請。這場拉鋸揭示一個新問題：當 AI 能以機器速度行使公民權利，制度該如何區分「使用」與「濫用」。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "MIT Technology Review",
+          "url": "https://www.technologyreview.com/2026/11/25/1149702/ai-is-straining-americas-open-records-systems/"
+        },
+        {
+          "label": "newsroomamerica",
+          "url": "https://newsroomamerica.com/a/Q9HRcMBrN9s5NBMywlrkQguz132/mit_technology_review_reports_ai_is_straining_america_s_open_records_systems_as_startups_mine_public_data_while_hackers_used_an_ai_tool_to_breach_us_spy_agencies_and_huawei_was_convicted_of_trade_secret_theft.html"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "MIT Technology Review",
+          "published_at": "2026-11-25T00:00:00+00:00",
+          "timezone": "UTC",
+          "url": "https://www.technologyreview.com/2026/11/25/1149702/ai-is-straining-americas-open-records-systems/"
+        },
+        {
+          "name": "newsroomamerica",
+          "published_at": "2026-11-25T00:00:00+00:00",
+          "timezone": "UTC",
+          "url": "https://newsroomamerica.com/a/Q9HRcMBrN9s5NBMywlrkQguz132/mit_technology_review_reports_ai_is_straining_america_s_open_records_systems_as_startups_mine_public_data_while_hackers_used_an_ai_tool_to_breach_us_spy_agencies_and_huawei_was_convicted_of_trade_secret_theft.html"
+        }
+      ],
+      "summary_zh": "MIT Technology Review 11 月 25 日報導，AI 新創募資逾 1 億美元，把公開紀錄收割為 AI 銷售情報，申請量暴增拖垮美國各州的公開紀錄系統。數據顯示：Starbridge 募資 5,200 萬美元、Pursuit 募資 2,550 萬美元；SmartProcure 與 Pursuit 每年合計約 18 萬件申請，NationGraph 每天為客戶提交約 1 萬件。美國教育部 7 月的紀錄顯示，至少 29% 的申請至少部分由 AI 撰寫，長度約為以往兩倍；賓州申訴量 2026 年約 6,000 件、較 2021 年的約 3,000 件翻倍，部分引用為 AI 幻覺。各州已開始回應：加州認定 AI 系統不是「公眾」，印第安納州允許機關拒絕疑似爬蟲的申請。",
+      "tag": "policy",
+      "tagLabel": "政策",
+      "title": "MIT 科技評論：AI 正在拖垮美國公開紀錄申請系統",
+      "title_en": "MIT Technology Review: AI is straining America's open-records systems",
+      "title_zh": "MIT 科技評論：AI 正在拖垮美國公開紀錄申請系統",
+      "summary_en": "MIT Technology Review reported on Nov 25 that AI startups have raised more than $100 million to harvest public records into AI sales intelligence, and the surge in requests is straining open-records systems across U.S. states. The figures: Starbridge raised $52 million and Pursuit $25.5 million; SmartProcure and Pursuit together file about 180,000 requests a year, and NationGraph submits about 10,000 a day for clients. The U.S. Department of Education's July log shows at least 29% of requests were at least partly AI-written and twice as long as before; Pennsylvania appeals reached about 6,000 in 2026, double the roughly 3,000 in 2021, with some containing hallucinated citations. States have begun to respond: California says AI systems are not members of the public, and Indiana lets agencies deny suspected scraping.",
+      "paras_en": [
+        "MIT Technology Review reported on Nov 25 that AI startups have raised more than $100 million to harvest public records into AI sales intelligence, and the surge in requests is straining open-records systems across U.S. states. Open-records laws were meant to let citizens oversee government; they have now become a data mine for AI companies.",
+        "The figures: Starbridge raised $52 million and Pursuit $25.5 million; SmartProcure and Pursuit together file about 180,000 requests a year, and NationGraph submits about 10,000 a day for clients. Most of these requests aim to obtain government procurement and contract information, which is then fed to AI sales tools.",
+        "The U.S. Department of Education's July log shows at least 29% of requests were at least partly AI-written and twice as long as before; Pennsylvania appeals reached about 6,000 in 2026, double the roughly 3,000 in 2021, with some containing hallucinated citations. Caseworkers are forced to spend more time distinguishing genuine requests from machine-generated ones, while real citizens' requests get crowded out.",
+        "States have begun to respond: California says AI systems are not members of the public, and Indiana lets agencies deny suspected scraping. The tug-of-war raises a new question: when AI can exercise citizens' rights at machine speed, how should the system distinguish \"use\" from \"abuse\"?"
+      ],
+      "one_line_summary_en": "MIT Technology Review reported on Nov 25 that AI startups have raised more than $100 million to harvest public records into AI sales intelligence, and the surge in requests is straining America's open-records systems: at least 29% of the Education Department's requests were at least partly AI-written and twice as long, and Pennsylvania appeals reached about 6,000 in 2026, double the roughly 3,000 in 2021, with some containing hallucinated citations."
+    },
+    {
+      "anchor": "card-15",
+      "category": "其他",
+      "en": "AI data centers are becoming harder to build, and neoclouds are feeling it",
+      "entryNo": 15,
+      "is_top3": false,
+      "n": 15,
+      "note": "僅 TechCrunch Equity 播客一家來源；2027 年洗牌為來賓 Chamath Palihapitiya 的預測。",
+      "one_line_summary": "TechCrunch Equity 播客 11 月 25 日指出，AI 資料中心越來越難蓋：土地、電力與廠房「三缺」齊發，輝達要到接近完工才願意背書，新雲業者承壓；來賓預測 2027 年將出現一波洗牌。",
+      "paras": [
+        "TechCrunch Equity 播客 11 月 25 日指出，AI 資料中心越來越難蓋，新雲業者（neoclouds）首當其衝。過去兩年靠著轉租輝達 GPU 快速崛起的新雲業者，如今面臨的是比搶晶片更難的關卡：把資料中心蓋出來。",
+        "土地、電力與廠房「三缺」齊發：合適的地難找、電力接不上、廠房蓋不及，連輝達也不願在接近完工前為專案背書。沒有輝達的背書，融資與客戶簽約都更困難。",
+        "來賓、亞利桑那土地顧問 Anita Verma-Lallian 在節目中說明了土地與電力瓶頸的實況；另一位來賓 Chamath Palihapitiya 則預測，2027 年將出現一波洗牌。洗牌的邏輯很直接：蓋不成的業者會先被淘汰，留下的才能吃到長期需求。",
+        "這集播客本身就是事件：僅 TechCrunch 一家來源，反映的是市場對 AI 基建熱潮能否持續的集體焦慮。當算力需求仍在高漲，供給端的瓶頸已從晶片移向土地與電力，AI 基建的故事進入下一個階段。"
+      ],
+      "sourceText": "",
+      "sources": [
+        {
+          "label": "TechCrunch",
+          "url": "https://techcrunch.com/podcast/ai-data-centers-are-becoming-harder-to-build-and-neoclouds-are-feeling-it/"
+        }
+      ],
+      "sources_detail": [
+        {
+          "name": "TechCrunch",
+          "published_at": "2026-11-25T15:41:43+00:00",
+          "timezone": "UTC",
+          "url": "https://techcrunch.com/podcast/ai-data-centers-are-becoming-harder-to-build-and-neoclouds-are-feeling-it/"
+        }
+      ],
+      "summary_zh": "TechCrunch Equity 播客 11 月 25 日指出，AI 資料中心越來越難蓋，新雲業者（neoclouds）首當其衝。土地、電力與廠房「三缺」齊發：合適的地難找、電力接不上、廠房蓋不及，連輝達也不願在接近完工前為專案背書。來賓、亞利桑那土地顧問 Anita Verma-Lallian 在節目中說明了土地與電力瓶頸的實況；另一位來賓 Chamath Palihapitiya 則預測，2027 年將出現一波洗牌。這集播客本身就是事件：僅 TechCrunch 一家來源，反映的是市場對 AI 基建熱潮能否持續的集體焦慮。",
+      "tag": "other",
+      "tagLabel": "其他",
+      "title": "AI 資料中心越來越難蓋，新雲業者承壓、2027 年恐洗牌",
+      "title_en": "AI data centers are becoming harder to build, and neoclouds are feeling it",
+      "title_zh": "AI 資料中心越來越難蓋，新雲業者承壓、2027 年恐洗牌",
+      "summary_en": "The TechCrunch Equity podcast said on Nov 25 that AI data centers are becoming harder to build, with neoclouds feeling the pressure first. Land, power, and shell are all in short supply: suitable land is hard to find, power connections lag, and shells cannot be built fast enough, and even Nvidia will not back a project until it is nearly ready. Guest Anita Verma-Lallian of Arizona Land Consulting described the land and power bottlenecks on the show, while fellow guest Chamath Palihapitiya predicted a shakeout in 2027. The episode itself is the event: a single TechCrunch source, reflecting the market's collective anxiety over whether the AI infrastructure boom can last.",
+      "paras_en": [
+        "The TechCrunch Equity podcast said on Nov 25 that AI data centers are becoming harder to build, with neoclouds feeling the pressure first. Neoclouds that rose quickly over the past two years by subleasing Nvidia GPUs now face a harder hurdle than securing chips: actually building data centers.",
+        "Land, power, and shell are all in short supply: suitable land is hard to find, power connections lag, and shells cannot be built fast enough, and even Nvidia will not back a project until it is nearly ready. Without Nvidia's backing, financing and customer contracts both become harder.",
+        "Guest Anita Verma-Lallian of Arizona Land Consulting described the land and power bottlenecks on the show, while fellow guest Chamath Palihapitiya predicted a shakeout in 2027. The logic of a shakeout is straightforward: companies that cannot build will be eliminated first, and only the survivors will capture long-term demand.",
+        "The episode itself is the event: a single TechCrunch source, reflecting the market's collective anxiety over whether the AI infrastructure boom can last. While demand for computing power keeps rising, the supply-side bottleneck has moved from chips to land and power, and the AI infrastructure story is entering its next phase."
+      ],
+      "one_line_summary_en": "The TechCrunch Equity podcast said on Nov 25 that AI data centers are becoming harder to build: with land, power, and shell all in short supply, Nvidia will not back a project until it is nearly ready, and neoclouds are feeling the pressure. Guest Chamath Palihapitiya predicted a shakeout in 2027."
+    }
+  ],
+  "hero": "過去 24 小時，FCC 批准 SpaceX 在太空部署 100 萬顆 AI 資料中心衛星；Google Cogentic 一口氣發表六篇數學論文，宣稱整數分解證明界大幅推進；小鵬人形機器人 IRON 明年 1 月量產、首季進店當銷售導購；歐盟提出 500 億歐元主權科技基金；標普考慮下調輝達信用評級。",
+  "is_latest": true,
+  "issue": "2026-11-26",
+  "label": "11-26",
+  "meta": "時間視窗：2026-11-25 09:00 至 2026-11-26 09:00（台北時間）· 共 15 條",
+  "notes": [
+    "來源說明：本期 15 條，皆來自官方部落格、英文與中文科技媒體、跑分榜與社群；發布類條目依方案 B 以兩個獨立來源核對事件日期，核對不上的已降級或棄用；發布時間不確定者標「未確認」，不猜測。",
+    "排除說明：OpenAI ChatGPT「聊天＋工作」合併（Sottiaux 貼文與上線皆為 11 月 24 日，11 月 25 日報導為跟進）、Anthropic Skills over MCP 公開測試、Anthropic 與 OpenAI 的 VP≠VNP 證明、百度文心 5.5 Flash Preview 權重上線、HungerG 匿名模型、亞馬遜收購 Decart、Google Workspace MCP 全面開放、F-Secure 詐騙賣家預印本、美國銀行 AI 代理終止開關、LessWrong 推理伺服器隱密通道論文、vLLM-GR、GPT-6.2 Astra 1808 素描本、矩陣乘法 ω=9/4 預印本、Nothing Ear（note）AI 耳機、T-Mobile AI 客服、Wired 報導 Muse 取消追蹤 Instagram 帳號等，事件日皆在視窗外，已排除。跑分榜七個來源視窗內無登頂、超車或新模型上榜（LMArena 數據為 11 月 22 日、LiveBench 榜首結果為 11 月 6 日）。",
+    "單一來源說明：標普考慮下調輝達評級、Anthropic 執行長 Amodei 發文、亞馬遜與 Meta 談判解除 Muse 封鎖、新雲業者承壓等，皆僅一家主要來源，已於條目備註中說明；Cogentic 六篇論文與 Sernau 精簡版黎曼猜想證明皆未經同行評審；輝達 B300／GB300 交期、CIA 入侵事件為供應鏈與情報來源說法，輝達與相關機構未證實；以上皆已於條目備註中說明。",
+    "未讀取說明：The Verge、Ars Technica 因網域阻擋未能直接開啟，改以搜尋與聚合站核實；Wired 未直接讀取，以搜尋與轉載核實；X 有登入牆，改以搜尋核實官方貼文；36氪未取得原文連結；Hugging Face 熱門榜未直接讀取，改以搜尋核實；紐約時報 CIA 入侵原文為付費牆，經轉述核實。"
+  ],
+  "tldr": [
+    {
+      "n": 1,
+      "text": "美國聯邦通訊委員會 11 月 25 日批准 SpaceX 在太空部署多達 100 萬顆 AI 資料中心衛星的計畫，要求首顆衛星 2033 年 11 月前升空、2040 年前完成全部部署；衛星將以雷射鏈路互連、運行於 500 至 1,002 公里軌道，Amazon、Viasat 與美國天文學會曾提出反對。"
+    },
+    {
+      "n": 2,
+      "text": "Google 的 AI 數學代理 Cogentic 11 月 25 日在 GitHub 一口氣發表六篇數學論文，宣稱在無條件整數分解上取得 L[1/3, 105] 的證明界，大幅推進 1992 年 Lenstra–Pomerance 的 L[1/2] 紀錄；六篇皆未經同行評審，Lean 4 證明已承諾但尚未公開。"
+    },
+    {
+      "n": 3,
+      "text": "小鵬汽車 11 月 25 日在第八屆科技日宣布，人形機器人 IRON 將於 2027 年 1 月量產，2027 年第一季先進門市擔任銷售導購「實習」，第二季正式發布；IRON 身高 170 公分、重 62 公斤，具 76 個自由度、1,500 多個觸覺點，搭載 3 顆圖靈 AI 晶片、算力 2,250 TOPS。"
+    },
+    {
+      "n": 4,
+      "text": "歐盟執委會 11 月 25 日提出《量子法案》，並規劃規模 500 億歐元的主權科技股權基金，目標讓歐洲在 2030 年前領先量子科技；基金涵蓋 AI、量子、半導體與網路安全，預計於 2028–2034 年多年期財政框架開始時運作，500 億歐元為目標規模、非已核准預算。"
+    },
+    {
+      "n": 5,
+      "text": "標普全球評級考慮下調輝達的信用評級，理由是黃仁勳請辭又復職引發的治理疑慮與「關鍵人物」風險；評級檢討預計 90 天內完成，若下調將由 AA 降至 AA-；目前僅 TechCrunch 一家報導，尚未經標普或輝達證實。"
+    },
+    {
+      "n": 6,
+      "text": "Anthropic 執行長 Dario Amodei 11 月 25 日在 X 發文，駁斥「交出人類自由意志」的指控「荒謬」；他回應 Axios 前一日報導——逾 20 名消息來源稱員工質疑未發布的模型能否安全推出——並劃出底線：反對遞迴自我改進。"
+    },
+    {
+      "n": 7,
+      "text": "紐約時報 11 月 25 日報導，美國中央情報局、國家地理空間情報局與國家情報總監辦公室的開源情報分析系統傳遭入侵，未分類資料外洩、機密資料未受影響，疑似與中國有關；攻擊疑似濫用 2026 年 7 月由中國開發者發布的 AI 滲透測試工具 ARTEX。"
+    },
+    {
+      "n": 8,
+      "text": "Anthropic 11 月 25 日發表工程文章，說明如何讓 Claude 代理主導、把 Messages API 從 Python 重寫為 Rust：Claude 約一週寫出首版核心請求路徑，以線上 Python 版為準、影子流量比對，結果每請求 CPU 用量降約七成、首次回應時間中位數快約兩成，且全程未停機、未凍結功能開發。"
+    },
+    {
+      "n": 9,
+      "text": "OpenAI 執行長 Sam Altman 11 月 25 日在 X 宣布，Private Inference 開始小規模客戶內測：以機密運算讓提示與回應在模型處理時仍加密於可驗證環境中，處理完成後適用零資料保留；這是 9 月 29 日 DevDay 發表的 Private Intelligence 計畫一環，適用模型與定價尚未公布。"
+    },
+    {
+      "n": 10,
+      "text": "42 位美國州檢察長挑戰 Character.AI 拍賣用戶私人對話的計畫：該公司破產拍賣預定 12 月 1 日舉行，涉及逾 2,100 萬美國帳戶、其中逾 210 萬為未成年人，唯一已披露的競標者為 11 月 13 日才成立的 Smirks and Pangs Acquisition LLC。"
+    },
+    {
+      "n": 11,
+      "text": "TrendForce 11 月 25 日引述台灣 ODM 業者報導，輝達 B300 新訂單交期拉長至 26 至 40 週、GB300 為 14 至 26 週，近兩季多數新訂單要到 2027 年第二至三季才能交貨；記憶體供應吃緊下，輝達傳砍 GeForce RTX 50 供應、RTX 60 量產（目標 2027 年底）恐延後，輝達未證實。"
+    },
+    {
+      "n": 12,
+      "text": "Anthropic 研究員 Luke Sernau 11 月 25 日發布黎曼猜想證明的精簡版，把 Alpöge 原版約 1,700 萬行縮至 30 萬行可讀版（精簡版 7.6 萬行），以 Apache 授權釋出；數學家 Andrew Sutherland 已於同日開始驗算，兩版本皆可編譯。"
+    },
+    {
+      "n": 13,
+      "text": "據《財富》報導、TechCrunch 11 月 25 日轉述，亞馬遜與 Meta 正在談判解除對 AI 代理 Muse 的封鎖；爭議點為搜尋結果呈現方式與廣告，談判本身未經證實。"
+    },
+    {
+      "n": 14,
+      "text": "MIT Technology Review 11 月 25 日報導，AI 新創募資逾 1 億美元、把公開紀錄收割為 AI 銷售情報，申請量暴增拖垮美國各州公開紀錄系統：教育部的申請中至少 29% 部分由 AI 撰寫、長度翻倍，賓州申訴量 2026 年約 6,000 件、較 2021 年翻倍，部分引用為 AI 幻覺。"
+    },
+    {
+      "n": 15,
+      "text": "TechCrunch Equity 播客 11 月 25 日指出，AI 資料中心越來越難蓋：土地、電力與廠房「三缺」齊發，輝達要到接近完工才願意背書，新雲業者承壓；來賓預測 2027 年將出現一波洗牌。"
+    }
+  ],
+  "top3": [
+    {
+      "blurb": "美國聯邦通訊委員會 11 月 25 日批准 SpaceX 在太空部署多達 100 萬顆 AI 資料中心衛星的計畫，要求首顆衛星 2033 年 11 月前升空、2040 年前完成全部部署；衛星將以雷射鏈路互連、運行於 500 至 1,002 公里軌道，Amazon、Viasat 與美國天文學會曾提出反對。",
+      "n": 1,
+      "rank": 1,
+      "title": "FCC 批准 SpaceX 太空 AI 資料中心計畫，最多部署 100 萬顆衛星",
+      "blurb_en": "The U.S. Federal Communications Commission approved SpaceX's plan on Nov 25 to deploy up to 1 million AI data-center satellites in space, requiring the first satellite to launch by November 2033 and the full deployment to be completed by 2040. The satellites will be linked by laser connections and operate in orbits 500 to 1,002 kilometers high; Amazon, Viasat, and the American Astronomical Society had objected to the plan."
+    },
+    {
+      "blurb": "Google 的 AI 數學代理 Cogentic 11 月 25 日在 GitHub 一口氣發表六篇數學論文，宣稱在無條件整數分解上取得 L[1/3, 105] 的證明界，大幅推進 1992 年 Lenstra–Pomerance 的 L[1/2] 紀錄；六篇皆未經同行評審，Lean 4 證明已承諾但尚未公開。",
+      "n": 2,
+      "rank": 2,
+      "title": "Google Cogentic 一口氣發表六篇數學論文，宣稱整數分解證明界大幅推進",
+      "blurb_en": "Google's AI math agent Cogentic published six math papers on GitHub on Nov 25, claiming an unconditional proven bound of L[1/3, 105] for integer factorization, a major advance over the L[1/2] record set by Lenstra–Pomerance in 1992. None of the six papers has been peer-reviewed, and the promised Lean 4 proofs have not yet been made public."
+    },
+    {
+      "blurb": "小鵬汽車 11 月 25 日在第八屆科技日宣布，人形機器人 IRON 將於 2027 年 1 月量產，2027 年第一季先進門市擔任銷售導購「實習」，第二季正式發布；IRON 身高 170 公分、重 62 公斤，具 76 個自由度、1,500 多個觸覺點，搭載 3 顆圖靈 AI 晶片、算力 2,250 TOPS。",
+      "n": 3,
+      "rank": 3,
+      "title": "小鵬人形機器人 IRON 明年 1 月量產，首季進店當銷售導購「實習」",
+      "blurb_en": "XPeng announced at its 8th Tech Day on Nov 25 that its humanoid robot IRON will enter mass production in January 2027, start \"interning\" as a sales guide in stores in the first quarter of 2027, and officially launch in the second quarter. IRON stands 170 cm tall, weighs 62 kg, has 76 degrees of freedom and more than 1,500 touch points, and carries three Turing AI chips delivering 2,250 TOPS."
+    }
+  ],
+  "weekday": "星期四",
+  "hero_en": "Over the past 24 hours, the FCC approved SpaceX's plan to deploy 1 million AI data-center satellites in space; Google's Cogentic published six math papers at once, claiming a major advance in the proven bound for integer factorization; XPeng's humanoid robot IRON enters mass production in January 2027 and will start \"interning\" as a sales guide in stores in the first quarter; the EU proposed a €50 billion sovereign tech fund; and S&P is considering downgrading Nvidia's credit rating.",
+  "tldr_en": [
+    {
+      "n": 1,
+      "text": "The U.S. Federal Communications Commission approved SpaceX's plan on Nov 25 to deploy up to 1 million AI data-center satellites in space, requiring the first satellite to launch by November 2033 and the full deployment to be completed by 2040. The satellites will be linked by laser connections and operate in orbits 500 to 1,002 kilometers high; Amazon, Viasat, and the American Astronomical Society had objected to the plan."
+    },
+    {
+      "n": 2,
+      "text": "Google's AI math agent Cogentic published six math papers on GitHub on Nov 25, claiming an unconditional proven bound of L[1/3, 105] for integer factorization, a major advance over the L[1/2] record set by Lenstra–Pomerance in 1992. None of the six papers has been peer-reviewed, and the promised Lean 4 proofs have not yet been made public."
+    },
+    {
+      "n": 3,
+      "text": "XPeng announced at its 8th Tech Day on Nov 25 that its humanoid robot IRON will enter mass production in January 2027, start \"interning\" as a sales guide in stores in the first quarter of 2027, and officially launch in the second quarter. IRON stands 170 cm tall, weighs 62 kg, has 76 degrees of freedom and more than 1,500 touch points, and carries three Turing AI chips delivering 2,250 TOPS."
+    },
+    {
+      "n": 4,
+      "text": "The European Commission proposed a Quantum Act on Nov 25, together with a €50 billion sovereign tech equity fund, aiming for Europe to lead quantum technology by 2030. The fund covers AI, quantum, semiconductors, and cybersecurity and is expected to become operational at the start of the 2028–2034 multiannual financial framework; €50 billion is a target scale, not an approved budget."
+    },
+    {
+      "n": 5,
+      "text": "S&P Global Ratings is considering downgrading Nvidia's credit rating, citing governance concerns and \"key man\" risk after Jensen Huang's resignation and reinstatement. The review is expected to conclude within 90 days, and a downgrade would take the rating from AA to AA-; only TechCrunch has reported this so far, and neither S&P nor Nvidia has confirmed it."
+    },
+    {
+      "n": 6,
+      "text": "Anthropic CEO Dario Amodei posted on X on Nov 25, calling accusations of \"surrendering human free will\" \"absurd.\" He was responding to an Axios report from the previous day, in which more than 20 sources said employees doubted whether unreleased models could be safely released, and he drew a line against recursive self-improvement."
+    },
+    {
+      "n": 7,
+      "text": "The New York Times reported on Nov 25 that an open-source intelligence analysis system shared by the CIA, the National Geospatial-Intelligence Agency, and the Office of the Director of National Intelligence was reportedly breached, exposing unclassified data while classified data was unaffected, with a suspected link to China. The attack is suspected to have abused ARTEX, an AI penetration-testing tool released in July 2026 by a Chinese developer."
+    },
+    {
+      "n": 8,
+      "text": "Anthropic published an engineering post on Nov 25 describing how Claude agents led the rewrite of its Messages API from Python to Rust: Claude wrote the first version of the core request path in about a week, the production Python API served as the oracle with live traffic shadowed for comparison, and the result was about 70% less CPU per request and a median time-to-first-token about 20% faster, shipped without downtime or a feature freeze."
+    },
+    {
+      "n": 9,
+      "text": "OpenAI CEO Sam Altman announced on X on Nov 25 that Private Inference has entered limited customer trials: using confidential computing, prompts and responses stay encrypted inside attested environments while the model processes them, and Zero Data Retention applies once processing is complete. It is part of the Private Intelligence program unveiled at DevDay on September 29; applicable models and pricing are undisclosed."
+    },
+    {
+      "n": 10,
+      "text": "Forty-two U.S. state attorneys general are challenging Character.AI's plan to auction off users' private conversations: the bankruptcy auction is scheduled for Dec 1 and covers more than 21 million U.S. accounts, including more than 2.1 million minors, with the sole disclosed bidder being Smirks and Pangs Acquisition LLC, set up only on Nov 13."
+    },
+    {
+      "n": 11,
+      "text": "TrendForce reported on Nov 25, citing Taiwanese ODMs, that lead times for new Nvidia B300 orders have stretched to 26–40 weeks and GB300 to 14–26 weeks, with most new orders from the past two quarters not deliverable until the second to third quarter of 2027. With memory supply tight, Nvidia is reportedly cutting GeForce RTX 50 supply and mass production of the RTX 60, targeted for late 2027, may slip; Nvidia has not confirmed this."
+    },
+    {
+      "n": 12,
+      "text": "Anthropic researcher Luke Sernau released a slimmed-down version of the Riemann hypothesis proof on Nov 25, cutting Alpöge's original roughly 17 million lines to 300,000 lines in a readable version (76,000 lines compact), released under the Apache license. Mathematician Andrew Sutherland began checking it the same day, and both versions compile."
+    },
+    {
+      "n": 13,
+      "text": "According to Fortune, as reported by TechCrunch on Nov 25, Amazon and Meta are in talks to lift their blockade on Muse, Anthropic's AI agent. The sticking points are how search results are presented and advertising; the talks themselves are unconfirmed."
+    },
+    {
+      "n": 14,
+      "text": "MIT Technology Review reported on Nov 25 that AI startups have raised more than $100 million to harvest public records into AI sales intelligence, and the surge in requests is straining America's open-records systems: at least 29% of the Education Department's requests were at least partly AI-written and twice as long, and Pennsylvania appeals reached about 6,000 in 2026, double the roughly 3,000 in 2021, with some containing hallucinated citations."
+    },
+    {
+      "n": 15,
+      "text": "The TechCrunch Equity podcast said on Nov 25 that AI data centers are becoming harder to build: with land, power, and shell all in short supply, Nvidia will not back a project until it is nearly ready, and neoclouds are feeling the pressure. Guest Chamath Palihapitiya predicted a shakeout in 2027."
+    }
+  ],
+  "notes_en": [
+    "Sources: All 15 items in this issue come from official blogs, English- and Chinese-language tech media, benchmark leaderboards, and social media. For release-type items, event dates were verified against two independent sources under Plan B; items that could not be verified were downgraded or dropped. Items whose publication time is uncertain are marked \"unconfirmed\" — no guessing.",
+    "Exclusions: The OpenAI ChatGPT \"Chat + Work\" merge (the Sottiaux post and the rollout were both Nov 24; Nov 25 coverage was follow-up), Anthropic's Skills over MCP public beta, the Anthropic and OpenAI VP≠VNP proofs, Baidu ERNIE 5.5 Flash Preview weights going live, the HungerG anonymous model, Amazon's acquisition of Decart, Google Workspace MCP general availability, the F-Secure scam-seller preprint, U.S. banks' AI-agent kill switches, the LessWrong covert-channel paper on inference servers, vLLM-GR, the GPT-6.2 Astra 1808 sketchbook, the matrix-multiplication ω=9/4 preprint, Nothing Ear (note) AI earbuds, T-Mobile AI customer service, and Wired's report of Muse unfollowing an Instagram account were all excluded, as their event dates fall outside the window. None of the seven benchmark-leaderboard sources had a new top-ranked model, an overtaking, or a new model debuting within the window (LMArena data is dated Nov 22; the LiveBench leading result is dated Nov 6).",
+    "Single-source notes: The possible S&P downgrade of Nvidia, Anthropic CEO Amodei's post, the reported Amazon–Meta talks to lift the Muse blockade, and the neocloud squeeze each rely on a single main source, as noted in the relevant entries. The Cogentic math papers and Sernau's slimmed-down Riemann hypothesis proof have not been peer-reviewed. The Nvidia B300/GB300 lead times and the CIA breach are based on supply-chain and intelligence sources, and Nvidia and the relevant agencies have not confirmed them. All of the above are noted in the relevant entries.",
+    "Unread sources: The Verge and Ars Technica could not be opened directly due to domain blocking, so search results and aggregators were used for verification instead. Wired was not read directly; verification relied on search and reposts. X has a login wall, so official posts were verified via search. No link to the original 36Kr text was obtained. The Hugging Face trending list could not be read directly, so search was used for verification. The New York Times original on the CIA breach is paywalled, so verification relied on reposts."
+  ]
+}

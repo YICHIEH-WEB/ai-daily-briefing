@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI 每日早報 · 2026-11-26</title>
+<style>
+  :root{
+    --bg:#faf8f4; --card:#fffdf9; --ink:#1d1915; --muted:#71685b; --faint:#a39a8a;
+    --hairline:#e9e0d0; --border:#ece3d2;
+    --ember:#b45309; --ember-deep:#8a3d05; --gold:#d9a441;
+    --serif:ui-serif,"Songti TC","STSong","Noto Serif TC","Noto Serif CJK TC",serif;
+    --mono:ui-monospace,SFMono-Regular,"SF Mono",Menlo,Consolas,monospace;
+    --dot-model:#b45309; --dot-funding:#3f7a4e; --dot-policy:#8a5a83;
+    --dot-app:#2f7d7a; --dot-oss:#5b6470; --dot-research:#7a6a9a; --dot-other:#a89f90;
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#14110d; --card:#1d1814; --ink:#f1ebe0; --muted:#a79d8c; --faint:#6f665a;
+      --hairline:#2b251e; --border:#372d21;
+      --ember:#e5a05c; --ember-deep:#f2bc7d; --gold:#d9a441;
+      --dot-model:#e5a05c; --dot-funding:#82bd8d; --dot-policy:#c69dc2;
+      --dot-app:#82c6c1; --dot-oss:#9aa3ad; --dot-research:#b3a1d6; --dot-other:#8d8474;
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","PingFang SC","Hiragino Sans GB","Microsoft JhengHei","Noto Sans TC",sans-serif;
+    line-height:1.75;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:680px;margin:0 auto;padding:36px 16px 72px}
+  .masthead{margin-bottom:30px}
+  .brand{display:flex;align-items:center;gap:9px;margin-bottom:14px}
+  .brand .mark{width:9px;height:9px;background:var(--ember);border-radius:2px;flex-shrink:0}
+  .brand .bt{font-family:var(--mono);font-size:11px;letter-spacing:.3em;color:var(--muted)}
+  .masthead h1{font-family:var(--serif);font-size:36px;font-weight:700;margin:0 0 8px;letter-spacing:.08em}
+  .dateline{font-size:14.5px;color:var(--muted);margin:0 0 4px}
+  .dayline{font-family:var(--mono);font-size:11px;letter-spacing:.22em;color:var(--faint);margin:0 0 4px}
+  .meta{font-size:12.5px;color:var(--faint);margin:0}
+  .signal{height:3px;margin-top:20px;border-radius:2px;
+    background:linear-gradient(90deg,var(--ember) 0%,var(--gold) 45%,transparent 100%)}
+  .hero{font-family:var(--serif);font-size:15.5px;line-height:1.85;margin:0 0 30px}
+  section{margin-bottom:38px}
+  .sec-head{display:flex;align-items:baseline;gap:12px;margin-bottom:16px}
+  .sec-num{font-family:var(--mono);font-size:12px;color:var(--ember);letter-spacing:.1em;flex-shrink:0}
+  .sec-head h2{font-size:15px;margin:0;letter-spacing:.14em;font-weight:700;flex-shrink:0}
+  .sec-head .rule{flex:1;height:1px;background:var(--hairline);transform:translateY(-4px)}
+  .tldr{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:20px 20px 20px 12px}
+  .tldr ol{margin:0;padding-left:26px}
+  .tldr li{margin:8px 0;font-size:14px}
+  .tldr li::marker{font-family:var(--mono);font-size:12px;color:var(--ember)}
+  .tldr a{color:var(--ink);text-decoration:none;border-bottom:1px dotted var(--faint)}
+  .tldr a:hover{color:var(--ember);border-bottom-color:var(--ember)}
+  .top3{display:grid;gap:10px}
+  .mini{position:relative;background:var(--card);border:1px solid var(--border);border-radius:12px;
+    padding:15px 18px 15px 20px;overflow:hidden}
+  .mini::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;
+    background:linear-gradient(var(--ember),var(--gold))}
+  .mini .rank{font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--ember);display:block;margin-bottom:6px}
+  .mini a{color:var(--ink);text-decoration:none;font-weight:700;font-size:15px}
+  .mini a:hover{color:var(--ember)}
+  .mini p{margin:7px 0 0;font-size:13.5px;color:var(--muted)}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:14px;
+    padding:22px 20px;margin-bottom:14px;scroll-margin-top:16px}
+  .card .head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+  .num{font-family:var(--mono);font-size:12px;color:var(--faint);letter-spacing:.08em}
+  .card.is-top .num{color:var(--ember);font-weight:700}
+  .tag{display:inline-flex;align-items:center;font-size:11.5px;padding:2px 10px;border-radius:999px;
+    border:1px solid var(--border);color:var(--muted)}
+  .tag::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--dot,var(--faint));margin-right:7px;flex-shrink:0}
+  .tag-model{--dot:var(--dot-model)}
+  .tag-funding{--dot:var(--dot-funding)}
+  .tag-policy{--dot:var(--dot-policy)}
+  .tag-app{--dot:var(--dot-app)}
+  .tag-oss{--dot:var(--dot-oss)}
+  .tag-research{--dot:var(--dot-research)}
+  .tag-other{--dot:var(--dot-other)}
+  .card h3{font-family:var(--serif);font-size:19px;margin:2px 0 5px;line-height:1.55;font-weight:700}
+  .card .en{font-size:12.5px;color:var(--faint);margin:0 0 10px;font-style:italic}
+  .card .lede{font-size:14px;color:var(--muted);margin:0 0 12px;padding-left:10px;border-left:2px solid var(--ember)}
+  .card p.body{font-size:14.5px;margin:0 0 10px;text-align:justify}
+  .card .foot{margin-top:14px;padding-top:12px;border-top:1px dashed var(--hairline);
+    font-size:12.5px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 14px}
+  .card .foot a{color:var(--ember);text-decoration:none}
+  .card .foot a:hover{text-decoration:underline}
+  .card .foot .note{flex-basis:100%}
+  .src-label{font-weight:700;color:var(--muted)}
+  footer{border-top:1px solid var(--hairline);padding-top:20px;color:var(--muted);font-size:13px}
+  footer p{margin:0}
+  @media (max-width:560px){
+    .masthead h1{font-size:29px}
+    .card{padding:18px 16px}
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="masthead">
+    <div class="brand"><span class="mark"></span><span class="bt">AI DAILY BRIEFING</span></div>
+    <h1>AI 每日早報</h1>
+    <p class="dateline">2026 年 11 月 26 日 · 星期四</p>
+    <p class="dayline">THURSDAY · 台北時間</p>
+    <p class="meta">時間視窗：2026-11-25 09:00 至 2026-11-26 09:00（台北時間）· 共 15 條</p>
+    <div class="signal"></div>
+  </header>
+  <p class="hero">過去 24 小時，FCC 批准 SpaceX 在太空部署 100 萬顆 AI 資料中心衛星；Google Cogentic 一口氣發表六篇數學論文，宣稱整數分解證明界大幅推進；小鵬人形機器人 IRON 明年 1 月量產、首季進店當銷售導購；歐盟提出 500 億歐元主權科技基金；標普考慮下調輝達信用評級。</p>
+  <section>
+    <div class="sec-head"><span class="sec-num">01</span><h2>一句話速覽</h2><span class="rule"></span></div>
+    <div class="tldr"><ol>
+      <li><a href="#card-1">美國聯邦通訊委員會 11 月 25 日批准 SpaceX 在太空部署多達 100 萬顆 AI 資料中心衛星的計畫，要求首顆衛星 2033 年 11 月前升空、2040 年前完成全部部署；衛星將以雷射鏈路互連、運行於 500 至 1,002 公里軌道，Amazon、Viasat 與美國天文學會曾提出反對。</a></li>
+      <li><a href="#card-2">Google 的 AI 數學代理 Cogentic 11 月 25 日在 GitHub 一口氣發表六篇數學論文，宣稱在無條件整數分解上取得 L[1/3, 105] 的證明界，大幅推進 1992 年 Lenstra–Pomerance 的 L[1/2] 紀錄；六篇皆未經同行評審，Lean 4 證明已承諾但尚未公開。</a></li>
+      <li><a href="#card-3">小鵬汽車 11 月 25 日在第八屆科技日宣布，人形機器人 IRON 將於 2027 年 1 月量產，2027 年第一季先進門市擔任銷售導購「實習」，第二季正式發布；IRON 身高 170 公分、重 62 公斤，具 76 個自由度、1,500 多個觸覺點，搭載 3 顆圖靈 AI 晶片、算力 2,250 TOPS。</a></li>
+      <li><a href="#card-4">歐盟執委會 11 月 25 日提出《量子法案》，並規劃規模 500 億歐元的主權科技股權基金，目標讓歐洲在 2030 年前領先量子科技；基金涵蓋 AI、量子、半導體與網路安全，預計於 2028–2034 年多年期財政框架開始時運作，500 億歐元為目標規模、非已核准預算。</a></li>
+      <li><a href="#card-5">標普全球評級考慮下調輝達的信用評級，理由是黃仁勳請辭又復職引發的治理疑慮與「關鍵人物」風險；評級檢討預計 90 天內完成，若下調將由 AA 降至 AA-；目前僅 TechCrunch 一家報導，尚未經標普或輝達證實。</a></li>
+      <li><a href="#card-6">Anthropic 執行長 Dario Amodei 11 月 25 日在 X 發文，駁斥「交出人類自由意志」的指控「荒謬」；他回應 Axios 前一日報導——逾 20 名消息來源稱員工質疑未發布的模型能否安全推出——並劃出底線：反對遞迴自我改進。</a></li>
+      <li><a href="#card-7">紐約時報 11 月 25 日報導，美國中央情報局、國家地理空間情報局與國家情報總監辦公室的開源情報分析系統傳遭入侵，未分類資料外洩、機密資料未受影響，疑似與中國有關；攻擊疑似濫用 2026 年 7 月由中國開發者發布的 AI 滲透測試工具 ARTEX。</a></li>
+      <li><a href="#card-8">Anthropic 11 月 25 日發表工程文章，說明如何讓 Claude 代理主導、把 Messages API 從 Python 重寫為 Rust：Claude 約一週寫出首版核心請求路徑，以線上 Python 版為準、影子流量比對，結果每請求 CPU 用量降約七成、首次回應時間中位數快約兩成，且全程未停機、未凍結功能開發。</a></li>
+      <li><a href="#card-9">OpenAI 執行長 Sam Altman 11 月 25 日在 X 宣布，Private Inference 開始小規模客戶內測：以機密運算讓提示與回應在模型處理時仍加密於可驗證環境中，處理完成後適用零資料保留；這是 9 月 29 日 DevDay 發表的 Private Intelligence 計畫一環，適用模型與定價尚未公布。</a></li>
+      <li><a href="#card-10">42 位美國州檢察長挑戰 Character.AI 拍賣用戶私人對話的計畫：該公司破產拍賣預定 12 月 1 日舉行，涉及逾 2,100 萬美國帳戶、其中逾 210 萬為未成年人，唯一已披露的競標者為 11 月 13 日才成立的 Smirks and Pangs Acquisition LLC。</a></li>
+      <li><a href="#card-11">TrendForce 11 月 25 日引述台灣 ODM 業者報導，輝達 B300 新訂單交期拉長至 26 至 40 週、GB300 為 14 至 26 週，近兩季多數新訂單要到 2027 年第二至三季才能交貨；記憶體供應吃緊下，輝達傳砍 GeForce RTX 50 供應、RTX 60 量產（目標 2027 年底）恐延後，輝達未證實。</a></li>
+      <li><a href="#card-12">Anthropic 研究員 Luke Sernau 11 月 25 日發布黎曼猜想證明的精簡版，把 Alpöge 原版約 1,700 萬行縮至 30 萬行可讀版（精簡版 7.6 萬行），以 Apache 授權釋出；數學家 Andrew Sutherland 已於同日開始驗算，兩版本皆可編譯。</a></li>
+      <li><a href="#card-13">據《財富》報導、TechCrunch 11 月 25 日轉述，亞馬遜與 Meta 正在談判解除對 AI 代理 Muse 的封鎖；爭議點為搜尋結果呈現方式與廣告，談判本身未經證實。</a></li>
+      <li><a href="#card-14">MIT Technology Review 11 月 25 日報導，AI 新創募資逾 1 億美元、把公開紀錄收割為 AI 銷售情報，申請量暴增拖垮美國各州公開紀錄系統：教育部的申請中至少 29% 部分由 AI 撰寫、長度翻倍，賓州申訴量 2026 年約 6,000 件、較 2021 年翻倍，部分引用為 AI 幻覺。</a></li>
+      <li><a href="#card-15">TechCrunch Equity 播客 11 月 25 日指出，AI 資料中心越來越難蓋：土地、電力與廠房「三缺」齊發，輝達要到接近完工才願意背書，新雲業者承壓；來賓預測 2027 年將出現一波洗牌。</a></li>
+    </ol></div>
+  </section>
+  <section>
+    <div class="sec-head"><span class="sec-num">02</span><h2>今日頭條</h2><span class="rule"></span></div>
+    <div class="top3">
+      <div class="mini"><span class="rank">01</span><a href="#card-1">FCC 批准 SpaceX 太空 AI 資料中心計畫，最多部署 100 萬顆衛星</a><p>美國聯邦通訊委員會 11 月 25 日批准 SpaceX 在太空部署多達 100 萬顆 AI 資料中心衛星的計畫，要求首顆衛星 2033 年 11 月前升空、2040 年前完成全部部署；衛星將以雷射鏈路互連、運行於 500 至 1,002 公里軌道，Amazon、Viasat 與美國天文學會曾提出反對。</p></div>
+      <div class="mini"><span class="rank">02</span><a href="#card-2">Google Cogentic 一口氣發表六篇數學論文，宣稱整數分解證明界大幅推進</a><p>Google 的 AI 數學代理 Cogentic 11 月 25 日在 GitHub 一口氣發表六篇數學論文，宣稱在無條件整數分解上取得 L[1/3, 105] 的證明界，大幅推進 1992 年 Lenstra–Pomerance 的 L[1/2] 紀錄；六篇皆未經同行評審，Lean 4 證明已承諾但尚未公開。</p></div>
+      <div class="mini"><span class="rank">03</span><a href="#card-3">小鵬人形機器人 IRON 明年 1 月量產，首季進店當銷售導購「實習」</a><p>小鵬汽車 11 月 25 日在第八屆科技日宣布，人形機器人 IRON 將於 2027 年 1 月量產，2027 年第一季先進門市擔任銷售導購「實習」，第二季正式發布；IRON 身高 170 公分、重 62 公斤，具 76 個自由度、1,500 多個觸覺點，搭載 3 顆圖靈 AI 晶片、算力 2,250 TOPS。</p></div>
+    </div>
+  </section>
+  <section>
+    <div class="sec-head"><span class="sec-num">03</span><h2>全部資訊</h2><span class="rule"></span></div>
+    <article class="card is-top" id="card-1">
+      <div class="head"><span class="num">01</span><span class="tag tag-policy">政策</span></div>
+      <h3>FCC 批准 SpaceX 太空 AI 資料中心計畫，最多部署 100 萬顆衛星</h3>
+      <p class="en">FCC authorizes SpaceX plan to put up to 1 million AI data-center satellites in orbit</p>
+      <p class="lede">美國聯邦通訊委員會 11 月 25 日批准 SpaceX 在太空部署多達 100 萬顆 AI 資料中心衛星的計畫，要求首顆衛星 2033 年 11 月前升空、2040 年前完成全部部署；衛星將以雷射鏈路互連、運行於 500 至 1,002 公里軌道，Amazon、Viasat 與美國天文學會曾提出反對。</p>
+      <p class="body">SpaceX 提出名為 Starmind 的計畫，要把 AI 資料中心搬上太空：在軌道上部署大量衛星，直接在太空中提供 AI 運算能力，避開地面資料中心面臨的土地與電力瓶頸。</p>
+      <p class="body">美國聯邦通訊委員會 11 月 25 日批准這項計畫，允許 SpaceX 部署多達 100 萬顆 AI 資料中心衛星。許可附帶明確的部署時程：首顆衛星須在 2033 年 11 月前升空，2035 年前完成 10%、2038 年前完成 50%、2040 年前完成全部部署。</p>
+      <p class="body">技術上，衛星將運行於 500 至 1,002 公里高度的軌道，衛星之間以雷射鏈路互連，射頻通訊作為備援。如此龐大的星座規模，遠超過現有 Starlink 的部署量，也意味著太空軌道資源的競爭將進一步升溫。</p>
+      <p class="body">Amazon、Viasat 與美國天文學會曾對此計畫提出反對，擔憂軌道擁擠、碰撞風險與對天文觀測的干擾。FCC 仍予放行，這是監管機構首次為軌道 AI 資料中心開綠燈，也為其他業者跟進太空算力鋪路。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.wsj.com/business/fcc-authorizes-spacex-to-build-1-million-data-centers-in-space-0eb20ee7" target="_blank" rel="noopener">WSJ</a><a href="https://www.reuters.com/business/media-telecom/us-authorizes-spacex-deploy-1-million-satellites-data-centers-space-2026-11-25/" target="_blank" rel="noopener">Reuters</a><a href="https://techcrunch.com/2026/11/25/fcc-approves-spacex-plan-to-put-ai-data-centers-in-space/" target="_blank" rel="noopener">TechCrunch</a><span class="note">批准時間為美東 11 月 25 日 12:55（17:55 UTC）；部署時程為 FCC 許可條件；反對方為 Amazon、Viasat 與美國天文學會。</span></div>
+    </article>
+    <article class="card is-top" id="card-2">
+      <div class="head"><span class="num">02</span><span class="tag tag-research">研究</span></div>
+      <h3>Google Cogentic 一口氣發表六篇數學論文，宣稱整數分解證明界大幅推進</h3>
+      <p class="en">Google&#x27;s Cogentic posts six AI math papers, claiming a proven bound for factoring integers</p>
+      <p class="lede">Google 的 AI 數學代理 Cogentic 11 月 25 日在 GitHub 一口氣發表六篇數學論文，宣稱在無條件整數分解上取得 L[1/3, 105] 的證明界，大幅推進 1992 年 Lenstra–Pomerance 的 L[1/2] 紀錄；六篇皆未經同行評審，Lean 4 證明已承諾但尚未公開。</p>
+      <p class="body">Google 的 AI 數學代理 Cogentic 11 月 25 日在 GitHub 公開六篇數學論文，涵蓋整數分解、離散對數、賽局理論與圖論。Cogentic 是 Google 內部以 AI 代理自動探索數學問題的研究計畫。</p>
+      <p class="body">最受矚目的是整數分解論文：宣稱在無條件設定下取得 L[1/3, 105] 的證明界，大幅推進 1992 年 Lenstra–Pomerance 以來的 L[1/2] 紀錄。整數分解的難度是 RSA 等公鑰密碼學的安全基礎，因此任何進展都格外引人注目。</p>
+      <p class="body">其餘五篇分別處理確定性分解的 L[3/4] 界、離散對數問題、奈許均衡的 1/5 近似、對數秩（log-rank）的改進，以及 Harary 邊重建問題。不過六篇論文皆未經同行評審，Lean 4 形式化證明已承諾但尚未公開，學界仍在等待驗證。</p>
+      <p class="body">需要特別說明的是，L[1/3, 105] 是證明理論上的推進，常數 105 遠大於數域篩法的約 1.92，實際分解並未因此變快，也不構成對現有加密的威脅。GitHub 倉庫亦註明「這不是 Google 官方產品」，顯示這仍是研究性質的探索。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://fourweekmba.com/ai-googles-cogentic-posts-6-ai-math-papers-one-on-factoring/" target="_blank" rel="noopener">FourWeekMBA</a><a href="https://mlq.ai/news/googles-cogentic-agent-posts-six-math-papers-led-by-a-claimed-proven-l13-bound-for-factoring-integers/" target="_blank" rel="noopener">MLQ</a><a href="https://www.rdworldonline.com/google-cogentic-ai-integer-factoring-bounds-lean-proofs/" target="_blank" rel="noopener">RDWorldOnline</a><span class="note">六篇皆未經同行評審；Lean 4 證明已承諾但尚未公開；GitHub 倉庫註明非 Google 官方產品；L[1/3, 105] 為證明界推進，常數 105 遠大於篩法的約 1.92，不代表實際分解更快。</span></div>
+    </article>
+    <article class="card is-top" id="card-3">
+      <div class="head"><span class="num">03</span><span class="tag tag-app">應用</span></div>
+      <h3>小鵬人形機器人 IRON 明年 1 月量產，首季進店當銷售導購「實習」</h3>
+      <p class="en">XPeng&#x27;s humanoid robot IRON enters mass production in January 2027</p>
+      <p class="lede">小鵬汽車 11 月 25 日在第八屆科技日宣布，人形機器人 IRON 將於 2027 年 1 月量產，2027 年第一季先進門市擔任銷售導購「實習」，第二季正式發布；IRON 身高 170 公分、重 62 公斤，具 76 個自由度、1,500 多個觸覺點，搭載 3 顆圖靈 AI 晶片、算力 2,250 TOPS。</p>
+      <p class="body">小鵬汽車 11 月 25 日下午在廣州舉行的第八屆小鵬科技日上，宣布人形機器人 IRON 的量產與上市時程：2027 年 1 月開始量產。</p>
+      <p class="body">按照規劃，IRON 將在 2027 年第一季先進入小鵬門市，擔任銷售導購「實習」，在真實門市環境中接待顧客；2027 年第二季正式發布。這種「先實習、後發布」的安排，讓機器人在受控場景中先累積實戰經驗。</p>
+      <p class="body">硬體規格方面，IRON 身高 170 公分、重 62 公斤，具備 76 個自由度與 1,500 多個觸覺點，搭載 3 顆圖靈 AI 晶片，總算力達 2,250 TOPS。觸覺點的數量顯示小鵬強調精細操作能力，而非僅止於行走與展示。</p>
+      <p class="body">小鵬同時宣布，第二代 VLA（視覺語言動作模型）將於 2027 年上半年在全球首批交付。VLA 是讓機器人理解指令、看見環境並執行動作的關鍵模型，其進度將直接決定 IRON 在門市的實際表現。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="http://www.chinanews.com.cn/cj/2026/11-25/10737811.shtml" target="_blank" rel="noopener">中國新聞網</a><a href="https://www.techedt.com/xpeng-targets-january-2027-for-mass-production-of-its-iron-humanoid-robot" target="_blank" rel="noopener">TechEdt</a><span class="note">發布會為 11 月 25 日下午於廣州舉行的第八屆小鵬科技日；量產與上市時程為官方說法。</span></div>
+    </article>
+    <article class="card" id="card-4">
+      <div class="head"><span class="num">04</span><span class="tag tag-policy">政策</span></div>
+      <h3>歐盟提出《量子法案》與 500 億歐元主權科技股權基金，目標 2030 年領先量子</h3>
+      <p class="en">EU proposes Quantum Act and €50 billion sovereign tech equity fund</p>
+      <p class="lede">歐盟執委會 11 月 25 日提出《量子法案》，並規劃規模 500 億歐元的主權科技股權基金，目標讓歐洲在 2030 年前領先量子科技；基金涵蓋 AI、量子、半導體與網路安全，預計於 2028–2034 年多年期財政框架開始時運作，500 億歐元為目標規模、非已核准預算。</p>
+      <p class="body">歐盟執委會 11 月 25 日提出《量子法案》，並同步規劃規模 500 億歐元的主權科技股權基金，目標讓歐洲在 2030 年前成為量子科技的領先者。</p>
+      <p class="body">基金涵蓋 AI、量子運算、半導體與網路安全等關鍵領域，定位為歐洲的「主權科技」投資工具。提案同時納入採購偏好：公共採購將優先考慮歐洲企業，以扶植本土供應鏈。</p>
+      <p class="body">需要注意的是，500 億歐元是目標規模而非已核准預算，基金預計於下一個多年期財政框架（2028–2034 年）開始時才運作。從提案到實際出資，仍有一段立法與協商的路要走。</p>
+      <p class="body">這項提案是歐盟面對美中科技競賽的最新回應：美國以私人資本與聯邦計畫推動 AI 與量子，中國以國家計畫加速追趕，歐盟則試圖以公共股權基金補上投資缺口。實際立法與出資規模，仍待成員國與歐洲議會討論。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://live.euronext.com/en/financial-news/europe-plans-eu50-billion-sovereign-tech-equity-fund-boost-quantum-technology" target="_blank" rel="noopener">Reuters</a><a href="https://www.channelnewsasia.com/world/eu-plans-50-billion-euro-investment-in-ai-quantum-computing-6581386" target="_blank" rel="noopener">CNA</a><a href="https://tech.eu/2026/11/25/eu-proposes-eur50-billion-equity-fund-to-support-quantum-and-essential-sovereign-tech/" target="_blank" rel="noopener">tech.eu</a><span class="note">500 億歐元為目標規模，非已核准預算；基金預計於下一個多年期財政框架（2028–2034 年）開始時運作。</span></div>
+    </article>
+    <article class="card" id="card-5">
+      <div class="head"><span class="num">05</span><span class="tag tag-other">其他</span></div>
+      <h3>標普考慮下調輝達信用評級，稱治理與「關鍵人物」風險</h3>
+      <p class="en">S&amp;P considers Nvidia credit downgrade over governance and key-man risks</p>
+      <p class="lede">標普全球評級考慮下調輝達的信用評級，理由是黃仁勳請辭又復職引發的治理疑慮與「關鍵人物」風險；評級檢討預計 90 天內完成，若下調將由 AA 降至 AA-；目前僅 TechCrunch 一家報導，尚未經標普或輝達證實。</p>
+      <p class="body">標普全球評級正在考慮下調輝達的信用評級，理由是黃仁勳請辭又復職的風波所引發的治理疑慮與「關鍵人物」風險。</p>
+      <p class="body">據報導，評級檢討預計在 90 天內完成；若決定下調，輝達的評級將由 AA 降至 AA-。評級機構關注的是董事會在短時間內先接受請辭、又恢復職務的決策過程，以及公司對創辦人兼執行長的依賴程度。</p>
+      <p class="body">這起風波源自黃仁勳 11 月 12 日因婚外情請辭、11 月 23 日復職，短短 12 天內的大逆轉。黃仁勳已在 11 月 24 日的全員大會上道歉，並承諾接受定期 360 度評核，但評級機構顯然仍在觀察後續發展。</p>
+      <p class="body">需要注意的是，目前僅 TechCrunch 一家報導此事，尚未經標普或輝達證實。即使下調至 AA-，仍屬投資級高評級，不至於動搖輝達的融資能力；但對一家市值居全球前列的公司而言，評級檢討本身就是值得注意的訊號。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://techcrunch.com/2026/11/25/sp-considers-nvidia-credit-downgrade-over-governance-and-key-man-risks/" target="_blank" rel="noopener">TechCrunch</a><span class="note">僅 TechCrunch 一家報導，尚未經標普或輝達證實；評級檢討預計 90 天內完成。</span></div>
+    </article>
+    <article class="card" id="card-6">
+      <div class="head"><span class="num">06</span><span class="tag tag-policy">政策</span></div>
+      <h3>Anthropic 執行長 Amodei 發文駁「交出人類自由意志」指控，稱荒謬</h3>
+      <p class="en">Anthropic CEO Dario Amodei calls accusations of surrendering human control to AI &quot;absurd&quot;</p>
+      <p class="lede">Anthropic 執行長 Dario Amodei 11 月 25 日在 X 發文，駁斥「交出人類自由意志」的指控「荒謬」；他回應 Axios 前一日報導——逾 20 名消息來源稱員工質疑未發布的模型能否安全推出——並劃出底線：反對遞迴自我改進。</p>
+      <p class="body">Anthropic 執行長 Dario Amodei 11 月 25 日在 X 發文，回應外界對 Anthropic 安全立場的質疑，駁斥「交出人類自由意志」的指控「荒謬」。</p>
+      <p class="body">他的發文是回應 Axios 前一日的報導：該報導引述逾 20 名消息來源，稱 Anthropic 員工質疑公司未發布的模型能否安全推出。報導曝光後，Anthropic 是否為了競爭而放鬆安全標準，成為外界關注的焦點。</p>
+      <p class="body">Amodei 在文中劃出底線，表明反對讓 AI 進行遞迴自我改進，並強調人類必須保有控制權。他試圖以此回應「交出控制權」的批評，說明 Anthropic 仍有不可退讓的紅線。</p>
+      <p class="body">需要注意的是，目前僅 TechCrunch 一家報導此事，X 原文連結未取得。這場爭論也反映 AI 安全路線在業界內部仍有分歧：當模型能力快速推進，安全評估的速度與標準該如何拿捏，連領先實驗室內部都沒有共識。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://techcrunch.com/2026/11/25/anthropics-dario-amodei-calls-accusations-of-surrendering-human-control-to-ai-absurd/" target="_blank" rel="noopener">TechCrunch</a><span class="note">僅 TechCrunch 一家報導，X 原文連結未取得；Axios 報導為 11 月 24 日，指逾 20 名消息來源稱員工質疑未發布模型能否安全推出。</span></div>
+    </article>
+    <article class="card" id="card-7">
+      <div class="head"><span class="num">07</span><span class="tag tag-other">其他</span></div>
+      <h3>美情報機構傳遭入侵，疑中國開發的 AI 滲透工具 ARTEX 遭濫用</h3>
+      <p class="en">U.S. spy agencies reportedly breached; suspected China-linked ARTEX AI tool</p>
+      <p class="lede">紐約時報 11 月 25 日報導，美國中央情報局、國家地理空間情報局與國家情報總監辦公室的開源情報分析系統傳遭入侵，未分類資料外洩、機密資料未受影響，疑似與中國有關；攻擊疑似濫用 2026 年 7 月由中國開發者發布的 AI 滲透測試工具 ARTEX。</p>
+      <p class="body">紐約時報 11 月 25 日報導，美國中央情報局（CIA）、國家地理空間情報局（NGA）與國家情報總監辦公室（ODNI）共用的開源情報分析系統傳遭入侵。</p>
+      <p class="body">報導指出，未分類資料外洩，但機密資料未受影響；入侵疑似與中國有關。開源情報系統彙整的是公開來源資料，雖不涉機密，仍是情報工作的重要基礎設施。</p>
+      <p class="body">攻擊疑似濫用名為 ARTEX 的 AI 滲透測試工具：該工具由中國開發者於 2026 年 7 月發布，原為合法滲透測試用途，後被改用於攻擊。這是 AI 工具被武器化、反過來攻擊情報機構的罕見案例。</p>
+      <p class="body">同一天，美國財政部金融犯罪執法局（FinCEN）也另外披露遭入侵；聯邦調查局國家犯罪資訊中心（NCIC）前一週末的入侵報導則是獨立事件。紐約時報原文為付費牆，本條經 Ynet、BleepingComputer 與 Gizmodo 轉述核實。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.ynetnews.com/article/by8einq1mx" target="_blank" rel="noopener">Ynet</a><a href="https://www.bleepingcomputer.com/news/security/hackers-reportedly-breached-cia-intelligence-analysis-system/" target="_blank" rel="noopener">BleepingComputer</a><a href="https://gizmodo.com/u-s-spying-agencies-reportedly-hacked-2000845088" target="_blank" rel="noopener">Gizmodo</a><span class="note">紐約時報原文為付費牆，經 Ynet、BleepingComputer、Gizmodo 轉述核實；ARTEX 為 2026 年 7 月由中國開發者發布的 AI 滲透測試工具；FinCEN 同日另行披露遭入侵；FBI NCIC 入侵為前一週末報導的獨立事件。</span></div>
+    </article>
+    <article class="card" id="card-8">
+      <div class="head"><span class="num">08</span><span class="tag tag-app">應用</span></div>
+      <h3>Anthropic 用 Claude 把 Messages API 從 Python 重寫成 Rust，CPU 用量降七成</h3>
+      <p class="en">Anthropic migrates Messages API from Python to Rust with Claude leading the rewrite</p>
+      <p class="lede">Anthropic 11 月 25 日發表工程文章，說明如何讓 Claude 代理主導、把 Messages API 從 Python 重寫為 Rust：Claude 約一週寫出首版核心請求路徑，以線上 Python 版為準、影子流量比對，結果每請求 CPU 用量降約七成、首次回應時間中位數快約兩成，且全程未停機、未凍結功能開發。</p>
+      <p class="body">Anthropic 11 月 25 日發表工程文章，說明如何讓 Claude 代理主導、把 Messages API 從 Python 重寫為 Rust。Messages API 是 Claude 對外服務的核心介面，承載了絕大多數的模型呼叫流量。</p>
+      <p class="body">背景是 API 流量從 2024 年初到 2026 年秋暴增約 1,800 倍，Python 服務已難以為繼；到 2026 年 5 月，Claude 已寫下逾八成合併程式碼。與其說這是一次語言遷移，不如說是 AI 寫程式能力的壓力測試。</p>
+      <p class="body">重寫過程中，Claude 約一週就寫出首版核心請求路徑；團隊以上線的 Python 版為準，再以影子流量逐一比對，確保新舊實作行為一致。這種「以舊版為 oracle」的做法，是大型遷移能否不翻車的關鍵。</p>
+      <p class="body">成果是每請求 CPU 用量降約七成、首次回應時間中位數快約兩成，且全程未停機、未凍結功能開發。數據為 Anthropic 官方自述；這篇工程文章本身，也成了 AI 代理主導大型重構的最佳示範。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.anthropic.com/research/migrating-api-to-rust" target="_blank" rel="noopener">Anthropic</a><a href="https://newsletter.pragmaticengineer.com/p/how-anthropic-builds-software-in" target="_blank" rel="noopener">Pragmatic Engineer</a><a href="https://AI.INFO/news/anthropic-messages-api-python-rust-migration" target="_blank" rel="noopener">ai.info</a><span class="note">數據為 Anthropic 官方自述；上線過程未停機、未凍結功能開發。</span></div>
+    </article>
+    <article class="card" id="card-9">
+      <div class="head"><span class="num">09</span><span class="tag tag-app">應用</span></div>
+      <h3>OpenAI 推出 Private Inference 內測，承諾模型運算時也不看用戶資料</h3>
+      <p class="en">OpenAI begins limited trials of Private Inference alpha</p>
+      <p class="lede">OpenAI 執行長 Sam Altman 11 月 25 日在 X 宣布，Private Inference 開始小規模客戶內測：以機密運算讓提示與回應在模型處理時仍加密於可驗證環境中，處理完成後適用零資料保留；這是 9 月 29 日 DevDay 發表的 Private Intelligence 計畫一環，適用模型與定價尚未公布。</p>
+      <p class="body">OpenAI 執行長 Sam Altman 11 月 25 日在 X 宣布，Private Inference 開始小規模客戶內測。這是 OpenAI 在 9 月 29 日 DevDay 發表的 Private Intelligence 計畫一環，目標是讓企業敢把敏感資料交給 OpenAI 處理。</p>
+      <p class="body">技術上以機密運算為基礎：提示與回應在模型處理時仍加密於可驗證環境中，連 OpenAI 也無法在運算過程中讀取內容；處理完成後則適用零資料保留政策。這回應了企業長期以來的疑慮：資料交給模型商，到底會不會被看見。</p>
+      <p class="body">Private Inference 目前為 API 預覽，適用模型與定價尚未公布；它曾於 11 月 20 日的 Azure 大會上亮相。內測對象僅限一小群客戶，顯示 OpenAI 仍在驗證機密運算的穩定性與效能成本。</p>
+      <p class="body">對企業用戶而言，Private Inference 若能兌現承諾，將降低金融、醫療等高度監管產業採用外部模型的門檻；對 OpenAI 而言，這也是與 Anthropic、Google 爭奪企業市場的信任籌碼。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://the-decoder.com/openai-wants-companies-to-trust-it-with-sensitive-work-by-promising-not-to-look-at-their-data/" target="_blank" rel="noopener">The Decoder</a><a href="https://www.unite.ai/openai-begins-limited-customer-trials-of-alpha-private-inference/" target="_blank" rel="noopener">Unite.AI</a><a href="https://www.kucoin.com/news/flash/openai-tests-private-inference-with-select-customers" target="_blank" rel="noopener">KuCoin</a><span class="note">適用模型與定價尚未公布；為 9 月 29 日 DevDay 發表的 Private Intelligence 計畫一環；零資料保留涵蓋處理完成之後的階段。</span></div>
+    </article>
+    <article class="card" id="card-10">
+      <div class="head"><span class="num">10</span><span class="tag tag-policy">政策</span></div>
+      <h3>42 州檢察長挑戰 Character.AI 拍賣用戶私人對話，涉 210 萬未成年人</h3>
+      <p class="en">42 state attorneys general challenge Character.AI plan to auction users&#x27; private chats</p>
+      <p class="lede">42 位美國州檢察長挑戰 Character.AI 拍賣用戶私人對話的計畫：該公司破產拍賣預定 12 月 1 日舉行，涉及逾 2,100 萬美國帳戶、其中逾 210 萬為未成年人，唯一已披露的競標者為 11 月 13 日才成立的 Smirks and Pangs Acquisition LLC。</p>
+      <p class="body">42 位美國州檢察長挑戰 Character.AI 拍賣用戶私人對話的計畫。Character.AI 正處破產程序，拍賣預定 12 月 1 日舉行，拍賣標的包括用戶與 AI 角色的私人對話。</p>
+      <p class="body">拍賣涉及逾 2,100 萬美國帳戶，其中逾 210 萬為未成年人。對話內容往往包含高度私人的情感傾訴，一旦易主，隱私風險不言而喻。</p>
+      <p class="body">唯一已披露的競標者，是 11 月 13 日才成立、11 月 14 日即獲選的 Smirks and Pangs Acquisition LLC；若交易破局，將收取 35 萬美元分手費。競標者的背景與拍賣程序的透明度，同樣受到質疑。</p>
+      <p class="body">檢察長們主張，私人對話不應成為可拍賣的資產，尤其涉及大量未成年人。這場法律戰將決定 AI 陪伴應用的用戶資料歸屬，也可能為其他 AI 公司的破產處置立下先例。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://techcrunch.com/2026/11/25/state-ags-fight-character-ais-plan-to-auction-off-users-private-chats/" target="_blank" rel="noopener">TechCrunch</a><a href="https://coag.gov/press-releases/weiser-challenges-auction-of-millions-of-private-character-ai-conversations/" target="_blank" rel="noopener">Colorado AG</a><span class="note">事件以 11 月 25 日計，康乃狄克州檢察長新聞稿日期為 11 月 24 日；拍賣預定 12 月 1 日；唯一已披露競標者為 11 月 13 日成立的 Smirks and Pangs Acquisition LLC。</span></div>
+    </article>
+    <article class="card" id="card-11">
+      <div class="head"><span class="num">11</span><span class="tag tag-other">其他</span></div>
+      <h3>輝達 B300 交期傳拉長至 40 週，RTX 60 量產恐延後</h3>
+      <p class="en">Nvidia B300 lead times reportedly stretch to 40 weeks; RTX 60 may face delays</p>
+      <p class="lede">TrendForce 11 月 25 日引述台灣 ODM 業者報導，輝達 B300 新訂單交期拉長至 26 至 40 週、GB300 為 14 至 26 週，近兩季多數新訂單要到 2027 年第二至三季才能交貨；記憶體供應吃緊下，輝達傳砍 GeForce RTX 50 供應、RTX 60 量產（目標 2027 年底）恐延後，輝達未證實。</p>
+      <p class="body">TrendForce 11 月 25 日引述台灣 ODM 業者報導，輝達 B300 新訂單交期拉長至 26 至 40 週，GB300 為 14 至 26 週，DGX Station GB300 約 26 週、RTX Pro 至少 26 週。</p>
+      <p class="body">近兩季的多數新訂單，預計要到 2027 年第二至三季才能交貨。交期拉長反映 AI 伺服器需求仍遠超供給，也意味著雲端業者與企業的算力擴張計畫將被迫排隊。</p>
+      <p class="body">記憶體供應吃緊是另一重壓力：記憶體廠優先供應伺服器 DRAM，GDDR7 供應受限，輝達傳出削減 GeForce RTX 50 供應，原定 2027 年底量產的 RTX 60 也可能延後。AI 需求正在排擠消費級顯示卡的產能。</p>
+      <p class="body">需要注意的是，輝達未證實上述說法；36氪亦於 11 月 25 日 08:45 報導相關交期消息。交期數據引述供應鏈說法，實際交付仍以輝達官方排程為準。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.trendforce.com/news/2026/11/25/news-nvidia-b300-lead-times-reportedly-hit-40-weeks-rtx-60-may-face-delays-as-memory-supply-tightens/" target="_blank" rel="noopener">TrendForce</a><a href="https://wccftech.com/nvidia-faces-booming-demand-despite-woes-as-b300-lead-times-reportedly-stretch-to-40-weeks-for-new-orders-gb300-buyers-now-face-14-to-26-weeks-says-report/" target="_blank" rel="noopener">WCCFTech</a><a href="https://www.kucoin.com/news/flash/nvidia-ai-gpu-delivery-delays-push-rtx-60-series-production-to-2027" target="_blank" rel="noopener">KuCoin</a><span class="note">輝達未證實；交期數據引述台灣 ODM 業者說法；36氪報導刊於 11 月 25 日 08:45（北京時間）。</span></div>
+    </article>
+    <article class="card" id="card-12">
+      <div class="head"><span class="num">12</span><span class="tag tag-research">研究</span></div>
+      <h3>黎曼猜想證明再瘦身：Sernau 版從 1,700 萬行縮至 30 萬行可讀版</h3>
+      <p class="en">Riemann hypothesis proof slimmed down: Sernau version cuts 17M lines to 300,000</p>
+      <p class="lede">Anthropic 研究員 Luke Sernau 11 月 25 日發布黎曼猜想證明的精簡版，把 Alpöge 原版約 1,700 萬行縮至 30 萬行可讀版（精簡版 7.6 萬行），以 Apache 授權釋出；數學家 Andrew Sutherland 已於同日開始驗算，兩版本皆可編譯。</p>
+      <p class="body">Anthropic 研究員 Luke Sernau 11 月 25 日發布黎曼猜想證明的精簡版，把 Alpöge 原版約 1,700 萬行大幅縮減為 30 萬行可讀版（精簡版 7.6 萬行），以 Apache 授權釋出。</p>
+      <p class="body">原版 Alpöge 證明於 11 月 20 日發表、Lean 驗證於 11 月 21 日完成，皆在視窗外；本條僅收 11 月 25 日的 Sernau 精簡版。Sernau 的貢獻不在於新的數學主張，而在於把機器生成的龐大證明壓縮到人類可處理的規模。</p>
+      <p class="body">數學家 Andrew Sutherland 已於同日開始驗算，兩版本皆可編譯，驗證工作仍在進行。編譯通過只是第一步：證明是否正確，仍需數學社群逐項檢查。</p>
+      <p class="body">從 1,700 萬行到 30 萬行，精簡版讓人類數學家真正有機會讀懂這份證明，也讓後續的檢查與質疑得以展開。黎曼猜想是數學界最著名的未解難題之一，任何宣稱的證明都將面臨最嚴格的檢視。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://en.wikipedia.org/wiki/Alp%C3%B6ge%27s_proof_of_the_Riemann_hypothesis" target="_blank" rel="noopener">Wikipedia</a><a href="https://app.hncompanion.com/item?id=50648050" target="_blank" rel="noopener">HN Companion</a><span class="note">原版 Alpöge 證明（11 月 20 日）與 Lean 驗證（11 月 21 日）為視窗外事件，本條僅收 11 月 25 日的 Sernau 精簡版；兩版本皆可編譯，驗證進行中。</span></div>
+    </article>
+    <article class="card" id="card-13">
+      <div class="head"><span class="num">13</span><span class="tag tag-app">應用</span></div>
+      <h3>傳亞馬遜與 Meta 談判解除對 AI 代理 Muse 的封鎖</h3>
+      <p class="en">Amazon and Meta reportedly in talks to lift blockade on AI agent Muse</p>
+      <p class="lede">據《財富》報導、TechCrunch 11 月 25 日轉述，亞馬遜與 Meta 正在談判解除對 AI 代理 Muse 的封鎖；爭議點為搜尋結果呈現方式與廣告，談判本身未經證實。</p>
+      <p class="body">據《財富》報導、TechCrunch 11 月 25 日轉述，亞馬遜與 Meta 正在談判，解除對 AI 代理 Muse 的封鎖。</p>
+      <p class="body">Muse 是 Anthropic 開發的 AI 代理，能代用戶在網路上執行任務；亞馬遜與 Meta 先前皆對其設限，擔憂它繞過自家介面、直接與用戶互動。當代理成為新的流量入口，平台的守門人角色便受到挑戰。</p>
+      <p class="body">談判的爭議點包括搜尋結果的呈現方式與廣告：平台希望保有對內容呈現與變現方式的控制，代理則希望直接為用戶辦事。如何分潤、如何標示，成為雙方拉鋸的焦點。</p>
+      <p class="body">需要注意的是，目前僅 TechCrunch 轉述《財富》報導一家，談判本身未經證實。但無論結果如何，這場談判都反映平台與 AI 代理之間的權力拉鋸才剛開始，類似的談判未來只會更多。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://techcrunch.com/2026/11/25/amazon-and-meta-reportedly-in-talks-to-lift-blockade-on-ai-agent-muse/" target="_blank" rel="noopener">TechCrunch</a><span class="note">僅 TechCrunch 轉述《財富》報導一家，談判本身未經證實；爭議點為搜尋結果呈現方式與廣告。</span></div>
+    </article>
+    <article class="card" id="card-14">
+      <div class="head"><span class="num">14</span><span class="tag tag-policy">政策</span></div>
+      <h3>MIT 科技評論：AI 正在拖垮美國公開紀錄申請系統</h3>
+      <p class="en">MIT Technology Review: AI is straining America&#x27;s open-records systems</p>
+      <p class="lede">MIT Technology Review 11 月 25 日報導，AI 新創募資逾 1 億美元、把公開紀錄收割為 AI 銷售情報，申請量暴增拖垮美國各州公開紀錄系統：教育部的申請中至少 29% 部分由 AI 撰寫、長度翻倍，賓州申訴量 2026 年約 6,000 件、較 2021 年翻倍，部分引用為 AI 幻覺。</p>
+      <p class="body">MIT Technology Review 11 月 25 日報導，AI 新創募資逾 1 億美元，把公開紀錄收割為 AI 銷售情報，申請量暴增拖垮美國各州的公開紀錄系統。公開紀錄法原是為了讓公民監督政府，如今卻成了 AI 公司的資料礦場。</p>
+      <p class="body">數據顯示：Starbridge 募資 5,200 萬美元、Pursuit 募資 2,550 萬美元；SmartProcure 與 Pursuit 每年合計約 18 萬件申請，NationGraph 每天為客戶提交約 1 萬件。這些申請多半是為了取得政府採購與合約資訊，再餵給 AI 銷售工具。</p>
+      <p class="body">美國教育部 7 月的紀錄顯示，至少 29% 的申請至少部分由 AI 撰寫，長度約為以往兩倍；賓州申訴量 2026 年約 6,000 件、較 2021 年的約 3,000 件翻倍，部分引用為 AI 幻覺。承辦人員被迫花更多時間分辨真假申請，真正公民的請求反而被排擠。</p>
+      <p class="body">各州已開始回應：加州認定 AI 系統不是「公眾」，印第安納州允許機關拒絕疑似爬蟲的申請。這場拉鋸揭示一個新問題：當 AI 能以機器速度行使公民權利，制度該如何區分「使用」與「濫用」。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://www.technologyreview.com/2026/11/25/1149702/ai-is-straining-americas-open-records-systems/" target="_blank" rel="noopener">MIT Technology Review</a><a href="https://newsroomamerica.com/a/Q9HRcMBrN9s5NBMywlrkQguz132/mit_technology_review_reports_ai_is_straining_america_s_open_records_systems_as_startups_mine_public_data_while_hackers_used_an_ai_tool_to_breach_us_spy_agencies_and_huawei_was_convicted_of_trade_secret_theft.html" target="_blank" rel="noopener">newsroomamerica</a><span class="note">數據引述 MIT Technology Review 報導；部分州已開始以法規回應。</span></div>
+    </article>
+    <article class="card" id="card-15">
+      <div class="head"><span class="num">15</span><span class="tag tag-other">其他</span></div>
+      <h3>AI 資料中心越來越難蓋，新雲業者承壓、2027 年恐洗牌</h3>
+      <p class="en">AI data centers are becoming harder to build, and neoclouds are feeling it</p>
+      <p class="lede">TechCrunch Equity 播客 11 月 25 日指出，AI 資料中心越來越難蓋：土地、電力與廠房「三缺」齊發，輝達要到接近完工才願意背書，新雲業者承壓；來賓預測 2027 年將出現一波洗牌。</p>
+      <p class="body">TechCrunch Equity 播客 11 月 25 日指出，AI 資料中心越來越難蓋，新雲業者（neoclouds）首當其衝。過去兩年靠著轉租輝達 GPU 快速崛起的新雲業者，如今面臨的是比搶晶片更難的關卡：把資料中心蓋出來。</p>
+      <p class="body">土地、電力與廠房「三缺」齊發：合適的地難找、電力接不上、廠房蓋不及，連輝達也不願在接近完工前為專案背書。沒有輝達的背書，融資與客戶簽約都更困難。</p>
+      <p class="body">來賓、亞利桑那土地顧問 Anita Verma-Lallian 在節目中說明了土地與電力瓶頸的實況；另一位來賓 Chamath Palihapitiya 則預測，2027 年將出現一波洗牌。洗牌的邏輯很直接：蓋不成的業者會先被淘汰，留下的才能吃到長期需求。</p>
+      <p class="body">這集播客本身就是事件：僅 TechCrunch 一家來源，反映的是市場對 AI 基建熱潮能否持續的集體焦慮。當算力需求仍在高漲，供給端的瓶頸已從晶片移向土地與電力，AI 基建的故事進入下一個階段。</p>
+      <div class="foot"><span class="src-label">來源</span><a href="https://techcrunch.com/podcast/ai-data-centers-are-becoming-harder-to-build-and-neoclouds-are-feeling-it/" target="_blank" rel="noopener">TechCrunch</a><span class="note">僅 TechCrunch Equity 播客一家來源；2027 年洗牌為來賓 Chamath Palihapitiya 的預測。</span></div>
+    </article>
+  </section>
+  <footer>
+  <p>來源說明：本期 15 條，皆來自官方部落格、英文與中文科技媒體、跑分榜與社群；發布類條目依方案 B 以兩個獨立來源核對事件日期，核對不上的已降級或棄用；發布時間不確定者標「未確認」，不猜測。</p>
+  <p>排除說明：OpenAI ChatGPT「聊天＋工作」合併（Sottiaux 貼文與上線皆為 11 月 24 日，11 月 25 日報導為跟進）、Anthropic Skills over MCP 公開測試、Anthropic 與 OpenAI 的 VP≠VNP 證明、百度文心 5.5 Flash Preview 權重上線、HungerG 匿名模型、亞馬遜收購 Decart、Google Workspace MCP 全面開放、F-Secure 詐騙賣家預印本、美國銀行 AI 代理終止開關、LessWrong 推理伺服器隱密通道論文、vLLM-GR、GPT-6.2 Astra 1808 素描本、矩陣乘法 ω=9/4 預印本、Nothing Ear（note）AI 耳機、T-Mobile AI 客服、Wired 報導 Muse 取消追蹤 Instagram 帳號等，事件日皆在視窗外，已排除。跑分榜七個來源視窗內無登頂、超車或新模型上榜（LMArena 數據為 11 月 22 日、LiveBench 榜首結果為 11 月 6 日）。</p>
+  <p>單一來源說明：標普考慮下調輝達評級、Anthropic 執行長 Amodei 發文、亞馬遜與 Meta 談判解除 Muse 封鎖、新雲業者承壓等，皆僅一家主要來源，已於條目備註中說明；Cogentic 六篇論文與 Sernau 精簡版黎曼猜想證明皆未經同行評審；輝達 B300／GB300 交期、CIA 入侵事件為供應鏈與情報來源說法，輝達與相關機構未證實；以上皆已於條目備註中說明。</p>
+  <p>未讀取說明：The Verge、Ars Technica 因網域阻擋未能直接開啟，改以搜尋與聚合站核實；Wired 未直接讀取，以搜尋與轉載核實；X 有登入牆，改以搜尋核實官方貼文；36氪未取得原文連結；Hugging Face 熱門榜未直接讀取，改以搜尋核實；紐約時報 CIA 入侵原文為付費牆，經轉述核實。</p>
+  </footer>
+</div>
+</body>
+</html>
